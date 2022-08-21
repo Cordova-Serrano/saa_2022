@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Futura Light BT';
+    src: url('../core/fonts/FuturaLightBT.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Futura Light BT';
+}
+
+/* SAA Table Header */
+/* Modal CSV Title*/
+.modal-title-saa{
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.saa-table-header{
+    background-color: #EDF2F7;
+    border-bottom: #EDF2F7;
+}
