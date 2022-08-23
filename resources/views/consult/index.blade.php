@@ -50,13 +50,13 @@
                         <h3 class="card-title my-auto">Consulta de alumnos</h3>
                     </div>
                     <div class="col d-flex justify-content-end">
-                        <div class="col-sm-4">
-                            <select class="form-control select2 select2-reflex-blue" data-dropdown-css-class="select2-reflex-blue" data-placeholder="Seleccione el semestre" id="semesters" name="" required>
+                        <div class="mr-2">
+                            <select class="form-control select2 select2-reflex-blue" style="width: 100%" data-dropdown-css-class="select2-reflex-blue" data-placeholder="Seleccione el semestre" id="semesters" name="" required>
                                 <option></option>
                             </select>
                         </div>
-                        <div class="col-sm-4" id="career-select2" style="display: none;">
-                            <select class="form-control select2 select2-reflex-blue" data-dropdown-css-class="select2-reflex-blue" data-placeholder="Seleccione la carrera" id="career" name="" required>
+                        <div class="" id="career-select2" style="display: none;">
+                            <select class="form-control select2 select2-reflex-blue" style="width: 100%" data-dropdown-css-class="select2-reflex-blue" data-placeholder="Seleccione la carrera" id="careers" name="" required>
                                 <option></option>
                                 <option value=""></option>
                             </select>
@@ -122,26 +122,32 @@
     let dt = null;
 
     $(function() {
+        //Semesters
         var semesters = @json($semesters);
-        let select = $('#semesters')
+        let select_semesters = $('#semesters')
         $.each(semesters, function(i, semester) {
             var newOption = new Option(semester.semester, semester.id, false, false);
-            select.append(newOption).trigger('change');
+            select_semesters.append(newOption).trigger('change');
         });
-
-        /*dt = $('#data-table').DataTable({
+        //Careers
+        var careers = @json($careers);
+        let select_careers = $('#careers')
+        $.each(careers, function(i, career) {
+            var newOption = new Option(career.name, career.id, false, false);
+            select_careers.append(newOption).trigger('change');
+        });
+        //DataTable Draw
+        dt = $('#data-table').DataTable({
             pageLength: 10,
             autoWidth: false,
             processing: true,
             responsive: true,
             searching: false,
             lengthChange: false,
-            serverSide: true,
-            dom: '<"#toolbar.toolbar">frtip',
+            scrollX: true,
             language: {
                 url: "{{ asset('plugins/datatables/jquery.dataTables.spanish.json') }}"
             },
-            ajax: "{{ route('consult.index') }}",
             columnDefs: [{
                 className: 'text-center',
                 targets: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
@@ -219,19 +225,7 @@
                     data: 'subjects_failed'
                 },
             ],
-            fnInitComplete: function() {
-                let toolbar = $('div#toolbar');
-                toolbar.html(
-                    `<div class="d-flex flex-wrap justify-content-between mb-3">
-                        <div>
-                            <div class="col-log-8 col-md-12 pl-0 pr-0">
-                                <div class="col-sm-8">
-                                </div>
-                            </div>
-                        </div>
-                    </div>`);
-            },
-        });*/
+        })
 
         $('#overlay').hide();
     });
@@ -247,7 +241,12 @@
                     semester_id: $(this).val(),
                 },
                 success: function(response) {
-                    console.log(response)
+                    const table = $("#data-table").DataTable();
+                    table.clear()
+                    $.each(response, function(i, student) {
+                        table.row.add(student).draw();
+                    });
+
                 },
                 error: function(xhr) {
                     console.log(xhr)
@@ -256,18 +255,11 @@
         }
     })
 
-    function getDateFormatted(e) {
-        let date = new Date(e)
-        let year = date.getFullYear()
-        let month = ('0' + (date.getMonth() + 1)).slice(-2)
-        let day = date.getDate()
-        let hour = date.getHours()
-        let min = String(date.getMinutes()).padStart(2, '0')
-
-        //Date Formatted
-        date = day + '/' + month + '/' + year + " " + hour + ":" + min
-
-        return date
-    }
+    $('#careers').change(function() {
+        if ($(this).val() != '') {
+            var data = $(this).select2('data');
+            let career = data[0].text
+        }
+    })
 </script>
 @endsection
