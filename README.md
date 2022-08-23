@@ -7,7 +7,7 @@ TODO: Descripción del sistema
 
  Instala [Laragon](https://laragon.org/).
 
- Suponiando que se utilizo el directorio por defecto durante la instalación, crear un archivo llamado `sistema-seguimiento-alumnos.conf` en el directorio `C:\laragon\etc\apache2\sites-enabled\` con el siguiente contenido:
+ Suponiendo que se utilizó el directorio por defecto durante la instalación, crear un archivo llamado `sistema-seguimiento-alumnos.conf` en el directorio `C:\laragon\etc\apache2\sites-enabled\` con el siguiente contenido:
 
 ```xml
 <VirtualHost *:80> 
@@ -23,7 +23,7 @@ TODO: Descripción del sistema
 
 `C:\PATH\TO\PROJECT` debe sustituirse por el directorio del proyecto.
 
-Despues de reiniciar Laragon, se deben ejetuar los siguientes comandos:
+Después de reiniciar Laragon, se deben ejecutar los siguientes comandos:
 
 ```powershell
 composer install
