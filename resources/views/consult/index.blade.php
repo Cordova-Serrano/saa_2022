@@ -255,11 +255,32 @@
         }
     })
 
+    
     $('#careers').change(function() {
         if ($(this).val() != '') {
-            var data = $(this).select2('data');
-            let career = data[0].text
+            //$('#career-select2').show()
+            //Ajax semester
+            $.ajax({
+                url: "/load_career",
+                type: "get",
+                data: {
+                    semester_id: $('#semesters').val(),
+                    career : $('#careers option:selected').text(),
+                },
+                success: function(response) {
+                    const table = $("#data-table").DataTable();
+                    table.clear()
+                    $.each(response, function(i, student) {
+                        table.row.add(student).draw();
+                    });
+
+                },
+                error: function(xhr) {
+                    console.log(xhr)
+                }
+            });
         }
+        console.log($('#careers option:selected').text());
     })
 </script>
 @endsection

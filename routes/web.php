@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CSVController;
 use App\Http\Controllers\GraphsController;
 use App\Http\Controllers\ConsultController;
+use App\Http\Controllers\CareerController;
 use App\Models\Student;
 use App\Models\Semester;
 use App\Models\Career;
@@ -32,5 +33,6 @@ Route::resource('consult', ConsultController::class);
 
 Route::get('/update', [CSVController::class, 'updateDoc']);
 Route::get('/load_semester', [ConsultController::class, 'loadSemester']);
+Route::get('/load_career', [CareerController::class, 'loadCareer']);
 Route::get('/test', [ConsultController::class, 'test'])->name('consult.test');
 

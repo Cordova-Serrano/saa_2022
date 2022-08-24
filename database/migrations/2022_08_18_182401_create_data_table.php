@@ -21,7 +21,7 @@ class CreateDataTable extends Migration
             $table->integer('semesters_completed'); //Semestres cursados
             $table->double('percentage_progress'); //Porcentaje de avance
             $table->float('general_average',5,3); //Promedio general
-            $table->double('general_performance',5,3); //Rendimiento general 
+            $table->double('general_performance'); //Rendimiento general 
             $table->double('app_average',5,3); //Promedio aprobatorio
             $table->integer('subjects_approved'); //Materias aprobadas
             $table->integer('subjects_failed'); //Materias reprobadas

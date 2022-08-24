@@ -102,12 +102,28 @@ class CSVController extends Controller
                 }
                 //Data 
                 $status = ($data_excel[$i])[5];
-                $creds_remaining = ($data_excel[$i])[6];
-                $creds_per_semester = ($data_excel[$i])[7];
+                if(($data_excel[$i])[6] != null)//check if creds_remaining value exist
+                    $cr = ($data_excel[$i])[6];
+                else
+                    $cr = 0;
+                $creds_remaining = $cr;
+                if(($data_excel[$i])[7] != null)//check if creds_per_semester value exist
+                    $cps = ($data_excel[$i])[7];
+                else
+                    $cps = 0;
+                $creds_per_semester = $cps;
                 $semesters_completed = ($data_excel[$i])[8];
-                $percentage_progress = ($data_excel[$i])[9];
-                $general_average = ($data_excel[$i])[10];
-                $general_performance = ($data_excel[$i])[11];
+                if(($data_excel[$i])[9] != null)//check if percentage_progress value exist
+                    $pp = ($data_excel[$i])[9];
+                else
+                    $pp = 0;
+                $percentage_progress = $pp;
+                $general_average = ($data_excel[$i])[10];//check if general_performance value exist
+                if(($data_excel[$i])[11] != null)
+                    $gp = ($data_excel[$i])[11];
+                else
+                    $gp = 0;
+                $general_performance = $gp;
                 $app_average = ($data_excel[$i])[12];
                 $subjects_approved = ($data_excel[$i])[13];
                 $subjects_failed = ($data_excel[$i])[14];
