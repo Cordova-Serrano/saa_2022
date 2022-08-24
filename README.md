@@ -30,3 +30,9 @@ composer install
 copy .env.example .env 
 php artisan key:generate
 ```
+En la base de datos de laragon (HeidiSQL), crear una base de datos llamada 'saa', correr migraciones  y servidor.
+
+```powershell
+php artisan migrate:fresh
+php artisan serve
+```
