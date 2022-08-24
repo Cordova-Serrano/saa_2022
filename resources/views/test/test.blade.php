@@ -111,17 +111,16 @@
 
 @section ('scripts')
 <script type="text/javascript">
-    //Initialize Select2 Elements
-    $('.select2').select2()
-
-    //Initialize Select2 Elements
-    $('.select2bs4').select2({
-        theme: 'bootstrap4'
-    })
-
-    let dt = null;
+    let dataTable = null;
 
     $(function() {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        })
         //Semesters
         var semesters = @json($semesters);
         let select_semesters = $('#semesters')
@@ -234,6 +233,251 @@
                     },
                 ],
             });
+
+            //Data Table : Expedients
+            dataTable = $('#data-table').DataTable({
+                pageLength: 10,
+                autoWidth: false,
+                processing: true,
+                responsive: true,
+                searching: true,
+                lengthChange: false,
+                serverSide: true,
+                dom: '<"#toolbar.toolbar">frtip',
+                language: {
+                    url: "{{ asset('plugins/datatables/jquery.dataTables.spanish.json') }}"
+                },
+                ajax: "{{ route('consult.test') }}",
+                columnDefs: [{
+                        className: 'text-center',
+                        targets: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+                    },
+                    {
+                        orderable: false,
+                        searchable: false,
+                        targets: 8
+                    }
+                ],
+                columns: [{
+                        data: 'expedient_code',
+                    },
+                    {
+                        data: 'patient_code',
+                    },
+                    {
+                        data: 'patient_name',
+                    },
+                    {
+                        data: 'doctor_name',
+                    },
+                    {
+                        data: 'entry_date',
+                        render: function(data, row, type, meta) {
+                            var dateDay = getDateFormatted(data);
+                            return dateDay;
+                        }
+                    },
+                    {
+                        data: 'status',
+                        render: function(data, row, type, meta) {
+                            let status = '<span class="badge bg-warning">N/A</span>';
+                            switch (data) {
+                                case 'ABIERTO':
+                                    status = '<span class="badge bg-success">ABIERTO</span>';
+                                    break;
+                                case 'CERRADO':
+                                    status = '<span class="badge badge-blue">CERRADO</span>';
+                                    break;
+                                case 'PRECIERRE':
+                                    status = '<span class="badge" style="color: white; background-color: purple;">PRECIERRE</span>';
+                                    break;
+                                case 'LIQUIDADO':
+                                    status = '<span class="badge badge-warning">LIQUIDADO</span>';
+                                    break;
+                                case 'MOROSO':
+                                    status = '<span style="background-color:#fd7a0e;color:white;" class="badge">MOROSO</span>';
+                                    break;
+                            }
+                            return status;
+                        }
+                    },
+                    {
+                        data: 'has_discount',
+                        visible: false,
+                    },
+                    {
+                        data: 'exit_date',
+                        render: function(data, row, type, meta) {
+                            console.log(data)
+                            if (data) {
+                                var dateDay = getDateFormatted(data);
+                                return dateDay;
+                            }
+                            return null;
+                        }
+                    },
+                    {
+                        data: null,
+                        defaultContent: '',
+                        createdCell: function(td, cellData, rowData, row, col) {
+                            if (rowData.status == "CERRADO") {
+                                $(td).prepend(
+                                    `<div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-reflex-blue show-record mr-1" title="Mostrar">
+                                    <i class="fal fa-eye"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm responsable-record mr-1" title="Responsable"
+                                    style="background-color: purple;">
+                                    <i class="fas fa-user" style="color: white;"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-primary  pdf-record mr-1" title="PDF">
+                                    <i class="fas fa-download" style="color: white;"></i>
+                                </button>
+                            </div>`
+                                )
+                            } else if (rowData.status == "MOROSO") {
+                                $(td).prepend(
+                                    `<div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-reflex-blue show-record mr-1" title="Mostrar">
+                                    <i class="fal fa-eye"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-warning edit-record mr-1" title="Editar">
+                                    <i class="fal fa-pencil-alt"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm responsable-record mr-1" title="Responsable"
+                                    style="background-color: purple;">
+                                    <i class="fas fa-user" style="color: white;"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-primary  pdf-record mr-1" title="PDF">
+                                    <i class="fas fa-download" style="color: white;"></i>
+                                </button>
+                            </div>`
+                                )
+                            } else {
+                                $(td).prepend(
+                                    `<div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-reflex-blue show-record mr-1" title="Mostrar">
+                                    <i class="fal fa-eye"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-warning edit-record mr-1" title="Editar">
+                                    <i class="fal fa-pencil-alt"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm responsable-record mr-1" title="Responsable"
+                                    style="background-color: purple;">
+                                    <i class="fas fa-user" style="color: white;"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm bg-orange room-record mr-1" title="Habitación">
+                                    <i class="far fa-exchange-alt"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-primary  pdf-record mr-1" title="PDF">
+                                    <i class="fas fa-download" style="color: white;"></i>
+                                </button>
+                            </div>`
+                                )
+                            }
+
+                        }
+                    }
+                ],
+                drawCallback: () => {
+                    $("#data-table_filter").remove();
+                    $('.show-record').on('click', (e) => {
+                        let expedient = dataTable.row($(e.currentTarget).closest('tr')).data();
+
+                        showRecord(expedient);
+                    });
+
+                    $('.pdf-record').on('click', (e) => {
+                        let expedient = dataTable.row($(e.currentTarget).closest('tr')).data();
+
+                        downloadRecord(expedient);
+                    });
+
+                    $('.responsable-record').on('click', (e) => {
+                        let expedient = dataTable.row($(e.currentTarget).closest('tr')).data();
+
+                        responsableRecord(expedient);
+                    });
+
+                    $('.room-record').on('click', (e) => {
+                        let expedient = dataTable.row($(e.currentTarget).closest('tr')).data();
+
+                        roomRecord(expedient);
+                    });
+
+                    $('.edit-record').on('click', (e) => {
+                        let expedient = dataTable.row($(e.currentTarget).closest('tr')).data();
+
+                        editRecord(expedient);
+                    });
+
+                    $('.delete-record').on('click', (e) => {
+                        let expedient = dataTable.row($(e.currentTarget).closest('tr')).data();
+
+                        deleteRecord(expedient);
+                    });
+                },
+                fnInitComplete: function() {
+                    let toolbar = $('div#toolbar');
+                    toolbar.html(
+                        `<div class="d-flex flex-wrap justify-content-between mb-3">
+                                    <div class="col-log-8 col-md-12 pl-0 pr-0">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input id="paid-checkbox" name="stat" class="form-check-input" type="checkbox" value="ABIERTO"
+                                            onclick="checkBox(this)">
+                                            <label class="form-check-label">
+                                                <span class="badge badge-success">ABIERTO</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input id="canceled-checkbox" name="stat" class="form-check-input" type="checkbox" value="PRECIERRE"
+                                            onclick="checkBox(this)">
+                                            <label class="form-check-label">
+                                                <span style="background-color:#800080; color:white;" class="badge">PRECIERRE</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input id="pending-checkbox" name="stat" class="form-check-input" type="checkbox" value="LIQUIDADO"
+                                            onclick="checkBox(this)">
+                                            <label class="form-check-label">
+                                                <span class="badge badge-warning">LIQUIDADO</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input id="pending-checkbox" name="stat" class="form-check-input" type="checkbox" value="MOROSO"
+                                            onclick="checkBox(this)">
+                                            <label class="form-check-label">
+                                                <span style="background-color:#fd7a0e;color:white;" class="badge">MOROSO</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input id="pending-checkbox" name="stat" class="form-check-input" type="checkbox" value="CERRADO"
+                                            onclick="checkBox(this)">
+                                            <label class="form-check-label">
+                                                <span class="badge badge-blue">CERRADO</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input id="pending-checkbox" name="stat2" class="form-check-input" type="checkbox" value="1"
+                                            onclick="checkBoxDiscount(this)">
+                                            <label class="form-check-label">
+                                                <span class="badge badge-primary" style="background-color: #087cfc !important;">APLICA DESCUENTO</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input id="pending-checkbox" name="stat2" class="form-check-input" type="checkbox" value="0"
+                                            onclick="checkBoxDiscount(this)">
+                                            <label class="form-check-label">
+                                                <span class="badge badge-info" style="background-color: #28cc94 !important;">SIN DESCUENTO</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>`);
+                },
+                order: [
+                    [0, 'desc']
+                ]
+            });
         }
     })
 
@@ -244,19 +488,5 @@
             console.log(career)
         }
     })
-
-    function getDateFormatted(e) {
-        let date = new Date(e)
-        let year = date.getFullYear()
-        let month = ('0' + (date.getMonth() + 1)).slice(-2)
-        let day = date.getDate()
-        let hour = date.getHours()
-        let min = String(date.getMinutes()).padStart(2, '0')
-
-        //Date Formatted
-        date = day + '/' + month + '/' + year + " " + hour + ":" + min
-
-        return date
-    }
 </script>
 @endsection

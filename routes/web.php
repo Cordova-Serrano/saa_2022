@@ -22,15 +22,15 @@ Route::get('/home', function () {
     return view('welcome');
 });
 
+Route::get('/', function () {
+    return view('login');
+});
+
 Route::resource('csv', CSVController::class);
 Route::resource('graphs', GraphsController::class);
 Route::resource('consult', ConsultController::class);
 
 Route::get('/update', [CSVController::class, 'updateDoc']);
 Route::get('/load_semester', [ConsultController::class, 'loadSemester']);
-Route::get('/test', function () {
-    //Recuperamos los semestres y carreras
-    $semesters = Semester::get();
-    $careers = Career::get();
-    return view('test.test', compact('semesters', 'careers'));
-});
+Route::get('/test', [ConsultController::class, 'test'])->name('consult.test');
+
