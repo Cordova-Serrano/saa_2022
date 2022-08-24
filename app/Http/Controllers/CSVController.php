@@ -63,7 +63,11 @@ class CSVController extends Controller
                     ]);
                     $new_career->save();
                 }
-                //Data 
+                //Data
+                dd($students, $data_excel,$students[$i - 1]->data[0]->id);
+                //Obtener la tabla pivote que esta relacionada el estudiante para obtener la data correcta
+                //Ya contamos con el semestre o file
+                $data = Data::find(1);
                 $students[$i - 1]->data[0]->status = ($data_excel[$i])[5];
                 $students[$i - 1]->data[0]->creds_remaining = ($data_excel[$i])[6];
                 $students[$i - 1]->data[0]->creds_per_semester = ($data_excel[$i])[7];
