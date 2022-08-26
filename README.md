@@ -37,5 +37,6 @@ php artisan migrate:fresh
 php artisan serve
 ```
 En la terminal de laragon ingresar el comando:
-```composer require laravel/ui
+```powershell 
+composer require laravel/ui
 ```
