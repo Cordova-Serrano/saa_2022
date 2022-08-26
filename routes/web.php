@@ -24,6 +24,14 @@ Route::get('/home', function () {
     return view('welcome');
 });
 
+Route::get('/', function () {
+    return view('login');
+});
+//Login template
+Route::get('/login_test', function () {
+    return view('test.login');
+});
+
 Route::resource('csv', CSVController::class);
 Route::resource('graphs', GraphsController::class);
 Route::resource('consult', ConsultController::class);
