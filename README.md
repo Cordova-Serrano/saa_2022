@@ -36,3 +36,6 @@ En la base de datos de laragon (HeidiSQL), crear una base de datos llamada 'saa'
 php artisan migrate:fresh
 php artisan serve
 ```
+En la terminal de laragon ingresar el comando:
+```composer require laravel/ui
+```
