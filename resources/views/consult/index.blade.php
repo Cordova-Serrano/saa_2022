@@ -52,13 +52,19 @@
                     <div class="col d-flex justify-content-end">
                         <div class="mr-2">
                             <select class="form-control select2 select2-reflex-blue" style="width: 100%" data-dropdown-css-class="select2-reflex-blue" data-placeholder="Seleccione el semestre" id="semesters" name="" required>
-                                <option></option>
+                            {{-- <option selected value=''>Seleccionar semestre</option> --}}
                             </select>
                         </div>
-                        <div class="" id="career-select2" style="display: none;">
+                        <div class="" id="career-select2">
                             <select class="form-control select2 select2-reflex-blue" style="width: 100%" data-dropdown-css-class="select2-reflex-blue" data-placeholder="Seleccione la carrera" id="careers" name="" required>
-                                <option></option>
-                                <option value=""></option>
+                                {{-- <option selected value=''>Seleccionar carrera</option> --}}
+                                {{-- <option value=""></option> --}}
+                            </select>
+                        </div>
+                        <div class="" id="generation-select">
+                            <select class="form-control select2 select2-reflex-blue" style="width: 100%" data-dropdown-css-class="select2-reflex-blue" data-placeholder="Seleccione generacion" id="generations" name="" required>
+                                {{-- <option selected value=''>Seleccionar generación</option> --}}
+                                {{-- <option value=""></option> --}}
                             </select>
                         </div>
                     </div>
@@ -125,6 +131,8 @@
         //Semesters
         var semesters = @json($semesters);
         let select_semesters = $('#semesters')
+        var newOption = new Option("Selecciona semestre", '0', false, false);
+            select_semesters.append(newOption).trigger('change');
         $.each(semesters, function(i, semester) {
             var newOption = new Option(semester.semester, semester.id, false, false);
             select_semesters.append(newOption).trigger('change');
@@ -132,9 +140,19 @@
         //Careers
         var careers = @json($careers);
         let select_careers = $('#careers')
-        $.each(careers, function(i, career) {
-            var newOption = new Option(career.name, career.id, false, false);
+        var newOption = new Option("Selecciona carrera", "0", false, false);
             select_careers.append(newOption).trigger('change');
+        $.each(careers, function(i, career) {
+            var newOption = new Option(career.name, career.name, false, false);
+            select_careers.append(newOption).trigger('change');
+        });
+        var generations = @json($gen);
+        let select_generations = $('#generations')
+        var newOption = new Option("Selecciona generación", "0", false, false);
+            select_generations.append(newOption).trigger('change');
+        $.each(generations, function(i, generations) {
+            var newOption = new Option(generations.generation, generations.generation, false, false);
+            select_generations.append(newOption).trigger('change');
         });
         //DataTable Draw
         dt = $('#data-table').DataTable({
@@ -230,57 +248,141 @@
         $('#overlay').hide();
     });
 
-    $('#semesters').change(function() {
-        if ($(this).val() != '') {
-            $('#career-select2').show()
-            //Ajax semester
-            $.ajax({
-                url: "/load_semester",
+    function delete_rows(semester,career,generation, type = 1){//function to clean table
+        var n_rows = $('#data-table tr').length;
+        if(n_rows > 1)
+            if(((semester == null)&&(career == null)&&(generation == null))||(type == 0))
+            $('#data-table').find('tbody').empty();
+            
+    }
+
+    function make_query(){
+        var semester = null;
+        if ($('#semesters').val() != "0")
+         semester = $('#semesters').val();
+        var career = null;
+        if ($('#careers').val() != "0")
+            career = $('#careers').val();
+        var generation = null;
+        if ($('#generations').val() != "0")
+            generation = $('#generations').val();
+        //Ajax semester
+        if((semester != null)||(career != null)||(generation != null))
+        $.ajax({
+                url: "/load_query",
                 type: "get",
                 data: {
-                    semester_id: $(this).val(),
+                    semester_id: semester,
+                    career : career,
+                    generation : generation,
                 },
                 success: function(response) {
                     const table = $("#data-table").DataTable();
                     table.clear()
                     $.each(response, function(i, student) {
                         table.row.add(student).draw();
-                    });
-
+                    })
+                    if(response.length < 1)
+                        delete_rows(semester,career,generation,0);
+                        //funcion para mostrar alerta o algo para hacerle saber al usuario que no hay registros coincidentes
                 },
                 error: function(xhr) {
                     console.log(xhr)
                 }
             });
-        }
+            else
+                delete_rows(semester,career,generation);
+    }
+
+    $('#semesters').change(function(){//make query when semesters change
+        make_query();
     })
+
+    $('#careers').change(function(){//make query when careers change
+        make_query();
+    })
+    
+    $('#generations').change(function(){//make query when generations change
+        make_query();
+    })
+    // $('#semesters').change(function() {
+    //     if ($(this).val() != '') {
+    //         $('#career-select2').show()
+    //         //Ajax semester
+    //         $.ajax({
+    //             url: "/load_semester",
+    //             type: "get",
+    //             data: {
+    //                 semester_id: $(this).val(),
+    //             },
+    //             success: function(response) {
+    //                 const table = $("#data-table").DataTable();
+    //                 table.clear()
+    //                 $.each(response, function(i, student) {
+    //                     table.row.add(student).draw();
+    //                 });
+
+    //             },
+    //             error: function(xhr) {
+    //                 console.log(xhr)
+    //             }
+    //         });
+    //     }
+    // })
 
     
-    $('#careers').change(function() {
-        if ($(this).val() != '') {
-            //$('#career-select2').show()
-            //Ajax semester
-            $.ajax({
-                url: "/load_career",
-                type: "get",
-                data: {
-                    semester_id: $('#semesters').val(),
-                    career : $('#careers option:selected').text(),
-                },
-                success: function(response) {
-                    const table = $("#data-table").DataTable();
-                    table.clear()
-                    $.each(response, function(i, student) {
-                        table.row.add(student).draw();
-                    });
+    // $('#careers').change(function() {
+    //     if ($(this).val() != '') {
+    //         $('#generation-select').show()
+    //         //Ajax semester
+    //         $.ajax({
+    //             url: "/load_career",
+    //             type: "get",
+    //             data: {
+    //                 semester_id: $('#semesters').val(),
+    //                 career : $('#careers option:selected').text(),
+    //             },
+    //             success: function(response) {
+    //                 const table = $("#data-table").DataTable();
+    //                 table.clear()
+    //                 $.each(response, function(i, student) {
+    //                     table.row.add(student).draw();
+    //                 });
 
-                },
-                error: function(xhr) {
-                    console.log(xhr)
-                }
-            });
-        }
-        console.log($('#careers option:selected').text());
-    })
+    //             },
+    //             error: function(xhr) {
+    //                 console.log(xhr)
+    //             }
+    //         });
+    //     }
+    //     console.log($('#careers option:selected').text());
+    // })
+    // $('#generations').change(function() {
+    //     if ($(this).val() != '') {
+    //         //Ajax generation
+    //         $.ajax({
+    //             url: "/load_generation",
+    //             type: "get",
+    //             data: {
+    //                 semester_id: $('#semesters').val(),
+    //                 career : $('#careers option:selected').text(),
+    //                 generation : $('#generations option:selected').text(),
+    //             },
+    //             success: function(response) {
+    //                 const table = $("#data-table").DataTable();
+    //                 table.clear()
+    //                 $.each(response, function(i, student) {
+    //                     table.row.add(student).draw();
+    //                 });
+
+    //             },
+    //             error: function(xhr) {
+    //                 console.log(xhr)
+    //             }
+    //         });
+    //     }
+    //     console.log($('#generations option:selected').text());
+    // })
+    
 </script>
 @endsection
