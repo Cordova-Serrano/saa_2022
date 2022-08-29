@@ -27,7 +27,9 @@ class ConsultController extends Controller
         //Recuperamos los semestres y carreras
         $semesters = Semester::get();
         $careers = Career::get();
-        return view('consult.index', compact('semesters', 'careers'));
+        $gen = Student::orderBy('generation', 'asc')->select('generation')->distinct()->get();
+        //$generation = DataTables::of($gen)->toJson();
+        return view('consult.index', compact('semesters', 'careers','gen'));
     }
 
     public function loadSemester(Request $request)

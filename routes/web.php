@@ -6,6 +6,8 @@ use App\Http\Controllers\CSVController;
 use App\Http\Controllers\GraphsController;
 use App\Http\Controllers\ConsultController;
 use App\Http\Controllers\CareerController;
+use App\Http\Controllers\GenerationController;
+use App\Http\Controllers\QueryController;
 use App\Models\Student;
 use App\Models\Semester;
 use App\Models\Career;
@@ -37,8 +39,13 @@ Route::resource('graphs', GraphsController::class);
 Route::resource('consult', ConsultController::class);
 
 Route::get('/update', [CSVController::class, 'updateDoc']);
-Route::get('/load_semester', [ConsultController::class, 'loadSemester']);
-Route::get('/load_career', [CareerController::class, 'loadCareer']);
+// Route::get('/load_semester', [ConsultController::class, 'loadSemester']);
+// Route::get('/load_career', [CareerController::class, 'loadCareer']);
+// Route::get('/load_generation', [GenerationController::class, 'loadGeneration']);
+
+Route::get('/load_query', [QueryController::class, 'loadQuery']);
+Route::get('/clean_query', [QueryController::class, 'cleanQuery']);
+
 Route::get('/test', [ConsultController::class, 'test'])->name('consult.test');
 
 
