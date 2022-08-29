@@ -35,19 +35,13 @@ $route = Route::currentRouteName();
                         <img class="h-100 img-circle elevation-1" src="{{ asset('core/img/logo_minimal_test.jpg') }}">
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+
                         <!-- ----------------------------------------------------------------------------------------------------------------------- -->
                         <a id="navbarDropdown" class="dropdown-item dropdown-header" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>
                         <!-- ----------------------------------------------------------------------------------------------------------------------- -->
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="">
-                            <i class="fal fa-id-card mr-2"></i>Perfil
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="">
-                            <i class="fal fa-lock-alt mr-2"></i>Editar Contraseña
-                        </a>
                         <div class="dropdown-divider"></div>
                         <form action="" autocomplete="off" method="post">
                             @csrf
@@ -62,9 +56,6 @@ $route = Route::currentRouteName();
                             </form>
 
                             <!-- ----------------------------------------------------------------------------------------------------------------- -->
-                            <a class="dropdown-item" href="javascript:void(0)" onclick="event.preventDefault(); this.closest('form').submit();">
-                                <i class="fal fa-sign-out mr-2"></i>Cerrar Sesión
-                            </a>
                         </form>
                     </div>
                 </li>
