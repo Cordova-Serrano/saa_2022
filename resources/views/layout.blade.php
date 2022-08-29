@@ -35,7 +35,11 @@ $route = Route::currentRouteName();
                         <img class="h-100 img-circle elevation-1" src="{{ asset('core/img/logo_minimal_test.jpg') }}">
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                        <span class="dropdown-item dropdown-header">Auth::user()->name</span>
+                        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+                        <a id="navbarDropdown" class="dropdown-item dropdown-header" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+                        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="">
                             <i class="fal fa-id-card mr-2"></i>Perfil
@@ -47,6 +51,17 @@ $route = Route::currentRouteName();
                         <div class="dropdown-divider"></div>
                         <form action="" autocomplete="off" method="post">
                             @csrf
+                            <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><i class="fal fa-sign-out mr-2"></i>
+                                {{ __('Cerrar sesión') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+
+                            <!-- ----------------------------------------------------------------------------------------------------------------- -->
                             <a class="dropdown-item" href="javascript:void(0)" onclick="event.preventDefault(); this.closest('form').submit();">
                                 <i class="fal fa-sign-out mr-2"></i>Cerrar Sesión
                             </a>

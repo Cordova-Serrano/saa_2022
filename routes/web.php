@@ -45,8 +45,3 @@ Route::get('/test', [ConsultController::class, 'test'])->name('consult.test');
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-Route::get('/login_test', function () {
-    return view('test.login');
-});
