@@ -41,7 +41,7 @@
                         <input id="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Correo electrónico" required type="email" value="{{ old('email') }}" autocomplete="email">
                         <div class="input-group-append">
                             <div class="input-group-text">
-                                <span class="fal fa-user"></span>
+                                <i class="fal fa-envelope"></i>
                             </div>
                         </div>
                         @error('email')

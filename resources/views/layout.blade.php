@@ -42,28 +42,15 @@ $route = Route::currentRouteName();
                         </a>
                         <!-- ----------------------------------------------------------------------------------------------------------------------- -->
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="">
-                            <i class="fal fa-id-card mr-2"></i>Perfil
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="">
-                            <i class="fal fa-lock-alt mr-2"></i>Editar Contraseña
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <!-- <form action="" autocomplete="off" method="post"> -->
+                        <form action="{{ route('logout') }}" autocomplete="off" method="post">
                             @csrf
-                            <!-- ----------------------------------------------------------------------------------------------------------------- -->
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();"><i class="fal fa-sign-out mr-2"></i>
-                                {{ __('Cerrar sesión') }}
+                            <a class="dropdown-item" href="javascript:void(0)" onclick="event.preventDefault(); this.closest('form').submit();">
+                                <i class="fal fa-sign-out mr-2"></i>Cerrar Sesión
                             </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-
-                            <!-- ----------------------------------------------------------------------------------------------------------------- -->
-                        <!-- </form> -->
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                        </form>
                     </div>
                 </li>
             </ul>
