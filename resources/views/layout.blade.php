@@ -42,8 +42,15 @@ $route = Route::currentRouteName();
                         </a>
                         <!-- ----------------------------------------------------------------------------------------------------------------------- -->
                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="">
+                            <i class="fal fa-id-card mr-2"></i>Perfil
+                        </a>
                         <div class="dropdown-divider"></div>
-                        <form action="" autocomplete="off" method="post">
+                        <a class="dropdown-item" href="">
+                            <i class="fal fa-lock-alt mr-2"></i>Editar Contraseña
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <!-- <form action="" autocomplete="off" method="post"> -->
                             @csrf
                             <!-- ----------------------------------------------------------------------------------------------------------------- -->
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -56,7 +63,7 @@ $route = Route::currentRouteName();
                             </form>
 
                             <!-- ----------------------------------------------------------------------------------------------------------------- -->
-                        </form>
+                        <!-- </form> -->
                     </div>
                 </li>
             </ul>
