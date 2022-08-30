@@ -19,7 +19,7 @@
                 </div>
                 @endif
 
-                <form method="POST" action="{{ route('register') }}" autocomplete="off">
+                <form method="POST" action="{{ route('register') }}" autocomplete="off" id="register-form">
                     @csrf
                     <!-- NAME -->
                     <div class="input-group mb-3">
@@ -93,8 +93,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         {{ __('Cerrar sesión') }}
                                     </a>
 
@@ -112,4 +111,36 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section ('plugins')
+<!-- Form Validations -->
+<script src="{{ asset('plugins/jquery-validation/jquery.validate.js') }}"></script>
+<script src="{{ asset('plugins/jquery-validation/localization/messages_es.js') }}"></script>
+@endsection
+
+@section ('scripts')
+<script type="text/javascript">
+    $(function() {
+        $('#register-form').validate({
+                errorPlacement: function (error, element) {
+                    error.addClass('form-check-label invalid-feedback');
+                    element.closest('.input-group').append(error);
+                }, 
+                highlight: function (element, errorClass, validClass) {
+                    $(element).addClass('is-invalid');
+                }, 
+                unhighlight: function (element, errorClass, validClass) {
+                    $(element).removeClass('is-invalid');
+                }, 
+                submitHandler: function (form) {
+                    $('#overlay').show();
+
+                    return true;
+                }
+            });
+
+        $('#overlay').hide();
+    })
+</script>
 @endsection

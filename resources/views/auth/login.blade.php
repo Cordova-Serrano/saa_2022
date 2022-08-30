@@ -19,7 +19,7 @@
                 </div>
                 @endif
 
-                <form method="POST" action="{{ route('login') }}" autocomplete="off">
+                <form method="POST" action="{{ route('login') }}" autocomplete="off" id="login-form">
                     @csrf
                     <!-- EMAIL -->
                     <div class="input-group mb-3">
@@ -107,4 +107,36 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section ('plugins')
+<!-- Form Validations -->
+<script src="{{ asset('plugins/jquery-validation/jquery.validate.js') }}"></script>
+<script src="{{ asset('plugins/jquery-validation/localization/messages_es.js') }}"></script>
+@endsection
+
+@section ('scripts')
+<script type="text/javascript">
+    $(function() {
+        $('#login-form').validate({
+                errorPlacement: function (error, element) {
+                    error.addClass('form-check-label invalid-feedback');
+                    element.closest('.input-group').append(error);
+                }, 
+                highlight: function (element, errorClass, validClass) {
+                    $(element).addClass('is-invalid');
+                }, 
+                unhighlight: function (element, errorClass, validClass) {
+                    $(element).removeClass('is-invalid');
+                }, 
+                submitHandler: function (form) {
+                    $('#overlay').show();
+
+                    return true;
+                }
+            });
+
+        $('#overlay').hide();
+    })
+</script>
 @endsection
