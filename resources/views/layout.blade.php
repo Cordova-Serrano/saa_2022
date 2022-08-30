@@ -11,6 +11,7 @@ $route = Route::currentRouteName();
     <title>@yield ('title')</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" rel="stylesheet">
     <link href="{{ asset('plugins/font-awesome-pro/css/all.css') }}" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- etc. -->
     @yield ('styles')
     <link href="{{ asset('core/css/adminlte.css') }}" rel="stylesheet">
@@ -109,6 +110,7 @@ $route = Route::currentRouteName();
             Todos los derechos reservados.
         </footer>
     </div>
+    <script src="{!! mix('js/app.js') !!}"></script>
     <script src="{{ asset('plugins/jquery/jquery.js') }}"></script>
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.js') }}"></script>
     <script src="{{ asset('plugins/inputmask/jquery.inputmask.js') }}"></script>

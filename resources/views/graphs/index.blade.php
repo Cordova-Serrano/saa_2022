@@ -32,8 +32,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-body">
-                Bienvenido.
+            <div id="graph" style="text-align: center; min-height: 500;">
             </div>
         </div>
     </div>
@@ -58,4 +57,6 @@
         });
     })
 </script>
+<script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/graphs.js') }}"></script>
 @endsection

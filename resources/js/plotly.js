@@ -1,7 +1,6 @@
-require('./bootstrap');
 try{
     console.log("plotly.js loaded");
-    Plotly = require("plotly.js");
+    Plotly =require("plotly.js");
 } catch (error) {
     console.log(error);
 }
