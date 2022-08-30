@@ -34,9 +34,9 @@ Route::get('/login_test', function () {
     return view('test.login');
 });
 
-Route::resource('csv', CSVController::class);
-Route::resource('graphs', GraphsController::class);
-Route::resource('consult', ConsultController::class);
+Route::resource('csv', CSVController::class)->middleware('auth');
+Route::resource('graphs', GraphsController::class)->middleware('auth');
+Route::resource('consult', ConsultController::class)->middleware('auth');
 
 Route::get('/update', [CSVController::class, 'updateDoc']);
 // Route::get('/load_semester', [ConsultController::class, 'loadSemester']);
