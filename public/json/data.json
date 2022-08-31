@@ -3087,7 +3087,7 @@
                 1
             ],
             "title": {
-                "text": "cred_aprob_acum"
+                "text": "Creditos Aprobados Acumulados"
             }
         },
         "yaxis": {
@@ -3097,12 +3097,12 @@
                 1
             ],
             "title": {
-                "text": "promedio_aprobatorio"
+                "text": "Promedio Aprobatorio"
             }
         },
         "legend": {
             "title": {
-                "text": "generación"
+                "text": "Generación"
             },
             "tracegroupgap": 0
         },
