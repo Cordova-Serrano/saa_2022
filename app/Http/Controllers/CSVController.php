@@ -69,7 +69,7 @@ class CSVController extends Controller
                     $new_career->save();
                 }
                 //Data
-                dd($students, $data_excel,$students[$i - 1]->data[0]->id);
+                //dd($students, $data_excel,$students[$i - 1]->data[0]->id);
                 //Obtener la tabla pivote que esta relacionada el estudiante para obtener la data correcta
                 //Ya contamos con el semestre o file
                 $data = Data::find(1);

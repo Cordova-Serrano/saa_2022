@@ -52,7 +52,7 @@
                     </div>
                     <!-- /PASSWORD -->
                     <!-- REMEMBER ME -->
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-md-6">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -62,7 +62,7 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- /REMEMBER ME -->
                     <!-- BUTTON -->
                     <div class="row">
@@ -78,10 +78,10 @@
                             @endif -->
                             <!-- /FORGOT YOUR PASSWORD? -->
                             @guest
-                            @if (Route::has('register'))
+                            <!-- @if (Route::has('register'))
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Regístrate') }}</a>
                             @endif
-                            @else
+                            @else -->
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
