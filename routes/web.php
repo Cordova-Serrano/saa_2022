@@ -21,6 +21,23 @@ use App\Models\Career;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('home');
+
+    Route::get('profile', 'ProfileController@index')->name('profile.index');
+    Route::post('profile/{user}/update', 'ProfileController@update')->name('profile.update');
+
+    Route::get('password/edit', 'PasswordController@edit')->name('password.edit');
+    Route::post('password/update', 'PasswordController@update')->name('password.update');
+});
+
+Route::middleware(['check.role:super'])->group(function () {
+    Route::resource('users', UserController::class);
+
+    Route::post('password/{user}/reset', 'PasswordController@reset')->name('password.reset');
+});
 
 Route::get('/home', function () {
     return view('welcome');

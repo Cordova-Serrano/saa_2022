@@ -90,6 +90,25 @@ $route = Route::currentRouteName();
                                 <p>Consulta de alumnos</p>
                             </a>
                         </li>
+                        @if (Auth::user()->hasRole('super'))
+                        <li class="nav-item {{ (str_starts_with($route, 'classifications') || str_starts_with($route, 'settings') || str_starts_with($route, 'suppliers') || str_starts_with($route, 'users'))||  str_starts_with($route, 'fees') ||str_starts_with($route, 'charge-vouchers') ||  str_starts_with($route, 'type') ? 'menu-open' : '' }}">
+                            <a class="nav-link {{ (str_starts_with($route, 'classifications') || str_starts_with($route, 'settings') || str_starts_with($route, 'suppliers') || str_starts_with($route, 'users')) || str_starts_with($route, 'charge-vouchers') ||  str_starts_with($route, 'fees') ? 'active' : '' }}" href="javascript:void(0)">
+                                <i class="nav-icon fas fa-tools"></i>
+                                <p>
+                                    Configuración
+                                    <i class="right fal fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a class="nav-link {{ str_starts_with($route, 'users') ? 'active' : '' }}" href="{{ route('users.index') }}">
+                                        <i class="nav-icon fal fa-users"></i>
+                                        <p>Usuarios</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        @endif
                     </ul>
                 </nav>
             </div>
