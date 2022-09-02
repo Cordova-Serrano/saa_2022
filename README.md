@@ -40,3 +40,4 @@ En la terminal de laragon ingresar el comando:
 ```powershell 
 composer require laravel/ui
 ```
+En el archivo vendor/laravel/ui/auth-backend/AuthenticatesUsers.php linea 157 modificar 'email' por 'username'
