@@ -22,7 +22,7 @@
                 <form method="POST" action="{{ route('login') }}" autocomplete="off" id="login-form">
                     @csrf
                     <!-- EMAIL -->
-                    <div class="input-group mb-3">
+                    <!-- <div class="input-group mb-3">
                         <input id="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Correo electrónico" required autofocus type="email" value="{{ old('email') }}" autocomplete="email">
                         <div class="input-group-append">
                             <div class="input-group-text">
@@ -34,8 +34,23 @@
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
-                    </div>
+                    </div> -->
                     <!-- /EMAIL -->
+                    <!-- USERNAME -->
+                    <div class="input-group mb-3">
+                        <input id="username" class="form-control @error('username') is-invalid @enderror" name="username" placeholder="Nombre de usuario" required autofocus type="username" value="{{ old('username') }}" autocomplete="off">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fal fa-user"></span>
+                            </div>
+                        </div>
+                        @error('username')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <!-- /USERNAME -->
                     <!-- PASSWORD -->
                     <div class="input-group mb-3">
                         <input id="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Contraseña" required type="password" autocomplete="current-password">
