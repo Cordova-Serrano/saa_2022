@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CSVController;
 use App\Http\Controllers\GraphsController;
 use App\Http\Controllers\ConsultController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\GenerationController;
 use App\Http\Controllers\QueryController;
@@ -21,6 +23,7 @@ use App\Models\Career;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return view('welcome');
@@ -33,11 +36,19 @@ Route::middleware(['auth'])->group(function () {
     Route::post('password/update', 'PasswordController@update')->name('password.update');
 });
 
+// Route::middleware(['check.role:super'])->group(function () {
+//     Route::resource('users', UserController::class);
+
+//     Route::post('password/{user}/reset', 'PasswordController@reset')->name('password.reset');
+// });
+
 Route::middleware(['check.role:super'])->group(function () {
-    Route::resource('users', UserController::class);
+
 
     Route::post('password/{user}/reset', 'PasswordController@reset')->name('password.reset');
 });
+
+Route::resource('users', UserController::class);
 
 Route::get('/home', function () {
     return view('welcome');
