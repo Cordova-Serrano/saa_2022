@@ -36,19 +36,18 @@ Route::middleware(['auth'])->group(function () {
     Route::post('password/update', 'PasswordController@update')->name('password.update');
 });
 
-// Route::middleware(['check.role:super'])->group(function () {
-//     Route::resource('users', UserController::class);
-
-//     Route::post('password/{user}/reset', 'PasswordController@reset')->name('password.reset');
-// });
-
 Route::middleware(['check.role:super'])->group(function () {
-
+    Route::resource('users', UserController::class);
 
     Route::post('password/{user}/reset', 'PasswordController@reset')->name('password.reset');
 });
 
-Route::resource('users', UserController::class);
+// Route::middleware(['check.role:super'])->group(function () {
+// Route::resource('users', UserController::class);
+
+//     Route::post('password/{user}/reset', 'PasswordController@reset')->name('password.reset');
+// });
+
 
 Route::get('/home', function () {
     return view('welcome');
