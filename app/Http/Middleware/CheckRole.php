@@ -6,18 +6,16 @@ use Auth;
 use Closure;
 use Illuminate\Http\Request;
 
-class CheckRole
+class CheckRole 
 {
-    public function handle(Request $request, Closure $next,  string $role)
+    public function handle(Request $request, Closure $next,  ...$roles) 
     {
-        if (!Auth::check()) {
-            return redirect()->route('login');
+        $userRoles = Auth::user()->roles->pluck('name');
+        // dd($userRoles);
+        if(!$userRoles->contains('super')){
+            return redirect('/home');
         }
 
-        if ($request->user()->role === $role) {
-            return $next($request);
-        }
-
-        return redirect()->route('home')->with('warning', 'Ha intentado acceder a una sección a la cual no está autorizado.');
+        return $next($request);
     }
 }

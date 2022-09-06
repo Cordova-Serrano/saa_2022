@@ -105,7 +105,6 @@ $route = Route::currentRouteName();
                                         <i class="nav-icon fal fa-users"></i>
                                         <p>Usuarios</p>
                                     </a>
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Regístrate') }}</a>
                                 </li>
                             </ul>
                         </li>

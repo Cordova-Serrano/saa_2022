@@ -42,12 +42,6 @@ Route::middleware(['check.role:super'])->group(function () {
     Route::post('password/{user}/reset', 'PasswordController@reset')->name('password.reset');
 });
 
-// Route::middleware(['check.role:super'])->group(function () {
-// Route::resource('users', UserController::class);
-
-//     Route::post('password/{user}/reset', 'PasswordController@reset')->name('password.reset');
-// });
-
 
 Route::get('/home', function () {
     return view('welcome');
