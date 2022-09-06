@@ -32,71 +32,109 @@ class CSVController extends Controller
 
     public function store(Request $request)
     {
-        $file_name_uns = pathinfo(request()->file('document')->getClientOriginalName(), PATHINFO_FILENAME); //obtiene el nombre del archivo sin extencion
+        $doc_info = pathinfo(request()->file('document')->getClientOriginalName());
+        $extension = $doc_info['extension'];
+        //  dd($doc_info);
+        $file_name_uns = $doc_info['filename']; //pathinfo(request()->file('document')->getClientOriginalName(), PATHINFO_FILENAME); //obtiene el nombre del archivo sin extencion
         $file_name = explode(" ", $file_name_uns); //separa la cadena en arreglo
         $excel_array = Excel::toArray([], request()->file('document')); //convierte el archivo subido en arreglo
         //Si el nombre de archivo ya existe, se hace un update
         $data_excel = $excel_array[0]; //obtenemos las columnas
         //dd($excel_array, $data_excel);
         $lenght = count($data_excel);
+        if($extension != 'csv')
+            $lenght = $lenght-1;
         //Semester
         $semester_str = $file_name[1];
         //Semestre
+        
         if (isset(Semester::where('semester', $semester_str)->first()->semester)) {
-        } else {
+            $semester = Semester::where('semester', $semester_str)->first();
+
+        } 
+        
+        else {
             $semester = new Semester([
                 "semester" => $semester_str,
             ]);
         }
         //Overwrite semester data
         if ($request->is_update == 1) {
-            //Se actualiza la informacion de la base de datos,sobre el mismo archivo
-            $students = Student::with('data')->get();
-            //Recorremos toda la nueva informacion
-            for ($i = 1; $i < $lenght; ++$i) {
-                //Students
-                $students[$i - 1]->uaslp_key = ($data_excel[$i])[0];
-                $students[$i - 1]->large_key = ($data_excel[$i])[1];
-                $students[$i - 1]->generation = ($data_excel[$i])[2];
-                $students[$i - 1]->name = ($data_excel[$i])[3];
-                $students[$i - 1]->career = ($data_excel[$i])[4];
-                //Career
-                if (isset(Career::where('name', $students[$i - 1]->career)->first()->name)) {
-                } else {
-                    $new_career = new Career([
-                        "name" => $students[$i - 1]->career,
-                    ]);
-                    $new_career->save();
+            
+            $flag = 0;
+            for ($i = 1; $i < count($data_excel); ++$i){//loop to read registers of file
+
+                $register_excel = $data_excel[$i];//get n register
+                $t_student = Student::where('uaslp_key', $register_excel[0])->first();
+                if(isset($t_student)){// if student exist, update student
+                    $t_student->large_key = $register_excel[1];
+                    $t_student->generation = $register_excel[2];
+                    $t_student->name = $register_excel[3];
+                    $t_student->career = $register_excel[4];
+                    $t_student->update();
                 }
-                //Data
-                //dd($students, $data_excel,$students[$i - 1]->data[0]->id);
-                //Obtener la tabla pivote que esta relacionada el estudiante para obtener la data correcta
-                //Ya contamos con el semestre o file
-                $data = Data::find(1);
-                $students[$i - 1]->data[0]->status = ($data_excel[$i])[5];
-                $students[$i - 1]->data[0]->creds_remaining = ($data_excel[$i])[6];
-                $students[$i - 1]->data[0]->creds_per_semester = ($data_excel[$i])[7];
-                $students[$i - 1]->data[0]->semesters_completed = ($data_excel[$i])[8];
-                $students[$i - 1]->data[0]->percentage_progress = ($data_excel[$i])[9];
-                $students[$i - 1]->data[0]->general_average = ($data_excel[$i])[10];
-                $students[$i - 1]->data[0]->general_performance = ($data_excel[$i])[11];
-                $students[$i - 1]->data[0]->app_average = ($data_excel[$i])[12];
-                $students[$i - 1]->data[0]->subjects_approved = ($data_excel[$i])[13];
-                $students[$i - 1]->data[0]->subjects_failed = ($data_excel[$i])[14];
-                $students[$i - 1]->save();
+                else {//create student register
+                    $t_student = Student::create([
+                        "uaslp_key" => $register_excel[0],
+                        "large_key" => $register_excel[1],
+                        "generation" => $register_excel[2],
+                        "name" => $register_excel[3],
+                        "career" => $register_excel[4],
+                    ]);
+                     $t_student->save();
+                     $flag = 1;
+                }
+
+                if($flag == 0){//if student is updated
+                    $t_student = $t_student->data[0];
+                     //Data 
+                     $t_student->status = $register_excel[5];
+                    $t_student->creds_remaining = check_value($register_excel[6]);
+                    $t_student->creds_per_semester = check_value($register_excel[7]);
+                    $t_student->semesters_completed = $register_excel[8];
+                    $t_student->percentage_progress = check_value($register_excel[9]);
+                    $t_student->general_average = check_value($register_excel[10]);
+                    $t_student->general_performance = check_value($register_excel[11]);
+                    $t_student->app_average = check_value($register_excel[12]);
+                    $t_student->subjects_approved = check_value($register_excel[13]);
+                    $t_student->subjects_failed = check_value($register_excel[14]);
+                    
+                    $t_student->update();
+    
+                }
+                else{//if student is created
+                    $t_data = Data::create([
+                        'status' => $register_excel[5],
+                        'creds_remaining' => check_value($register_excel[6]),
+                        'creds_per_semester' => check_value($register_excel[7]), 
+                        'semesters_completed' => $register_excel[8],
+                        'percentage_progress' => check_value($register_excel[9]),
+                        'general_average' => check_value($register_excel[10]),
+                        'general_performance' =>check_value($register_excel[11]),
+                        'app_average'=>check_value($register_excel[12]),
+                        'subjects_approved' => check_value($register_excel[13]),
+                        'subjects_failed' => check_value($register_excel[14]),
+                    ]);
+                    $t_data->save();
+                    $ste = 'ACC '.$semester->semester;
+                    $info_file = File::where('name', $ste)->first();
+                    $t_student->data()->attach($t_data->id, ['semester_id' => $semester->id, 'file_id' => $info_file->id]);
+                }
             }
-        } else {
-            $file = new File([
+        } else {//if upload a new semester
+            $file = new File([//create register in File
                 "name" => $file_name_uns,
             ]);
-            $file->save();
+            $file->save(); //save it
             for ($i = 1; $i < $lenght; ++$i) {
+                $register_excel = $data_excel[$i];//get n register
                 //Students
                 $uaslp_key = ($data_excel[$i])[0];
                 $large_key = ($data_excel[$i])[1];
                 $generation = ($data_excel[$i])[2];
                 $name = ($data_excel[$i])[3];
                 $career = ($data_excel[$i])[4];
+                
                 //Career
                 if (isset(Career::where('name', $career)->first()->name)) {
                 } else {
@@ -105,33 +143,7 @@ class CSVController extends Controller
                     ]);
                     $new_career->save();
                 }
-                //Data 
-                $status = ($data_excel[$i])[5];
-                if(($data_excel[$i])[6] != null)//check if creds_remaining value exist
-                    $cr = ($data_excel[$i])[6];
-                else
-                    $cr = 0;
-                $creds_remaining = $cr;
-                if(($data_excel[$i])[7] != null)//check if creds_per_semester value exist
-                    $cps = ($data_excel[$i])[7];
-                else
-                    $cps = 0;
-                $creds_per_semester = $cps;
-                $semesters_completed = ($data_excel[$i])[8];
-                if(($data_excel[$i])[9] != null)//check if percentage_progress value exist
-                    $pp = ($data_excel[$i])[9];
-                else
-                    $pp = 0;
-                $percentage_progress = $pp;
-                $general_average = ($data_excel[$i])[10];//check if general_performance value exist
-                if(($data_excel[$i])[11] != null)
-                    $gp = ($data_excel[$i])[11];
-                else
-                    $gp = 0;
-                $general_performance = $gp;
-                $app_average = ($data_excel[$i])[12];
-                $subjects_approved = ($data_excel[$i])[13];
-                $subjects_failed = ($data_excel[$i])[14];
+                
                 if (isset(Student::where('uaslp_key', $uaslp_key)->first()->uaslp_key)) { //Busca si existe el alumno mediande su clave unica
                     $student = Student::where('uaslp_key', $uaslp_key)->first();
                     $student->fill([
@@ -143,16 +155,16 @@ class CSVController extends Controller
                     ]);
                     $student->save();
                     $data = new Data([
-                        "status" => $status,
-                        "creds_remaining" => $creds_remaining,
-                        "creds_per_semester" => $creds_per_semester,
-                        "semesters_completed" => $semesters_completed,
-                        "percentage_progress" => $percentage_progress,
-                        "general_average" => $general_average,
-                        "general_performance" => $general_performance,
-                        "app_average" => $app_average,
-                        "subjects_approved" => $subjects_approved,
-                        "subjects_failed" => $subjects_failed,
+                        'status' => $register_excel[5],
+                        'creds_remaining' => check_value($register_excel[6]),
+                        'creds_per_semester' => check_value($register_excel[7]), 
+                        'semesters_completed' => $register_excel[8],
+                        'percentage_progress' => check_value($register_excel[9]),
+                        'general_average' => check_value($register_excel[10]),
+                        'general_performance' =>check_value($register_excel[11]),
+                        'app_average'=>check_value($register_excel[12]),
+                        'subjects_approved' => check_value($register_excel[13]),
+                        'subjects_failed' => check_value($register_excel[14]),
                     ]);
                     $semester->save();
                     $data->save();
@@ -166,16 +178,16 @@ class CSVController extends Controller
                         "career" => $career,
                     ]);
                     $data = new Data([
-                        "status" => $status,
-                        "creds_remaining" => $creds_remaining,
-                        "creds_per_semester" => $creds_per_semester,
-                        "semesters_completed" => $semesters_completed,
-                        "percentage_progress" => $percentage_progress,
-                        "general_average" => $general_average,
-                        "general_performance" => $general_performance,
-                        "app_average" => $app_average,
-                        "subjects_approved" => $subjects_approved,
-                        "subjects_failed" => $subjects_failed,
+                        'status' => $register_excel[5],
+                        'creds_remaining' => check_value($register_excel[6]),
+                        'creds_per_semester' => check_value($register_excel[7]), 
+                        'semesters_completed' => $register_excel[8],
+                        'percentage_progress' => check_value($register_excel[9]),
+                        'general_average' => check_value($register_excel[10]),
+                        'general_performance' =>check_value($register_excel[11]),
+                        'app_average'=>check_value($register_excel[12]),
+                        'subjects_approved' => check_value($register_excel[13]),
+                        'subjects_failed' => check_value($register_excel[14]),
                     ]);
                     $student->save();
                     $data->save();
@@ -208,3 +220,10 @@ class CSVController extends Controller
         }
     }
 }
+function check_value($v){
+    if($v != null)
+        $cr = $v;
+    else
+        $cr = 0;
+    return $cr;
+    } 
