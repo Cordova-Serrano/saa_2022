@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Validator;
 class UserController extends Controller
 {
 
-    public function index(Request $request)
+    public function index()
     {
-        return view('users.index');
+        $users = User::all();
+        // dd($users);
+        return view('users.index')->with('users', $users);
     }
 
     use RegistersUsers;

@@ -31,7 +31,7 @@
                     </div>
                     @endif
 
-                    <form method="POST" action="{{ route('register') }}" autocomplete="off" id="register-form">
+                    <form method="POST" action="{{ route('users.index') }}" autocomplete="off" id="register-form">
                         @csrf
                         <!-- NAME -->
                         <div class="input-group mb-3">
@@ -102,6 +102,33 @@
             </div>
         </div>
     </div>
+    <table class="table table-hover" style="width: 50%; margin-left: auto; margin-right: auto;">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Email</th>
+                <th scope="col">Username</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($users as $user)
+            <tr>
+                <th scope="row">{{$user->name}}</th>
+                <td>{{$user->email}}</td>
+                <td>{{$user->username}}</td>
+                <!-- AGREGAR RUTA -->
+                <td><a href="/eliminar/{{$user->id}}">Eliminar</a></td>
+                <td>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{$user->id}}">
+                        Editar
+                    </button>
+                    <!-- <a data-bs-toggle="modal" data-bs-target="#exampleModal{{$user->id}}">Editar</a> -->
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 </div>
 @endsection
 
