@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Role;
+use App\Models\RoleUser;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -17,13 +18,13 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = Role::join('users', 'Role.id', '=', 'users.categoria_id')
-            ->select('articulos.*', 'categoria_id', 'categorias.nombreCategoria')
-            ->get();
+        // $users = RoleUser::join('users', 'RoleUser.role_id', '=', 'users.categoria_id')
+        //     ->select('articulos.*', 'categoria_id', 'categorias.nombreCategoria')
+        //     ->get();
         // $articulos = Articulos::all();
-        $categorias = Categorias::all();
+        // $categorias = Categorias::all();
         // dd($articulos);
-        return view('inventario')->with('articulos', $articulos)->with('categorias', $categorias);
+        // return view('inventario')->with('articulos', $articulos)->with('categorias', $categorias);
         $users = User::all();
         // dd($users);
         return view('users.index')->with('users', $users);

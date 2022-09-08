@@ -11,12 +11,11 @@ class RoleUser extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'user_isid', 'role_id'
+        'user_id', 'role_id'
     ];
 
-    public function users() 
+    public function roleUsers() 
     {
-        return $this->belongsToMany(User::class);
-        // return $this->belongsToMany('App/User');
+        return $this->belongsToMany(User::class, Role::class);
     }
 }
