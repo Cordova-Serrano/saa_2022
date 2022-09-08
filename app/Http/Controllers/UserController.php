@@ -20,6 +20,27 @@ class UserController extends Controller
         return view('users.index')->with('users', $users);
     }
 
+    public function guardar(Request $request)
+    {
+        $users = new User();
+        $users->name = $request->name;
+        $users->email = $request->email;
+        $users->username = $request->uername;
+        $users->password = $request->password;
+        $users->save();
+
+        $log = new logUsers();
+        $log->idarticulo = $users->id;
+        $log->nombreN = $users->nombre;
+        $log->piezasN = $users->piezas;
+        $log->fechaTerminoN = $users->fechaTermino;
+        $log->save();
+
+
+        return redirect()->back();
+    }
+
+
     use RegistersUsers;
     /**
      * Get a validator for an incoming registration request.

@@ -73,3 +73,10 @@ Route::get('/test', [ConsultController::class, 'test'])->name('consult.test');
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//CRUD
+Route::get('/eliminar/{id}', [HomeController::class, 'eliminar']);
+// Route::get('/editar/{id}', [HomeController::class, 'muestraeditar']);
+
+// Route::post('/guardar', [HomeController::class, 'guardar']);
+// Route::post('/guardaedicion', [HomeController::class, 'guardarEdicion']);
