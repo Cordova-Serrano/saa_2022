@@ -1,25 +1,19 @@
 # pylint: disable=missing-docstring
-import json
+# import json
+from typing import Dict, List
 
 import pandas as pd
 import plotly.express as px
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from starlette.responses import RedirectResponse
 
 graphAPI = FastAPI()
 
-
-origins = [
-    "http://localhost",
-    "http://localhost:5000",
-    "null",
-]
-
 graphAPI.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -37,7 +31,7 @@ def load_data(file_name):
     """
     Loads the data from the file_name and returns a pandas dataframe."""
     data_frame = pd.read_csv(file_name)
-    data_frame["generación"] = data_frame["generación"].astype(str)
+    data_frame["generation"] = data_frame["generation"].astype(str)
     return data_frame
 
 
@@ -49,7 +43,42 @@ class File(BaseModel):
     file_name: str
 
 
+
 @graphAPI.post("/graph/scatter")
+async def scatter_plot(data: Request):
+
+
+    entries = await data.json()
+
+    data_frame = pd.DataFrame()
+
+    data_frame = data_frame.append(entries["entries"])
+        
+    print(data_frame)
+
+    data_frame["generation"] = data_frame["generation"].astype(str)
+
+    data_frame["cred_aprob_acum"] = (
+        data_frame["semesters_completed"] * data_frame["creds_per_semester"]
+    )
+
+    fig = px.scatter(
+        data_frame,
+        x="cred_aprob_acum",
+        y="creds_per_semester",
+        color="generation",
+        color_discrete_sequence=px.colors.qualitative.G10,
+        hover_name="name",
+        hover_data=["uaslp_key", "large_key", "status"],
+    )
+
+    print(fig.to_json())
+
+    return fig.to_json()
+
+
+
+@graphAPI.post("/file/graph/scatter")
 async def plot_scatter(file: File):
     """
     Create a scatter plot from the data in the file.
@@ -62,10 +91,10 @@ async def plot_scatter(file: File):
         data,
         x="cred_aprob_acum",
         y="promedio_aprobatorio",
-        color="generación",
+        color="generation",
         color_discrete_sequence=px.colors.qualitative.G10,
         hover_name="nombre",
         hover_data=["cve_uaslp", "cve_larga", "situación"],
     )
 
-    return json.loads(fig.to_json())
+    return fig.to_json()

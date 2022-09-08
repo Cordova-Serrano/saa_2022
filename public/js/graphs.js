@@ -3,13 +3,24 @@
 //import Plotly from 'plotly.js'
 
 // load from local file
-fetch('../json/data.json').then(response => response.json()).then(data => {
-    console.log(data);
-    var grap_HTML_div = document.getElementById('graph');
-    Plotly.newPlot(grap_HTML_div, data);
-}).catch(error => {
-    console.log(error);
-}).finally(() => {
-    console.log('finally');
-});
 
+function RenderGraphs(data) {
+    const object_data = {
+        entries: data,
+    };
+    console.log(object_data);
+    const URL = "http://127.0.0.1:8000/graph/scatter";
+    const request = {
+        method: "POST",
+        headers: {"content-type": "application/json", "accept": "application/json"},
+        body: JSON.stringify(object_data),
+    }
+    fetch(URL, request)
+        .then(response => response.json())
+        .then(data => {
+            json_graph = JSON.parse(data);
+
+            Plotly.newPlot('graph', json_graph);
+        }
+    );
+}
