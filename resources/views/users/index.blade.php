@@ -47,7 +47,7 @@
             <div class="card-header">
                 <div class="d-flex flex-wrap justify-content-between">
                     <h3 class="card-title my-auto">Usuarios</h3>
-                    <button type="button" class="btn  btn-sm btn-success" data-toggle="modal" data-target="#modal-csv">
+                    <button type="button" class="btn  btn-sm btn-success" data-toggle="modal" data-target="#modal-register">
                         <i class="fal fa-plus-circle mr-2"></i>Nuevo
                     </button>
                 </div>
@@ -56,30 +56,14 @@
                 <table class="table table-valign-middle table-hover" id="data-table">
                     <thead class="saa-table-header">
                         <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Username</th>
-                            <th scope="col">Eliminar</th>
-                            <th scope="col">Editar</th>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Username</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($users as $user)
-                        <tr>
-                            <th scope="row">{{$user->name}}</th>
-                            <td>{{$user->email}}</td>
-                            <td>{{$user->username}}</td>
-                            <!-- AGREGAR RUTA -->
-                            <td><a href="/eliminar/{{$user->id}}">Eliminar</a></td>
-                            <td>
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{$user->id}}">
-                                    Editar
-                                </button>
-                                <!-- <a data-bs-toggle="modal" data-bs-target="#exampleModal{{$user->id}}">Editar</a> -->
-                            </td>
-                        </tr>
-                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -88,7 +72,7 @@
 </div>
 
 <!-- Modal Añadir nuevo usuario-->
-<div class="modal fade" id="modal-csv" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -97,73 +81,77 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="POST" action="{{ route('users.index') }}" autocomplete="off" id="register-form">
-                @csrf
-                <!-- NAME -->
-                <div class="input-group mb-3">
-                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nombre">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fal fa-user"></span>
+            <div class="modal-body">
+                <!-- FORMULARIO REGISTRO -->
+                <form method="POST" action="{{ route('users.index') }}" autocomplete="off" id="register-form">
+                    @csrf
+                    <!-- NAME -->
+                    <div class="input-group mb-3">
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nombre">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fal fa-user"></span>
+                            </div>
+                        </div>
+                        @error('name')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <!-- /NAME -->
+                    <!-- EMAIL -->
+                    <div class="input-group mb-3">
+                        <input id="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Correo electrónico" required type="email" value="{{ old('email') }}" autocomplete="email">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <i class="fal fa-envelope"></i>
+                            </div>
+                        </div>
+                        @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <!-- /EMAIL -->
+                    <!-- PASSWORD -->
+                    <div class="input-group mb-3">
+                        <input id="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Contraseña" required type="password" autocomplete="new-password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fal fa-lock-alt"></span>
+                            </div>
+                        </div>
+                        @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <!-- /PASSWORD -->
+                    <!-- CONFIRM PASSWORD -->
+                    <div class="input-group mb-3">
+                        <input id="password-confirm" class="form-control" name="password_confirmation" placeholder="Confirma contraseña" required type="password" autocomplete="new-password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fal fa-lock-alt"></span>
+                            </div>
                         </div>
                     </div>
-                    @error('name')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </div>
-                <!-- /NAME -->
-                <!-- EMAIL -->
-                <div class="input-group mb-3">
-                    <input id="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Correo electrónico" required type="email" value="{{ old('email') }}" autocomplete="email">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <i class="fal fa-envelope"></i>
+                    <!-- /CONFIRM PASSWORD -->
+                    <!-- BUTTON -->
+                    <div class="row mb-0">
+                        <div class="col-12 text-center text-sm-right ">
+                            <button type="submit" class="btn btn-sm btn-primary">
+                                <i class="fal fa-sign-in mr-2"></i>{{ __('Registra nuevo usuario') }}
+                            </button>
                         </div>
                     </div>
-                    @error('email')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </div>
-                <!-- /EMAIL -->
-                <!-- PASSWORD -->
-                <div class="input-group mb-3">
-                    <input id="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Contraseña" required type="password" autocomplete="new-password">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fal fa-lock-alt"></span>
-                        </div>
-                    </div>
-                    @error('password')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </div>
-                <!-- /PASSWORD -->
-                <!-- CONFIRM PASSWORD -->
-                <div class="input-group mb-3">
-                    <input id="password-confirm" class="form-control" name="password_confirmation" placeholder="Confirma contraseña" required type="password" autocomplete="new-password">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fal fa-lock-alt"></span>
-                        </div>
-                    </div>
-                </div>
-                <!-- /CONFIRM PASSWORD -->
-                <!-- BUTTON -->
-                <div class="row mb-0">
-                    <div class="col-12 text-center text-sm-right ">
-                        <button type="submit" class="btn btn-sm btn-primary">
-                            <i class="fal fa-sign-in mr-2"></i>{{ __('Registra nuevo usuario') }}
-                        </button>
-                    </div>
-                </div>
-                <!-- /BUTTON -->
-            </form>
+                    <!-- /BUTTON -->
+                </form>
+                <!-- /FORMULARIO REGISTRO -->
+            </div>
         </div>
     </div>
 </div>
@@ -197,10 +185,10 @@
             language: {
                 url: "{{ asset('plugins/datatables/jquery.dataTables.spanish.json') }}"
             },
-            ajax: "{{ route('csv.index') }}",
+            ajax: "{{ route('users.index') }}",
             columnDefs: [{
                 className: 'text-center',
-                targets: [0, 1, 2]
+                targets: [0, 1, 2, 3]
             }, ],
             columns: [{
                     data: 'id'
@@ -209,16 +197,15 @@
                     data: 'name'
                 },
                 {
-                    data: 'created_at',
-                    render: function(data, row, type, meta) {
-                        var dateDay = getDateFormatted(data);
-                        return dateDay;
-                    }
+                    data: 'email'
+                },
+                {
+                    data: 'username'
                 }
             ]
         });
 
-        $('#csv-form').validate({
+        $('#register-form').validate({
             rules: {
                 email: {
                     email: true
@@ -243,59 +230,6 @@
         bsCustomFileInput.init();
         $('#overlay').hide();
     });
-
-
-    $('#document').change(function() {
-        var filename = $(this).val().replace(/.*(\/|\\)/, '')
-        //Ajax Patients
-        /*$.get('/update', function(data) {
-            console.log(data)
-        });*/
-        //Ajax semester
-        $.ajax({
-            url: "/update",
-            type: "get",
-            data: {
-                filename: filename,
-            },
-            success: function(response) {
-                //Do Something
-                console.log(response)
-                if (response == 1) {
-                    //Ya existe, mostrar modal sobreescribir
-                    $modalUpdate = $('#modal-csv-update')
-                    $modalUpdate.modal('show')
-
-                } else {
-                    //No existe subir a base de datos
-                    $('#is_update').val(0)
-                }
-            },
-            error: function(xhr) {
-                //Do Something to handle error
-                console.log(xhr)
-            }
-        });
-    })
-
-    $('#accept-update').click(function() {
-        $('#is_update').val(1)
-        $('#csv-form').submit();
-    })
-
-    function getDateFormatted(e) {
-        let date = new Date(e)
-        let year = date.getFullYear()
-        let month = ('0' + (date.getMonth() + 1)).slice(-2)
-        let day = date.getDate()
-        let hour = date.getHours()
-        let min = String(date.getMinutes()).padStart(2, '0')
-
-        //Date Formatted
-        date = day + '/' + month + '/' + year + " " + hour + ":" + min
-
-        return date
-    }
 
     $(function() {
         $('#register-form').validate({
