@@ -127,13 +127,15 @@
 @section ('plugins')
 <!-- Form Validations -->
 <script src="{{ asset('plugins/jquery-validation/jquery.validate.js') }}"></script>
-<script src="{{ asset('plugins/jquery-validation/localization/messages_es.js') }}"></script>
+<!--<script src="{{ asset('plugins/jquery-validation/localization/messages_es.js') }}"></script>-->
+<script type="text/javascript" src="{{ asset('plugins/jquery-validation/localization/messages_es.js') }}"></script>
 @endsection
 
 @section ('scripts')
 <script type="text/javascript">
     $(function() {
         $('#login-form').validate({
+                lang: 'es',
                 errorPlacement: function (error, element) {
                     error.addClass('form-check-label invalid-feedback');
                     element.closest('.input-group').append(error);
