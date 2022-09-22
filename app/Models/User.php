@@ -12,10 +12,6 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable, SoftDeletes, HasApiTokens;
 
-    protected $appends = [
-        'profile_photo_url'
-    ];
-
     protected $casts = [
         'email_verified_at' => 'datetime'
     ];

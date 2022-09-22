@@ -24,26 +24,19 @@ class UserController extends Controller
 
             return DataTables::of($model)->toJson();
         }
+        // $model = User::with('roles')->get();
+        // dd($model);
         return view('users.index');
     }
 
-    // public function guardar(Request $request)
-    // {
-    //     $users = new User();
-    //     $users->name = $request->name;
-    //     $users->email = $request->email;
-    //     $users->username = $request->uername;
-    //     $users->password = $request->password;
-    //     $users->save();
+    public function create()
+    {
+        return view('users.create');
+    }
 
-    //     $log = new logUsers();
-    //     $log->idarticulo = $users->id;
-    //     $log->nombreN = $users->nombre;
-    //     $log->piezasN = $users->piezas;
-    //     $log->fechaTerminoN = $users->fechaTermino;
-    //     $log->save();
-
-
-    //     return redirect()->back();
-    // }
+    public function store(Request $request)
+    {
+        dd($request->all());
+        return view('users.index');
+    }
 }

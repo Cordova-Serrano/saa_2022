@@ -47,9 +47,9 @@
             <div class="card-header">
                 <div class="d-flex flex-wrap justify-content-between">
                     <h3 class="card-title my-auto">Usuarios</h3>
-                    <button type="button" class="btn  btn-sm btn-success" data-toggle="modal" data-target="#modal-register">
+                    <a class="btn btn-sm btn-success" href="{{ route('users.create') }}">
                         <i class="fal fa-plus-circle mr-2"></i>Nuevo
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="card-body">
@@ -70,91 +70,6 @@
         </div>
     </div>
 </div>
-
-<!-- Modal Añadir nuevo usuario-->
-<div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title-saa">Nuevo usuario</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- FORMULARIO REGISTRO -->
-                <form method="POST" action="{{ route('users.index') }}" autocomplete="off" id="register-form">
-                    @csrf
-                    <!-- NAME -->
-                    <div class="input-group mb-3">
-                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nombre">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fal fa-user"></span>
-                            </div>
-                        </div>
-                        @error('name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <!-- /NAME -->
-                    <!-- EMAIL -->
-                    <div class="input-group mb-3">
-                        <input id="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Correo electrónico" required type="email" value="{{ old('email') }}" autocomplete="email">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <i class="fal fa-envelope"></i>
-                            </div>
-                        </div>
-                        @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <!-- /EMAIL -->
-                    <!-- PASSWORD -->
-                    <div class="input-group mb-3">
-                        <input id="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Contraseña" required type="password" autocomplete="new-password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fal fa-lock-alt"></span>
-                            </div>
-                        </div>
-                        @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <!-- /PASSWORD -->
-                    <!-- CONFIRM PASSWORD -->
-                    <div class="input-group mb-3">
-                        <input id="password-confirm" class="form-control" name="password_confirmation" placeholder="Confirma contraseña" required type="password" autocomplete="new-password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fal fa-lock-alt"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /CONFIRM PASSWORD -->
-                    <!-- BUTTON -->
-                    <div class="row mb-0">
-                        <div class="col-12 text-center text-sm-right ">
-                            <button type="submit" class="btn btn-sm btn-primary">
-                                <i class="fal fa-sign-in mr-2"></i>{{ __('Registra nuevo usuario') }}
-                            </button>
-                        </div>
-                    </div>
-                    <!-- /BUTTON -->
-                </form>
-                <!-- /FORMULARIO REGISTRO -->
-            </div>
-        </div>
-    </div>
-</div>
 @endsection
 
 @section ('plugins')
@@ -166,8 +81,6 @@
 <script src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
 <script src="{{ asset('plugins/datatables-responsive/js/dataTables.responsive.js') }}"></script>
 <script src="{{ asset('plugins/datatables-responsive/js/responsive.bootstrap4.js') }}"></script>
-<!-- Files -->
-<script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
 @endsection
 
 @section ('scripts')
@@ -187,9 +100,15 @@
             },
             ajax: "{{ route('users.index') }}",
             columnDefs: [{
-                className: 'text-center',
-                targets: [0, 1, 2, 3]
-            }, ],
+                    className: 'text-center',
+                    targets: [0, 1, 2, 3,4]
+                },
+                {
+                    orderable: false,
+                    searchable: false,
+                    targets: 4
+                }
+            ],
             columns: [{
                     data: 'id'
                 },
@@ -201,56 +120,28 @@
                 },
                 {
                     data: 'username'
+                },
+                {
+                    data: null,
+                    className: 'text-center',
+                    defaultContent: '',
+                    createdCell: function(td, cellData, rowData, row, col) {
+                        $(td).prepend(
+                            `<div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-warning edit-record mr-1" title="Editar">
+                                    <i class="fal fa-pencil-alt"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-danger delete-record" title="Eliminar">
+                                    <i class="fal fa-trash-alt"></i>
+                                </button>
+                            </div>`
+                        );
+                    }
                 }
             ]
         });
 
-        $('#register-form').validate({
-            rules: {
-                email: {
-                    email: true
-                }
-            },
-            errorPlacement: function(error, element) {
-                error.addClass('form-check-label invalid-feedback');
-                element.closest('div').append(error);
-            },
-            highlight: function(element, errorClass, validClass) {
-                $(element).addClass('is-invalid');
-            },
-            unhighlight: function(element, errorClass, validClass) {
-                $(element).removeClass('is-invalid');
-            },
-            submitHandler: function(form) {
-                $('#overlay').show();
-
-                return true;
-            }
-        });
-        bsCustomFileInput.init();
         $('#overlay').hide();
     });
-
-    $(function() {
-        $('#register-form').validate({
-            errorPlacement: function(error, element) {
-                error.addClass('form-check-label invalid-feedback');
-                element.closest('.input-group').append(error);
-            },
-            highlight: function(element, errorClass, validClass) {
-                $(element).addClass('is-invalid');
-            },
-            unhighlight: function(element, errorClass, validClass) {
-                $(element).removeClass('is-invalid');
-            },
-            submitHandler: function(form) {
-                $('#overlay').show();
-
-                return true;
-            }
-        });
-
-        $('#overlay').hide();
-    })
 </script>
 @endsection
