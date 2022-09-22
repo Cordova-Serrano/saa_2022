@@ -69,7 +69,27 @@
 
 @section ('scripts')
 <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
-<script type="text/javascript" src="{{ asset('js/graphs.js') }}"></script>
+<script type="text/javascript">
+    function RenderGraphs(records) {
+        const URL = "http://127.0.0.1:8000/graph/scatter";
+        const request = {
+            method: "POST",
+            headers: {"content-type": "application/json", "accept": "application/json"},
+            body: JSON.stringify({
+                records: records
+            }),
+        }
+        console.log(request);
+        fetch(URL, request)
+            .then(response => response.json())
+            .then(data => {
+                json_graph = JSON.parse(data);
+
+                Plotly.newPlot('graph', json_graph);
+            }
+        );
+    }
+</script>
 <script type="text/javascript">
     //Initialize Select2 Elements
     $('.select2').select2()

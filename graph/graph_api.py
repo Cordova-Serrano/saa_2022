@@ -1,10 +1,9 @@
 # pylint: disable=missing-docstring
 # import json
-from typing import Dict, List
 
 import pandas as pd
 import plotly.express as px
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from starlette.responses import RedirectResponse
@@ -27,36 +26,30 @@ async def root():
     return RedirectResponse(url="/docs")
 
 
-def load_data(file_name):
-    """
-    Loads the data from the file_name and returns a pandas dataframe."""
-    data_frame = pd.read_csv(file_name)
-    data_frame["generation"] = data_frame["generation"].astype(str)
-    return data_frame
+class Student(BaseModel):
+    name: str
+    uaslp_key: str
+    large_key: str
+    status: str
+    generation: str
+    semesters_completed: int
+    creds_per_semester: float
 
 
-class File(BaseModel):
-    """
-    Path to the file to be loaded
-    """
-
-    file_name: str
-
+class StudentList(BaseModel):
+    records: list[Student]
 
 
 @graphAPI.post("/graph/scatter")
-async def scatter_plot(data: Request):
+async def scatter_plot(data: StudentList):
 
+    print(type(data.records))
 
-    entries = await data.json()
+    data_frame = pd.DataFrame.from_records(
+        map(lambda student: student.dict(), data.records)
+    )
 
-    data_frame = pd.DataFrame()
-
-    data_frame = data_frame.append(entries["entries"])
-        
     print(data_frame)
-
-    data_frame["generation"] = data_frame["generation"].astype(str)
 
     data_frame["cred_aprob_acum"] = (
         data_frame["semesters_completed"] * data_frame["creds_per_semester"]
@@ -70,31 +63,6 @@ async def scatter_plot(data: Request):
         color_discrete_sequence=px.colors.qualitative.G10,
         hover_name="name",
         hover_data=["uaslp_key", "large_key", "status"],
-    )
-
-    print(fig.to_json())
-
-    return fig.to_json()
-
-
-
-@graphAPI.post("/file/graph/scatter")
-async def plot_scatter(file: File):
-    """
-    Create a scatter plot from the data in the file.
-
-    Returns a plotly figure on json format to be rendered in the browser.
-    """
-
-    data = load_data(file.file_name)
-    fig = px.scatter(
-        data,
-        x="cred_aprob_acum",
-        y="promedio_aprobatorio",
-        color="generation",
-        color_discrete_sequence=px.colors.qualitative.G10,
-        hover_name="nombre",
-        hover_data=["cve_uaslp", "cve_larga", "situación"],
     )
 
     return fig.to_json()
