@@ -28,18 +28,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return view('welcome');
     })->name('home');
-
-    Route::get('profile', 'ProfileController@index')->name('profile.index');
-    Route::post('profile/{user}/update', 'ProfileController@update')->name('profile.update');
-
-    Route::get('password/edit', 'PasswordController@edit')->name('password.edit');
-    Route::post('password/update', 'PasswordController@update')->name('password.update');
 });
 
 Route::middleware(['check.role:super'])->group(function () {
     Route::resource('users', UserController::class);
-
-    Route::post('password/{user}/reset', 'PasswordController@reset')->name('password.reset');
 });
 
 
@@ -60,9 +52,6 @@ Route::resource('graphs', GraphsController::class)->middleware('auth');
 Route::resource('consult', ConsultController::class)->middleware('auth');
 
 Route::get('/update', [CSVController::class, 'updateDoc']);
-// Route::get('/load_semester', [ConsultController::class, 'loadSemester']);
-// Route::get('/load_career', [CareerController::class, 'loadCareer']);
-// Route::get('/load_generation', [GenerationController::class, 'loadGeneration']);
 
 Route::get('/load_query', [QueryController::class, 'loadQuery']);
 Route::get('/clean_query', [QueryController::class, 'cleanQuery']);
@@ -74,9 +63,3 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//CRUD
-Route::get('/eliminar/{id}', [HomeController::class, 'eliminar']);
-// Route::get('/editar/{id}', [HomeController::class, 'muestraeditar']);
-
-// Route::post('/guardar', [HomeController::class, 'guardar']);
-// Route::post('/guardaedicion', [HomeController::class, 'guardarEdicion']);
