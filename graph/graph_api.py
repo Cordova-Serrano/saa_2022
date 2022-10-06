@@ -43,13 +43,9 @@ class StudentList(BaseModel):
 @graphAPI.post("/graph/scatter")
 async def scatter_plot(data: StudentList):
 
-    print(type(data.records))
-
     data_frame = pd.DataFrame.from_records(
         map(lambda student: student.dict(), data.records)
     )
-
-    print(data_frame)
 
     data_frame["cred_aprob_acum"] = (
         data_frame["semesters_completed"] * data_frame["creds_per_semester"]
