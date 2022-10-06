@@ -41,3 +41,42 @@ En la terminal de laragon ingresar el comando:
 composer require laravel/ui
 ```
 En el archivo vendor/laravel/ui/auth-backend/AuthenticatesUsers.php linea 157 modificar 'email' por 'username'
+
+# Iniciar Servidor Python
+
+Si es la primera vez que se ejecuta el servidor, se debe crear un entorno virtual de python y activarlo. Para esto, se debe ejecutar el siguiente comando en la carpeta del proyecto:
+
+```powershell
+python -m venv .venv
+```
+## Activar entorno virtual
+
+**Windows Powershell:**
+
+```powershell
+& .venv\Scripts\Activate.ps1
+```
+
+**Windows CMD:**
+
+```cmd
+.venv\Scripts\activate.bat
+```
+
+**Linux/MacOS:**
+
+```bash
+source .venv/bin/activate
+```
+
+## Instalar dependencias
+
+```shell
+pip install -r graph/requirements.txt
+```
+
+## Ejecutar servidor
+
+```shell
+uvicorn graph.graph_api:graphAPI
+```
