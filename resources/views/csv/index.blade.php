@@ -201,6 +201,7 @@
 
 
     $('#document').change(function() {
+        validateExt();
         var filename = $(this).val().replace(/.*(\/|\\)/, '')
         //Ajax Patients
         /*$.get('/update', function(data) {
@@ -250,6 +251,13 @@
         date = day + '/' + month + '/' + year + " " + hour + ":" + min
 
         return date
+    }
+    function validateExt(){
+        var ext = $('#document').val().split('.')[1];//get extension of file
+        if( ext != 'csv'){
+            alert('Seleccione un archivo valido con extensión .csv');
+            $('#document').val('');
+        }
     }
 </script>
 @endsection
