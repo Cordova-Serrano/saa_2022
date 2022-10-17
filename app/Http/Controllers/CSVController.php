@@ -131,15 +131,25 @@ class CSVController extends Controller
                 //Students
                 $uaslp_key = ($data_excel[$i])[0];
                 $large_key = ($data_excel[$i])[1];
-                $generation = ($data_excel[$i])[2];
+                //$generation = ($data_excel[$i])[2];
                 $name = ($data_excel[$i])[3];
-                $career = ($data_excel[$i])[4];
-                
+                //$career = ($data_excel[$i])[4];
+                //data obtained from large key
+                $generation_lk = substr($large_key,0,4);//generation
+                //$s_lk = substr($large_key,4,1);//sex
+                $c_key = substr($large_key,5,2);
+                if(strcmp( $c_key,"15")) $career_lk = "INGENIERÍA EN COMPUTACIÓN";//career
+                else
+                if(strcmp($c_key,"23")) $career_lk = "INGENIERÍA EN SISTEMAS INTELIGENTES";//career
+                // dd(substr($large_key,5,2));
+                $ingreso_lk = substr($large_key,7,1);//way of entry
+                // dd(intval(substr($large_key,7,2)));
+
                 //Career
-                if (isset(Career::where('name', $career)->first()->name)) {
+                if (isset(Career::where('name', $career_lk)->first()->name)) {
                 } else {
                     $new_career = new Career([
-                        "name" => $career,
+                        "name" => $career_lk,
                     ]);
                     $new_career->save();
                 }
@@ -149,9 +159,10 @@ class CSVController extends Controller
                     $student->fill([
                         "uaslp_key" => $uaslp_key,
                         "large_key" => $large_key,
-                        "generation" => $generation,
+                        "generation" => $generation_lk,
                         "name" => $name,
-                        "career" => $career,
+                        "career" => $career_lk,
+                        "type" => intval($ingreso_lk),
                     ]);
                     $student->save();
                     $data = new Data([
@@ -173,9 +184,10 @@ class CSVController extends Controller
                     $student = new Student([
                         "uaslp_key" => $uaslp_key,
                         "large_key" => $large_key,
-                        "generation" => $generation,
+                        "generation" => $generation_lk,
                         "name" => $name,
-                        "career" => $career,
+                        "career" => $career_lk,
+                        "type" => $ingreso_lk,
                     ]);
                     $data = new Data([
                         'status' => $register_excel[5],
