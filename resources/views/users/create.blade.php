@@ -53,7 +53,7 @@
                 @csrf
                 <div class="card-body">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-sm-6">
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label mt-2" for="name">Nombre</label>
                                 <div class="col-sm-9 mt-2">
@@ -61,12 +61,39 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label mt-2" for="name">Rol</label>
+                                <label class="col-sm-3 col-form-label mt-2" for="name">Nombre de usuario</label>
                                 <div class="col-sm-9 mt-2">
-                                    <input class="form-control" maxlength="255" name="name" placeholder="Nombre" required type="text" value="{{ old('name') }}">
+                                    <input class="form-control" maxlength="255" name="username" placeholder="Nombre de usuario" required type="text">
                                 </div>
+                            </div>
+                        </div>   
+                        <div class="col-sm-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label mt-2" for="name">Correo electrónico</label>
+                                <div class="col-sm-9 mt-2">
+                                    <input class="form-control" maxlength="255" name="email" placeholder="Correo electrónico" required type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label mt-2" for="name">Contraseña</label>
+                                <div class="col-sm-9 mt-2">
+                                    <input class="form-control" maxlength="255" name="password" placeholder="Contraseña" required type="password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="col-sm-3 col-form-label mt-2" for="name">Seleccionar rol</label>
+                            <div class="form-group row">
+                                <select class="form-control select2 select2-reflex-blue" style="width: 100%" data-dropdown-css-class="select2-reflex-blue" data-placeholder="Seleccione generacion" id="rol" name="role" required>
+                                    <option selected value=''>Seleccionar rol</option>
+                                    <option value="super">Super Administrador</option> 
+                                    <option value="admin">Administrador</option>
+                                    <option value="user">Usuario</option>
+                                </select>
                             </div>
                         </div>
                     </div>

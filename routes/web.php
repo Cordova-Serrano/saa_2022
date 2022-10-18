@@ -31,13 +31,20 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::middleware(['check.role:super'])->group(function () {
-    Route::resource('users', UserController::class);
+    $routes = ['except' => ['show']];
+    Route::resource('users', UserController::class, $routes);
+
+    //Route::get('/users/{user}/edit', [UserController::class, 'edit']);
+    //Route::put('/users/update', [UserController::class, 'update']);
+    Route::get('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+    //Route::delete('/users/{user}/destroy', [UserController::class, 'destroy']);
 });
 
 
 Route::get('/home', function () {
     return view('welcome');
 });
+
 
 Route::get('/', function () {
     return view('login');
@@ -62,4 +69,5 @@ Route::get('/test', [ConsultController::class, 'test'])->name('consult.test');
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 

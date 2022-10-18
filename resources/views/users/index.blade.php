@@ -122,26 +122,78 @@
                     data: 'username'
                 },
                 {
-                    data: null,
                     className: 'text-center',
                     defaultContent: '',
-                    createdCell: function(td, cellData, rowData, row, col) {
+                    createdCell: function(td, cellData, rowData, row, col, data, id, meta) {
+                        // console.log(rowData.id);
                         $(td).prepend(
                             `<div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-warning edit-record mr-1" title="Editar">
+                                <button type="button" class="update btn btn-sm btn-warning edit-user mr-1 update" title="Editar">
                                     <i class="fal fa-pencil-alt"></i>
                                 </button>
-                                <button type="button" class="btn btn-sm btn-danger delete-record" title="Eliminar">
+                                <button type="button" class="btn btn-sm btn-danger delete-user" title="Eliminar">
                                     <i class="fal fa-trash-alt"></i>
                                 </button>
                             </div>`
                         );
+                        //console.log(data.id);
+                        $(td).addClass(data);
                     }
                 }
-            ]
+            ],
+            drawCallback: () => {
+                $('.edit-user').on('click', (e) => {
+                    let user = dt.row($(e.currentTarget).closest('tr')).data();
+                    console.log(user);
+                    editRecord(user);
+                });
+
+                $('.delete-user').on('click', (e) => {
+                    let user = dt.row($(e.currentTarget).closest('tr')).data();
+                    deleteRecord(user);
+                });
+            }
         });
 
         $('#overlay').hide();
     });
+
+    /*$(document).ready( function () {
+        $('button.update').on('click', function() {
+            //var filename = $(this).val().replace(/.*(\/|\\)/, '')
+            //var data = table.row( row ).data().name;
+            console.log("1");
+            //Ajax semester
+            $.ajax({
+                url: "/update",
+                type: "get",
+                data: {
+                    filename: filename,
+                },
+                success: function(response) {
+                },
+                error: function(xhr) {
+
+                }
+            });
+        });
+    });*/
+
+    function editRecord(user) {
+        let route = "{{ route('users.edit', ['user' => 'id']) }}";
+        route = route.replace('id', user.id);
+
+        window.location.href = route;
+    }
+
+    function deleteRecord(user){
+        let route = "{{ route('users.destroy', ['user' => 'id']) }}";
+        route = route.replace('id', user.id);
+
+        window.location.href = route;
+    }
+
+
+
 </script>
 @endsection
