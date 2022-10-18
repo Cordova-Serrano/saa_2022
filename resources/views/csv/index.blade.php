@@ -112,7 +112,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                Ya existe un achivo existente <br>
+                Archivo ya existente <br>
                 ¿Está seguro de querer actualizarlo?
             </div>
             <div class="modal-footer  justify-content-between">
