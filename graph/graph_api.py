@@ -40,16 +40,36 @@ class StudentList(BaseModel):
     records: list[Student]
 
 
-@graphAPI.post("/graph/scatter")
-async def scatter_plot(data: StudentList):
-
+def get_dataframe(student_list: StudentList) -> pd.DataFrame:
     data_frame = pd.DataFrame.from_records(
-        map(lambda student: student.dict(), data.records)
+        map(lambda student: student.dict(), student_list.records)
     )
 
     data_frame["cred_aprob_acum"] = (
         data_frame["semesters_completed"] * data_frame["creds_per_semester"]
     )
+
+    data_frame["cred_rezago"] = (
+        data_frame["semesters_completed"] * 45 - data_frame["cred_aprob_acum"]
+    )
+
+    data_frame["nivel_rezago"] = data_frame["cred_rezago"].apply(
+        lambda cred_rezago: (
+            "Sin rezago"
+            if cred_rezago <= 0
+            else "Rezago leve"
+            if cred_rezago <= 10
+            else "Rezago grave"
+        )
+    )
+
+    return data_frame
+
+
+@graphAPI.post("/graph/scatter")
+async def scatter_plot(data: StudentList):
+
+    data_frame = get_dataframe(data)
 
     fig = px.scatter(
         data_frame,
@@ -60,5 +80,36 @@ async def scatter_plot(data: StudentList):
         hover_name="name",
         hover_data=["uaslp_key", "large_key", "status"],
     )
+
+    return fig.to_json()
+
+
+@graphAPI.post("/graph/bar")
+async def bar_plot(data: StudentList):
+
+    data_frame = get_dataframe(data)
+
+    fig = px.histogram(
+        data_frame,
+        x="generation",
+        color="nivel_rezago",
+        color_discrete_map={
+            "Sin rezago": "rgb(0, 255, 0)",
+            "Rezago leve": "rgb(255, 255, 0)",
+            "Rezago grave": "rgb(255, 0, 0)",
+        },
+        hover_name="name",
+        hover_data=["uaslp_key", "large_key", "status"],
+    )
+
+    # fig = px.bar(
+    #     data_frame,
+    #     x="generation",
+    #     y="cred_rezago",
+    #     color="nivel_rezago",
+    #     color_discrete_sequence=px.colors.qualitative.G10,
+    #     hover_name="name",
+    #     hover_data=["uaslp_key", "large_key", "status"],
+    # )
 
     return fig.to_json()

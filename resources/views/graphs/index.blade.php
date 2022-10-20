@@ -25,6 +25,13 @@
                     </div>
                     <div class="col d-flex justify-content-end">
                         <div class="mr-2">
+                            <!-- Dropdown with the options: [Creditos Acumulados, Rezago Académico] -->
+                            <select class="form-control select2" id="select-graph" style="width: 100%;">
+                                <option value="0" selected>Créditos Acumulados</option>
+                                <option value="1">Rezago Académico</option>
+                            </select>
+
+
                             <select class="form-control select2 select2-reflex-blue" style="width: 100%" data-dropdown-css-class="select2-reflex-blue" data-placeholder="Seleccione el semestre" id="semesters" name="" required>
                             {{-- <option selected value=''>Seleccionar semestre</option> --}}
                             </select>
@@ -71,7 +78,7 @@
 <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
 <script type="text/javascript">
     function RenderGraphs(records) {
-        const URL = "http://127.0.0.1:8000/graph/scatter";
+        const URL = "http://127.0.0.1:8000/graph/bar";
         const request = {
             method: "POST",
             headers: {"content-type": "application/json", "accept": "application/json"},
