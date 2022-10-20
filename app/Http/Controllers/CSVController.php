@@ -11,7 +11,7 @@ use App\Models\Data;
 use App\Models\Semester;
 use App\Models\Career;
 use App\Models\File;
-
+use Illuminate\Support\Facades\DB;
 class CSVController extends Controller
 {
     public function __construct()
@@ -58,6 +58,8 @@ class CSVController extends Controller
                 "semester" => $semester_str,
             ]);
         }
+        $error_array_s = array();
+            $error_array_d = array();
         //Overwrite semester data
         if ($request->is_update == 1) {
             
@@ -177,9 +179,14 @@ class CSVController extends Controller
                         'subjects_approved' => check_value($register_excel[13]),
                         'subjects_failed' => check_value($register_excel[14]),
                     ]);
-                    $semester->save();
-                    $data->save();
-                    $student->data()->attach($data->id, ['semester_id' => $semester->id, 'file_id' => $file->id]);
+                    
+                    try {
+                        $semester->save();
+                        $data->save();
+                        $student->data()->attach($data->id, ['semester_id' => $semester->id, 'file_id' => $file->id]);
+                    } catch (\Throwable $th) {
+                        //throw $th;
+                    }
                 } else {
                     $student = new Student([
                         "uaslp_key" => $uaslp_key,
@@ -201,10 +208,27 @@ class CSVController extends Controller
                         'subjects_approved' => check_value($register_excel[13]),
                         'subjects_failed' => check_value($register_excel[14]),
                     ]);
-                    $student->save();
-                    $data->save();
+                    $fs=0;
                     $semester->save();
-                    $student->data()->attach($data->id, ['semester_id' => $semester->id, 'file_id' => $file->id]);
+                    try {//intenta guardar registro de students
+                        $student->save();
+                        
+                    } catch (\Throwable $th) {
+                        $fs = 1;//cuando hay error en students cambia la bandera para no guardar su data
+                        array_push($error_array_s,$i + 1); //deteccion de errores en students
+                    }
+                    try {
+                        if($fs == 0){//en caso de que los datos de alumno sean correctos
+                            $data->save(); 
+                            $student->data()->attach($data->id, ['semester_id' => $semester->id, 'file_id' => $file->id]);
+                        }
+                        
+                    } catch (\Throwable $th) {//si hay error en data, borra el registro de estudiante
+                        DB::table('students')->
+                        orderBy('id', 'desc')->limit(1)->delete();
+                        array_push($error_array_d,$i + 1);//deteccion de errores en data
+                    }
+
                 }
             }
         }
