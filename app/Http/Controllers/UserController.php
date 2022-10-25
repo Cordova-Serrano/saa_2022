@@ -93,11 +93,10 @@ class UserController extends Controller
     {
         //dd($user);
         $id = $user->id;
-        $user_table = User::where('id', $id)->first();
-        $user_table->delete();
-
         $role_table = RoleUser::where('user_id', $id)->first();
         $role_table->delete();
+        $user_table = User::where('id', $id)->first();
+        $user_table->delete();
         return redirect()->route('users.index');
         /*if ($user->expedient()->exists()) {
             return redirect()->route('users.index')->with('error', 'El usuario no puede ser eliminado.');
