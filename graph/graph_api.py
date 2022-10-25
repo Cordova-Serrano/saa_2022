@@ -42,8 +42,6 @@ class StudentList(BaseModel):
 
 def get_dataframe(student_list: StudentList) -> pd.DataFrame:
 
-    print(student_list)
-
     data_frame = pd.DataFrame.from_records(
         map(lambda student: student.dict(), student_list.records)
     )
