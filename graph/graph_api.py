@@ -41,6 +41,9 @@ class StudentList(BaseModel):
 
 
 def get_dataframe(student_list: StudentList) -> pd.DataFrame:
+
+    print(student_list)
+
     data_frame = pd.DataFrame.from_records(
         map(lambda student: student.dict(), student_list.records)
     )
@@ -101,15 +104,5 @@ async def bar_plot(data: StudentList):
         hover_name="name",
         hover_data=["uaslp_key", "large_key", "status"],
     )
-
-    # fig = px.bar(
-    #     data_frame,
-    #     x="generation",
-    #     y="cred_rezago",
-    #     color="nivel_rezago",
-    #     color_discrete_sequence=px.colors.qualitative.G10,
-    #     hover_name="name",
-    #     hover_data=["uaslp_key", "large_key", "status"],
-    # )
 
     return fig.to_json()
