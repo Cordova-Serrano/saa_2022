@@ -11,7 +11,7 @@ class Student extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'uaslp_key', 'large_key', 'generation', 'name', 'career'
+        'uaslp_key', 'large_key', 'generation', 'name', 'career_id'
     ];
 
     protected $hidden = [
@@ -22,5 +22,10 @@ class Student extends Model
     {
         return $this->belongsToMany(Data::class, 'student_data_semester', 'student_id', 'data_id')
             ->withPivot('semester_id','file_id');
+    }
+
+    public function career()
+    {
+        return $this->belongsTo(Career::class);
     }
 }

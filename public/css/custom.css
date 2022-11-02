@@ -18,3 +18,8 @@ body {
     background-color: #EDF2F7;
     border-bottom: #EDF2F7;
 }
+
+.saa-bg-color{
+    background-color: #004A98 !important;
+    color: white;
+}

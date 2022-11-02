@@ -47,9 +47,10 @@
             <div class="card-header">
                 <div class="d-flex flex-wrap justify-content-between">
                     <h3 class="card-title my-auto">Subir / Actualizar archivo CSV</h3>
-                    <button type="button" class="btn  btn-sm btn-success" data-toggle="modal" data-target="#modal-csv">
-                        <i class="fal fa-plus-circle mr-2"></i>Nuevo
-                    </button>
+
+                    <a class="btn btn-sm btn-warning" href="{{ route('csv.import') }}">
+                        <i class="fas fa-download mr-2"></i>Importar
+                    </a>
                 </div>
             </div>
             <div class="card-body">
@@ -90,7 +91,7 @@
                                 <label class="custom-file-label" for="exampleInputFile">Seleccione el archivo</label>
                             </div>
                         </div>
-                        <input type="text" class="form-control" id="is_update" name="is_update"hidden>
+                        <input type="text" class="form-control" id="is_update" name="is_update" hidden>
                     </div>
                 </div>
                 <div class="modal-footer  justify-content-between">
@@ -252,9 +253,10 @@
 
         return date
     }
-    function validateExt(){
-        var ext = $('#document').val().split('.')[1];//get extension of file
-        if( ext != 'csv'){
+
+    function validateExt() {
+        var ext = $('#document').val().split('.')[1]; //get extension of file
+        if (ext != 'csv') {
             alert('Seleccione un archivo valido con extensión .csv');
             $('#document').val('');
         }
