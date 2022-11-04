@@ -46,7 +46,7 @@
             </div>
             <div class="card-header">
                 <div class="d-flex flex-wrap justify-content-between">
-                    <h3 class="card-title my-auto">Nuevo Usuario </h3>
+                    <h3 class="card-title my-auto">Editar Usuario </h3>
                 </div>
             </div>
             <form action="{{ route('users.update', ['user' => '$user']) }}" autocomplete="off" class="form-horizontal" id="user-form" method="post">

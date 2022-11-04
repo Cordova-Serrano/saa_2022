@@ -6,17 +6,15 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateStudentsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('career');
+            
+            $table->unsignedBigInteger('career_id');
+            $table->foreign('career_id')->references('id')->on('careers');
+
             $table->string('generation');
             $table->integer('uaslp_key')->unique(); //Clave única
             $table->bigInteger('large_key')->unique(); //Clave larga o de ingeniería
@@ -26,11 +24,6 @@ class CreateStudentsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('students');

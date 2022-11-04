@@ -70,6 +70,34 @@
         </div>
     </div>
 </div>
+
+<div aria-hidden="true" aria-labelledby="delete-record" class="modal fade" id="delete-modal" data-backdrop="static" data-keyboard="false" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-danger">
+                <h4 class="modal-title">Eliminar Paciente</h4>
+                <button aria-label="Close" class="close" data-dismiss="modal" title="Cerrar" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-justify">¿Está seguro que desea eliminar al paciente?</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button class="btn btn-sm btn-secondary" data-dismiss="modal" type="button">
+                    <i class="fal fa-times-circle mr-2"></i>Cancelar
+                </button>
+                <form autocomplete="off" id="delete-form" method="post">
+                    @csrf
+                    @method ('DELETE')
+                    <button class="btn btn-sm btn-danger" type="submit">
+                        <i class="fal fa-trash-alt mr-2"></i>Eliminar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section ('plugins')
@@ -148,6 +176,8 @@
                     editRecord(user);
                 });
 
+
+                
                 $('.delete-user').on('click', (e) => {
                     let user = dt.row($(e.currentTarget).closest('tr')).data();
                     deleteRecord(user);
@@ -190,7 +220,12 @@
         let route = "{{ route('users.destroy', ['user' => 'id']) }}";
         route = route.replace('id', user.id);
 
-        window.location.href = route;
+        let modal = $('#delete-modal');
+
+        let form = modal.find('form:first');
+        form.attr('action', route);
+
+        modal.modal('show');
     }
 
 

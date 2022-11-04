@@ -11,9 +11,8 @@ class Data extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'status', 'creds_remaining', 'creds_per_semester', 
-        'semesters_completed', 'percentage_progress', 'general_average', 'general_performance', 'app_average', 'subjects_approved',
-        'subjects_failed'
+        'status', 'creds_remaining', 'creds_per_semester', 'semesters_completed', 'percentage_progress', 'general_average', 
+        'general_performance', 'app_average', 'subjects_approved', 'subjects_failed'
     ];
 
     protected $hidden = [
