@@ -76,6 +76,15 @@ async def scatter_plot(data: StudentList):
         data_frame,
         x="cred_aprob_acum",
         y="creds_per_semester",
+        labels={
+            "cred_aprob_acum": "Créditos aprobados acumulados",
+            "creds_per_semester": "Créditos aprobados por semestre",
+            "generation": "Generación",
+            "status": "Estatus",
+            "name": "Nombre",
+            "uaslp_key": "Clave única",
+            "large_key": "Clave larga de la facultad",
+        },
         color="generation",
         color_discrete_sequence=px.colors.qualitative.G10,
         hover_name="name",
@@ -94,13 +103,16 @@ async def bar_plot(data: StudentList):
         data_frame,
         x="generation",
         color="nivel_rezago",
+        labels={
+            "generation": "Generación",
+            "nivel_rezago": "Nivel de rezago",
+        },
         color_discrete_map={
             "Sin rezago": "rgb(0, 255, 0)",
             "Rezago leve": "rgb(255, 255, 0)",
             "Rezago grave": "rgb(255, 0, 0)",
         },
         hover_name="name",
-        hover_data=["uaslp_key", "large_key", "status"],
     )
 
     return fig.to_json()
