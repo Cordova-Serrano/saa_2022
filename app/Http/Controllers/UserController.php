@@ -66,7 +66,7 @@ class UserController extends Controller
             'name' => 'required|max:100',
             'username' => 'required|max:100',
             'email' => 'required|email:rfc',
-            'password' => 'required|min:8'
+            'password' => 'required|min:8|alpha_num'
         ]);
         $user = new User([
             "name" => $request->name,
