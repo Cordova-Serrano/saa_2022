@@ -27,17 +27,16 @@ class CSVController extends Controller
             return DataTables::of($model)->toJson();
         }
 
-        return view('csv.index');
+        return view('csv.import');
     }
 
     public function store(Request $request)
     {
-        $doc_info = pathinfo(request()->file('document')->getClientOriginalName());
+        $doc_info = pathinfo(request()->file('file')->getClientOriginalName());
         $extension = $doc_info['extension'];
-        //  dd($doc_info);
         $file_name_uns = $doc_info['filename']; //pathinfo(request()->file('document')->getClientOriginalName(), PATHINFO_FILENAME); //obtiene el nombre del archivo sin extencion
         $file_name = explode(" ", $file_name_uns); //separa la cadena en arreglo
-        $excel_array = Excel::toArray([], request()->file('document')); //convierte el archivo subido en arreglo
+        $excel_array = Excel::toArray([], request()->file('file')); //convierte el archivo subido en arreglo
         //Si el nombre de archivo ya existe, se hace un update
         $data_excel = $excel_array[0]; //obtenemos las columnas
         //dd($excel_array, $data_excel);
@@ -47,7 +46,6 @@ class CSVController extends Controller
         //Semester
         $semester_str = $file_name[1];
         //Semestre
-        
         if (isset(Semester::where('semester', $semester_str)->first()->semester)) {
             $semester = Semester::where('semester', $semester_str)->first();
 
@@ -67,12 +65,13 @@ class CSVController extends Controller
             for ($i = 1; $i < count($data_excel); ++$i){//loop to read registers of file
 
                 $register_excel = $data_excel[$i];//get n register
+                $career = Carrer::where('name', $register_excel[4])->first();
                 $t_student = Student::where('uaslp_key', $register_excel[0])->first();
                 if(isset($t_student)){// if student exist, update student
                     $t_student->large_key = $register_excel[1];
                     $t_student->generation = $register_excel[2];
                     $t_student->name = $register_excel[3];
-                    $t_student->career = $register_excel[4];
+                    $t_student->career_id = $career->id ;
                     $t_student->update();
                 }
                 else {//create student register
@@ -81,7 +80,7 @@ class CSVController extends Controller
                         "large_key" => $register_excel[1],
                         "generation" => $register_excel[2],
                         "name" => $register_excel[3],
-                        "career" => $register_excel[4],
+                        "career" => $career->id,
                     ]);
                      $t_student->save();
                      $flag = 1;
@@ -143,12 +142,11 @@ class CSVController extends Controller
                 if(strcmp( $c_key,"15")) $career_lk = "INGENIERÍA EN COMPUTACIÓN";//career
                 else
                 if(strcmp($c_key,"23")) $career_lk = "INGENIERÍA EN SISTEMAS INTELIGENTES";//career
-                // dd(substr($large_key,5,2));
                 $ingreso_lk = substr($large_key,7,1);//way of entry
-                // dd(intval(substr($large_key,7,2)));
 
                 //Career
-                if (isset(Career::where('name', $career_lk)->first()->name)) {
+                $new_career = Career::where('name', $career_lk)->first();
+                if (isset($new_career->name)) {
                 } else {
                     $new_career = new Career([
                         "name" => $career_lk,
@@ -163,10 +161,11 @@ class CSVController extends Controller
                         "large_key" => $large_key,
                         "generation" => $generation_lk,
                         "name" => $name,
-                        "career" => $career_lk,
+                        "career_id" => $new_career->id,
                         "type" => intval($ingreso_lk),
                     ]);
                     $student->save();
+                    dd($student);
                     $data = new Data([
                         'status' => $register_excel[5],
                         'creds_remaining' => check_value($register_excel[6]),
@@ -193,7 +192,7 @@ class CSVController extends Controller
                         "large_key" => $large_key,
                         "generation" => $generation_lk,
                         "name" => $name,
-                        "career" => $career_lk,
+                        "career_id" => $new_career->id,
                         "type" => $ingreso_lk,
                     ]);
                     $data = new Data([
