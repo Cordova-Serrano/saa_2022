@@ -3,12 +3,15 @@
 @section('content')
 <div class="container">
     <div class="justify-content-center">
+        <!-- Card con el fomrulario de login -->
         <div class="card">
             <div class="overlay" id="overlay">
                 <i class="fal fa-2x fa-sync fa-spin"></i>
             </div>
+            <!-- Contenido del card -->
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Ingresa para continuar</p>
+                <!-- Verifica si existe algun error y muestra una alerta en caso de error -->
                 @if ($errors->any())
                 <div class="alert alert-danger alert-dismissible text-justify" id="error-alert">
                     <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
@@ -19,23 +22,9 @@
                 </div>
                 @endif
 
+                <!-- FORMULARIO DE LOGIN -->
                 <form method="POST" action="{{ route('login') }}" autocomplete="off" id="login-form">
                     @csrf
-                    <!-- EMAIL -->
-                    <!-- <div class="input-group mb-3">
-                        <input id="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Correo electrónico" required autofocus type="email" value="{{ old('email') }}" autocomplete="email">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fal fa-user"></span>
-                            </div>
-                        </div>
-                        @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div> -->
-                    <!-- /EMAIL -->
                     <!-- USERNAME -->
                     <div class="input-group mb-3">
                         <input id="username" class="form-control @error('username') is-invalid @enderror" name="username" placeholder="Nombre de usuario" required autofocus type="username" value="{{ old('username') }}" autocomplete="off">
@@ -44,6 +33,7 @@
                                 <span class="fal fa-user"></span>
                             </div>
                         </div>
+                        <!-- Si sale error de username va a mostrar una alerta -->
                         @error('username')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -59,6 +49,7 @@
                                 <span class="fal fa-lock-alt"></span>
                             </div>
                         </div>
+                        <!-- Si sale error de password va a mostrar una alerta -->
                         @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -66,25 +57,13 @@
                         @enderror
                     </div>
                     <!-- /PASSWORD -->
-                    <!-- REMEMBER ME -->
-                    <!-- <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                <label class="form-check-label" for="remember">
-                                    {{ __('Recuérdame') }}
-                                </label>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- /REMEMBER ME -->
                     <!-- BUTTON -->
                     <div class="row">
                         <div class="col-12 text-center text-sm-right">
                             <button type="submit" class="btn btn-sm btn-primary">
                                 <i class="fal fa-sign-in mr-2"></i>{{ __('Iniciar sesión') }}
                             </button>
+                            <!-- Si quiere activar la funcion de olvido contraseña descomentar esta sección -->
                             <!-- FORGOT YOUR PASSWORD? -->
                             <!-- @if (Route::has('password.request'))
                             <a class="btn btn-link" href="{{ route('password.request') }}">
@@ -93,6 +72,7 @@
                             @endif -->
                             <!-- /FORGOT YOUR PASSWORD? -->
                             @guest
+                            <!-- Si quiere activar la funcion de registro descomentar esta sección -->
                             <!-- @if (Route::has('register'))
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Regístrate') }}</a>
                             @endif
@@ -118,6 +98,7 @@
                     </div>
                     <!-- /BUTTON -->
                 </form>
+                <!-- /FORMULARIO DE LOGIN -->
             </div>
         </div>
     </div>
@@ -133,25 +114,26 @@
 
 @section ('scripts')
 <script type="text/javascript">
+    // Valida las credenciales ingresadas en el formulario
     $(function() {
         $('#login-form').validate({
-                lang: 'es',
-                errorPlacement: function (error, element) {
-                    error.addClass('form-check-label invalid-feedback');
-                    element.closest('.input-group').append(error);
-                }, 
-                highlight: function (element, errorClass, validClass) {
-                    $(element).addClass('is-invalid');
-                }, 
-                unhighlight: function (element, errorClass, validClass) {
-                    $(element).removeClass('is-invalid');
-                }, 
-                submitHandler: function (form) {
-                    $('#overlay').show();
+            lang: 'es',
+            errorPlacement: function(error, element) { //define una clase para el elemento de error
+                error.addClass('form-check-label invalid-feedback'); 
+                element.closest('.input-group').append(error);
+            },
+            highlight: function(element, errorClass, validClass) {//se invoca el metodo highlight sobre el elemento que se quiere destacar
+                $(element).addClass('is-invalid');
+            },
+            unhighlight: function(element, errorClass, validClass) {//se invoca el metodo unhighlight sobre el elemento que no se va a resaltar
+                $(element).removeClass('is-invalid');
+            },
+            submitHandler: function(form) { //se invoca el metodo submitHandler para el envio de datos
+                $('#overlay').show();
 
-                    return true;
-                }
-            });
+                return true;
+            }
+        });
 
         $('#overlay').hide();
     })
