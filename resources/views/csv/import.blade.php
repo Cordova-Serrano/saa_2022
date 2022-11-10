@@ -24,6 +24,7 @@
                 <div class="card-body">
                     <div class="row">
                         <input id="logo" type="file" class="dropify" name="file" data-max-file-size="15M" data-allowed-file-extensions="csv" data-default-file="">
+                        <input type="text" class="form-control" id="is_update" name="is_update" hidden>
                     </div>
                     <div class="row mt-4">
                         <div class="alert alert-info alert-dismissible w-100 saa-bg-color">
@@ -120,8 +121,7 @@
         $('#overlay').hide();
     });
 
-    $('#document').change(function() {
-        validateExt();
+    $('#logo').change(function() {
         var filename = $(this).val().replace(/.*(\/|\\)/, '')
         //Ajax Patients
         /*$.get('/update', function(data) {
@@ -156,7 +156,8 @@
 
     $('#accept-update').click(function() {
         $('#is_update').val(1)
-        $('#csv-form').submit();
+        $('#import-form').submit();
     })
+
 </script>
 @endsection
