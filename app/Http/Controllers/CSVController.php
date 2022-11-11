@@ -56,14 +56,12 @@ class CSVController extends Controller
                 "semester" => $semester_str,
             ]);
         }
-        $error_array_s = array();
-            $error_array_d = array();
-        //Overwrite semester data
+        $error_array_s = array();//arreglo para deteccion de errores de estudiantes
+        $error_array_d = array();//arreglo para deteccion de errores de data
+        //Sobreescritura de semestre
         if ($request->is_update == 1) {//verifica si será proceso de sobreescritura o escritura
-            
             $flag = 0;
             for ($i = 1; $i < count($data_excel); ++$i){//ciclo para leer la informacion del archivo
-
                 $register_excel = $data_excel[$i];//obtiene la informacion del registro
                 $career = Career::where('name', $register_excel[4])->first();//obtiene la carrera
                 $large_key = $register_excel[1];//obtiene la clave larga
@@ -83,7 +81,7 @@ class CSVController extends Controller
                     $new_career = new Career([
                         "name" => $career_lk,
                     ]);
-                    $new_career->save();
+                    $new_career->save();//guarda registro de carrera nueva
                 } 
 
                 $t_student = Student::where('uaslp_key', $register_excel[0])->first();//obtiene el estudiante correspondiente 
@@ -102,11 +100,11 @@ class CSVController extends Controller
                         "name" => $register_excel[3],//guarda nombre
                         "career_id" => $new_career->id,//guarda carrera
                     ]);
-                     $t_student->save();
-                     $flag = 1;
+                     $t_student->save();//guarda registro de estudiante en student
+                     $flag = 1;//bandera para conocer si se actualizo estudiante o se creó un nuevo registro
                 }
 
-                if($flag == 0){//si se actualizo estudiante
+                if($flag == 0){//si se actualizo estudiante, queire decir que se actualiza su registro de data
                     $t_student = $t_student->data[0];
                      //Data 
                      $t_student->status = $register_excel[5];
@@ -123,7 +121,7 @@ class CSVController extends Controller
                     $t_student->update();
     
                 }
-                else{//si se creo estudiante
+                else{//si se creo estudiante quiere decir que es un nuevo registro de data
                     $t_data = Data::create([
                         'status' => $register_excel[5],
                         'creds_remaining' => check_value($register_excel[6]),
@@ -136,7 +134,7 @@ class CSVController extends Controller
                         'subjects_approved' => check_value($register_excel[13]),
                         'subjects_failed' => check_value($register_excel[14]),
                     ]);
-                    $t_data->save();
+                    $t_data->save();//se guarda registro de data
                     $ste = 'ACC '.$semester->semester;
                     $info_file = File::where('name', $ste)->first();
                     $t_student->data()->attach($t_data->id, ['semester_id' => $semester->id, 'file_id' => $info_file->id]);
@@ -165,17 +163,24 @@ class CSVController extends Controller
                         $career_lk = "INGENIERÍA EN INFORMÁTICA";
                 $ingreso_lk = substr($large_key,7,1);//manera de ingreso a la facultad
 
-                $new_career = Career::where('name', $career_lk)->first();//consulta carrera
-                if (!isset($new_career->name)) {
+                try {//intenta buscar la carrera
+                    $new_career = Career::where('name', $career_lk)->first();//consulta carrera
+                } catch (\Throwable $th) {
+                    //en caso de que no consiga carrera quiere decir que no está bien la clave larga
+                    $career_lk = null;//no se consiguio una clave de carrera correcta
+                }
+
+                
+                if (!isset($new_career->name) && $career_lk) {//si new_career no esta seteado y career_lk es correcto
                     $new_career = new Career([
                         "name" => $career_lk,
                     ]);
-                    $new_career->save();
+                    $new_career->save();//guarda el registro de carrera en caso de que la clave se haya detectado de manera correcta
                 }
                 
-                if (isset(Student::where('uaslp_key', $uaslp_key)->first()->uaslp_key)) { //Busca si existe el alumno mediande su clave unica
-                    $student = Student::where('uaslp_key', $uaslp_key)->first();
-                    $student->fill([
+                if (isset(Student::where('uaslp_key', $uaslp_key)->first()->uaslp_key) ) { //Busca si existe el alumno mediande su clave unica
+                    $student = Student::where('uaslp_key', $uaslp_key)->first();//obtiene el registro del estudiante
+                    $student->fill([//rellena el esquema para student
                         "uaslp_key" => $uaslp_key,
                         "large_key" => $large_key,
                         "generation" => $generation_lk,
@@ -183,11 +188,11 @@ class CSVController extends Controller
                         "career_id" => $new_career->id,
                         "type" => intval($ingreso_lk),
                     ]);
-                    $student->save();
-                    $data = new Data([
+                    
+                    $data = new Data([//crea el esquema para data
                         'status' => $register_excel[5],
                         'creds_remaining' => check_value($register_excel[6]),
-                        'creds_per_semester' => check_value($register_excel[7]), 
+                        'creds_per_semester' => check_value($register_excel[7]),
                         'semesters_completed' => $register_excel[8],
                         'percentage_progress' => check_value($register_excel[9]),
                         'general_average' => check_value($register_excel[10]),
@@ -198,13 +203,15 @@ class CSVController extends Controller
                     ]);
                     
                     try {//intenta guardar semestre, data de alumno y student
-                        $semester->save();
-                        $data->save();
+                        $student->save();//guarda estudiante
+                        $semester->save();//guarda semestre
+                        $data->save();//guarda data
                         $student->data()->attach($data->id, ['semester_id' => $semester->id, 'file_id' => $file->id]);
                     } catch (\Throwable $th) {
                         //
                     }
                 } else {//si no hay alumno en registro, crea uno nuevo
+                    if ($new_career)//comprueba que new career no sea null
                     $student = new Student([
                         "uaslp_key" => $uaslp_key,
                         "large_key" => $large_key,
@@ -225,7 +232,7 @@ class CSVController extends Controller
                         'subjects_approved' => check_value($register_excel[13]),
                         'subjects_failed' => check_value($register_excel[14]),
                     ]);
-                    $fs=0;//bandera para berificar si es creacion o actualizacion
+                    $fs=0;//bandera para verificar si es creacion o actualizacion
                     $semester->save();
                     try {//intenta guardar registro de students
                         $student->save();
@@ -274,10 +281,10 @@ class CSVController extends Controller
         }
     }
 }
-function check_value($v){
-    if($v != null)
+function check_value($v){//evalua el valor recibido como parametro
+    if($v != null)//en caso de que sea null, lo asigna a la variable 
         $cr = $v;
-    else
+    else//si es null, lo asigna como 0
         $cr = 0;
     return $cr;
     } 
