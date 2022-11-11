@@ -34,32 +34,35 @@ class CSVController extends Controller
     {
         $doc_info = pathinfo(request()->file('file')->getClientOriginalName());
         $extension = $doc_info['extension'];
-        $file_name_uns = $doc_info['filename']; //pathinfo(request()->file('document')->getClientOriginalName(), PATHINFO_FILENAME); //obtiene el nombre del archivo sin extencion
+        $file_name_uns = $doc_info['filename']; 
         $file_name = explode(" ", $file_name_uns); //separa la cadena en arreglo
         $excel_array = Excel::toArray([], request()->file('file')); //convierte el archivo subido en arreglo
         //Si el nombre de archivo ya existe, se hace un update
         $data_excel = $excel_array[0]; //obtenemos las columnas
-        //dd($excel_array, $data_excel);
-        $lenght = count($data_excel);
-        if($extension != 'csv')
-            $lenght = $lenght-1;
-        //Semester
-        $semester_str = $file_name[1];
-        //Semestre
-        if (isset(Semester::where('semester', $semester_str)->first()->semester)) {
-            $semester = Semester::where('semester', $semester_str)->first();
+        $no_process = 0;//variable para verificar que el excel contiene el numero completo de columnas deacuerdo al formato
+        if(count($data_excel[0]) != 16) $no_process = 1;//si no tiene las columnas suficientes
+        else{
+            $lenght = count($data_excel);
+            if($extension != 'csv')
+                $lenght = $lenght-1;
+            //Semester
+            $semester_str = $file_name[1];
+            //Semestre
+            if (isset(Semester::where('semester', $semester_str)->first()->semester)) {
+                $semester = Semester::where('semester', $semester_str)->first();
 
-        } 
-        
-        else {
-            $semester = new Semester([
-                "semester" => $semester_str,
-            ]);
+            } 
+
+            else {
+                $semester = new Semester([
+                    "semester" => $semester_str,
+                ]);
+            }
+            $error_array_s = array();//arreglo para deteccion de errores de estudiantes
+            $error_array_d = array();//arreglo para deteccion de errores de data
         }
-        $error_array_s = array();//arreglo para deteccion de errores de estudiantes
-        $error_array_d = array();//arreglo para deteccion de errores de data
         //Sobreescritura de semestre
-        if ($request->is_update == 1) {//verifica si será proceso de sobreescritura o escritura
+        if ($request->is_update == 1 && $no_process == 0) {//verifica si será proceso de sobreescritura o escritura
             $flag = 0;
             for ($i = 1; $i < count($data_excel); ++$i){//ciclo para leer la informacion del archivo
                 $register_excel = $data_excel[$i];//obtiene la informacion del registro
@@ -140,7 +143,9 @@ class CSVController extends Controller
                     $t_student->data()->attach($t_data->id, ['semester_id' => $semester->id, 'file_id' => $info_file->id]);
                 }
             }
-        } else {//si se sube un nuevo semestre
+        } else 
+        if ($no_process == 0) 
+        {//si se sube un nuevo semestre
             $file = new File([//se crea registro de FIle
                 "name" => $file_name_uns,
             ]);
@@ -168,6 +173,7 @@ class CSVController extends Controller
                 } catch (\Throwable $th) {
                     //en caso de que no consiga carrera quiere decir que no está bien la clave larga
                     $career_lk = null;//no se consiguio una clave de carrera correcta
+                    $new_career = null;
                 }
 
                 
