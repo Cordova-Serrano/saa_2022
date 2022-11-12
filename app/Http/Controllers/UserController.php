@@ -29,11 +29,20 @@ class UserController extends Controller
         return view('users.index');
     }
 
+    /** 
+     * @desc Regresa la vista de crear usuarios
+    
+    */ 
     public function create()
     {
         return view('users.create');
     }
 
+    /** 
+     * @desc Regresa la vista de editar usuarios con información del usuario
+     * @params {User} El usuario a actualizar
+    
+    */ 
     public function edit(User $user)
     {
         //dd($user->roles[0]->name);
@@ -42,6 +51,12 @@ class UserController extends Controller
         return view('users.edit', compact('user', $user));
     }
 
+    /** 
+     * @desc Guarda la nueva información de usuario existente
+     * @params {Request} Información nueva del usuario a almacenar
+     * @returns Vista index de usuario
+    
+    */ 
     public function update(Request $request)
     {
         $id = $request->id;
@@ -58,9 +73,13 @@ class UserController extends Controller
         return redirect()->route('users.index');
     }
 
+    /** 
+     * @desc Guarda la información de un usuario nuevo
+     * @params {Request} Información del usuario a almacenar
+     * @returns Vista index de usuario
+    */ 
     public function store(Request $request)
     {
-        //dd($request->all());
         $role = 0;
         $validated = $request->validate([
             'name' => 'required|max:100',
@@ -89,39 +108,18 @@ class UserController extends Controller
         return view('users.index');
     }
 
+    /** 
+     * @desc Elimina un usuario
+     * @params {User} Usuario a eliminar
+     * @returns Vista index de usuario
+    */ 
     public function destroy(User $user)
     {
-        //dd($user);
         $id = $user->id;
         $role_table = RoleUser::where('user_id', $id)->first();
         $role_table->delete();
         $user_table = User::where('id', $id)->first();
         $user_table->delete();
         return redirect()->route('users.index');
-        /*if ($user->expedient()->exists()) {
-            return redirect()->route('users.index')->with('error', 'El usuario no puede ser eliminado.');
-        } else {
-            $user->updatedBy()->associate(Auth::user());
-            $user->delete();
-
-            return redirect()->route('users.index')->with('success', 'El usuario ha sido eliminado con éxito.');
-        }*/
     }
-
-    /*public function show(Request $request)
-    {
-        $id = $request->id;
-        $user = User::where('id', $id)->first();
-        //dd($user);
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->username = $request->username;
-        $user->password = bcrypt($request->password);
-        $user->save();
-
-        $role = RoleUser::where('user_id', $id)->first();
-        $role->role_id = $request->role;
-        $role->save();
-        return redirect()->route('users.index');
-    }*/
 }
