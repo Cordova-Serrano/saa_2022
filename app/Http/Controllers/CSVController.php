@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use DataTables;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\CSVImport;
 use App\Models\Student;
@@ -12,6 +13,8 @@ use App\Models\Semester;
 use App\Models\Career;
 use App\Models\File;
 use Illuminate\Support\Facades\DB;
+
+
 class CSVController extends Controller
 {
     public function __construct()
@@ -27,6 +30,15 @@ class CSVController extends Controller
             return DataTables::of($model)->toJson();
         }
 
+        return view('csv.index');
+    }
+
+    /** 
+     * @desc Regresa la vista de importar archivo
+    
+    */
+    public function import()
+    {
         return view('csv.import');
     }
 

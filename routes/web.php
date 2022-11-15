@@ -59,11 +59,16 @@ Route::resource('graphs', GraphsController::class)->middleware('auth');
 Route::resource('consult', ConsultController::class)->middleware('auth');
 
 Route::get('/update', [CSVController::class, 'updateDoc']);
+// Route::get('/import', [CSVController::class, 'import']);s
 
 Route::get('/load_query', [QueryController::class, 'loadQuery']);
 Route::get('/clean_query', [QueryController::class, 'cleanQuery']);
 
 Route::get('/test', [ConsultController::class, 'test'])->name('consult.test');
+
+Route::get('/csv', [CSVController::class, 'import'])->name('csv.import');
+Route::get('/csv', [CSVController::class, 'import'])->name('csv.index');
+
 
 
 Auth::routes();
