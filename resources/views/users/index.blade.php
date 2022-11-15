@@ -40,6 +40,11 @@
             @endforeach
         </div>
         @endif
+        @if ($message = Session::get('error'))
+                <div id="successMessage" class="alert alert-danger alert-block">
+                    <strong>{{ $message }}</strong>
+                </div>
+        @endif
         <div class="card card-outline card-reflex-blue">
             <div class="overlay" id="overlay">
                 <i class="fal fa-2x fa-sync fa-spin"></i>
@@ -75,13 +80,13 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header bg-danger">
-                <h4 class="modal-title">Eliminar Paciente</h4>
+                <h4 class="modal-title">Eliminar Usuario</h4>
                 <button aria-label="Close" class="close" data-dismiss="modal" title="Cerrar" type="button">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <p class="text-justify">¿Está seguro que desea eliminar al paciente?</p>
+                <p class="text-justify">¿Está seguro que desea eliminar al usuario?</p>
             </div>
             <div class="modal-footer justify-content-between">
                 <button class="btn btn-sm btn-secondary" data-dismiss="modal" type="button">
@@ -153,7 +158,6 @@
                     className: 'text-center',
                     defaultContent: '',
                     createdCell: function(td, cellData, rowData, row, col, data, id, meta) {
-                        // console.log(rowData.id);
                         $(td).prepend(
                             `<div class="btn-group">
                                 <button type="button" class="update btn btn-sm btn-warning edit-user mr-1 update" title="Editar">
@@ -164,7 +168,6 @@
                                 </button>
                             </div>`
                         );
-                        //console.log(data.id);
                         $(td).addClass(data);
                     }
                 }
@@ -188,27 +191,6 @@
         $('#overlay').hide();
     });
 
-    /*$(document).ready( function () {
-        $('button.update').on('click', function() {
-            //var filename = $(this).val().replace(/.*(\/|\\)/, '')
-            //var data = table.row( row ).data().name;
-            console.log("1");
-            //Ajax semester
-            $.ajax({
-                url: "/update",
-                type: "get",
-                data: {
-                    filename: filename,
-                },
-                success: function(response) {
-                },
-                error: function(xhr) {
-
-                }
-            });
-        });
-    });*/
-
     function editRecord(user) {
         let route = "{{ route('users.edit', ['user' => 'id']) }}";
         route = route.replace('id', user.id);
@@ -228,7 +210,7 @@
         modal.modal('show');
     }
 
-
+    setTimeout(function() {$('#successMessage').fadeOut('fast');}, 3000);
 
 </script>
 @endsection

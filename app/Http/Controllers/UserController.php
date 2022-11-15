@@ -117,6 +117,8 @@ class UserController extends Controller
     {
         $id = $user->id;
         $role_table = RoleUser::where('user_id', $id)->first();
+        if($role_table->role_id == 1)
+            return redirect()->route('users.index')->with('error', 'No se puede eliminar al superusuario');
         $role_table->delete();
         $user_table = User::where('id', $id)->first();
         $user_table->delete();
