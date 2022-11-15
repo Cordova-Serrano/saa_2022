@@ -40,6 +40,14 @@ Route::middleware(['check.role:super'])->group(function () {
     //Route::delete('/users/{user}/destroy', [UserController::class, 'destroy']);
 });
 
+Route::middleware(['auth'])->group(function () {
+    $routes = ['except' => ['show']];
+    Route::resource('csv', CSVController::class,$routes);
+
+    
+    Route::get('/csv/import', [CSVController::class, 'import'])->name('csv.import');
+});
+
 
 Route::get('/home', function () {
     return view('welcome');
@@ -54,20 +62,19 @@ Route::get('/login_test', function () {
     return view('test.login');
 });
 
-Route::resource('csv', CSVController::class)->middleware('auth');
+// Route::resource('csv', CSVController::class)->middleware('auth');
 Route::resource('graphs', GraphsController::class)->middleware('auth');
 Route::resource('consult', ConsultController::class)->middleware('auth');
 
 Route::get('/update', [CSVController::class, 'updateDoc']);
-// Route::get('/import', [CSVController::class, 'import']);s
 
 Route::get('/load_query', [QueryController::class, 'loadQuery']);
 Route::get('/clean_query', [QueryController::class, 'cleanQuery']);
 
 Route::get('/test', [ConsultController::class, 'test'])->name('consult.test');
 
-Route::get('/csv', [CSVController::class, 'import'])->name('csv.import');
-Route::get('/csv', [CSVController::class, 'import'])->name('csv.index');
+// Route::get('/csv/import', [CSVController::class, 'import'])->name('csv.import');
+// Route::get('/csv', [CSVController::class, 'index'])->name('csv.index');
 
 
 
