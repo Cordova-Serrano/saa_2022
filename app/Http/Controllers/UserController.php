@@ -59,6 +59,9 @@ class UserController extends Controller
     */ 
     public function update(Request $request)
     {
+        if(User::where('email',$request->email)->exists()){
+            return back()->with('duplicated', 'El correo ingresado ya existe. Por favor, ingrese un correo diferente');
+        }
         $id = $request->id;
         $user = User::where('id', $id)->first();
         $user->name = $request->name;
@@ -80,6 +83,9 @@ class UserController extends Controller
     */ 
     public function store(Request $request)
     {
+        if(User::where('email',$request->email)->exists()){
+            return redirect()->route('users.create')->with('duplicated', 'El correo ingresado ya existe. Por favor, ingrese un correo diferente');
+        }
         $role = 0;
         $validated = $request->validate([
             'name' => 'required|max:100',

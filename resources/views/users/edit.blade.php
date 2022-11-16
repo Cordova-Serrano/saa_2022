@@ -31,6 +31,13 @@
             {{ $message }}
         </div>
         @endif
+        @if ($message = session('duplicated'))
+        <div class="alert alert-warning alert-dismissible text-justify" id="warning-alert">
+            <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
+            <h6><i class="icon fal fa-check-circle"></i>¡Advertencia!</h6>
+            {{ $message }}
+        </div>
+        @endif
         @if ($errors->any())
         <div class="alert alert-danger alert-dismissible text-justify" id="error-alert">
             <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
