@@ -41,7 +41,6 @@ class CSVController extends Controller
     {
         return view('csv.import');
     }
-
     public function store(Request $request)
     {
         $doc_info = pathinfo(request()->file('file')->getClientOriginalName());
@@ -52,7 +51,8 @@ class CSVController extends Controller
         //Si el nombre de archivo ya existe, se hace un update
         $data_excel = $excel_array[0]; //obtenemos las columnas
         $no_process = 0;//variable para verificar que el excel contiene el numero completo de columnas deacuerdo al formato
-        if(count($data_excel[0]) != 16) $no_process = 1;//si no tiene las columnas suficientes
+        //dd($data_excel);
+        if(count($data_excel[0]) != 15) $no_process = 1;//si no tiene las columnas suficientes
         else{
             $lenght = count($data_excel);
             if($extension != 'csv')
@@ -178,18 +178,19 @@ class CSVController extends Controller
                     else
                         if($c_key=="14")//clave 14 de informatica
                         $career_lk = "INGENIERÍA EN INFORMÁTICA";
+                //dd($career_lk);
                 $ingreso_lk = substr($large_key,7,1);//manera de ingreso a la facultad
-
                 try {//intenta buscar la carrera
                     $new_career = Career::where('name', $career_lk)->first();//consulta carrera
                 } catch (\Throwable $th) {
                     //en caso de que no consiga carrera quiere decir que no está bien la clave larga
+                    if($career_lk != ("15" || "23" || "14"))
                     $career_lk = null;//no se consiguio una clave de carrera correcta
                     $new_career = null;
                 }
 
                 
-                if (!isset($new_career->name) && $career_lk) {//si new_career no esta seteado y career_lk es correcto
+                if (!isset($new_career->name)) {//si new_career no esta seteado y career_lk es correcto
                     $new_career = new Career([
                         "name" => $career_lk,
                     ]);
@@ -236,7 +237,7 @@ class CSVController extends Controller
                         "generation" => $generation_lk,
                         "name" => $name,
                         "career_id" => $new_career->id,
-                        "type" => $ingreso_lk,
+                        "type" => intval($ingreso_lk),
                     ]);
                     $data = new Data([//guarda registro de data de semestre
                         'status' => $register_excel[5],
