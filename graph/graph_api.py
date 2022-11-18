@@ -3,6 +3,7 @@
 
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -84,6 +85,7 @@ async def scatter_plot(data: StudentList):
             "name": "Nombre",
             "uaslp_key": "Clave única",
             "large_key": "Clave larga de la facultad",
+            "color": "Generación",
         },
         color="generation",
         color_discrete_sequence=px.colors.qualitative.G10,
@@ -99,20 +101,24 @@ async def bar_plot(data: StudentList):
 
     data_frame = get_dataframe(data)
 
-    fig = px.histogram(
-        data_frame,
-        x="generation",
-        color="nivel_rezago",
-        labels={
-            "generation": "Generación",
-            "nivel_rezago": "Nivel de rezago",
-        },
-        color_discrete_map={
-            "Sin rezago": "rgb(0, 255, 0)",
-            "Rezago leve": "rgb(255, 255, 0)",
-            "Rezago grave": "rgb(255, 0, 0)",
-        },
-        hover_name="name",
+    fig = go.Figure().add_trace(
+        go.Bar(
+            x=data_frame["generation"],
+            y=data_frame["generation"].value_counts(),
+            name=data_frame["name"].astype(str),
+            marker={
+                "color": data_frame["nivel_rezago"].apply(
+                    lambda nivel_rezago: (
+                        "green"
+                        if nivel_rezago == "Sin rezago"
+                        else "yellow"
+                        if nivel_rezago == "Rezago leve"
+                        else "red"
+                    )
+                )
+            },
+            hoverinfo=["name", "x", "y"],
+        )
     )
 
     return fig.to_json()
