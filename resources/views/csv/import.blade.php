@@ -52,12 +52,12 @@
 </div>
 
 <!-- Modal Sobreescribir-->
-<div class="modal fade" id="modal-csv-update" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal fade" id="modal-csv-update" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-warning">
                 <h5 class="modal-title-saa">Sobreescribir archivo</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" id="close-modal">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -65,9 +65,9 @@
                 Archivo ya existente <br>
                 ¿Está seguro de querer actualizarlo?
             </div>
-            <div class="modal-footer  justify-content-between">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-success" id="accept-update">Aceptar</button>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="accept-update">Aceptar</button>
             </div>
         </div>
     </div>
@@ -158,6 +158,9 @@
         $('#is_update').val(1)
         $('#import-form').submit();
     })
-
+    
+    $('#close-modal').click(function() {
+        $('#modal-csv-update').modal('hide');
+    })
 </script>
 @endsection

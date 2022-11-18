@@ -55,6 +55,32 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Variable -->
+<div class="modal fade" id="modal-var" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title-saa">Cálculo de rezago</h5>
+                <button type="button" class="close" id="close-modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex">
+                    <div class="text-center d-flex justify-content-center align-items-center mr-2">
+                        <label for="">Variable:</label>
+                    </div>
+                    <input type="number" class="form-control" id="var">
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="accept-var">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section ('plugins')
@@ -189,7 +215,23 @@
     })
 
     $('#select-graph').change(function(){//make query when graph type change
-        make_query();
+        if($(this).val() === 'bar'){
+            console.log($(this).val());
+            //Clear current graph 
+            //Open Modal
+            $('#modal-var').modal('show');
+        }
+        else{
+            make_query();
+        } 
+    })
+
+    $('#close-modal').click(function() {
+        $('#modal-var').modal('hide');
+    })
+
+    $('#accept-var').click(function() {
+        //AÑadir funcion para mandar variable a graph
     })
     // $('#semesters').change(function() {
     //     if ($(this).val() != '') {
