@@ -170,6 +170,7 @@ class CSVController extends Controller
                 $name = ($data_excel[$i])[3];//nombre
                 $generation_lk = substr($large_key,0,4);//generacion
                 $c_key = substr($large_key,5,2);//clave de clave larga
+                $career_lk = null;
                 if($c_key=="15")//clave 15 de ingenieria en computacion
                 $career_lk = "INGENIERÍA EN COMPUTACIÓN";
                 else
@@ -190,7 +191,7 @@ class CSVController extends Controller
                 }
 
                 
-                if (!isset($new_career->name)) {//si new_career no esta seteado y career_lk es correcto
+                if (!isset($new_career->name) && $career_lk == ("15" || "23" || "14")) {//si new_career no esta seteado y career_lk es correcto
                     $new_career = new Career([
                         "name" => $career_lk,
                     ]);
