@@ -59,11 +59,19 @@ class UserController extends Controller
     */ 
     public function update(Request $request)
     {
-        if(User::where('email',$request->email)->exists()){
-            return back()->with('duplicated', 'El correo ingresado ya existe. Por favor, ingrese un correo diferente');
-        }
         $id = $request->id;
         $user = User::where('id', $id)->first();
+        if(User::where('email',$request->email)->exists() && $user->email != $request->email){
+            return back()->with('duplicated', 'El correo ingresado ya existe. Por favor, ingrese un correo diferente');
+        }
+        $validated = $request->validate([
+            'name' => 'required|max:100',
+            'username' => 'required|max:100',
+            'email' => 'required|email:rfc',
+            'password' => 'required|min:8|alpha_num'
+        ]);
+        //$id = $request->id;
+        //$user = User::where('id', $id)->first();
         $user->name = $request->name;
         $user->email = $request->email;
         $user->username = $request->username;

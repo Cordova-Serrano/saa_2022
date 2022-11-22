@@ -41,8 +41,10 @@
         </div>
         @endif
         @if ($message = Session::get('error'))
-                <div id="successMessage" class="alert alert-danger alert-block">
-                    <strong>{{ $message }}</strong>
+                <div class="alert alert-danger alert-dismissible text-justify" id="successMessage">
+                    <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
+                    <h6><i class="icon fal fa-times-circle"></i>¡Error!</h6>
+                    {{ $message }}<br>
                 </div>
         @endif
         <div class="card card-outline card-reflex-blue">
