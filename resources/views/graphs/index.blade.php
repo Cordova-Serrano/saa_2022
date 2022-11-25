@@ -102,9 +102,22 @@
 @section ('scripts')
 <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
 <script type="text/javascript">
+
+    /**
+     * RenderGraphs
+     * 
+     * Sends a POST request to the server to get a json with necessary data to render the graphs,
+     * uses the value of component select-graph to determine which graph to render. It also sends
+     * the value of the modal-var input if the graph type is "Rezago Academico".
+     * 
+     * @param {array} records
+     * 
+     * @return {void}
+     */
     function RenderGraphs(records) {
         const graphType = document.getElementById('select-graph').value;
-        const URL = "http://127.0.0.1:8000/graph/" + graphType;
+        const varValue = document.getElementById('modal-var').getAttribute('data-var');
+        const URL = "http://127.0.0.1:8000/graph/" + graphType + "?var=" + varValue;
         const request = {
             method: "POST",
             headers: {"content-type": "application/json", "accept": "application/json"},
@@ -134,6 +147,14 @@
 
     let dt = null;
 
+
+    /**
+     * GetRecords
+     * 
+     * Gets the valid values for semester, career and generation selects, by
+     * retrieving the values on the database.
+     * 
+     */
     $(function() {
         //Semesters
         var semesters = @json($semesters);
@@ -166,7 +187,16 @@
         $('#overlay').hide();
     });
 
-
+    /**
+     * make_query
+     * 
+     * Obtains the students registers from the database from a given file 
+     * using the values of the career, semester and generation selects as filters.
+     * With the obtained data, it calls the function RenderGraphs to render the graph
+     * type selected in the select-graph select.
+     *
+     * @return void
+     */
     function make_query(){
         var semester = null;
         if ($('#semesters').val() != "0")
