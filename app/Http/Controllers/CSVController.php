@@ -173,8 +173,13 @@ class CSVController extends Controller
                 $uaslp_key = $register_excel[0];//clave uaslp
                 $large_key = $register_excel[1];//clave larga
                 $name = $register_excel[3];//nombre
-                $generation_lk = substr($large_key,0,4);//generacion
-                $c_key = substr($large_key,5,2);//clave de clave larga
+                $generation_lk = null;//generacion
+                    $c_key = null;//clave de clave larga
+                $patron = "/^[[:digit:]]+$/";
+                if (preg_match($patron, $large_key)) {
+                    $generation_lk = substr($large_key,0,4);//generacion
+                    $c_key = substr($large_key,5,2);//clave de clave larga
+                }
                 $career_lk = null;
                 if($c_key=="15" || $c_key=="47")//clave 15 de ingenieria en computacion
                 $career_lk = "INGENIERÍA EN COMPUTACIÓN";
@@ -236,7 +241,7 @@ class CSVController extends Controller
                         //
                     }
                 } else {//si no hay alumno en registro, crea uno nuevo
-                    if ($new_career)//comprueba que new career no sea null
+                    if ($new_career){//comprueba que new career no sea null
                     $student = new Student([
                         "uaslp_key" => $uaslp_key,
                         "large_key" => $large_key,
@@ -279,6 +284,9 @@ class CSVController extends Controller
                     }
 
                 }
+                unset($student);
+            }
+                
             }
         }
         
