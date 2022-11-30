@@ -1,0 +1,549 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Graph API}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Install requirements}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Run mock server}{1}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Sistema de seguimiento de Alumnos}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Instalación para desarrollo}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Iniciar Servidor Python}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Activar entorno virtual}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Instalar dependencias}{4}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Ejecutar servidor}{4}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3}Namespace Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Namespace List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Hierarchical Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Class Hierarchy}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Class Index}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Class List}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}File Index}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}File List}{11}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Namespace Documentation}{15}{chapter.7}%
+\contentsline {section}{\numberline {7.1}App\textbackslash {}Console Namespace Reference}{15}{section.7.1}%
+\contentsline {section}{\numberline {7.2}App\textbackslash {}Exceptions Namespace Reference}{15}{section.7.2}%
+\contentsline {section}{\numberline {7.3}App\textbackslash {}Http Namespace Reference}{15}{section.7.3}%
+\contentsline {section}{\numberline {7.4}App\textbackslash {}Http\textbackslash {}Controllers Namespace Reference}{15}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Function Documentation}{16}{subsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.1.1}check\_value()}{16}{subsubsection.7.4.1.1}%
+\contentsline {section}{\numberline {7.5}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Auth Namespace Reference}{16}{section.7.5}%
+\contentsline {section}{\numberline {7.6}App\textbackslash {}Http\textbackslash {}Middleware Namespace Reference}{16}{section.7.6}%
+\contentsline {section}{\numberline {7.7}App\textbackslash {}Imports Namespace Reference}{17}{section.7.7}%
+\contentsline {section}{\numberline {7.8}App\textbackslash {}Models Namespace Reference}{17}{section.7.8}%
+\contentsline {section}{\numberline {7.9}App\textbackslash {}Providers Namespace Reference}{17}{section.7.9}%
+\contentsline {section}{\numberline {7.10}Database\textbackslash {}Factories Namespace Reference}{17}{section.7.10}%
+\contentsline {section}{\numberline {7.11}Database\textbackslash {}Seeders Namespace Reference}{17}{section.7.11}%
+\contentsline {section}{\numberline {7.12}graph Namespace Reference}{18}{section.7.12}%
+\contentsline {section}{\numberline {7.13}graph.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}dash\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}api Namespace Reference}{18}{section.7.13}%
+\contentsline {subsection}{\numberline {7.13.1}Variable Documentation}{18}{subsection.7.13.1}%
+\contentsline {subsubsection}{\numberline {7.13.1.1}app}{18}{subsubsection.7.13.1.1}%
+\contentsline {subsubsection}{\numberline {7.13.1.2}children}{18}{subsubsection.7.13.1.2}%
+\contentsline {subsubsection}{\numberline {7.13.1.3}debug}{18}{subsubsection.7.13.1.3}%
+\contentsline {subsubsection}{\numberline {7.13.1.4}df}{19}{subsubsection.7.13.1.4}%
+\contentsline {subsubsection}{\numberline {7.13.1.5}fig}{19}{subsubsection.7.13.1.5}%
+\contentsline {subsubsection}{\numberline {7.13.1.6}layout}{19}{subsubsection.7.13.1.6}%
+\contentsline {section}{\numberline {7.14}graph.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}api Namespace Reference}{19}{section.7.14}%
+\contentsline {subsection}{\numberline {7.14.1}Function Documentation}{19}{subsection.7.14.1}%
+\contentsline {subsubsection}{\numberline {7.14.1.1}bar\_plot()}{20}{subsubsection.7.14.1.1}%
+\contentsline {subsubsection}{\numberline {7.14.1.2}get\_dataframe()}{20}{subsubsection.7.14.1.2}%
+\contentsline {subsubsection}{\numberline {7.14.1.3}root()}{20}{subsubsection.7.14.1.3}%
+\contentsline {subsubsection}{\numberline {7.14.1.4}scatter\_plot()}{20}{subsubsection.7.14.1.4}%
+\contentsline {subsection}{\numberline {7.14.2}Variable Documentation}{20}{subsection.7.14.2}%
+\contentsline {subsubsection}{\numberline {7.14.2.1}allow\_credentials}{20}{subsubsection.7.14.2.1}%
+\contentsline {subsubsection}{\numberline {7.14.2.2}allow\_headers}{20}{subsubsection.7.14.2.2}%
+\contentsline {subsubsection}{\numberline {7.14.2.3}allow\_methods}{21}{subsubsection.7.14.2.3}%
+\contentsline {subsubsection}{\numberline {7.14.2.4}allow\_origins}{21}{subsubsection.7.14.2.4}%
+\contentsline {subsubsection}{\numberline {7.14.2.5}graphAPI}{21}{subsubsection.7.14.2.5}%
+\contentsline {section}{\numberline {7.15}Illuminate\textbackslash {}Foundation\textbackslash {}Auth Namespace Reference}{21}{section.7.15}%
+\contentsline {subsection}{\numberline {7.15.1}Function Documentation}{21}{subsection.7.15.1}%
+\contentsline {subsubsection}{\numberline {7.15.1.1}attemptLogin()}{21}{subsubsection.7.15.1.1}%
+\contentsline {subsubsection}{\numberline {7.15.1.2}authenticated()}{22}{subsubsection.7.15.1.2}%
+\contentsline {subsubsection}{\numberline {7.15.1.3}credentials()}{22}{subsubsection.7.15.1.3}%
+\contentsline {subsubsection}{\numberline {7.15.1.4}guard()}{23}{subsubsection.7.15.1.4}%
+\contentsline {subsubsection}{\numberline {7.15.1.5}loggedOut()}{23}{subsubsection.7.15.1.5}%
+\contentsline {subsubsection}{\numberline {7.15.1.6}login()}{23}{subsubsection.7.15.1.6}%
+\contentsline {subsubsection}{\numberline {7.15.1.7}logout()}{24}{subsubsection.7.15.1.7}%
+\contentsline {subsubsection}{\numberline {7.15.1.8}sendFailedLoginResponse()}{24}{subsubsection.7.15.1.8}%
+\contentsline {subsubsection}{\numberline {7.15.1.9}sendLoginResponse()}{24}{subsubsection.7.15.1.9}%
+\contentsline {subsubsection}{\numberline {7.15.1.10}showLoginForm()}{25}{subsubsection.7.15.1.10}%
+\contentsline {subsubsection}{\numberline {7.15.1.11}username()}{25}{subsubsection.7.15.1.11}%
+\contentsline {subsubsection}{\numberline {7.15.1.12}validateLogin()}{25}{subsubsection.7.15.1.12}%
+\contentsline {subsection}{\numberline {7.15.2}Variable Documentation}{26}{subsection.7.15.2}%
+\contentsline {subsubsection}{\numberline {7.15.2.1}AuthenticatesUsers}{26}{subsubsection.7.15.2.1}%
+\contentsline {section}{\numberline {7.16}Laravel Namespace Reference}{26}{section.7.16}%
+\contentsline {subsection}{\numberline {7.16.1}Detailed Description}{26}{subsection.7.16.1}%
+\contentsline {section}{\numberline {7.17}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}api Namespace Reference}{26}{section.7.17}%
+\contentsline {section}{\numberline {7.18}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}creation Namespace Reference}{26}{section.7.18}%
+\contentsline {section}{\numberline {7.19}Tests Namespace Reference}{27}{section.7.19}%
+\contentsline {section}{\numberline {7.20}Tests\textbackslash {}Feature Namespace Reference}{27}{section.7.20}%
+\contentsline {section}{\numberline {7.21}Tests\textbackslash {}Unit Namespace Reference}{27}{section.7.21}%
+\contentsline {chapter}{\numberline {8}Class Documentation}{29}{chapter.8}%
+\contentsline {section}{\numberline {8.1}App\textbackslash {}Providers\textbackslash {}App\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Provider Class Reference}{29}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Member Function Documentation}{29}{subsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.1.1}boot()}{29}{subsubsection.8.1.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.1.2}register()}{30}{subsubsection.8.1.1.2}%
+\contentsline {section}{\numberline {8.2}App\textbackslash {}Http\textbackslash {}Middleware\textbackslash {}Authenticate Class Reference}{30}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Member Function Documentation}{30}{subsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.1.1}redirectTo()}{30}{subsubsection.8.2.1.1}%
+\contentsline {section}{\numberline {8.3}App\textbackslash {}Providers\textbackslash {}Auth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Provider Class Reference}{31}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Member Function Documentation}{31}{subsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.1.1}boot()}{31}{subsubsection.8.3.1.1}%
+\contentsline {subsection}{\numberline {8.3.2}Member Data Documentation}{31}{subsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.2.1}\$policies}{32}{subsubsection.8.3.2.1}%
+\contentsline {section}{\numberline {8.4}App\textbackslash {}Providers\textbackslash {}Broadcast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Provider Class Reference}{32}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Member Function Documentation}{32}{subsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.1.1}boot()}{32}{subsubsection.8.4.1.1}%
+\contentsline {section}{\numberline {8.5}App\textbackslash {}Models\textbackslash {}Career Class Reference}{33}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Member Data Documentation}{33}{subsection.8.5.1}%
+\contentsline {subsubsection}{\numberline {8.5.1.1}\$fillable}{33}{subsubsection.8.5.1.1}%
+\contentsline {subsubsection}{\numberline {8.5.1.2}\$hidden}{33}{subsubsection.8.5.1.2}%
+\contentsline {section}{\numberline {8.6}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Career\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{33}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Member Function Documentation}{34}{subsection.8.6.1}%
+\contentsline {subsubsection}{\numberline {8.6.1.1}loadCareer()}{34}{subsubsection.8.6.1.1}%
+\contentsline {section}{\numberline {8.7}App\textbackslash {}Http\textbackslash {}Middleware\textbackslash {}Check\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Role Class Reference}{34}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Member Function Documentation}{34}{subsection.8.7.1}%
+\contentsline {subsubsection}{\numberline {8.7.1.1}handle()}{34}{subsubsection.8.7.1.1}%
+\contentsline {section}{\numberline {8.8}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Auth\textbackslash {}Confirm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{35}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Constructor \& Destructor Documentation}{35}{subsection.8.8.1}%
+\contentsline {subsubsection}{\numberline {8.8.1.1}\_\_construct()}{35}{subsubsection.8.8.1.1}%
+\contentsline {subsection}{\numberline {8.8.2}Member Data Documentation}{35}{subsection.8.8.2}%
+\contentsline {subsubsection}{\numberline {8.8.2.1}\$redirectTo}{35}{subsubsection.8.8.2.1}%
+\contentsline {section}{\numberline {8.9}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Consult\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{36}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Constructor \& Destructor Documentation}{36}{subsection.8.9.1}%
+\contentsline {subsubsection}{\numberline {8.9.1.1}\_\_construct()}{36}{subsubsection.8.9.1.1}%
+\contentsline {subsection}{\numberline {8.9.2}Member Function Documentation}{36}{subsection.8.9.2}%
+\contentsline {subsubsection}{\numberline {8.9.2.1}index()}{36}{subsubsection.8.9.2.1}%
+\contentsline {subsubsection}{\numberline {8.9.2.2}loadSemester()}{36}{subsubsection.8.9.2.2}%
+\contentsline {subsubsection}{\numberline {8.9.2.3}test()}{37}{subsubsection.8.9.2.3}%
+\contentsline {section}{\numberline {8.10}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Controller Class Reference}{37}{section.8.10}%
+\contentsline {section}{\numberline {8.11}Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Careers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{38}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}Member Function Documentation}{38}{subsection.8.11.1}%
+\contentsline {subsubsection}{\numberline {8.11.1.1}down()}{38}{subsubsection.8.11.1.1}%
+\contentsline {subsubsection}{\numberline {8.11.1.2}up()}{38}{subsubsection.8.11.1.2}%
+\contentsline {section}{\numberline {8.12}Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{39}{section.8.12}%
+\contentsline {subsection}{\numberline {8.12.1}Member Function Documentation}{39}{subsection.8.12.1}%
+\contentsline {subsubsection}{\numberline {8.12.1.1}down()}{39}{subsubsection.8.12.1.1}%
+\contentsline {subsubsection}{\numberline {8.12.1.2}up()}{39}{subsubsection.8.12.1.2}%
+\contentsline {section}{\numberline {8.13}Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Failed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Jobs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{40}{section.8.13}%
+\contentsline {subsection}{\numberline {8.13.1}Member Function Documentation}{40}{subsection.8.13.1}%
+\contentsline {subsubsection}{\numberline {8.13.1.1}down()}{40}{subsubsection.8.13.1.1}%
+\contentsline {subsubsection}{\numberline {8.13.1.2}up()}{40}{subsubsection.8.13.1.2}%
+\contentsline {section}{\numberline {8.14}Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Files\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{41}{section.8.14}%
+\contentsline {subsection}{\numberline {8.14.1}Member Function Documentation}{41}{subsection.8.14.1}%
+\contentsline {subsubsection}{\numberline {8.14.1.1}down()}{41}{subsubsection.8.14.1.1}%
+\contentsline {subsubsection}{\numberline {8.14.1.2}up()}{41}{subsubsection.8.14.1.2}%
+\contentsline {section}{\numberline {8.15}Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Personal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Access\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tokens\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{42}{section.8.15}%
+\contentsline {subsection}{\numberline {8.15.1}Member Function Documentation}{42}{subsection.8.15.1}%
+\contentsline {subsubsection}{\numberline {8.15.1.1}down()}{42}{subsubsection.8.15.1.1}%
+\contentsline {subsubsection}{\numberline {8.15.1.2}up()}{42}{subsubsection.8.15.1.2}%
+\contentsline {section}{\numberline {8.16}Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Roles\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{43}{section.8.16}%
+\contentsline {subsection}{\numberline {8.16.1}Member Function Documentation}{43}{subsection.8.16.1}%
+\contentsline {subsubsection}{\numberline {8.16.1.1}down()}{43}{subsubsection.8.16.1.1}%
+\contentsline {subsubsection}{\numberline {8.16.1.2}up()}{43}{subsubsection.8.16.1.2}%
+\contentsline {section}{\numberline {8.17}Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Role\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{44}{section.8.17}%
+\contentsline {subsection}{\numberline {8.17.1}Member Function Documentation}{44}{subsection.8.17.1}%
+\contentsline {subsubsection}{\numberline {8.17.1.1}down()}{44}{subsubsection.8.17.1.1}%
+\contentsline {subsubsection}{\numberline {8.17.1.2}up()}{44}{subsubsection.8.17.1.2}%
+\contentsline {section}{\numberline {8.18}Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Semesters\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{44}{section.8.18}%
+\contentsline {subsection}{\numberline {8.18.1}Member Function Documentation}{45}{subsection.8.18.1}%
+\contentsline {subsubsection}{\numberline {8.18.1.1}down()}{45}{subsubsection.8.18.1.1}%
+\contentsline {subsubsection}{\numberline {8.18.1.2}up()}{45}{subsubsection.8.18.1.2}%
+\contentsline {section}{\numberline {8.19}Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Student\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Semester\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{45}{section.8.19}%
+\contentsline {subsection}{\numberline {8.19.1}Member Function Documentation}{46}{subsection.8.19.1}%
+\contentsline {subsubsection}{\numberline {8.19.1.1}down()}{46}{subsubsection.8.19.1.1}%
+\contentsline {subsubsection}{\numberline {8.19.1.2}up()}{46}{subsubsection.8.19.1.2}%
+\contentsline {section}{\numberline {8.20}Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Students\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{46}{section.8.20}%
+\contentsline {subsection}{\numberline {8.20.1}Member Function Documentation}{47}{subsection.8.20.1}%
+\contentsline {subsubsection}{\numberline {8.20.1.1}down()}{47}{subsubsection.8.20.1.1}%
+\contentsline {subsubsection}{\numberline {8.20.1.2}up()}{47}{subsubsection.8.20.1.2}%
+\contentsline {section}{\numberline {8.21}Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{47}{section.8.21}%
+\contentsline {subsection}{\numberline {8.21.1}Member Function Documentation}{47}{subsection.8.21.1}%
+\contentsline {subsubsection}{\numberline {8.21.1.1}down()}{48}{subsubsection.8.21.1.1}%
+\contentsline {subsubsection}{\numberline {8.21.1.2}up()}{48}{subsubsection.8.21.1.2}%
+\contentsline {section}{\numberline {8.22}App\textbackslash {}Models\textbackslash {}CSV Class Reference}{48}{section.8.22}%
+\contentsline {subsection}{\numberline {8.22.1}Member Data Documentation}{48}{subsection.8.22.1}%
+\contentsline {subsubsection}{\numberline {8.22.1.1}\$fillable}{49}{subsubsection.8.22.1.1}%
+\contentsline {section}{\numberline {8.23}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}CSVController Class Reference}{49}{section.8.23}%
+\contentsline {subsection}{\numberline {8.23.1}Constructor \& Destructor Documentation}{49}{subsection.8.23.1}%
+\contentsline {subsubsection}{\numberline {8.23.1.1}\_\_construct()}{49}{subsubsection.8.23.1.1}%
+\contentsline {subsection}{\numberline {8.23.2}Member Function Documentation}{49}{subsection.8.23.2}%
+\contentsline {subsubsection}{\numberline {8.23.2.1}import()}{50}{subsubsection.8.23.2.1}%
+\contentsline {subsubsection}{\numberline {8.23.2.2}index()}{50}{subsubsection.8.23.2.2}%
+\contentsline {subsubsection}{\numberline {8.23.2.3}store()}{50}{subsubsection.8.23.2.3}%
+\contentsline {subsubsection}{\numberline {8.23.2.4}updateDoc()}{50}{subsubsection.8.23.2.4}%
+\contentsline {section}{\numberline {8.24}App\textbackslash {}Imports\textbackslash {}CSVImport Class Reference}{50}{section.8.24}%
+\contentsline {subsection}{\numberline {8.24.1}Member Function Documentation}{51}{subsection.8.24.1}%
+\contentsline {subsubsection}{\numberline {8.24.1.1}model()}{51}{subsubsection.8.24.1.1}%
+\contentsline {subsubsection}{\numberline {8.24.1.2}rules()}{51}{subsubsection.8.24.1.2}%
+\contentsline {section}{\numberline {8.25}App\textbackslash {}Models\textbackslash {}Data Class Reference}{51}{section.8.25}%
+\contentsline {subsection}{\numberline {8.25.1}Member Function Documentation}{51}{subsection.8.25.1}%
+\contentsline {subsubsection}{\numberline {8.25.1.1}student()}{51}{subsubsection.8.25.1.1}%
+\contentsline {subsection}{\numberline {8.25.2}Member Data Documentation}{52}{subsection.8.25.2}%
+\contentsline {subsubsection}{\numberline {8.25.2.1}\$fillable}{52}{subsubsection.8.25.2.1}%
+\contentsline {subsubsection}{\numberline {8.25.2.2}\$hidden}{52}{subsubsection.8.25.2.2}%
+\contentsline {section}{\numberline {8.26}Database\textbackslash {}Seeders\textbackslash {}Database\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Seeder Class Reference}{52}{section.8.26}%
+\contentsline {subsection}{\numberline {8.26.1}Member Function Documentation}{52}{subsection.8.26.1}%
+\contentsline {subsubsection}{\numberline {8.26.1.1}run()}{53}{subsubsection.8.26.1.1}%
+\contentsline {section}{\numberline {8.27}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{53}{section.8.27}%
+\contentsline {section}{\numberline {8.28}App\textbackslash {}Http\textbackslash {}Middleware\textbackslash {}Encrypt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookies Class Reference}{53}{section.8.28}%
+\contentsline {subsection}{\numberline {8.28.1}Member Data Documentation}{54}{subsection.8.28.1}%
+\contentsline {subsubsection}{\numberline {8.28.1.1}\$except}{54}{subsubsection.8.28.1.1}%
+\contentsline {section}{\numberline {8.29}App\textbackslash {}Providers\textbackslash {}Event\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Provider Class Reference}{54}{section.8.29}%
+\contentsline {subsection}{\numberline {8.29.1}Member Function Documentation}{54}{subsection.8.29.1}%
+\contentsline {subsubsection}{\numberline {8.29.1.1}boot()}{54}{subsubsection.8.29.1.1}%
+\contentsline {subsection}{\numberline {8.29.2}Member Data Documentation}{55}{subsection.8.29.2}%
+\contentsline {subsubsection}{\numberline {8.29.2.1}\$listen}{55}{subsubsection.8.29.2.1}%
+\contentsline {section}{\numberline {8.30}Tests\textbackslash {}Feature\textbackslash {}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{55}{section.8.30}%
+\contentsline {subsection}{\numberline {8.30.1}Member Function Documentation}{55}{subsection.8.30.1}%
+\contentsline {subsubsection}{\numberline {8.30.1.1}test\_example()}{55}{subsubsection.8.30.1.1}%
+\contentsline {section}{\numberline {8.31}Tests\textbackslash {}Unit\textbackslash {}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{56}{section.8.31}%
+\contentsline {subsection}{\numberline {8.31.1}Member Function Documentation}{56}{subsection.8.31.1}%
+\contentsline {subsubsection}{\numberline {8.31.1.1}test\_example()}{56}{subsubsection.8.31.1.1}%
+\contentsline {section}{\numberline {8.32}App\textbackslash {}Models\textbackslash {}File Class Reference}{56}{section.8.32}%
+\contentsline {subsection}{\numberline {8.32.1}Member Data Documentation}{57}{subsection.8.32.1}%
+\contentsline {subsubsection}{\numberline {8.32.1.1}\$fillable}{57}{subsubsection.8.32.1.1}%
+\contentsline {subsubsection}{\numberline {8.32.1.2}\$hidden}{57}{subsubsection.8.32.1.2}%
+\contentsline {section}{\numberline {8.33}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{57}{section.8.33}%
+\contentsline {section}{\numberline {8.34}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Auth\textbackslash {}Forgot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{57}{section.8.34}%
+\contentsline {section}{\numberline {8.35}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Generation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{58}{section.8.35}%
+\contentsline {subsection}{\numberline {8.35.1}Member Function Documentation}{58}{subsection.8.35.1}%
+\contentsline {subsubsection}{\numberline {8.35.1.1}loadGeneration()}{58}{subsubsection.8.35.1.1}%
+\contentsline {section}{\numberline {8.36}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}api.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graphs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}API Class Reference}{58}{section.8.36}%
+\contentsline {subsection}{\numberline {8.36.1}Member Function Documentation}{59}{subsection.8.36.1}%
+\contentsline {subsubsection}{\numberline {8.36.1.1}setUp()}{59}{subsubsection.8.36.1.1}%
+\contentsline {subsubsection}{\numberline {8.36.1.2}test\_bar\_plot()}{59}{subsubsection.8.36.1.2}%
+\contentsline {subsection}{\numberline {8.36.2}Member Data Documentation}{59}{subsection.8.36.2}%
+\contentsline {subsubsection}{\numberline {8.36.2.1}client}{59}{subsubsection.8.36.2.1}%
+\contentsline {subsubsection}{\numberline {8.36.2.2}student\_list}{59}{subsubsection.8.36.2.2}%
+\contentsline {section}{\numberline {8.37}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}creation.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graphs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}API Class Reference}{60}{section.8.37}%
+\contentsline {subsection}{\numberline {8.37.1}Member Function Documentation}{60}{subsection.8.37.1}%
+\contentsline {subsubsection}{\numberline {8.37.1.1}setUp()}{60}{subsubsection.8.37.1.1}%
+\contentsline {subsubsection}{\numberline {8.37.1.2}test\_get\_dataframe()}{60}{subsubsection.8.37.1.2}%
+\contentsline {subsubsection}{\numberline {8.37.1.3}test\_lag\_graph()}{60}{subsubsection.8.37.1.3}%
+\contentsline {subsubsection}{\numberline {8.37.1.4}test\_process\_graph()}{61}{subsubsection.8.37.1.4}%
+\contentsline {subsection}{\numberline {8.37.2}Member Data Documentation}{61}{subsection.8.37.2}%
+\contentsline {subsubsection}{\numberline {8.37.2.1}student\_list}{61}{subsubsection.8.37.2.1}%
+\contentsline {section}{\numberline {8.38}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Graphs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{61}{section.8.38}%
+\contentsline {subsection}{\numberline {8.38.1}Constructor \& Destructor Documentation}{62}{subsection.8.38.1}%
+\contentsline {subsubsection}{\numberline {8.38.1.1}\_\_construct()}{62}{subsubsection.8.38.1.1}%
+\contentsline {subsection}{\numberline {8.38.2}Member Function Documentation}{62}{subsection.8.38.2}%
+\contentsline {subsubsection}{\numberline {8.38.2.1}create()}{62}{subsubsection.8.38.2.1}%
+\contentsline {subsubsection}{\numberline {8.38.2.2}destroy()}{62}{subsubsection.8.38.2.2}%
+\contentsline {subsubsection}{\numberline {8.38.2.3}edit()}{63}{subsubsection.8.38.2.3}%
+\contentsline {subsubsection}{\numberline {8.38.2.4}index()}{63}{subsubsection.8.38.2.4}%
+\contentsline {subsubsection}{\numberline {8.38.2.5}loadSemester()}{63}{subsubsection.8.38.2.5}%
+\contentsline {subsubsection}{\numberline {8.38.2.6}show()}{63}{subsubsection.8.38.2.6}%
+\contentsline {subsubsection}{\numberline {8.38.2.7}store()}{64}{subsubsection.8.38.2.7}%
+\contentsline {subsubsection}{\numberline {8.38.2.8}update()}{64}{subsubsection.8.38.2.8}%
+\contentsline {section}{\numberline {8.39}App\textbackslash {}Exceptions\textbackslash {}Handler Class Reference}{64}{section.8.39}%
+\contentsline {subsection}{\numberline {8.39.1}Member Function Documentation}{65}{subsection.8.39.1}%
+\contentsline {subsubsection}{\numberline {8.39.1.1}register()}{65}{subsubsection.8.39.1.1}%
+\contentsline {subsection}{\numberline {8.39.2}Member Data Documentation}{65}{subsection.8.39.2}%
+\contentsline {subsubsection}{\numberline {8.39.2.1}\$dontFlash}{65}{subsubsection.8.39.2.1}%
+\contentsline {subsubsection}{\numberline {8.39.2.2}\$dontReport}{65}{subsubsection.8.39.2.2}%
+\contentsline {section}{\numberline {8.40}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Home\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{66}{section.8.40}%
+\contentsline {subsection}{\numberline {8.40.1}Constructor \& Destructor Documentation}{66}{subsection.8.40.1}%
+\contentsline {subsubsection}{\numberline {8.40.1.1}\_\_construct()}{66}{subsubsection.8.40.1.1}%
+\contentsline {subsection}{\numberline {8.40.2}Member Function Documentation}{66}{subsection.8.40.2}%
+\contentsline {subsubsection}{\numberline {8.40.2.1}index()}{66}{subsubsection.8.40.2.1}%
+\contentsline {section}{\numberline {8.41}App\textbackslash {}Console\textbackslash {}Kernel Class Reference}{66}{section.8.41}%
+\contentsline {subsection}{\numberline {8.41.1}Member Function Documentation}{67}{subsection.8.41.1}%
+\contentsline {subsubsection}{\numberline {8.41.1.1}commands()}{67}{subsubsection.8.41.1.1}%
+\contentsline {subsubsection}{\numberline {8.41.1.2}schedule()}{67}{subsubsection.8.41.1.2}%
+\contentsline {section}{\numberline {8.42}App\textbackslash {}Http\textbackslash {}Kernel Class Reference}{67}{section.8.42}%
+\contentsline {subsection}{\numberline {8.42.1}Member Data Documentation}{68}{subsection.8.42.1}%
+\contentsline {subsubsection}{\numberline {8.42.1.1}\$middleware}{68}{subsubsection.8.42.1.1}%
+\contentsline {subsubsection}{\numberline {8.42.1.2}\$middlewareGroups}{68}{subsubsection.8.42.1.2}%
+\contentsline {subsubsection}{\numberline {8.42.1.3}\$routeMiddleware}{68}{subsubsection.8.42.1.3}%
+\contentsline {section}{\numberline {8.43}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Auth\textbackslash {}Login\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{69}{section.8.43}%
+\contentsline {subsection}{\numberline {8.43.1}Constructor \& Destructor Documentation}{69}{subsection.8.43.1}%
+\contentsline {subsubsection}{\numberline {8.43.1.1}\_\_construct()}{69}{subsubsection.8.43.1.1}%
+\contentsline {subsection}{\numberline {8.43.2}Member Data Documentation}{69}{subsection.8.43.2}%
+\contentsline {subsubsection}{\numberline {8.43.2.1}\$redirectTo}{69}{subsubsection.8.43.2.1}%
+\contentsline {section}{\numberline {8.44}Migration Class Reference}{70}{section.8.44}%
+\contentsline {subsection}{\numberline {8.44.1}Member Function Documentation}{70}{subsection.8.44.1}%
+\contentsline {subsubsection}{\numberline {8.44.1.1}down()}{70}{subsubsection.8.44.1.1}%
+\contentsline {subsubsection}{\numberline {8.44.1.2}up()}{70}{subsubsection.8.44.1.2}%
+\contentsline {section}{\numberline {8.45}App\textbackslash {}Http\textbackslash {}Middleware\textbackslash {}Prevent\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Requests\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}During\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Maintenance Class Reference}{70}{section.8.45}%
+\contentsline {subsection}{\numberline {8.45.1}Member Data Documentation}{71}{subsection.8.45.1}%
+\contentsline {subsubsection}{\numberline {8.45.1.1}\$except}{71}{subsubsection.8.45.1.1}%
+\contentsline {section}{\numberline {8.46}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Query\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{71}{section.8.46}%
+\contentsline {subsection}{\numberline {8.46.1}Member Function Documentation}{71}{subsection.8.46.1}%
+\contentsline {subsubsection}{\numberline {8.46.1.1}loadQuery()}{71}{subsubsection.8.46.1.1}%
+\contentsline {section}{\numberline {8.47}App\textbackslash {}Http\textbackslash {}Middleware\textbackslash {}Redirect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}If\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Authenticated Class Reference}{72}{section.8.47}%
+\contentsline {subsection}{\numberline {8.47.1}Member Function Documentation}{72}{subsection.8.47.1}%
+\contentsline {subsubsection}{\numberline {8.47.1.1}handle()}{72}{subsubsection.8.47.1.1}%
+\contentsline {section}{\numberline {8.48}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Auth\textbackslash {}Register\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{72}{section.8.48}%
+\contentsline {subsection}{\numberline {8.48.1}Constructor \& Destructor Documentation}{73}{subsection.8.48.1}%
+\contentsline {subsubsection}{\numberline {8.48.1.1}\_\_construct()}{73}{subsubsection.8.48.1.1}%
+\contentsline {subsection}{\numberline {8.48.2}Member Function Documentation}{73}{subsection.8.48.2}%
+\contentsline {subsubsection}{\numberline {8.48.2.1}create()}{73}{subsubsection.8.48.2.1}%
+\contentsline {subsubsection}{\numberline {8.48.2.2}validator()}{74}{subsubsection.8.48.2.2}%
+\contentsline {subsection}{\numberline {8.48.3}Member Data Documentation}{74}{subsection.8.48.3}%
+\contentsline {subsubsection}{\numberline {8.48.3.1}\$redirectTo}{74}{subsubsection.8.48.3.1}%
+\contentsline {section}{\numberline {8.49}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Auth\textbackslash {}Reset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{74}{section.8.49}%
+\contentsline {subsection}{\numberline {8.49.1}Member Data Documentation}{75}{subsection.8.49.1}%
+\contentsline {subsubsection}{\numberline {8.49.1.1}\$redirectTo}{75}{subsubsection.8.49.1.1}%
+\contentsline {section}{\numberline {8.50}App\textbackslash {}Models\textbackslash {}Role Class Reference}{75}{section.8.50}%
+\contentsline {subsection}{\numberline {8.50.1}Member Function Documentation}{75}{subsection.8.50.1}%
+\contentsline {subsubsection}{\numberline {8.50.1.1}users()}{75}{subsubsection.8.50.1.1}%
+\contentsline {subsection}{\numberline {8.50.2}Member Data Documentation}{75}{subsection.8.50.2}%
+\contentsline {subsubsection}{\numberline {8.50.2.1}\$fillable}{76}{subsubsection.8.50.2.1}%
+\contentsline {section}{\numberline {8.51}Database\textbackslash {}Seeders\textbackslash {}Role\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Seeder Class Reference}{76}{section.8.51}%
+\contentsline {subsection}{\numberline {8.51.1}Member Function Documentation}{76}{subsection.8.51.1}%
+\contentsline {subsubsection}{\numberline {8.51.1.1}run()}{76}{subsubsection.8.51.1.1}%
+\contentsline {section}{\numberline {8.52}App\textbackslash {}Models\textbackslash {}Role\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User Class Reference}{76}{section.8.52}%
+\contentsline {subsection}{\numberline {8.52.1}Member Function Documentation}{77}{subsection.8.52.1}%
+\contentsline {subsubsection}{\numberline {8.52.1.1}roleUsers()}{77}{subsubsection.8.52.1.1}%
+\contentsline {subsection}{\numberline {8.52.2}Member Data Documentation}{77}{subsection.8.52.2}%
+\contentsline {subsubsection}{\numberline {8.52.2.1}\$fillable}{77}{subsubsection.8.52.2.1}%
+\contentsline {subsubsection}{\numberline {8.52.2.2}\$primaryKey}{77}{subsubsection.8.52.2.2}%
+\contentsline {subsubsection}{\numberline {8.52.2.3}\$table}{78}{subsubsection.8.52.2.3}%
+\contentsline {subsubsection}{\numberline {8.52.2.4}\$timestamps}{78}{subsubsection.8.52.2.4}%
+\contentsline {section}{\numberline {8.53}App\textbackslash {}Providers\textbackslash {}Route\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Provider Class Reference}{78}{section.8.53}%
+\contentsline {subsection}{\numberline {8.53.1}Member Function Documentation}{78}{subsection.8.53.1}%
+\contentsline {subsubsection}{\numberline {8.53.1.1}boot()}{79}{subsubsection.8.53.1.1}%
+\contentsline {subsubsection}{\numberline {8.53.1.2}configureRateLimiting()}{79}{subsubsection.8.53.1.2}%
+\contentsline {subsection}{\numberline {8.53.2}Member Data Documentation}{79}{subsection.8.53.2}%
+\contentsline {subsubsection}{\numberline {8.53.2.1}HOME}{79}{subsubsection.8.53.2.1}%
+\contentsline {section}{\numberline {8.54}App\textbackslash {}Models\textbackslash {}Semester Class Reference}{79}{section.8.54}%
+\contentsline {subsection}{\numberline {8.54.1}Member Function Documentation}{80}{subsection.8.54.1}%
+\contentsline {subsubsection}{\numberline {8.54.1.1}data()}{80}{subsubsection.8.54.1.1}%
+\contentsline {subsection}{\numberline {8.54.2}Member Data Documentation}{80}{subsection.8.54.2}%
+\contentsline {subsubsection}{\numberline {8.54.2.1}\$fillable}{80}{subsubsection.8.54.2.1}%
+\contentsline {subsubsection}{\numberline {8.54.2.2}\$hidden}{80}{subsubsection.8.54.2.2}%
+\contentsline {section}{\numberline {8.55}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Semester\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{81}{section.8.55}%
+\contentsline {section}{\numberline {8.56}App\textbackslash {}Models\textbackslash {}Student Class Reference}{81}{section.8.56}%
+\contentsline {subsection}{\numberline {8.56.1}Member Function Documentation}{81}{subsection.8.56.1}%
+\contentsline {subsubsection}{\numberline {8.56.1.1}career()}{81}{subsubsection.8.56.1.1}%
+\contentsline {subsubsection}{\numberline {8.56.1.2}data()}{82}{subsubsection.8.56.1.2}%
+\contentsline {subsection}{\numberline {8.56.2}Member Data Documentation}{82}{subsection.8.56.2}%
+\contentsline {subsubsection}{\numberline {8.56.2.1}\$fillable}{82}{subsubsection.8.56.2.1}%
+\contentsline {subsubsection}{\numberline {8.56.2.2}\$hidden}{82}{subsubsection.8.56.2.2}%
+\contentsline {section}{\numberline {8.57}graph.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}api.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Student Class Reference}{82}{section.8.57}%
+\contentsline {section}{\numberline {8.58}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Student\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{83}{section.8.58}%
+\contentsline {section}{\numberline {8.59}graph.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}api.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Student\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List Class Reference}{83}{section.8.59}%
+\contentsline {section}{\numberline {8.60}Tests\textbackslash {}Test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case Class Reference}{83}{section.8.60}%
+\contentsline {section}{\numberline {8.61}App\textbackslash {}Http\textbackslash {}Middleware\textbackslash {}Trim\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Strings Class Reference}{84}{section.8.61}%
+\contentsline {subsection}{\numberline {8.61.1}Member Data Documentation}{84}{subsection.8.61.1}%
+\contentsline {subsubsection}{\numberline {8.61.1.1}\$except}{84}{subsubsection.8.61.1.1}%
+\contentsline {section}{\numberline {8.62}App\textbackslash {}Http\textbackslash {}Middleware\textbackslash {}Trust\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hosts Class Reference}{84}{section.8.62}%
+\contentsline {subsection}{\numberline {8.62.1}Member Function Documentation}{85}{subsection.8.62.1}%
+\contentsline {subsubsection}{\numberline {8.62.1.1}hosts()}{85}{subsubsection.8.62.1.1}%
+\contentsline {section}{\numberline {8.63}App\textbackslash {}Http\textbackslash {}Middleware\textbackslash {}Trust\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Proxies Class Reference}{85}{section.8.63}%
+\contentsline {subsection}{\numberline {8.63.1}Member Data Documentation}{85}{subsection.8.63.1}%
+\contentsline {subsubsection}{\numberline {8.63.1.1}\$headers}{85}{subsubsection.8.63.1.1}%
+\contentsline {subsubsection}{\numberline {8.63.1.2}\$proxies}{86}{subsubsection.8.63.1.2}%
+\contentsline {section}{\numberline {8.64}App\textbackslash {}Models\textbackslash {}User Class Reference}{86}{section.8.64}%
+\contentsline {subsection}{\numberline {8.64.1}Member Function Documentation}{86}{subsection.8.64.1}%
+\contentsline {subsubsection}{\numberline {8.64.1.1}authorizeRoles()}{86}{subsubsection.8.64.1.1}%
+\contentsline {subsubsection}{\numberline {8.64.1.2}hasAnyRole()}{86}{subsubsection.8.64.1.2}%
+\contentsline {subsubsection}{\numberline {8.64.1.3}hasRole()}{87}{subsubsection.8.64.1.3}%
+\contentsline {subsubsection}{\numberline {8.64.1.4}roles()}{87}{subsubsection.8.64.1.4}%
+\contentsline {subsection}{\numberline {8.64.2}Member Data Documentation}{87}{subsection.8.64.2}%
+\contentsline {subsubsection}{\numberline {8.64.2.1}\$casts}{87}{subsubsection.8.64.2.1}%
+\contentsline {subsubsection}{\numberline {8.64.2.2}\$fillable}{87}{subsubsection.8.64.2.2}%
+\contentsline {subsubsection}{\numberline {8.64.2.3}\$hidden}{87}{subsubsection.8.64.2.3}%
+\contentsline {section}{\numberline {8.65}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{88}{section.8.65}%
+\contentsline {subsection}{\numberline {8.65.1}Member Function Documentation}{88}{subsection.8.65.1}%
+\contentsline {subsubsection}{\numberline {8.65.1.1}create()}{88}{subsubsection.8.65.1.1}%
+\contentsline {subsubsection}{\numberline {8.65.1.2}destroy()}{88}{subsubsection.8.65.1.2}%
+\contentsline {subsubsection}{\numberline {8.65.1.3}edit()}{89}{subsubsection.8.65.1.3}%
+\contentsline {subsubsection}{\numberline {8.65.1.4}index()}{89}{subsubsection.8.65.1.4}%
+\contentsline {subsubsection}{\numberline {8.65.1.5}store()}{89}{subsubsection.8.65.1.5}%
+\contentsline {subsubsection}{\numberline {8.65.1.6}update()}{89}{subsubsection.8.65.1.6}%
+\contentsline {section}{\numberline {8.66}Database\textbackslash {}Factories\textbackslash {}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Factory Class Reference}{89}{section.8.66}%
+\contentsline {subsection}{\numberline {8.66.1}Member Function Documentation}{90}{subsection.8.66.1}%
+\contentsline {subsubsection}{\numberline {8.66.1.1}definition()}{90}{subsubsection.8.66.1.1}%
+\contentsline {subsubsection}{\numberline {8.66.1.2}unverified()}{90}{subsubsection.8.66.1.2}%
+\contentsline {section}{\numberline {8.67}Database\textbackslash {}Seeders\textbackslash {}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Seeder Class Reference}{90}{section.8.67}%
+\contentsline {subsection}{\numberline {8.67.1}Member Function Documentation}{91}{subsection.8.67.1}%
+\contentsline {subsubsection}{\numberline {8.67.1.1}run()}{91}{subsubsection.8.67.1.1}%
+\contentsline {section}{\numberline {8.68}App\textbackslash {}Http\textbackslash {}Controllers\textbackslash {}Auth\textbackslash {}Verification\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{91}{section.8.68}%
+\contentsline {subsection}{\numberline {8.68.1}Constructor \& Destructor Documentation}{91}{subsection.8.68.1}%
+\contentsline {subsubsection}{\numberline {8.68.1.1}\_\_construct()}{92}{subsubsection.8.68.1.1}%
+\contentsline {subsection}{\numberline {8.68.2}Member Data Documentation}{92}{subsection.8.68.2}%
+\contentsline {subsubsection}{\numberline {8.68.2.1}\$redirectTo}{92}{subsubsection.8.68.2.1}%
+\contentsline {section}{\numberline {8.69}App\textbackslash {}Http\textbackslash {}Middleware\textbackslash {}Verify\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Csrf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Token Class Reference}{92}{section.8.69}%
+\contentsline {subsection}{\numberline {8.69.1}Member Data Documentation}{92}{subsection.8.69.1}%
+\contentsline {subsubsection}{\numberline {8.69.1.1}\$except}{92}{subsubsection.8.69.1.1}%
+\contentsline {chapter}{\numberline {9}File Documentation}{93}{chapter.9}%
+\contentsline {section}{\numberline {9.1}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Console/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kernel.php File Reference}{93}{section.9.1}%
+\contentsline {section}{\numberline {9.2}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kernel.php File Reference}{93}{section.9.2}%
+\contentsline {section}{\numberline {9.3}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exceptions/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.php File Reference}{93}{section.9.3}%
+\contentsline {section}{\numberline {9.4}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Auth/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Confirm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{94}{section.9.4}%
+\contentsline {section}{\numberline {9.5}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Auth/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Forgot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{94}{section.9.5}%
+\contentsline {section}{\numberline {9.6}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Auth/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Login\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{94}{section.9.6}%
+\contentsline {section}{\numberline {9.7}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Auth/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Register\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{94}{section.9.7}%
+\contentsline {section}{\numberline {9.8}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Auth/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Reset\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{95}{section.9.8}%
+\contentsline {section}{\numberline {9.9}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Auth/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Verification\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{95}{section.9.9}%
+\contentsline {section}{\numberline {9.10}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Career\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{95}{section.9.10}%
+\contentsline {section}{\numberline {9.11}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Consult\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{95}{section.9.11}%
+\contentsline {section}{\numberline {9.12}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{96}{section.9.12}%
+\contentsline {section}{\numberline {9.13}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CSVController.php File Reference}{96}{section.9.13}%
+\contentsline {section}{\numberline {9.14}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{96}{section.9.14}%
+\contentsline {section}{\numberline {9.15}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{96}{section.9.15}%
+\contentsline {section}{\numberline {9.16}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Generation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{97}{section.9.16}%
+\contentsline {section}{\numberline {9.17}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graphs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{97}{section.9.17}%
+\contentsline {section}{\numberline {9.18}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Home\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{97}{section.9.18}%
+\contentsline {section}{\numberline {9.19}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Query\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{97}{section.9.19}%
+\contentsline {section}{\numberline {9.20}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Semester\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{98}{section.9.20}%
+\contentsline {section}{\numberline {9.21}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Student\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{98}{section.9.21}%
+\contentsline {section}{\numberline {9.22}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.php File Reference}{98}{section.9.22}%
+\contentsline {section}{\numberline {9.23}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Middleware/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Authenticate.php File Reference}{98}{section.9.23}%
+\contentsline {section}{\numberline {9.24}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Middleware/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Role.php File Reference}{99}{section.9.24}%
+\contentsline {section}{\numberline {9.25}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Middleware/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Encrypt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookies.php File Reference}{99}{section.9.25}%
+\contentsline {section}{\numberline {9.26}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Middleware/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Prevent\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Requests\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}During\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Maintenance.php File Reference}{99}{section.9.26}%
+\contentsline {section}{\numberline {9.27}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Middleware/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Redirect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}If\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Authenticated.php File Reference}{99}{section.9.27}%
+\contentsline {section}{\numberline {9.28}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Middleware/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trim\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Strings.php File Reference}{100}{section.9.28}%
+\contentsline {section}{\numberline {9.29}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Middleware/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trust\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hosts.php File Reference}{100}{section.9.29}%
+\contentsline {section}{\numberline {9.30}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Middleware/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trust\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Proxies.php File Reference}{100}{section.9.30}%
+\contentsline {section}{\numberline {9.31}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Middleware/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Verify\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Csrf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Token.php File Reference}{100}{section.9.31}%
+\contentsline {section}{\numberline {9.32}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Imports/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CSVImport.php File Reference}{101}{section.9.32}%
+\contentsline {section}{\numberline {9.33}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Models/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Career.php File Reference}{101}{section.9.33}%
+\contentsline {section}{\numberline {9.34}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Models/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CSV.php File Reference}{101}{section.9.34}%
+\contentsline {section}{\numberline {9.35}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Models/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.php File Reference}{101}{section.9.35}%
+\contentsline {section}{\numberline {9.36}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Models/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File.php File Reference}{102}{section.9.36}%
+\contentsline {section}{\numberline {9.37}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Models/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Role.php File Reference}{102}{section.9.37}%
+\contentsline {section}{\numberline {9.38}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Models/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Role\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User.php File Reference}{102}{section.9.38}%
+\contentsline {section}{\numberline {9.39}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Models/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Semester.php File Reference}{102}{section.9.39}%
+\contentsline {section}{\numberline {9.40}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Models/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Student.php File Reference}{103}{section.9.40}%
+\contentsline {section}{\numberline {9.41}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Models/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User.php File Reference}{103}{section.9.41}%
+\contentsline {section}{\numberline {9.42}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Providers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Provider.php File Reference}{103}{section.9.42}%
+\contentsline {section}{\numberline {9.43}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Providers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Auth\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Provider.php File Reference}{103}{section.9.43}%
+\contentsline {section}{\numberline {9.44}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Providers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Broadcast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Provider.php File Reference}{104}{section.9.44}%
+\contentsline {section}{\numberline {9.45}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Providers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Event\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Provider.php File Reference}{104}{section.9.45}%
+\contentsline {section}{\numberline {9.46}app/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Providers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Route\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Provider.php File Reference}{104}{section.9.46}%
+\contentsline {section}{\numberline {9.47}bootstrap/app.php File Reference}{104}{section.9.47}%
+\contentsline {subsection}{\numberline {9.47.1}Variable Documentation}{105}{subsection.9.47.1}%
+\contentsline {subsubsection}{\numberline {9.47.1.1}\$app}{105}{subsubsection.9.47.1.1}%
+\contentsline {section}{\numberline {9.48}config/app.php File Reference}{105}{section.9.48}%
+\contentsline {subsection}{\numberline {9.48.1}Variable Documentation}{106}{subsection.9.48.1}%
+\contentsline {subsubsection}{\numberline {9.48.1.1}return}{106}{subsubsection.9.48.1.1}%
+\contentsline {section}{\numberline {9.49}config/auth.php File Reference}{106}{section.9.49}%
+\contentsline {subsection}{\numberline {9.49.1}Variable Documentation}{107}{subsection.9.49.1}%
+\contentsline {subsubsection}{\numberline {9.49.1.1}return}{107}{subsubsection.9.49.1.1}%
+\contentsline {section}{\numberline {9.50}resources/lang/en/auth.php File Reference}{107}{section.9.50}%
+\contentsline {subsection}{\numberline {9.50.1}Variable Documentation}{107}{subsection.9.50.1}%
+\contentsline {subsubsection}{\numberline {9.50.1.1}return}{107}{subsubsection.9.50.1.1}%
+\contentsline {section}{\numberline {9.51}resources/lang/es/auth.php File Reference}{107}{section.9.51}%
+\contentsline {subsection}{\numberline {9.51.1}Variable Documentation}{107}{subsection.9.51.1}%
+\contentsline {subsubsection}{\numberline {9.51.1.1}return}{107}{subsubsection.9.51.1.1}%
+\contentsline {section}{\numberline {9.52}config/broadcasting.php File Reference}{108}{section.9.52}%
+\contentsline {subsection}{\numberline {9.52.1}Variable Documentation}{108}{subsection.9.52.1}%
+\contentsline {subsubsection}{\numberline {9.52.1.1}return}{108}{subsubsection.9.52.1.1}%
+\contentsline {section}{\numberline {9.53}config/cache.php File Reference}{108}{section.9.53}%
+\contentsline {subsection}{\numberline {9.53.1}Variable Documentation}{108}{subsection.9.53.1}%
+\contentsline {subsubsection}{\numberline {9.53.1.1}return}{109}{subsubsection.9.53.1.1}%
+\contentsline {section}{\numberline {9.54}config/cors.php File Reference}{109}{section.9.54}%
+\contentsline {section}{\numberline {9.55}config/database.php File Reference}{109}{section.9.55}%
+\contentsline {subsection}{\numberline {9.55.1}Variable Documentation}{109}{subsection.9.55.1}%
+\contentsline {subsubsection}{\numberline {9.55.1.1}return}{110}{subsubsection.9.55.1.1}%
+\contentsline {section}{\numberline {9.56}config/excel.php File Reference}{110}{section.9.56}%
+\contentsline {subsection}{\numberline {9.56.1}Variable Documentation}{110}{subsection.9.56.1}%
+\contentsline {subsubsection}{\numberline {9.56.1.1}return}{111}{subsubsection.9.56.1.1}%
+\contentsline {section}{\numberline {9.57}config/filesystems.php File Reference}{111}{section.9.57}%
+\contentsline {subsection}{\numberline {9.57.1}Variable Documentation}{111}{subsection.9.57.1}%
+\contentsline {subsubsection}{\numberline {9.57.1.1}return}{111}{subsubsection.9.57.1.1}%
+\contentsline {section}{\numberline {9.58}config/hashing.php File Reference}{112}{section.9.58}%
+\contentsline {subsection}{\numberline {9.58.1}Variable Documentation}{112}{subsection.9.58.1}%
+\contentsline {subsubsection}{\numberline {9.58.1.1}return}{112}{subsubsection.9.58.1.1}%
+\contentsline {section}{\numberline {9.59}config/logging.php File Reference}{112}{section.9.59}%
+\contentsline {subsection}{\numberline {9.59.1}Variable Documentation}{112}{subsection.9.59.1}%
+\contentsline {subsubsection}{\numberline {9.59.1.1}return}{112}{subsubsection.9.59.1.1}%
+\contentsline {section}{\numberline {9.60}config/mail.php File Reference}{113}{section.9.60}%
+\contentsline {subsection}{\numberline {9.60.1}Variable Documentation}{113}{subsection.9.60.1}%
+\contentsline {subsubsection}{\numberline {9.60.1.1}return}{113}{subsubsection.9.60.1.1}%
+\contentsline {section}{\numberline {9.61}config/queue.php File Reference}{113}{section.9.61}%
+\contentsline {subsection}{\numberline {9.61.1}Variable Documentation}{113}{subsection.9.61.1}%
+\contentsline {subsubsection}{\numberline {9.61.1.1}return}{114}{subsubsection.9.61.1.1}%
+\contentsline {section}{\numberline {9.62}config/sanctum.php File Reference}{114}{section.9.62}%
+\contentsline {subsection}{\numberline {9.62.1}Variable Documentation}{114}{subsection.9.62.1}%
+\contentsline {subsubsection}{\numberline {9.62.1.1}return}{114}{subsubsection.9.62.1.1}%
+\contentsline {section}{\numberline {9.63}config/services.php File Reference}{114}{section.9.63}%
+\contentsline {subsection}{\numberline {9.63.1}Variable Documentation}{114}{subsection.9.63.1}%
+\contentsline {subsubsection}{\numberline {9.63.1.1}return}{115}{subsubsection.9.63.1.1}%
+\contentsline {section}{\numberline {9.64}config/session.php File Reference}{115}{section.9.64}%
+\contentsline {subsection}{\numberline {9.64.1}Variable Documentation}{115}{subsection.9.64.1}%
+\contentsline {subsubsection}{\numberline {9.64.1.1}return}{115}{subsubsection.9.64.1.1}%
+\contentsline {section}{\numberline {9.65}config/view.php File Reference}{115}{section.9.65}%
+\contentsline {subsection}{\numberline {9.65.1}Variable Documentation}{115}{subsection.9.65.1}%
+\contentsline {subsubsection}{\numberline {9.65.1.1}return}{115}{subsubsection.9.65.1.1}%
+\contentsline {section}{\numberline {9.66}database/factories/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Factory.php File Reference}{116}{section.9.66}%
+\contentsline {section}{\numberline {9.67}database/migrations/2014\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}10\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}12\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}000000\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}users\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}table.php File Reference}{116}{section.9.67}%
+\contentsline {section}{\numberline {9.68}database/migrations/2014\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}10\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}12\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}100000\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}password\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}resets\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}table.php File Reference}{116}{section.9.68}%
+\contentsline {section}{\numberline {9.69}database/migrations/2019\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}08\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}19\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}000000\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}failed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}jobs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}table.php File Reference}{116}{section.9.69}%
+\contentsline {section}{\numberline {9.70}database/migrations/2019\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}12\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}14\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}000001\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}personal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}access\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tokens\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}table.php File Reference}{116}{section.9.70}%
+\contentsline {section}{\numberline {9.71}database/migrations/2022\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}08\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}18\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}001956\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}files\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}table.php File Reference}{117}{section.9.71}%
+\contentsline {section}{\numberline {9.72}database/migrations/2022\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}08\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}18\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}181913\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}careers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}table.php File Reference}{117}{section.9.72}%
+\contentsline {section}{\numberline {9.73}database/migrations/2022\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}08\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}18\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}181914\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}students\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}table.php File Reference}{117}{section.9.73}%
+\contentsline {section}{\numberline {9.74}database/migrations/2022\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}08\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}18\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}182401\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}table.php File Reference}{117}{section.9.74}%
+\contentsline {section}{\numberline {9.75}database/migrations/2022\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}08\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}18\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}182534\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}semesters\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}table.php File Reference}{117}{section.9.75}%
+\contentsline {section}{\numberline {9.76}database/migrations/2022\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}08\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}18\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}185029\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}student\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}semester\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}table.php File Reference}{117}{section.9.76}%
+\contentsline {section}{\numberline {9.77}database/migrations/2022\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}09\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}01\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}231231\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}roles\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}table.php File Reference}{118}{section.9.77}%
+\contentsline {section}{\numberline {9.78}database/migrations/2022\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}09\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}01\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}232452\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}role\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}user\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}table.php File Reference}{118}{section.9.78}%
+\contentsline {section}{\numberline {9.79}database/seeders/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Database\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Seeder.php File Reference}{118}{section.9.79}%
+\contentsline {section}{\numberline {9.80}database/seeders/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Role\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Seeder.php File Reference}{118}{section.9.80}%
+\contentsline {section}{\numberline {9.81}database/seeders/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Seeder.php File Reference}{118}{section.9.81}%
+\contentsline {section}{\numberline {9.82}graph/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{119}{section.9.82}%
+\contentsline {section}{\numberline {9.83}graph/dash\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}api.py File Reference}{119}{section.9.83}%
+\contentsline {section}{\numberline {9.84}graph/graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}api.py File Reference}{119}{section.9.84}%
+\contentsline {section}{\numberline {9.85}graph/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}README.md File Reference}{120}{section.9.85}%
+\contentsline {section}{\numberline {9.86}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{120}{section.9.86}%
+\contentsline {section}{\numberline {9.87}public/index.php File Reference}{120}{section.9.87}%
+\contentsline {subsection}{\numberline {9.87.1}Variable Documentation}{120}{subsection.9.87.1}%
+\contentsline {subsubsection}{\numberline {9.87.1.1}\$app}{120}{subsubsection.9.87.1.1}%
+\contentsline {subsubsection}{\numberline {9.87.1.2}\$kernel}{120}{subsubsection.9.87.1.2}%
+\contentsline {subsubsection}{\numberline {9.87.1.3}\$response}{120}{subsubsection.9.87.1.3}%
+\contentsline {subsubsection}{\numberline {9.87.1.4}if}{120}{subsubsection.9.87.1.4}%
+\contentsline {subsubsection}{\numberline {9.87.1.5}LARAVEL\_START}{121}{subsubsection.9.87.1.5}%
+\contentsline {section}{\numberline {9.88}resources/lang/en/pagination.php File Reference}{121}{section.9.88}%
+\contentsline {subsection}{\numberline {9.88.1}Variable Documentation}{121}{subsection.9.88.1}%
+\contentsline {subsubsection}{\numberline {9.88.1.1}return}{121}{subsubsection.9.88.1.1}%
+\contentsline {section}{\numberline {9.89}resources/lang/es/pagination.php File Reference}{121}{section.9.89}%
+\contentsline {subsection}{\numberline {9.89.1}Variable Documentation}{121}{subsection.9.89.1}%
+\contentsline {subsubsection}{\numberline {9.89.1.1}return}{121}{subsubsection.9.89.1.1}%
+\contentsline {section}{\numberline {9.90}resources/lang/en/passwords.php File Reference}{121}{section.9.90}%
+\contentsline {subsection}{\numberline {9.90.1}Variable Documentation}{122}{subsection.9.90.1}%
+\contentsline {subsubsection}{\numberline {9.90.1.1}return}{122}{subsubsection.9.90.1.1}%
+\contentsline {section}{\numberline {9.91}resources/lang/es/passwords.php File Reference}{122}{section.9.91}%
+\contentsline {subsection}{\numberline {9.91.1}Variable Documentation}{122}{subsection.9.91.1}%
+\contentsline {subsubsection}{\numberline {9.91.1.1}return}{122}{subsubsection.9.91.1.1}%
+\contentsline {section}{\numberline {9.92}resources/lang/en/validation.php File Reference}{122}{section.9.92}%
+\contentsline {subsection}{\numberline {9.92.1}Variable Documentation}{123}{subsection.9.92.1}%
+\contentsline {subsubsection}{\numberline {9.92.1.1}return}{123}{subsubsection.9.92.1.1}%
+\contentsline {section}{\numberline {9.93}resources/lang/es/validation.php File Reference}{125}{section.9.93}%
+\contentsline {subsection}{\numberline {9.93.1}Variable Documentation}{126}{subsection.9.93.1}%
+\contentsline {subsubsection}{\numberline {9.93.1.1}return}{126}{subsubsection.9.93.1.1}%
+\contentsline {section}{\numberline {9.94}resources/views/auth/login.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.94}%
+\contentsline {section}{\numberline {9.95}resources/views/auth/passwords/confirm.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.95}%
+\contentsline {section}{\numberline {9.96}resources/views/auth/passwords/email.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.96}%
+\contentsline {section}{\numberline {9.97}resources/views/auth/passwords/reset.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.97}%
+\contentsline {section}{\numberline {9.98}resources/views/auth/register.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.98}%
+\contentsline {section}{\numberline {9.99}resources/views/auth/verify.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.99}%
+\contentsline {section}{\numberline {9.100}resources/views/csv/import.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.100}%
+\contentsline {section}{\numberline {9.101}resources/views/home.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.101}%
+\contentsline {section}{\numberline {9.102}resources/views/layout.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.102}%
+\contentsline {section}{\numberline {9.103}resources/views/layouts/app.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.103}%
+\contentsline {section}{\numberline {9.104}resources/views/test/test.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.104}%
+\contentsline {section}{\numberline {9.105}resources/views/users/create.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.105}%
+\contentsline {section}{\numberline {9.106}resources/views/users/edit.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.106}%
+\contentsline {section}{\numberline {9.107}resources/views/consult/index.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.107}%
+\contentsline {section}{\numberline {9.108}resources/views/csv/index.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.108}%
+\contentsline {section}{\numberline {9.109}resources/views/graphs/index.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.109}%
+\contentsline {section}{\numberline {9.110}resources/views/users/index.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.110}%
+\contentsline {section}{\numberline {9.111}resources/views/users\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Copy.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.111}%
+\contentsline {section}{\numberline {9.112}resources/views/welcome.blade.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.112}%
+\contentsline {section}{\numberline {9.113}routes/api.php File Reference}{129}{section.9.113}%
+\contentsline {section}{\numberline {9.114}routes/channels.php File Reference}{129}{section.9.114}%
+\contentsline {section}{\numberline {9.115}routes/console.php File Reference}{129}{section.9.115}%
+\contentsline {section}{\numberline {9.116}routes/web.php File Reference}{129}{section.9.116}%
+\contentsline {section}{\numberline {9.117}server.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}php File Reference}{129}{section.9.117}%
+\contentsline {subsection}{\numberline {9.117.1}Variable Documentation}{130}{subsection.9.117.1}%
+\contentsline {subsubsection}{\numberline {9.117.1.1}\$uri}{130}{subsubsection.9.117.1.1}%
+\contentsline {subsubsection}{\numberline {9.117.1.2}if}{130}{subsubsection.9.117.1.2}%
+\contentsline {section}{\numberline {9.118}tests/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creates\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Application.php File Reference}{130}{section.9.118}%
+\contentsline {section}{\numberline {9.119}tests/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Feature/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test.php File Reference}{130}{section.9.119}%
+\contentsline {section}{\numberline {9.120}tests/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Unit/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test.php File Reference}{130}{section.9.120}%
+\contentsline {section}{\numberline {9.121}tests/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Feature/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}api.py File Reference}{131}{section.9.121}%
+\contentsline {section}{\numberline {9.122}tests/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Feature/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}creation.py File Reference}{131}{section.9.122}%
+\contentsline {section}{\numberline {9.123}tests/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case.php File Reference}{131}{section.9.123}%
+\contentsline {section}{\numberline {9.124}vendor/laravel/ui/auth-\/backend/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Authenticates\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users.php File Reference}{131}{section.9.124}%
+\contentsline {chapter}{Index}{133}{section*.333}%

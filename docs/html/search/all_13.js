@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['feature_0',['Feature',['../d5/df8/namespaceTests_1_1Feature.html',1,'Tests']]],
+  ['test_1',['test',['../d2/d6c/classApp_1_1Http_1_1Controllers_1_1ConsultController.html#a2a6799bea8d43ac45a6cab9a77b5c39c',1,'App::Http::Controllers::ConsultController']]],
+  ['test_2eblade_2ephp_2',['test.blade.php',['../d5/d71/test_8blade_8php.html',1,'']]],
+  ['test_5fbar_5fplot_3',['test_bar_plot',['../d8/d0d/classtest__graph__api_1_1GraphsAPI.html#aba88091cfc02fa6ad9b4bc28cba233c5',1,'test_graph_api::GraphsAPI']]],
+  ['test_5fexample_4',['test_example',['../db/d27/classTests_1_1Feature_1_1ExampleTest.html#a5c598b934253e5a218b36f4374d58da6',1,'Tests\Feature\ExampleTest\test_example()'],['../d1/d5b/classTests_1_1Unit_1_1ExampleTest.html#a5b5d9ffab7f6ef43b2415fd19512aee6',1,'Tests\Unit\ExampleTest\test_example()']]],
+  ['test_5fget_5fdataframe_5',['test_get_dataframe',['../d9/d7f/classtest__graph__creation_1_1GraphsAPI.html#ab7017dbc0d9189f7123628d5b4414385',1,'test_graph_creation::GraphsAPI']]],
+  ['test_5fgraph_5fapi_6',['test_graph_api',['../d0/d1d/namespacetest__graph__api.html',1,'']]],
+  ['test_5fgraph_5fapi_2epy_7',['test_graph_api.py',['../d9/dd5/test__graph__api_8py.html',1,'']]],
+  ['test_5fgraph_5fcreation_8',['test_graph_creation',['../d3/d97/namespacetest__graph__creation.html',1,'']]],
+  ['test_5fgraph_5fcreation_2epy_9',['test_graph_creation.py',['../d4/d9d/test__graph__creation_8py.html',1,'']]],
+  ['test_5flag_5fgraph_10',['test_lag_graph',['../d9/d7f/classtest__graph__creation_1_1GraphsAPI.html#af1839758820856ef5a136eaa081637e3',1,'test_graph_creation::GraphsAPI']]],
+  ['test_5fprocess_5fgraph_11',['test_process_graph',['../d9/d7f/classtest__graph__creation_1_1GraphsAPI.html#a66abb9476faab1471c739f356c8bd573',1,'test_graph_creation::GraphsAPI']]],
+  ['testcase_12',['TestCase',['../d5/db5/classTests_1_1TestCase.html',1,'Tests']]],
+  ['testcase_2ephp_13',['TestCase.php',['../dd/da9/TestCase_8php.html',1,'']]],
+  ['tests_14',['Tests',['../df/da7/namespaceTests.html',1,'']]],
+  ['trimstrings_15',['TrimStrings',['../dd/d28/classApp_1_1Http_1_1Middleware_1_1TrimStrings.html',1,'App::Http::Middleware']]],
+  ['trimstrings_2ephp_16',['TrimStrings.php',['../d6/da1/TrimStrings_8php.html',1,'']]],
+  ['trusthosts_17',['TrustHosts',['../d0/dbd/classApp_1_1Http_1_1Middleware_1_1TrustHosts.html',1,'App::Http::Middleware']]],
+  ['trusthosts_2ephp_18',['TrustHosts.php',['../d2/da6/TrustHosts_8php.html',1,'']]],
+  ['trustproxies_19',['TrustProxies',['../db/df4/classApp_1_1Http_1_1Middleware_1_1TrustProxies.html',1,'App::Http::Middleware']]],
+  ['trustproxies_2ephp_20',['TrustProxies.php',['../d2/d9e/TrustProxies_8php.html',1,'']]],
+  ['unit_21',['Unit',['../d8/deb/namespaceTests_1_1Unit.html',1,'Tests']]]
+];

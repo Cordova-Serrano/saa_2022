@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['sanctum_2ephp_0',['sanctum.php',['../dd/dcf/sanctum_8php.html',1,'']]],
+  ['scatter_5fplot_1',['scatter_plot',['../db/de0/namespacegraph_1_1graph__api.html#ae64a646121b5f119dd7681f45cd2517b',1,'graph::graph_api']]],
+  ['schedule_2',['schedule',['../d9/d47/classApp_1_1Console_1_1Kernel.html#a99912aa32dab8508ff247aef40ba7bcb',1,'App::Console::Kernel']]],
+  ['semester_3',['Semester',['../d4/db5/classApp_1_1Models_1_1Semester.html',1,'App::Models']]],
+  ['semester_2ephp_4',['Semester.php',['../d9/d94/Semester_8php.html',1,'']]],
+  ['semestercontroller_5',['SemesterController',['../d0/d14/classApp_1_1Http_1_1Controllers_1_1SemesterController.html',1,'App::Http::Controllers']]],
+  ['semestercontroller_2ephp_6',['SemesterController.php',['../d1/de0/SemesterController_8php.html',1,'']]],
+  ['sendfailedloginresponse_7',['sendFailedLoginResponse',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#a4b1c3b92547016765f50e5b59d0fde82',1,'Illuminate::Foundation::Auth']]],
+  ['sendloginresponse_8',['sendLoginResponse',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#a40b8808f6f72ed1259722d28c4e4290e',1,'Illuminate::Foundation::Auth']]],
+  ['server_2ephp_9',['server.php',['../df/dbd/server_8php.html',1,'']]],
+  ['services_2ephp_10',['services.php',['../de/d6d/services_8php.html',1,'']]],
+  ['session_2ephp_11',['session.php',['../de/d8b/session_8php.html',1,'']]],
+  ['setup_12',['setUp',['../d8/d0d/classtest__graph__api_1_1GraphsAPI.html#a52228f4066feaa413312c86ffe7ffb2e',1,'test_graph_api.GraphsAPI.setUp()'],['../d9/d7f/classtest__graph__creation_1_1GraphsAPI.html#a60c9716a662c600bcb62adfd22640245',1,'test_graph_creation.GraphsAPI.setUp()']]],
+  ['show_13',['show',['../dd/dec/classApp_1_1Http_1_1Controllers_1_1GraphsController.html#a1ca5893db77e5128851a9ad64417b69e',1,'App::Http::Controllers::GraphsController']]],
+  ['showloginform_14',['showLoginForm',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#a1f0b36e691c853be281602d0695fd9a9',1,'Illuminate::Foundation::Auth']]],
+  ['sistema_20de_20seguimiento_20de_20alumnos_15',['Sistema de seguimiento de Alumnos',['../d0/d30/md_README.html',1,'']]],
+  ['store_16',['store',['../d4/d30/classApp_1_1Http_1_1Controllers_1_1CSVController.html#af485165d21539f2fbd0b032a8776a993',1,'App\Http\Controllers\CSVController\store()'],['../dd/dec/classApp_1_1Http_1_1Controllers_1_1GraphsController.html#af49600266fc6004b00246f6c698209ed',1,'App\Http\Controllers\GraphsController\store()'],['../d0/da3/classApp_1_1Http_1_1Controllers_1_1UserController.html#a25d8745c27f95ad4ff14955be6bc12d3',1,'App\Http\Controllers\UserController\store()']]],
+  ['student_17',['Student',['../d1/d50/classApp_1_1Models_1_1Student.html',1,'App\Models\Student'],['../d5/dbd/classgraph_1_1graph__api_1_1Student.html',1,'graph.graph_api.Student']]],
+  ['student_18',['student',['../de/d53/classApp_1_1Models_1_1Data.html#a475af69d17453403c7e5f79ddcf582e0',1,'App::Models::Data']]],
+  ['student_2ephp_19',['Student.php',['../d6/dd0/Student_8php.html',1,'']]],
+  ['student_5flist_20',['student_list',['../d8/d0d/classtest__graph__api_1_1GraphsAPI.html#a8e4c0acc8f02b235f404623217b91d82',1,'test_graph_api.GraphsAPI.student_list()'],['../d9/d7f/classtest__graph__creation_1_1GraphsAPI.html#a23992160c6508f6256edb41d4ac5e867',1,'test_graph_creation.GraphsAPI.student_list()']]],
+  ['studentcontroller_21',['StudentController',['../d5/d5e/classApp_1_1Http_1_1Controllers_1_1StudentController.html',1,'App::Http::Controllers']]],
+  ['studentcontroller_2ephp_22',['StudentController.php',['../d7/db5/StudentController_8php.html',1,'']]],
+  ['studentlist_23',['StudentList',['../d6/d37/classgraph_1_1graph__api_1_1StudentList.html',1,'graph::graph_api']]]
+];

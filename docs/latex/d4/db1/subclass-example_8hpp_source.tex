@@ -1,0 +1,33 @@
+\hypertarget{subclass-example_8hpp_source}{}\doxysection{subclass-\/example.hpp}
+\label{subclass-example_8hpp_source}\index{doxygen-\/awesome-\/css/include/MyLibrary/subclass-\/example.hpp@{doxygen-\/awesome-\/css/include/MyLibrary/subclass-\/example.hpp}}
+\mbox{\hyperlink{subclass-example_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{example_8hpp}{example.hpp}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceMyLibrary}{MyLibrary}} \{}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11     \textcolor{keyword}{template}<\textcolor{keyword}{typename} TemplatedClass>}
+\DoxyCodeLine{12     \textcolor{keyword}{class }\mbox{\hyperlink{classMyLibrary_1_1SubclassExample}{SubclassExample}} : \textcolor{keyword}{public} \mbox{\hyperlink{classMyLibrary_1_1Example}{Example}} \{}
+\DoxyCodeLine{13     \textcolor{keyword}{public}:}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{19         \textcolor{keywordtype}{int} \mbox{\hyperlink{classMyLibrary_1_1SubclassExample_a08668a9f16511ad37fb547c985d62764}{virtualfunc}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{24         \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{25         std::shared\_ptr<std::string> \mbox{\hyperlink{classMyLibrary_1_1SubclassExample_ad2432fe3b060789f6f7052c515d515f4}{function\_template\_test}}(std::shared\_ptr<T>\& param);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{36         \textcolor{keyword}{template} <\textcolor{keyword}{typename} T, \textcolor{keyword}{typename} Foo, \textcolor{keyword}{typename} Bar, \textcolor{keyword}{typename} Alice, \textcolor{keyword}{typename} Bob, \textcolor{keyword}{typename} Charlie, \textcolor{keyword}{typename} Hello, \textcolor{keyword}{typename} World>}
+\DoxyCodeLine{37         std::pair<std::string, std::string> \mbox{\hyperlink{classMyLibrary_1_1SubclassExample_a92227fff4f72a11be0e21d88914ba63e}{long\_function\_with\_many\_parameters}}(std::shared\_ptr<T>\& param1, std::shared\_ptr<std::string>\& param2, \textcolor{keywordtype}{bool} parameter3, Alice paramater4 Bob parameter 5) \{}
+\DoxyCodeLine{38             \textcolor{keywordflow}{if}(\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{39                 std::cout << \textcolor{stringliteral}{"{}this even has some code."{}} << std::endl;}
+\DoxyCodeLine{40             \}}
+\DoxyCodeLine{41         \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \}}
+\DoxyCodeLine{46 }
+
+\end{DoxyCode}

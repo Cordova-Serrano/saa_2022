@@ -1,0 +1,91 @@
+TODO\+: Descripción del sistema\hypertarget{md_README_autotoc_md4}{}\doxysection{Instalación para desarrollo}\label{md_README_autotoc_md4}
+Instala \href{https://laragon.org/}{\texttt{ Laragon}}.
+
+Suponiendo que se utilizó el directorio por defecto durante la instalación, crear un archivo llamado {\ttfamily sistema-\/seguimiento-\/alumnos.\+conf} en el directorio {\ttfamily C\+:\textbackslash{}laragon\textbackslash{}etc\textbackslash{}apache2\textbackslash{}sites-\/enabled\textbackslash{}} con el siguiente contenido\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<\textcolor{keywordtype}{VirtualHost} *:80> }
+\DoxyCodeLine{    \textcolor{keyword}{DocumentRoot} \textcolor{stringliteral}{"{}C:\(\backslash\)PATH\(\backslash\)TO\(\backslash\)PROJECT\(\backslash\)public"{}}}
+\DoxyCodeLine{    \textcolor{keyword}{ServerName} \textcolor{keyword}{sistema-\/seguimiento.test}}
+\DoxyCodeLine{    \textcolor{keyword}{ServerAlias} *.\textcolor{keyword}{sistema-\/seguimiento.test}}
+\DoxyCodeLine{    <\textcolor{keywordtype}{Directory} \textcolor{stringliteral}{"{}C:\(\backslash\)PATH\(\backslash\)TO\(\backslash\)PROJECT\(\backslash\)public"{}}>}
+\DoxyCodeLine{        \textcolor{keyword}{AllowOverride} \textcolor{keyword}{All}}
+\DoxyCodeLine{        \textcolor{keyword}{Require} \textcolor{keyword}{all} \textcolor{keyword}{granted}}
+\DoxyCodeLine{    </\textcolor{keywordtype}{Directory}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{VirtualHost}>}
+
+\end{DoxyCode}
+
+
+{\ttfamily C\+:\textbackslash{}PATH\textbackslash{}TO\textbackslash{}PROJECT} debe sustituirse por el directorio del proyecto.
+
+Después de reiniciar Laragon, se deben ejecutar los siguientes comandos\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer install}
+\DoxyCodeLine{copy .env.example .env }
+\DoxyCodeLine{php artisan key:generate}
+
+\end{DoxyCode}
+ En la base de datos de laragon (Heidi\+SQL), crear una base de datos llamada \textquotesingle{}saa\textquotesingle{}, correr migraciones y servidor.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{php artisan migrate:fresh}
+\DoxyCodeLine{php artisan serve}
+
+\end{DoxyCode}
+ En la terminal de laragon ingresar el comando\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require laravel/ui}
+
+\end{DoxyCode}
+ En el archivo \mbox{\hyperlink{AuthenticatesUsers_8php}{vendor/laravel/ui/auth-\/backend/\+Authenticates\+Users.\+php}} linea 157 modificar \textquotesingle{}email\textquotesingle{} por \textquotesingle{}username\textquotesingle{}\hypertarget{md_README_autotoc_md5}{}\doxysection{Iniciar Servidor Python}\label{md_README_autotoc_md5}
+Si es la primera vez que se ejecuta el servidor, se debe crear un entorno virtual de python y activarlo. Para esto, se debe ejecutar el siguiente comando en la carpeta del proyecto\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python -\/m venv .venv}
+
+\end{DoxyCode}
+ \hypertarget{md_README_autotoc_md6}{}\doxysubsection{Activar entorno virtual}\label{md_README_autotoc_md6}
+{\bfseries{Windows Powershell\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\& .venv\(\backslash\)Scripts\(\backslash\)Activate.ps1}
+
+\end{DoxyCode}
+
+
+{\bfseries{Windows CMD\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.venv\(\backslash\)Scripts\(\backslash\)activate.bat}
+
+\end{DoxyCode}
+
+
+{\bfseries{Linux/\+Mac\+OS\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source .venv/bin/activate}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md7}{}\doxysubsection{Instalar dependencias}\label{md_README_autotoc_md7}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip install -\/r graph/requirements.txt}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md8}{}\doxysubsection{Ejecutar servidor}\label{md_README_autotoc_md8}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uvicorn graph.graph\_api:graphAPI}
+
+\end{DoxyCode}
+ 

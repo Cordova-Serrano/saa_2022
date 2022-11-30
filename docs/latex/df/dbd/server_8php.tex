@@ -1,0 +1,36 @@
+\hypertarget{server_8php}{}\doxysection{server.\+php File Reference}
+\label{server_8php}\index{server.php@{server.php}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceLaravel}{Laravel}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{server_8php_a653b5458163d338546c47271b4fb81b7}{\$uri}}
+\item 
+\mbox{\hyperlink{server_8php_afc8b25b448fd1a3d79f6171af75f39ff}{if}} ( \$uri !==\textquotesingle{}/\textquotesingle{} \&\&file\+\_\+exists(\+\_\+\+\_\+\+DIR\+\_\+\+\_\+.\textquotesingle{}/public\textquotesingle{}. \$uri))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{server_8php_a653b5458163d338546c47271b4fb81b7}\label{server_8php_a653b5458163d338546c47271b4fb81b7}} 
+\index{server.php@{server.php}!\$uri@{\$uri}}
+\index{\$uri@{\$uri}!server.php@{server.php}}
+\doxysubsubsection{\texorpdfstring{\$uri}{$uri}}
+{\footnotesize\ttfamily \$uri}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= urldecode(}
+\DoxyCodeLine{    parse\_url(\$\_SERVER[\textcolor{stringliteral}{'REQUEST\_URI'}], PHP\_URL\_PATH) ?? \textcolor{stringliteral}{''}}
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{server_8php_afc8b25b448fd1a3d79f6171af75f39ff}\label{server_8php_afc8b25b448fd1a3d79f6171af75f39ff}} 
+\index{server.php@{server.php}!if@{if}}
+\index{if@{if}!server.php@{server.php}}
+\doxysubsubsection{\texorpdfstring{if}{if}}
+{\footnotesize\ttfamily if(\$uri !==\textquotesingle{}/\textquotesingle{} \&\&file\+\_\+exists(\+\_\+\+\_\+\+DIR\+\_\+\+\_\+.\textquotesingle{}/public\textquotesingle{}. \$uri)) (\begin{DoxyParamCaption}\item[{}]{\$uri ! = {\ttfamily =~\textquotesingle{}/\textquotesingle{}~\&\&~file\+\_\+exists(\+\_\+\+\_\+DIR\+\_\+\+\_\+.\textquotesingle{}/public\textquotesingle{}.\$uri)} }\end{DoxyParamCaption})}
+

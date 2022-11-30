@@ -27,7 +27,7 @@ class QueryController extends Controller
             if($request->career)//check if specify career
                 $query->where('careers.name', '=',$request->career);
             if($request->generation)//check if specify generation
-                $query->where('student.generation', '=',$request->generation);
+                $query->where('students.generation', '=',$request->generation);
             return $query->get();
         }
     }
