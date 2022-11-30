@@ -60,7 +60,7 @@ def get_dataframe(student_list: StudentList) -> pd.DataFrame:
             "Sin rezago"
             if cred_rezago <= 0
             else "Rezago leve"
-            if cred_rezago <= 10
+            if cred_rezago <= 20
             else "Rezago grave"
         )
     )
@@ -101,24 +101,20 @@ async def bar_plot(data: StudentList):
 
     data_frame = get_dataframe(data)
 
-    fig = go.Figure().add_trace(
-        go.Bar(
-            x=data_frame["generation"],
-            y=data_frame["generation"].value_counts(),
-            name=data_frame["name"].astype(str),
-            marker={
-                "color": data_frame["nivel_rezago"].apply(
-                    lambda nivel_rezago: (
-                        "green"
-                        if nivel_rezago == "Sin rezago"
-                        else "yellow"
-                        if nivel_rezago == "Rezago leve"
-                        else "red"
-                    )
-                )
-            },
-            hoverinfo=["name", "x", "y"],
-        )
+    fig = px.histogram(
+        data_frame,
+        x="generation",
+        color="nivel_rezago",
+        labels={
+            "generation": "Generación",
+            "nivel_rezago": "Nivel de rezago",
+        },
+        color_discrete_map={
+            "Sin rezago": "rgb(0, 255, 0)",
+            "Rezago leve": "rgb(255, 255, 0)",
+            "Rezago grave": "rgb(255, 0, 0)",
+        },
+        hover_name="name",
     )
 
     return fig.to_json()

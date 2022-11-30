@@ -116,8 +116,7 @@
      */
     function RenderGraphs(records) {
         const graphType = document.getElementById('select-graph').value;
-        const varValue = document.getElementById('modal-var').getAttribute('data-var');
-        const URL = "http://127.0.0.1:8000/graph/" + graphType + "?var=" + varValue;
+        const URL = "http://127.0.0.1:8000/graph/" + graphType;
         const request = {
             method: "POST",
             headers: {"content-type": "application/json", "accept": "application/json"},
