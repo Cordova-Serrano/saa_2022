@@ -1,0 +1,12 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Sistema de seguimiento de Alumnos}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Instalación para desarrollo}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Iniciar Servidor Python}{1}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Activar entorno virtual}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Instalar dependencias}{2}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Ejecutar servidor}{2}{subsection.1.2.3}%
+\contentsline {chapter}{\numberline {2}Namespace Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Namespace List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Namespace Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Laravel Namespace Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
