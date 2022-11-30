@@ -1,0 +1,246 @@
+\hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth}{}\doxysection{Illuminate\textbackslash{}Foundation\textbackslash{}Auth Namespace Reference}
+\label{namespaceIlluminate_1_1Foundation_1_1Auth}\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_a1f0b36e691c853be281602d0695fd9a9}{show\+Login\+Form}} ()
+\item 
+\mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_ac93f5b7c4ea51eece6203533b4ecf17a}{login}} (Request \$request)
+\item 
+\mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_a64afb1fb49e325a4928f0196d3455fa2}{validate\+Login}} (Request \$request)
+\item 
+\mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_a689357bbcf3d23d296718a0bd7c0ac88}{attempt\+Login}} (Request \$request)
+\item 
+\mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_ab73c93e04f4ba778359921e209648066}{credentials}} (Request \$request)
+\item 
+\mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_a40b8808f6f72ed1259722d28c4e4290e}{send\+Login\+Response}} (Request \$request)
+\item 
+\mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_a0e9b05e1f8f07cb7a0d2f9933d401f04}{authenticated}} (Request \$request, \$user)
+\item 
+\mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_a4b1c3b92547016765f50e5b59d0fde82}{send\+Failed\+Login\+Response}} (Request \$request)
+\item 
+\mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_ad64bd657a8f23578398fc0bb2d620f5b}{username}} ()
+\item 
+\mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_a44c4cf7e7c321b96b391dcb1db9adb72}{logout}} (Request \$request)
+\item 
+\mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_a753621beb8b1f6dde02f9aa220eedb66}{logged\+Out}} (Request \$request)
+\item 
+\mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_a3510b6e8e3e892935534c1f3595560ec}{guard}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+trait \mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_ae4f3c3791a133ad66712fed89abb72ff}{Authenticates\+Users}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_a689357bbcf3d23d296718a0bd7c0ac88}\label{namespaceIlluminate_1_1Foundation_1_1Auth_a689357bbcf3d23d296718a0bd7c0ac88}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!attemptLogin@{attemptLogin}}
+\index{attemptLogin@{attemptLogin}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{attemptLogin()}{attemptLogin()}}
+{\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}attempt\+Login (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Attempt to log the user into the application.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_a0e9b05e1f8f07cb7a0d2f9933d401f04}\label{namespaceIlluminate_1_1Foundation_1_1Auth_a0e9b05e1f8f07cb7a0d2f9933d401f04}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!authenticated@{authenticated}}
+\index{authenticated@{authenticated}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{authenticated()}{authenticated()}}
+{\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}authenticated (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+The user has been authenticated.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & \\
+\hline
+mixed & {\em \$user} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_ab73c93e04f4ba778359921e209648066}\label{namespaceIlluminate_1_1Foundation_1_1Auth_ab73c93e04f4ba778359921e209648066}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!credentials@{credentials}}
+\index{credentials@{credentials}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{credentials()}{credentials()}}
+{\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}credentials (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get the needed authorization credentials from the request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_a3510b6e8e3e892935534c1f3595560ec}\label{namespaceIlluminate_1_1Foundation_1_1Auth_a3510b6e8e3e892935534c1f3595560ec}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!guard@{guard}}
+\index{guard@{guard}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{guard()}{guard()}}
+{\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}guard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get the guard to be used during authentication.
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+Contracts\textbackslash{}\+Auth\textbackslash{}\+Stateful\+Guard 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_a753621beb8b1f6dde02f9aa220eedb66}\label{namespaceIlluminate_1_1Foundation_1_1Auth_a753621beb8b1f6dde02f9aa220eedb66}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!loggedOut@{loggedOut}}
+\index{loggedOut@{loggedOut}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{loggedOut()}{loggedOut()}}
+{\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}logged\+Out (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+The user has logged out of the application.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_ac93f5b7c4ea51eece6203533b4ecf17a}\label{namespaceIlluminate_1_1Foundation_1_1Auth_ac93f5b7c4ea51eece6203533b4ecf17a}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!login@{login}}
+\index{login@{login}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}login (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})}
+
+Handle a login request to the application.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Redirect\+Response$\vert$\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Response$\vert$\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Json\+Response
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Illuminate\textbackslash{}\+Validation\textbackslash{}\+Validation\+Exception \mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_a44c4cf7e7c321b96b391dcb1db9adb72}\label{namespaceIlluminate_1_1Foundation_1_1Auth_a44c4cf7e7c321b96b391dcb1db9adb72}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!logout@{logout}}
+\index{logout@{logout}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}logout (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})}
+
+Log the user out of the application.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Redirect\+Response$\vert$\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Json\+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_a4b1c3b92547016765f50e5b59d0fde82}\label{namespaceIlluminate_1_1Foundation_1_1Auth_a4b1c3b92547016765f50e5b59d0fde82}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!sendFailedLoginResponse@{sendFailedLoginResponse}}
+\index{sendFailedLoginResponse@{sendFailedLoginResponse}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{sendFailedLoginResponse()}{sendFailedLoginResponse()}}
+{\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}send\+Failed\+Login\+Response (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get the failed login response instance.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Symfony\textbackslash{}\+Component\textbackslash{}\+Http\+Foundation\textbackslash{}\+Response
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Illuminate\textbackslash{}\+Validation\textbackslash{}\+Validation\+Exception \mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_a40b8808f6f72ed1259722d28c4e4290e}\label{namespaceIlluminate_1_1Foundation_1_1Auth_a40b8808f6f72ed1259722d28c4e4290e}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!sendLoginResponse@{sendLoginResponse}}
+\index{sendLoginResponse@{sendLoginResponse}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{sendLoginResponse()}{sendLoginResponse()}}
+{\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}send\+Login\+Response (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send the response after the user was authenticated.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Redirect\+Response$\vert$\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Json\+Response 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_a1f0b36e691c853be281602d0695fd9a9}\label{namespaceIlluminate_1_1Foundation_1_1Auth_a1f0b36e691c853be281602d0695fd9a9}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!showLoginForm@{showLoginForm}}
+\index{showLoginForm@{showLoginForm}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{showLoginForm()}{showLoginForm()}}
+{\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}show\+Login\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Show the application\textquotesingle{}s login form.
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_ad64bd657a8f23578398fc0bb2d620f5b}\label{namespaceIlluminate_1_1Foundation_1_1Auth_ad64bd657a8f23578398fc0bb2d620f5b}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!username@{username}}
+\index{username@{username}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{username()}{username()}}
+{\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the login username to be used by the controller.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_a64afb1fb49e325a4928f0196d3455fa2}\label{namespaceIlluminate_1_1Foundation_1_1Auth_a64afb1fb49e325a4928f0196d3455fa2}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!validateLogin@{validateLogin}}
+\index{validateLogin@{validateLogin}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{validateLogin()}{validateLogin()}}
+{\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}validate\+Login (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Validate the user login request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Illuminate\textbackslash{}\+Validation\textbackslash{}\+Validation\+Exception 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceIlluminate_1_1Foundation_1_1Auth_ae4f3c3791a133ad66712fed89abb72ff}\label{namespaceIlluminate_1_1Foundation_1_1Auth_ae4f3c3791a133ad66712fed89abb72ff}} 
+\index{Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}!AuthenticatesUsers@{AuthenticatesUsers}}
+\index{AuthenticatesUsers@{AuthenticatesUsers}!Illuminate\textbackslash{}Foundation\textbackslash{}Auth@{Illuminate\textbackslash{}Foundation\textbackslash{}Auth}}
+\doxysubsubsection{\texorpdfstring{AuthenticatesUsers}{AuthenticatesUsers}}
+{\footnotesize\ttfamily trait Illuminate\+::\+Foundation\+::\+Auth\textbackslash{}\+Authenticates\+Users}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    use RedirectsUsers, ThrottlesLogins}
+
+\end{DoxyCode}

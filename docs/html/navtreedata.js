@@ -25,23 +25,50 @@
 var NAVTREE =
 [
   [ "Sistema de seguimiento de Alumnos", "index.html", [
-    [ "Sistema de seguimiento de Alumnos", "md_README.html", [
-      [ "Instalación para desarrollo", "md_README.html#autotoc_md1", null ],
-      [ "Iniciar Servidor Python", "md_README.html#autotoc_md2", [
-        [ "Activar entorno virtual", "md_README.html#autotoc_md3", null ],
-        [ "Instalar dependencias", "md_README.html#autotoc_md4", null ],
-        [ "Ejecutar servidor", "md_README.html#autotoc_md5", null ]
+    [ "Graph API", "d6/d60/md_graph_README.html", [
+      [ "Install requirements", "d6/d60/md_graph_README.html#autotoc_md1", null ],
+      [ "Run mock server", "d6/d60/md_graph_README.html#autotoc_md2", null ]
+    ] ],
+    [ "Sistema de seguimiento de Alumnos", "d0/d30/md_README.html", [
+      [ "Instalación para desarrollo", "d0/d30/md_README.html#autotoc_md4", null ],
+      [ "Iniciar Servidor Python", "d0/d30/md_README.html#autotoc_md5", [
+        [ "Activar entorno virtual", "d0/d30/md_README.html#autotoc_md6", null ],
+        [ "Instalar dependencias", "d0/d30/md_README.html#autotoc_md7", null ],
+        [ "Ejecutar servidor", "d0/d30/md_README.html#autotoc_md8", null ]
       ] ]
     ] ],
     [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
+      ] ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Variables", "globals_vars.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"annotated.html",
+"d9/dd0/config_2auth_8php.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

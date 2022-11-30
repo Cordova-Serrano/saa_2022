@@ -1,0 +1,974 @@
+\begin{theindex}
+
+  \item {\$app}
+    \subitem {app.php}, \hyperpage{105}
+    \subitem {index.php}, \hyperpage{120}
+  \item {\$casts}
+    \subitem {App\textbackslash{}Models\textbackslash{}User}, 
+		\hyperpage{87}
+  \item {\$dontFlash}
+    \subitem {App\textbackslash{}Exceptions\textbackslash{}Handler}, 
+		\hyperpage{65}
+  \item {\$dontReport}
+    \subitem {App\textbackslash{}Exceptions\textbackslash{}Handler}, 
+		\hyperpage{65}
+  \item {\$except}
+    \subitem {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}EncryptCookies}, 
+		\hyperpage{54}
+    \subitem {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}PreventRequestsDuringMaintenance}, 
+		\hyperpage{71}
+    \subitem {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}TrimStrings}, 
+		\hyperpage{84}
+    \subitem {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}VerifyCsrfToken}, 
+		\hyperpage{92}
+  \item {\$fillable}
+    \subitem {App\textbackslash{}Models\textbackslash{}Career}, 
+		\hyperpage{33}
+    \subitem {App\textbackslash{}Models\textbackslash{}CSV}, 
+		\hyperpage{48}
+    \subitem {App\textbackslash{}Models\textbackslash{}Data}, 
+		\hyperpage{52}
+    \subitem {App\textbackslash{}Models\textbackslash{}File}, 
+		\hyperpage{57}
+    \subitem {App\textbackslash{}Models\textbackslash{}Role}, 
+		\hyperpage{75}
+    \subitem {App\textbackslash{}Models\textbackslash{}RoleUser}, 
+		\hyperpage{77}
+    \subitem {App\textbackslash{}Models\textbackslash{}Semester}, 
+		\hyperpage{80}
+    \subitem {App\textbackslash{}Models\textbackslash{}Student}, 
+		\hyperpage{82}
+    \subitem {App\textbackslash{}Models\textbackslash{}User}, 
+		\hyperpage{87}
+  \item {\$headers}
+    \subitem {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}TrustProxies}, 
+		\hyperpage{85}
+  \item {\$hidden}
+    \subitem {App\textbackslash{}Models\textbackslash{}Career}, 
+		\hyperpage{33}
+    \subitem {App\textbackslash{}Models\textbackslash{}Data}, 
+		\hyperpage{52}
+    \subitem {App\textbackslash{}Models\textbackslash{}File}, 
+		\hyperpage{57}
+    \subitem {App\textbackslash{}Models\textbackslash{}Semester}, 
+		\hyperpage{80}
+    \subitem {App\textbackslash{}Models\textbackslash{}Student}, 
+		\hyperpage{82}
+    \subitem {App\textbackslash{}Models\textbackslash{}User}, 
+		\hyperpage{87}
+  \item {\$kernel}
+    \subitem {index.php}, \hyperpage{120}
+  \item {\$listen}
+    \subitem {App\textbackslash{}Providers\textbackslash{}EventServiceProvider}, 
+		\hyperpage{55}
+  \item {\$middleware}
+    \subitem {App\textbackslash{}Http\textbackslash{}Kernel}, 
+		\hyperpage{68}
+  \item {\$middlewareGroups}
+    \subitem {App\textbackslash{}Http\textbackslash{}Kernel}, 
+		\hyperpage{68}
+  \item {\$policies}
+    \subitem {App\textbackslash{}Providers\textbackslash{}AuthServiceProvider}, 
+		\hyperpage{31}
+  \item {\$primaryKey}
+    \subitem {App\textbackslash{}Models\textbackslash{}RoleUser}, 
+		\hyperpage{77}
+  \item {\$proxies}
+    \subitem {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}TrustProxies}, 
+		\hyperpage{85}
+  \item {\$redirectTo}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}ConfirmPasswordController}, 
+		\hyperpage{35}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}LoginController}, 
+		\hyperpage{69}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}, 
+		\hyperpage{74}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}ResetPasswordController}, 
+		\hyperpage{75}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}VerificationController}, 
+		\hyperpage{92}
+  \item {\$response}
+    \subitem {index.php}, \hyperpage{120}
+  \item {\$routeMiddleware}
+    \subitem {App\textbackslash{}Http\textbackslash{}Kernel}, 
+		\hyperpage{68}
+  \item {\$table}
+    \subitem {App\textbackslash{}Models\textbackslash{}RoleUser}, 
+		\hyperpage{77}
+  \item {\$timestamps}
+    \subitem {App\textbackslash{}Models\textbackslash{}RoleUser}, 
+		\hyperpage{78}
+  \item {\$uri}
+    \subitem {server.php}, \hyperpage{130}
+  \item {\_\_construct}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}ConfirmPasswordController}, 
+		\hyperpage{35}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}LoginController}, 
+		\hyperpage{69}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}, 
+		\hyperpage{73}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}VerificationController}, 
+		\hyperpage{91}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}ConsultController}, 
+		\hyperpage{36}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}CSVController}, 
+		\hyperpage{49}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}GraphsController}, 
+		\hyperpage{62}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}HomeController}, 
+		\hyperpage{66}
+
+  \indexspace
+
+  \item {allow\_credentials}
+    \subitem {graph.graph\_api}, \hyperpage{20}
+  \item {allow\_headers}
+    \subitem {graph.graph\_api}, \hyperpage{20}
+  \item {allow\_methods}
+    \subitem {graph.graph\_api}, \hyperpage{20}
+  \item {allow\_origins}
+    \subitem {graph.graph\_api}, \hyperpage{21}
+  \item {app}
+    \subitem {graph.dash\_api}, \hyperpage{18}
+  \item {app.php}
+    \subitem {\$app}, \hyperpage{105}
+    \subitem {return}, \hyperpage{106}
+  \item {app/Console/Kernel.php}, \hyperpage{93}
+  \item {app/Exceptions/Handler.php}, \hyperpage{93}
+  \item {app/Http/Controllers/Auth/ConfirmPasswordController.php}, 
+		\hyperpage{94}
+  \item {app/Http/Controllers/Auth/ForgotPasswordController.php}, 
+		\hyperpage{94}
+  \item {app/Http/Controllers/Auth/LoginController.php}, \hyperpage{94}
+  \item {app/Http/Controllers/Auth/RegisterController.php}, 
+		\hyperpage{94}
+  \item {app/Http/Controllers/Auth/ResetPasswordController.php}, 
+		\hyperpage{95}
+  \item {app/Http/Controllers/Auth/VerificationController.php}, 
+		\hyperpage{95}
+  \item {app/Http/Controllers/CareerController.php}, \hyperpage{95}
+  \item {app/Http/Controllers/ConsultController.php}, \hyperpage{95}
+  \item {app/Http/Controllers/Controller.php}, \hyperpage{96}
+  \item {app/Http/Controllers/CSVController.php}, \hyperpage{96}
+  \item {app/Http/Controllers/DataController.php}, \hyperpage{96}
+  \item {app/Http/Controllers/FileController.php}, \hyperpage{96}
+  \item {app/Http/Controllers/GenerationController.php}, \hyperpage{97}
+  \item {app/Http/Controllers/GraphsController.php}, \hyperpage{97}
+  \item {app/Http/Controllers/HomeController.php}, \hyperpage{97}
+  \item {app/Http/Controllers/QueryController.php}, \hyperpage{97}
+  \item {app/Http/Controllers/SemesterController.php}, \hyperpage{98}
+  \item {app/Http/Controllers/StudentController.php}, \hyperpage{98}
+  \item {app/Http/Controllers/UserController.php}, \hyperpage{98}
+  \item {app/Http/Kernel.php}, \hyperpage{93}
+  \item {app/Http/Middleware/Authenticate.php}, \hyperpage{98}
+  \item {app/Http/Middleware/CheckRole.php}, \hyperpage{99}
+  \item {app/Http/Middleware/EncryptCookies.php}, \hyperpage{99}
+  \item {app/Http/Middleware/PreventRequestsDuringMaintenance.php}, 
+		\hyperpage{99}
+  \item {app/Http/Middleware/RedirectIfAuthenticated.php}, 
+		\hyperpage{99}
+  \item {app/Http/Middleware/TrimStrings.php}, \hyperpage{100}
+  \item {app/Http/Middleware/TrustHosts.php}, \hyperpage{100}
+  \item {app/Http/Middleware/TrustProxies.php}, \hyperpage{100}
+  \item {app/Http/Middleware/VerifyCsrfToken.php}, \hyperpage{100}
+  \item {app/Imports/CSVImport.php}, \hyperpage{101}
+  \item {app/Models/Career.php}, \hyperpage{101}
+  \item {app/Models/CSV.php}, \hyperpage{101}
+  \item {app/Models/Data.php}, \hyperpage{101}
+  \item {app/Models/File.php}, \hyperpage{102}
+  \item {app/Models/Role.php}, \hyperpage{102}
+  \item {app/Models/RoleUser.php}, \hyperpage{102}
+  \item {app/Models/Semester.php}, \hyperpage{102}
+  \item {app/Models/Student.php}, \hyperpage{103}
+  \item {app/Models/User.php}, \hyperpage{103}
+  \item {app/Providers/AppServiceProvider.php}, \hyperpage{103}
+  \item {app/Providers/AuthServiceProvider.php}, \hyperpage{103}
+  \item {app/Providers/BroadcastServiceProvider.php}, \hyperpage{104}
+  \item {app/Providers/EventServiceProvider.php}, \hyperpage{104}
+  \item {app/Providers/RouteServiceProvider.php}, \hyperpage{104}
+  \item {App\textbackslash{}Console}, \hyperpage{15}
+  \item {App\textbackslash{}Console\textbackslash{}Kernel}, 
+		\hyperpage{66}
+    \subitem {commands}, \hyperpage{67}
+    \subitem {schedule}, \hyperpage{67}
+  \item {App\textbackslash{}Exceptions}, \hyperpage{15}
+  \item {App\textbackslash{}Exceptions\textbackslash{}Handler}, 
+		\hyperpage{64}
+    \subitem {\$dontFlash}, \hyperpage{65}
+    \subitem {\$dontReport}, \hyperpage{65}
+    \subitem {register}, \hyperpage{65}
+  \item {App\textbackslash{}Http}, \hyperpage{15}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers}, 
+		\hyperpage{15}
+    \subitem {check\_value}, \hyperpage{16}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth}, 
+		\hyperpage{16}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}ConfirmPasswordController}, 
+		\hyperpage{35}
+    \subitem {\$redirectTo}, \hyperpage{35}
+    \subitem {\_\_construct}, \hyperpage{35}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}ForgotPasswordController}, 
+		\hyperpage{57}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}LoginController}, 
+		\hyperpage{69}
+    \subitem {\$redirectTo}, \hyperpage{69}
+    \subitem {\_\_construct}, \hyperpage{69}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}, 
+		\hyperpage{72}
+    \subitem {\$redirectTo}, \hyperpage{74}
+    \subitem {\_\_construct}, \hyperpage{73}
+    \subitem {create}, \hyperpage{73}
+    \subitem {validator}, \hyperpage{73}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}ResetPasswordController}, 
+		\hyperpage{74}
+    \subitem {\$redirectTo}, \hyperpage{75}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}VerificationController}, 
+		\hyperpage{91}
+    \subitem {\$redirectTo}, \hyperpage{92}
+    \subitem {\_\_construct}, \hyperpage{91}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}CareerController}, 
+		\hyperpage{33}
+    \subitem {loadCareer}, \hyperpage{34}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}ConsultController}, 
+		\hyperpage{36}
+    \subitem {\_\_construct}, \hyperpage{36}
+    \subitem {index}, \hyperpage{36}
+    \subitem {loadSemester}, \hyperpage{36}
+    \subitem {test}, \hyperpage{36}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Controller}, 
+		\hyperpage{37}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}CSVController}, 
+		\hyperpage{49}
+    \subitem {\_\_construct}, \hyperpage{49}
+    \subitem {import}, \hyperpage{49}
+    \subitem {index}, \hyperpage{50}
+    \subitem {store}, \hyperpage{50}
+    \subitem {updateDoc}, \hyperpage{50}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}DataController}, 
+		\hyperpage{53}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}FileController}, 
+		\hyperpage{57}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}GenerationController}, 
+		\hyperpage{58}
+    \subitem {loadGeneration}, \hyperpage{58}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}GraphsController}, 
+		\hyperpage{61}
+    \subitem {\_\_construct}, \hyperpage{62}
+    \subitem {create}, \hyperpage{62}
+    \subitem {destroy}, \hyperpage{62}
+    \subitem {edit}, \hyperpage{62}
+    \subitem {index}, \hyperpage{63}
+    \subitem {loadSemester}, \hyperpage{63}
+    \subitem {show}, \hyperpage{63}
+    \subitem {store}, \hyperpage{63}
+    \subitem {update}, \hyperpage{64}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}HomeController}, 
+		\hyperpage{66}
+    \subitem {\_\_construct}, \hyperpage{66}
+    \subitem {index}, \hyperpage{66}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}QueryController}, 
+		\hyperpage{71}
+    \subitem {loadQuery}, \hyperpage{71}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}SemesterController}, 
+		\hyperpage{81}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}StudentController}, 
+		\hyperpage{83}
+  \item {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}UserController}, 
+		\hyperpage{88}
+    \subitem {create}, \hyperpage{88}
+    \subitem {destroy}, \hyperpage{88}
+    \subitem {edit}, \hyperpage{88}
+    \subitem {index}, \hyperpage{89}
+    \subitem {store}, \hyperpage{89}
+    \subitem {update}, \hyperpage{89}
+  \item {App\textbackslash{}Http\textbackslash{}Kernel}, \hyperpage{67}
+    \subitem {\$middleware}, \hyperpage{68}
+    \subitem {\$middlewareGroups}, \hyperpage{68}
+    \subitem {\$routeMiddleware}, \hyperpage{68}
+  \item {App\textbackslash{}Http\textbackslash{}Middleware}, 
+		\hyperpage{16}
+  \item {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Authenticate}, 
+		\hyperpage{30}
+    \subitem {redirectTo}, \hyperpage{30}
+  \item {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}CheckRole}, 
+		\hyperpage{34}
+    \subitem {handle}, \hyperpage{34}
+  \item {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}EncryptCookies}, 
+		\hyperpage{53}
+    \subitem {\$except}, \hyperpage{54}
+  \item {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}PreventRequestsDuringMaintenance}, 
+		\hyperpage{70}
+    \subitem {\$except}, \hyperpage{71}
+  \item {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}RedirectIfAuthenticated}, 
+		\hyperpage{72}
+    \subitem {handle}, \hyperpage{72}
+  \item {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}TrimStrings}, 
+		\hyperpage{84}
+    \subitem {\$except}, \hyperpage{84}
+  \item {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}TrustHosts}, 
+		\hyperpage{84}
+    \subitem {hosts}, \hyperpage{85}
+  \item {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}TrustProxies}, 
+		\hyperpage{85}
+    \subitem {\$headers}, \hyperpage{85}
+    \subitem {\$proxies}, \hyperpage{85}
+  \item {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}VerifyCsrfToken}, 
+		\hyperpage{92}
+    \subitem {\$except}, \hyperpage{92}
+  \item {App\textbackslash{}Imports}, \hyperpage{17}
+  \item {App\textbackslash{}Imports\textbackslash{}CSVImport}, 
+		\hyperpage{50}
+    \subitem {model}, \hyperpage{51}
+    \subitem {rules}, \hyperpage{51}
+  \item {App\textbackslash{}Models}, \hyperpage{17}
+  \item {App\textbackslash{}Models\textbackslash{}Career}, 
+		\hyperpage{33}
+    \subitem {\$fillable}, \hyperpage{33}
+    \subitem {\$hidden}, \hyperpage{33}
+  \item {App\textbackslash{}Models\textbackslash{}CSV}, \hyperpage{48}
+    \subitem {\$fillable}, \hyperpage{48}
+  \item {App\textbackslash{}Models\textbackslash{}Data}, \hyperpage{51}
+    \subitem {\$fillable}, \hyperpage{52}
+    \subitem {\$hidden}, \hyperpage{52}
+    \subitem {student}, \hyperpage{51}
+  \item {App\textbackslash{}Models\textbackslash{}File}, \hyperpage{56}
+    \subitem {\$fillable}, \hyperpage{57}
+    \subitem {\$hidden}, \hyperpage{57}
+  \item {App\textbackslash{}Models\textbackslash{}Role}, \hyperpage{75}
+    \subitem {\$fillable}, \hyperpage{75}
+    \subitem {users}, \hyperpage{75}
+  \item {App\textbackslash{}Models\textbackslash{}RoleUser}, 
+		\hyperpage{76}
+    \subitem {\$fillable}, \hyperpage{77}
+    \subitem {\$primaryKey}, \hyperpage{77}
+    \subitem {\$table}, \hyperpage{77}
+    \subitem {\$timestamps}, \hyperpage{78}
+    \subitem {roleUsers}, \hyperpage{77}
+  \item {App\textbackslash{}Models\textbackslash{}Semester}, 
+		\hyperpage{79}
+    \subitem {\$fillable}, \hyperpage{80}
+    \subitem {\$hidden}, \hyperpage{80}
+    \subitem {data}, \hyperpage{80}
+  \item {App\textbackslash{}Models\textbackslash{}Student}, 
+		\hyperpage{81}
+    \subitem {\$fillable}, \hyperpage{82}
+    \subitem {\$hidden}, \hyperpage{82}
+    \subitem {career}, \hyperpage{81}
+    \subitem {data}, \hyperpage{81}
+  \item {App\textbackslash{}Models\textbackslash{}User}, \hyperpage{86}
+    \subitem {\$casts}, \hyperpage{87}
+    \subitem {\$fillable}, \hyperpage{87}
+    \subitem {\$hidden}, \hyperpage{87}
+    \subitem {authorizeRoles}, \hyperpage{86}
+    \subitem {hasAnyRole}, \hyperpage{86}
+    \subitem {hasRole}, \hyperpage{86}
+    \subitem {roles}, \hyperpage{87}
+  \item {App\textbackslash{}Providers}, \hyperpage{17}
+  \item {App\textbackslash{}Providers\textbackslash{}AppServiceProvider}, 
+		\hyperpage{29}
+    \subitem {boot}, \hyperpage{29}
+    \subitem {register}, \hyperpage{29}
+  \item {App\textbackslash{}Providers\textbackslash{}AuthServiceProvider}, 
+		\hyperpage{31}
+    \subitem {\$policies}, \hyperpage{31}
+    \subitem {boot}, \hyperpage{31}
+  \item {App\textbackslash{}Providers\textbackslash{}BroadcastServiceProvider}, 
+		\hyperpage{32}
+    \subitem {boot}, \hyperpage{32}
+  \item {App\textbackslash{}Providers\textbackslash{}EventServiceProvider}, 
+		\hyperpage{54}
+    \subitem {\$listen}, \hyperpage{55}
+    \subitem {boot}, \hyperpage{54}
+  \item {App\textbackslash{}Providers\textbackslash{}RouteServiceProvider}, 
+		\hyperpage{78}
+    \subitem {boot}, \hyperpage{78}
+    \subitem {configureRateLimiting}, \hyperpage{79}
+    \subitem {HOME}, \hyperpage{79}
+  \item {attemptLogin}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{21}
+  \item {auth.php}
+    \subitem {return}, \hyperpage{107}
+  \item {authenticated}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{22}
+  \item {AuthenticatesUsers}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{26}
+  \item {authorizeRoles}
+    \subitem {App\textbackslash{}Models\textbackslash{}User}, 
+		\hyperpage{86}
+
+  \indexspace
+
+  \item {bar\_plot}
+    \subitem {graph.graph\_api}, \hyperpage{19}
+  \item {boot}
+    \subitem {App\textbackslash{}Providers\textbackslash{}AppServiceProvider}, 
+		\hyperpage{29}
+    \subitem {App\textbackslash{}Providers\textbackslash{}AuthServiceProvider}, 
+		\hyperpage{31}
+    \subitem {App\textbackslash{}Providers\textbackslash{}BroadcastServiceProvider}, 
+		\hyperpage{32}
+    \subitem {App\textbackslash{}Providers\textbackslash{}EventServiceProvider}, 
+		\hyperpage{54}
+    \subitem {App\textbackslash{}Providers\textbackslash{}RouteServiceProvider}, 
+		\hyperpage{78}
+  \item {bootstrap/app.php}, \hyperpage{104}
+  \item {broadcasting.php}
+    \subitem {return}, \hyperpage{108}
+
+  \indexspace
+
+  \item {cache.php}
+    \subitem {return}, \hyperpage{108}
+  \item {career}
+    \subitem {App\textbackslash{}Models\textbackslash{}Student}, 
+		\hyperpage{81}
+  \item {check\_value}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers}, 
+		\hyperpage{16}
+  \item {children}
+    \subitem {graph.dash\_api}, \hyperpage{18}
+  \item {client}
+    \subitem {test\_graph\_api.GraphsAPI}, \hyperpage{59}
+  \item {commands}
+    \subitem {App\textbackslash{}Console\textbackslash{}Kernel}, 
+		\hyperpage{67}
+  \item {config/app.php}, \hyperpage{105}
+  \item {config/auth.php}, \hyperpage{106}
+  \item {config/broadcasting.php}, \hyperpage{108}
+  \item {config/cache.php}, \hyperpage{108}
+  \item {config/cors.php}, \hyperpage{109}
+  \item {config/database.php}, \hyperpage{109}
+  \item {config/excel.php}, \hyperpage{110}
+  \item {config/filesystems.php}, \hyperpage{111}
+  \item {config/hashing.php}, \hyperpage{112}
+  \item {config/logging.php}, \hyperpage{112}
+  \item {config/mail.php}, \hyperpage{113}
+  \item {config/queue.php}, \hyperpage{113}
+  \item {config/sanctum.php}, \hyperpage{114}
+  \item {config/services.php}, \hyperpage{114}
+  \item {config/session.php}, \hyperpage{115}
+  \item {config/view.php}, \hyperpage{115}
+  \item {configureRateLimiting}
+    \subitem {App\textbackslash{}Providers\textbackslash{}RouteServiceProvider}, 
+		\hyperpage{79}
+  \item {create}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}, 
+		\hyperpage{73}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}GraphsController}, 
+		\hyperpage{62}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}UserController}, 
+		\hyperpage{88}
+  \item {CreateCareersTable}, \hyperpage{38}
+    \subitem {down}, \hyperpage{38}
+    \subitem {up}, \hyperpage{38}
+  \item {CreateDataTable}, \hyperpage{39}
+    \subitem {down}, \hyperpage{39}
+    \subitem {up}, \hyperpage{39}
+  \item {CreateFailedJobsTable}, \hyperpage{40}
+    \subitem {down}, \hyperpage{40}
+    \subitem {up}, \hyperpage{40}
+  \item {CreateFilesTable}, \hyperpage{41}
+    \subitem {down}, \hyperpage{41}
+    \subitem {up}, \hyperpage{41}
+  \item {CreatePersonalAccessTokensTable}, \hyperpage{42}
+    \subitem {down}, \hyperpage{42}
+    \subitem {up}, \hyperpage{42}
+  \item {CreateRolesTable}, \hyperpage{43}
+    \subitem {down}, \hyperpage{43}
+    \subitem {up}, \hyperpage{43}
+  \item {CreateRoleUserTable}, \hyperpage{44}
+    \subitem {down}, \hyperpage{44}
+    \subitem {up}, \hyperpage{44}
+  \item {CreateSemestersTable}, \hyperpage{44}
+    \subitem {down}, \hyperpage{45}
+    \subitem {up}, \hyperpage{45}
+  \item {CreateStudentDataSemesterTable}, \hyperpage{45}
+    \subitem {down}, \hyperpage{46}
+    \subitem {up}, \hyperpage{46}
+  \item {CreateStudentsTable}, \hyperpage{46}
+    \subitem {down}, \hyperpage{47}
+    \subitem {up}, \hyperpage{47}
+  \item {CreateUsersTable}, \hyperpage{47}
+    \subitem {down}, \hyperpage{47}
+    \subitem {up}, \hyperpage{48}
+  \item {credentials}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{22}
+
+  \indexspace
+
+  \item {data}
+    \subitem {App\textbackslash{}Models\textbackslash{}Semester}, 
+		\hyperpage{80}
+    \subitem {App\textbackslash{}Models\textbackslash{}Student}, 
+		\hyperpage{81}
+  \item {database.php}
+    \subitem {return}, \hyperpage{109}
+  \item {database/factories/UserFactory.php}, \hyperpage{116}
+  \item {database/migrations/2014\_10\_12\_000000\_create\_users\_table.php}, 
+		\hyperpage{116}
+  \item {database/migrations/2014\_10\_12\_100000\_create\_password\_resets\_table.php}, 
+		\hyperpage{116}
+  \item {database/migrations/2019\_08\_19\_000000\_create\_failed\_jobs\_table.php}, 
+		\hyperpage{116}
+  \item {database/migrations/2019\_12\_14\_000001\_create\_personal\_access\_tokens\_table.php}, 
+		\hyperpage{116}
+  \item {database/migrations/2022\_08\_18\_001956\_create\_files\_table.php}, 
+		\hyperpage{117}
+  \item {database/migrations/2022\_08\_18\_181913\_create\_careers\_table.php}, 
+		\hyperpage{117}
+  \item {database/migrations/2022\_08\_18\_181914\_create\_students\_table.php}, 
+		\hyperpage{117}
+  \item {database/migrations/2022\_08\_18\_182401\_create\_data\_table.php}, 
+		\hyperpage{117}
+  \item {database/migrations/2022\_08\_18\_182534\_create\_semesters\_table.php}, 
+		\hyperpage{117}
+  \item {database/migrations/2022\_08\_18\_185029\_create\_student\_data\_semester\_table.php}, 
+		\hyperpage{117}
+  \item {database/migrations/2022\_09\_01\_231231\_create\_roles\_table.php}, 
+		\hyperpage{118}
+  \item {database/migrations/2022\_09\_01\_232452\_create\_role\_user\_table.php}, 
+		\hyperpage{118}
+  \item {database/seeders/DatabaseSeeder.php}, \hyperpage{118}
+  \item {database/seeders/RoleSeeder.php}, \hyperpage{118}
+  \item {database/seeders/UserSeeder.php}, \hyperpage{118}
+  \item {Database\textbackslash{}Factories}, \hyperpage{17}
+  \item {Database\textbackslash{}Factories\textbackslash{}UserFactory}, 
+		\hyperpage{89}
+    \subitem {definition}, \hyperpage{90}
+    \subitem {unverified}, \hyperpage{90}
+  \item {Database\textbackslash{}Seeders}, \hyperpage{17}
+  \item {Database\textbackslash{}Seeders\textbackslash{}DatabaseSeeder}, 
+		\hyperpage{52}
+    \subitem {run}, \hyperpage{52}
+  \item {Database\textbackslash{}Seeders\textbackslash{}RoleSeeder}, 
+		\hyperpage{76}
+    \subitem {run}, \hyperpage{76}
+  \item {Database\textbackslash{}Seeders\textbackslash{}UserSeeder}, 
+		\hyperpage{90}
+    \subitem {run}, \hyperpage{91}
+  \item {debug}
+    \subitem {graph.dash\_api}, \hyperpage{18}
+  \item {definition}
+    \subitem {Database\textbackslash{}Factories\textbackslash{}UserFactory}, 
+		\hyperpage{90}
+  \item {destroy}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}GraphsController}, 
+		\hyperpage{62}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}UserController}, 
+		\hyperpage{88}
+  \item {df}
+    \subitem {graph.dash\_api}, \hyperpage{18}
+  \item {down}
+    \subitem {CreateCareersTable}, \hyperpage{38}
+    \subitem {CreateDataTable}, \hyperpage{39}
+    \subitem {CreateFailedJobsTable}, \hyperpage{40}
+    \subitem {CreateFilesTable}, \hyperpage{41}
+    \subitem {CreatePersonalAccessTokensTable}, \hyperpage{42}
+    \subitem {CreateRolesTable}, \hyperpage{43}
+    \subitem {CreateRoleUserTable}, \hyperpage{44}
+    \subitem {CreateSemestersTable}, \hyperpage{45}
+    \subitem {CreateStudentDataSemesterTable}, \hyperpage{46}
+    \subitem {CreateStudentsTable}, \hyperpage{47}
+    \subitem {CreateUsersTable}, \hyperpage{47}
+    \subitem {Migration}, \hyperpage{70}
+
+  \indexspace
+
+  \item {edit}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}GraphsController}, 
+		\hyperpage{62}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}UserController}, 
+		\hyperpage{88}
+  \item {excel.php}
+    \subitem {return}, \hyperpage{110}
+
+  \indexspace
+
+  \item {fig}
+    \subitem {graph.dash\_api}, \hyperpage{19}
+  \item {filesystems.php}
+    \subitem {return}, \hyperpage{111}
+
+  \indexspace
+
+  \item {get\_dataframe}
+    \subitem {graph.graph\_api}, \hyperpage{20}
+  \item {graph}, \hyperpage{18}
+  \item {graph.dash\_api}, \hyperpage{18}
+    \subitem {app}, \hyperpage{18}
+    \subitem {children}, \hyperpage{18}
+    \subitem {debug}, \hyperpage{18}
+    \subitem {df}, \hyperpage{18}
+    \subitem {fig}, \hyperpage{19}
+    \subitem {layout}, \hyperpage{19}
+  \item {graph.graph\_api}, \hyperpage{19}
+    \subitem {allow\_credentials}, \hyperpage{20}
+    \subitem {allow\_headers}, \hyperpage{20}
+    \subitem {allow\_methods}, \hyperpage{20}
+    \subitem {allow\_origins}, \hyperpage{21}
+    \subitem {bar\_plot}, \hyperpage{19}
+    \subitem {get\_dataframe}, \hyperpage{20}
+    \subitem {graphAPI}, \hyperpage{21}
+    \subitem {root}, \hyperpage{20}
+    \subitem {scatter\_plot}, \hyperpage{20}
+  \item {graph.graph\_api.Student}, \hyperpage{82}
+  \item {graph.graph\_api.StudentList}, \hyperpage{83}
+  \item {graph/\_\_init\_\_.py}, \hyperpage{119}
+  \item {graph/dash\_api.py}, \hyperpage{119}
+  \item {graph/graph\_api.py}, \hyperpage{119}
+  \item {graph/README.md}, \hyperpage{120}
+  \item {graphAPI}
+    \subitem {graph.graph\_api}, \hyperpage{21}
+  \item {guard}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{22}
+
+  \indexspace
+
+  \item {handle}
+    \subitem {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}CheckRole}, 
+		\hyperpage{34}
+    \subitem {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}RedirectIfAuthenticated}, 
+		\hyperpage{72}
+  \item {hasAnyRole}
+    \subitem {App\textbackslash{}Models\textbackslash{}User}, 
+		\hyperpage{86}
+  \item {hashing.php}
+    \subitem {return}, \hyperpage{112}
+  \item {hasRole}
+    \subitem {App\textbackslash{}Models\textbackslash{}User}, 
+		\hyperpage{86}
+  \item {HOME}
+    \subitem {App\textbackslash{}Providers\textbackslash{}RouteServiceProvider}, 
+		\hyperpage{79}
+  \item {hosts}
+    \subitem {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}TrustHosts}, 
+		\hyperpage{85}
+
+  \indexspace
+
+  \item {if}
+    \subitem {index.php}, \hyperpage{120}
+    \subitem {server.php}, \hyperpage{130}
+  \item {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{21}
+    \subitem {attemptLogin}, \hyperpage{21}
+    \subitem {authenticated}, \hyperpage{22}
+    \subitem {AuthenticatesUsers}, \hyperpage{26}
+    \subitem {credentials}, \hyperpage{22}
+    \subitem {guard}, \hyperpage{22}
+    \subitem {loggedOut}, \hyperpage{23}
+    \subitem {login}, \hyperpage{23}
+    \subitem {logout}, \hyperpage{24}
+    \subitem {sendFailedLoginResponse}, \hyperpage{24}
+    \subitem {sendLoginResponse}, \hyperpage{24}
+    \subitem {showLoginForm}, \hyperpage{25}
+    \subitem {username}, \hyperpage{25}
+    \subitem {validateLogin}, \hyperpage{25}
+  \item {import}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}CSVController}, 
+		\hyperpage{49}
+  \item {index}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}ConsultController}, 
+		\hyperpage{36}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}CSVController}, 
+		\hyperpage{50}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}GraphsController}, 
+		\hyperpage{63}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}HomeController}, 
+		\hyperpage{66}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}UserController}, 
+		\hyperpage{89}
+  \item {index.php}
+    \subitem {\$app}, \hyperpage{120}
+    \subitem {\$kernel}, \hyperpage{120}
+    \subitem {\$response}, \hyperpage{120}
+    \subitem {if}, \hyperpage{120}
+    \subitem {LARAVEL\_START}, \hyperpage{120}
+
+  \indexspace
+
+  \item {Laravel}, \hyperpage{26}
+  \item {LARAVEL\_START}
+    \subitem {index.php}, \hyperpage{120}
+  \item {layout}
+    \subitem {graph.dash\_api}, \hyperpage{19}
+  \item {loadCareer}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}CareerController}, 
+		\hyperpage{34}
+  \item {loadGeneration}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}GenerationController}, 
+		\hyperpage{58}
+  \item {loadQuery}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}QueryController}, 
+		\hyperpage{71}
+  \item {loadSemester}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}ConsultController}, 
+		\hyperpage{36}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}GraphsController}, 
+		\hyperpage{63}
+  \item {loggedOut}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{23}
+  \item {logging.php}
+    \subitem {return}, \hyperpage{112}
+  \item {login}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{23}
+  \item {logout}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{24}
+
+  \indexspace
+
+  \item {mail.php}
+    \subitem {return}, \hyperpage{113}
+  \item {Migration}, \hyperpage{70}
+    \subitem {down}, \hyperpage{70}
+    \subitem {up}, \hyperpage{70}
+  \item {model}
+    \subitem {App\textbackslash{}Imports\textbackslash{}CSVImport}, 
+		\hyperpage{51}
+
+  \indexspace
+
+  \item {pagination.php}
+    \subitem {return}, \hyperpage{121}
+  \item {passwords.php}
+    \subitem {return}, \hyperpage{122}
+  \item {public/index.php}, \hyperpage{120}
+
+  \indexspace
+
+  \item {queue.php}
+    \subitem {return}, \hyperpage{113}
+
+  \indexspace
+
+  \item {README.md}, \hyperpage{120}
+  \item {redirectTo}
+    \subitem {App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Authenticate}, 
+		\hyperpage{30}
+  \item {register}
+    \subitem {App\textbackslash{}Exceptions\textbackslash{}Handler}, 
+		\hyperpage{65}
+    \subitem {App\textbackslash{}Providers\textbackslash{}AppServiceProvider}, 
+		\hyperpage{29}
+  \item {resources/lang/en/auth.php}, \hyperpage{107}
+  \item {resources/lang/en/pagination.php}, \hyperpage{121}
+  \item {resources/lang/en/passwords.php}, \hyperpage{121}
+  \item {resources/lang/en/validation.php}, \hyperpage{122}
+  \item {resources/lang/es/auth.php}, \hyperpage{107}
+  \item {resources/lang/es/pagination.php}, \hyperpage{121}
+  \item {resources/lang/es/passwords.php}, \hyperpage{122}
+  \item {resources/lang/es/validation.php}, \hyperpage{125}
+  \item {resources/views/auth/login.blade.php}, \hyperpage{129}
+  \item {resources/views/auth/passwords/confirm.blade.php}, 
+		\hyperpage{129}
+  \item {resources/views/auth/passwords/email.blade.php}, 
+		\hyperpage{129}
+  \item {resources/views/auth/passwords/reset.blade.php}, 
+		\hyperpage{129}
+  \item {resources/views/auth/register.blade.php}, \hyperpage{129}
+  \item {resources/views/auth/verify.blade.php}, \hyperpage{129}
+  \item {resources/views/consult/index.blade.php}, \hyperpage{129}
+  \item {resources/views/csv/import.blade.php}, \hyperpage{129}
+  \item {resources/views/csv/index.blade.php}, \hyperpage{129}
+  \item {resources/views/graphs/index.blade.php}, \hyperpage{129}
+  \item {resources/views/home.blade.php}, \hyperpage{129}
+  \item {resources/views/layout.blade.php}, \hyperpage{129}
+  \item {resources/views/layouts/app.blade.php}, \hyperpage{129}
+  \item {resources/views/test/test.blade.php}, \hyperpage{129}
+  \item {resources/views/users/create.blade.php}, \hyperpage{129}
+  \item {resources/views/users/edit.blade.php}, \hyperpage{129}
+  \item {resources/views/users/index.blade.php}, \hyperpage{129}
+  \item {resources/views/usersIndexCopy.blade.php}, \hyperpage{129}
+  \item {resources/views/welcome.blade.php}, \hyperpage{129}
+  \item {return}
+    \subitem {app.php}, \hyperpage{106}
+    \subitem {auth.php}, \hyperpage{107}
+    \subitem {broadcasting.php}, \hyperpage{108}
+    \subitem {cache.php}, \hyperpage{108}
+    \subitem {database.php}, \hyperpage{109}
+    \subitem {excel.php}, \hyperpage{110}
+    \subitem {filesystems.php}, \hyperpage{111}
+    \subitem {hashing.php}, \hyperpage{112}
+    \subitem {logging.php}, \hyperpage{112}
+    \subitem {mail.php}, \hyperpage{113}
+    \subitem {pagination.php}, \hyperpage{121}
+    \subitem {passwords.php}, \hyperpage{122}
+    \subitem {queue.php}, \hyperpage{113}
+    \subitem {sanctum.php}, \hyperpage{114}
+    \subitem {services.php}, \hyperpage{114}
+    \subitem {session.php}, \hyperpage{115}
+    \subitem {validation.php}, \hyperpage{123}, \hyperpage{126}
+    \subitem {view.php}, \hyperpage{115}
+  \item {roles}
+    \subitem {App\textbackslash{}Models\textbackslash{}User}, 
+		\hyperpage{87}
+  \item {roleUsers}
+    \subitem {App\textbackslash{}Models\textbackslash{}RoleUser}, 
+		\hyperpage{77}
+  \item {root}
+    \subitem {graph.graph\_api}, \hyperpage{20}
+  \item {routes/api.php}, \hyperpage{129}
+  \item {routes/channels.php}, \hyperpage{129}
+  \item {routes/console.php}, \hyperpage{129}
+  \item {routes/web.php}, \hyperpage{129}
+  \item {rules}
+    \subitem {App\textbackslash{}Imports\textbackslash{}CSVImport}, 
+		\hyperpage{51}
+  \item {run}
+    \subitem {Database\textbackslash{}Seeders\textbackslash{}DatabaseSeeder}, 
+		\hyperpage{52}
+    \subitem {Database\textbackslash{}Seeders\textbackslash{}RoleSeeder}, 
+		\hyperpage{76}
+    \subitem {Database\textbackslash{}Seeders\textbackslash{}UserSeeder}, 
+		\hyperpage{91}
+
+  \indexspace
+
+  \item {sanctum.php}
+    \subitem {return}, \hyperpage{114}
+  \item {scatter\_plot}
+    \subitem {graph.graph\_api}, \hyperpage{20}
+  \item {schedule}
+    \subitem {App\textbackslash{}Console\textbackslash{}Kernel}, 
+		\hyperpage{67}
+  \item {sendFailedLoginResponse}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{24}
+  \item {sendLoginResponse}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{24}
+  \item {server.php}, \hyperpage{129}
+    \subitem {\$uri}, \hyperpage{130}
+    \subitem {if}, \hyperpage{130}
+  \item {services.php}
+    \subitem {return}, \hyperpage{114}
+  \item {session.php}
+    \subitem {return}, \hyperpage{115}
+  \item {setUp}
+    \subitem {test\_graph\_api.GraphsAPI}, \hyperpage{59}
+    \subitem {test\_graph\_creation.GraphsAPI}, \hyperpage{60}
+  \item {show}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}GraphsController}, 
+		\hyperpage{63}
+  \item {showLoginForm}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{25}
+  \item {store}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}CSVController}, 
+		\hyperpage{50}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}GraphsController}, 
+		\hyperpage{63}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}UserController}, 
+		\hyperpage{89}
+  \item {student}
+    \subitem {App\textbackslash{}Models\textbackslash{}Data}, 
+		\hyperpage{51}
+  \item {student\_list}
+    \subitem {test\_graph\_api.GraphsAPI}, \hyperpage{59}
+    \subitem {test\_graph\_creation.GraphsAPI}, \hyperpage{61}
+
+  \indexspace
+
+  \item {test}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}ConsultController}, 
+		\hyperpage{36}
+  \item {test\_bar\_plot}
+    \subitem {test\_graph\_api.GraphsAPI}, \hyperpage{59}
+  \item {test\_example}
+    \subitem {Tests\textbackslash{}Feature\textbackslash{}ExampleTest}, 
+		\hyperpage{55}
+    \subitem {Tests\textbackslash{}Unit\textbackslash{}ExampleTest}, 
+		\hyperpage{56}
+  \item {test\_get\_dataframe}
+    \subitem {test\_graph\_creation.GraphsAPI}, \hyperpage{60}
+  \item {test\_graph\_api}, \hyperpage{26}
+  \item {test\_graph\_api.GraphsAPI}, \hyperpage{58}
+    \subitem {client}, \hyperpage{59}
+    \subitem {setUp}, \hyperpage{59}
+    \subitem {student\_list}, \hyperpage{59}
+    \subitem {test\_bar\_plot}, \hyperpage{59}
+  \item {test\_graph\_creation}, \hyperpage{26}
+  \item {test\_graph\_creation.GraphsAPI}, \hyperpage{60}
+    \subitem {setUp}, \hyperpage{60}
+    \subitem {student\_list}, \hyperpage{61}
+    \subitem {test\_get\_dataframe}, \hyperpage{60}
+    \subitem {test\_lag\_graph}, \hyperpage{60}
+    \subitem {test\_process\_graph}, \hyperpage{60}
+  \item {test\_lag\_graph}
+    \subitem {test\_graph\_creation.GraphsAPI}, \hyperpage{60}
+  \item {test\_process\_graph}
+    \subitem {test\_graph\_creation.GraphsAPI}, \hyperpage{60}
+  \item {Tests}, \hyperpage{27}
+  \item {tests/CreatesApplication.php}, \hyperpage{130}
+  \item {tests/Feature/ExampleTest.php}, \hyperpage{130}
+  \item {tests/Feature/test\_graph\_api.py}, \hyperpage{131}
+  \item {tests/Feature/test\_graph\_creation.py}, \hyperpage{131}
+  \item {tests/TestCase.php}, \hyperpage{131}
+  \item {tests/Unit/ExampleTest.php}, \hyperpage{130}
+  \item {Tests\textbackslash{}Feature}, \hyperpage{27}
+  \item {Tests\textbackslash{}Feature\textbackslash{}ExampleTest}, 
+		\hyperpage{55}
+    \subitem {test\_example}, \hyperpage{55}
+  \item {Tests\textbackslash{}TestCase}, \hyperpage{83}
+  \item {Tests\textbackslash{}Unit}, \hyperpage{27}
+  \item {Tests\textbackslash{}Unit\textbackslash{}ExampleTest}, 
+		\hyperpage{56}
+    \subitem {test\_example}, \hyperpage{56}
+
+  \indexspace
+
+  \item {unverified}
+    \subitem {Database\textbackslash{}Factories\textbackslash{}UserFactory}, 
+		\hyperpage{90}
+  \item {up}
+    \subitem {CreateCareersTable}, \hyperpage{38}
+    \subitem {CreateDataTable}, \hyperpage{39}
+    \subitem {CreateFailedJobsTable}, \hyperpage{40}
+    \subitem {CreateFilesTable}, \hyperpage{41}
+    \subitem {CreatePersonalAccessTokensTable}, \hyperpage{42}
+    \subitem {CreateRolesTable}, \hyperpage{43}
+    \subitem {CreateRoleUserTable}, \hyperpage{44}
+    \subitem {CreateSemestersTable}, \hyperpage{45}
+    \subitem {CreateStudentDataSemesterTable}, \hyperpage{46}
+    \subitem {CreateStudentsTable}, \hyperpage{47}
+    \subitem {CreateUsersTable}, \hyperpage{48}
+    \subitem {Migration}, \hyperpage{70}
+  \item {update}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}GraphsController}, 
+		\hyperpage{64}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}UserController}, 
+		\hyperpage{89}
+  \item {updateDoc}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}CSVController}, 
+		\hyperpage{50}
+  \item {username}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{25}
+  \item {users}
+    \subitem {App\textbackslash{}Models\textbackslash{}Role}, 
+		\hyperpage{75}
+
+  \indexspace
+
+  \item {validateLogin}
+    \subitem {Illuminate\textbackslash{}Foundation\textbackslash{}Auth}, 
+		\hyperpage{25}
+  \item {validation.php}
+    \subitem {return}, \hyperpage{123}, \hyperpage{126}
+  \item {validator}
+    \subitem {App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}, 
+		\hyperpage{73}
+  \item {vendor/laravel/ui/auth-\/backend/AuthenticatesUsers.php}, 
+		\hyperpage{131}
+  \item {view.php}
+    \subitem {return}, \hyperpage{115}
+
+\end{theindex}

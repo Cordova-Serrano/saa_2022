@@ -1,0 +1,88 @@
+\hypertarget{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController}{}\doxysection{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}Register\+Controller Class Reference}
+\label{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController}\index{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController@{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}}
+Inheritance diagram for App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}Register\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d5/d17/classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_a782a0072be2b44f06f2b67daa2d1876c}{\+\_\+\+\_\+construct}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_a8c0f4d4f7b751490d25d183ec086bc21}{validator}} (array \$data)
+\item 
+\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_af969cbad0c184d760c5e7ba80099abda}{create}} (array \$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_aa6b41bd2d6cdbaacf9b41805588073a2}{\$redirect\+To}} = Route\+Service\+Provider\+::\+HOME
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_a782a0072be2b44f06f2b67daa2d1876c}\label{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_a782a0072be2b44f06f2b67daa2d1876c}} 
+\index{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController@{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController@{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily App\textbackslash{}\+Http\textbackslash{}\+Controllers\textbackslash{}\+Auth\textbackslash{}\+Register\+Controller\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create a new controller instance.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_af969cbad0c184d760c5e7ba80099abda}\label{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_af969cbad0c184d760c5e7ba80099abda}} 
+\index{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController@{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}!create@{create}}
+\index{create@{create}!App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController@{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily App\textbackslash{}\+Http\textbackslash{}\+Controllers\textbackslash{}\+Auth\textbackslash{}\+Register\+Controller\+::create (\begin{DoxyParamCaption}\item[{array}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create a new user instance after a valid registration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+App\textbackslash{}\+Models\textbackslash{}\+User 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_a8c0f4d4f7b751490d25d183ec086bc21}\label{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_a8c0f4d4f7b751490d25d183ec086bc21}} 
+\index{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController@{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}!validator@{validator}}
+\index{validator@{validator}!App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController@{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}}
+\doxysubsubsection{\texorpdfstring{validator()}{validator()}}
+{\footnotesize\ttfamily App\textbackslash{}\+Http\textbackslash{}\+Controllers\textbackslash{}\+Auth\textbackslash{}\+Register\+Controller\+::validator (\begin{DoxyParamCaption}\item[{array}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get a validator for an incoming registration request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+Contracts\textbackslash{}\+Validation\textbackslash{}\+Validator 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_aa6b41bd2d6cdbaacf9b41805588073a2}\label{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_aa6b41bd2d6cdbaacf9b41805588073a2}} 
+\index{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController@{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}!\$redirectTo@{\$redirectTo}}
+\index{\$redirectTo@{\$redirectTo}!App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController@{App\textbackslash{}Http\textbackslash{}Controllers\textbackslash{}Auth\textbackslash{}RegisterController}}
+\doxysubsubsection{\texorpdfstring{\$redirectTo}{$redirectTo}}
+{\footnotesize\ttfamily App\textbackslash{}\+Http\textbackslash{}\+Controllers\textbackslash{}\+Auth\textbackslash{}\+Register\+Controller\+::\$redirect\+To = Route\+Service\+Provider\+::\+HOME\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+app/\+Http/\+Controllers/\+Auth/\mbox{\hyperlink{RegisterController_8php}{Register\+Controller.\+php}}\end{DoxyCompactItemize}
