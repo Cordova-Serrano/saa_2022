@@ -24,6 +24,17 @@ use App\Models\Career;
 |
 */
 
+// Ruta login, es la que muestra al usuario cuando inicia el sistema
+Route::get('/', function () {
+    return view('login');
+});
+
+// Ruta de redireccionamiento cuando el usuario esta autenticado
+Route::get('/home', function () {
+    return view('welcome');
+});
+
+// Ruta de inicio del sistema cuando el usuario haya sido autenticado
 Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return view('welcome');
@@ -48,14 +59,6 @@ Route::middleware(['auth'])->group(function () {
 });
 Route::resource('csv', CSVController::class)->middleware('auth');
 
-Route::get('/home', function () {
-    return view('welcome');
-});
-
-
-Route::get('/', function () {
-    return view('login');
-});
 //Login template
 Route::get('/login_test', function () {
     return view('test.login');

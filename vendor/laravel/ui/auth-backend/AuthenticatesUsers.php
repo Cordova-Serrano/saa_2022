@@ -12,7 +12,7 @@ trait AuthenticatesUsers
     use RedirectsUsers, ThrottlesLogins;
 
     /**
-     * Show the application's login form.
+     * Muestra el formulario de inicio de sesión del sistema
      *
      * @return \Illuminate\View\View
      */
@@ -22,7 +22,7 @@ trait AuthenticatesUsers
     }
 
     /**
-     * Handle a login request to the application.
+     * Manejar una solicitud de inicio de sesión al sistema
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Http\JsonResponse
@@ -33,11 +33,13 @@ trait AuthenticatesUsers
     {
         $this->validateLogin($request);
 
-        // If the class is using the ThrottlesLogins trait, we can automatically throttle
-        // the login attempts for this application. We'll key this by the username and
-        // the IP address of the client making these requests into this application.
-        if (method_exists($this, 'hasTooManyLoginAttempts') &&
-            $this->hasTooManyLoginAttempts($request)) {
+        // Si la clase usa el rasgo ThrottlesLogins, podemos acelerar automáticamente
+        // los intentos de inicio de sesión para el sistema. Teclearemos esto por el nombre de usuario y
+        // la dirección IP del cliente que realiza estas solicitudes en el sistema.
+        if (
+            method_exists($this, 'hasTooManyLoginAttempts') &&
+            $this->hasTooManyLoginAttempts($request)
+        ) {
             $this->fireLockoutEvent($request);
 
             return $this->sendLockoutResponse($request);
@@ -51,16 +53,16 @@ trait AuthenticatesUsers
             return $this->sendLoginResponse($request);
         }
 
-        // If the login attempt was unsuccessful we will increment the number of attempts
-        // to login and redirect the user back to the login form. Of course, when this
-        // user surpasses their maximum number of attempts they will get locked out.
+        // Si el intento de inicio de sesión no tuvo éxito, incrementaremos el número de intentos
+        // para iniciar sesión y redirigir al usuario al formulario de inicio de sesión. Por supuesto, cuando
+        // el usuario supera su número máximo de intentos, será bloqueado.
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
     }
 
     /**
-     * Validate the user login request.
+     * Validar la solicitud de inicio de sesión del usuario.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return void
@@ -76,7 +78,7 @@ trait AuthenticatesUsers
     }
 
     /**
-     * Attempt to log the user into the application.
+     * Intente iniciar la sesión del usuario en la aplicación.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return bool
@@ -84,12 +86,13 @@ trait AuthenticatesUsers
     protected function attemptLogin(Request $request)
     {
         return $this->guard()->attempt(
-            $this->credentials($request), $request->boolean('remember')
+            $this->credentials($request),
+            $request->boolean('remember')
         );
     }
 
     /**
-     * Get the needed authorization credentials from the request.
+     * Obtiene las credenciales de autorización necesarias de la solicitud.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return array
@@ -100,7 +103,7 @@ trait AuthenticatesUsers
     }
 
     /**
-     * Send the response after the user was authenticated.
+     * Envía la respuesta después de que el usuario se haya autenticado.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
@@ -116,12 +119,12 @@ trait AuthenticatesUsers
         }
 
         return $request->wantsJson()
-                    ? new JsonResponse([], 204)
-                    : redirect()->intended($this->redirectPath());
+            ? new JsonResponse([], 204)
+            : redirect()->intended($this->redirectPath());
     }
 
     /**
-     * The user has been authenticated.
+     * El usuario ha sido autenticado.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  mixed  $user
@@ -133,7 +136,7 @@ trait AuthenticatesUsers
     }
 
     /**
-     * Get the failed login response instance.
+     * Obtiene la instancia de respuesta de inicio de sesión fallida.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Symfony\Component\HttpFoundation\Response
@@ -148,7 +151,7 @@ trait AuthenticatesUsers
     }
 
     /**
-     * Get the login username to be used by the controller.
+     *  Obtiene el nombre de usuario de inicio de sesión que utilizará el controlador.
      *
      * @return string
      */
@@ -158,7 +161,7 @@ trait AuthenticatesUsers
     }
 
     /**
-     * Log the user out of the application.
+     * Cerrar la sesión del usuario de la aplicación.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
@@ -181,7 +184,7 @@ trait AuthenticatesUsers
     }
 
     /**
-     * The user has logged out of the application.
+     * El usuario ha cerrado sesión en la aplicación.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return mixed
@@ -192,7 +195,7 @@ trait AuthenticatesUsers
     }
 
     /**
-     * Get the guard to be used during authentication.
+     * Obtiene el protector que se usará durante la autenticación.
      *
      * @return \Illuminate\Contracts\Auth\StatefulGuard
      */

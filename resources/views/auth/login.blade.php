@@ -16,6 +16,7 @@
                 <div class="alert alert-danger alert-dismissible text-justify" id="error-alert">
                     <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
                     <h6><i class="icon fal fa-times-circle"></i>¡Error!</h6>
+                    <!-- Muestra el mensaje de error correspondiente -->
                     @foreach ($errors->all() as $error)
                     {{ $error }}<br>
                     @endforeach
@@ -27,6 +28,7 @@
                     @csrf
                     <!-- USERNAME -->
                     <div class="input-group mb-3">
+                        <!-- input con id necesario para identificar el nombre de usuario ingresado-->
                         <input id="username" class="form-control @error('username') is-invalid @enderror" name="username" placeholder="Nombre de usuario" required autofocus type="username" value="{{ old('username') }}" autocomplete="off">
                         <div class="input-group-append">
                             <div class="input-group-text">
@@ -43,6 +45,7 @@
                     <!-- /USERNAME -->
                     <!-- PASSWORD -->
                     <div class="input-group mb-3">
+                        <!-- input con id necesario para identificar la contraseña ingresada -->
                         <input id="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Contraseña" required type="password" autocomplete="current-password">
                         <div class="input-group-append">
                             <div class="input-group-text">
@@ -60,6 +63,7 @@
                     <!-- BUTTON -->
                     <div class="row">
                         <div class="col-12 text-center text-sm-right">
+                            <!-- BOTON QUE ENVIA LA INFORMACION INGRESADA AL SISTEMA -->
                             <button type="submit" class="btn btn-sm btn-primary">
                                 <i class="fal fa-sign-in mr-2"></i>{{ __('Iniciar sesión') }}
                             </button>
@@ -77,17 +81,18 @@
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Regístrate') }}</a>
                             @endif
                             @else -->
+                            <!-- MANDA UN ITEM DE NAVBAR DONDE MOSTRARA UN DROPDOWN -->
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->name }} <!-- Obtiene el nombre del usuario que ingreso al sistema -->
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); 
+                                                     document.getElementById('logout-form').submit();"> <!-- Boton manda a ruta de cerrar sesion -->
                                         {{ __('Cerrar sesión') }}
                                     </a>
-
+                                    <!-- Sale del sistema, mandando a la ruta de logouts -->
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -119,13 +124,13 @@
         $('#login-form').validate({
             lang: 'es',
             errorPlacement: function(error, element) { //define una clase para el elemento de error
-                error.addClass('form-check-label invalid-feedback'); 
+                error.addClass('form-check-label invalid-feedback');
                 element.closest('.input-group').append(error);
             },
-            highlight: function(element, errorClass, validClass) {//se invoca el metodo highlight sobre el elemento que se quiere destacar
+            highlight: function(element, errorClass, validClass) { //se invoca el metodo highlight sobre el elemento que se quiere destacar
                 $(element).addClass('is-invalid');
             },
-            unhighlight: function(element, errorClass, validClass) {//se invoca el metodo unhighlight sobre el elemento que no se va a resaltar
+            unhighlight: function(element, errorClass, validClass) { //se invoca el metodo unhighlight sobre el elemento que no se va a resaltar
                 $(element).removeClass('is-invalid');
             },
             submitHandler: function(form) { //se invoca el metodo submitHandler para el envio de datos
