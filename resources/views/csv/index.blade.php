@@ -17,13 +17,6 @@
             {{ $message }}
         </div>
         @endif
-        @if ($message = session('change_room'))
-        <div class="alert alert-success alert-dismissible text-justify" id="success-alert">
-            <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
-            <h6><i class="icon fal fa-check-circle"></i>¡Realizado!</h6>
-            {{ $message }}
-        </div>
-        @endif
         @if ($message = session('warning'))
         <div class="alert alert-warning alert-dismissible text-justify" id="warning-alert">
             <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>

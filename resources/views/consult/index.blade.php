@@ -20,13 +20,6 @@
             {{ $message }}
         </div>
         @endif
-        @if ($message = session('change_room'))
-        <div class="alert alert-success alert-dismissible text-justify" id="success-alert">
-            <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
-            <h6><i class="icon fal fa-check-circle"></i>¡Realizado!</h6>
-            {{ $message }}
-        </div>
-        @endif
         @if ($message = session('warning'))
         <div class="alert alert-warning alert-dismissible text-justify" id="warning-alert">
             <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
@@ -259,7 +252,7 @@
     function make_query(){
         var semester = null;
         if ($('#semesters').val() != "0")
-         semester = $('#semesters').val();
+            semester = $('#semesters').val();
         var career = null;
         if ($('#careers').val() != "0")
             career = $('#careers').val();
@@ -305,84 +298,5 @@
     $('#generations').change(function(){//make query when generations change
         make_query();
     })
-    // $('#semesters').change(function() {
-    //     if ($(this).val() != '') {
-    //         $('#career-select2').show()
-    //         //Ajax semester
-    //         $.ajax({
-    //             url: "/load_semester",
-    //             type: "get",
-    //             data: {
-    //                 semester_id: $(this).val(),
-    //             },
-    //             success: function(response) {
-    //                 const table = $("#data-table").DataTable();
-    //                 table.clear()
-    //                 $.each(response, function(i, student) {
-    //                     table.row.add(student).draw();
-    //                 });
-
-    //             },
-    //             error: function(xhr) {
-    //                 console.log(xhr)
-    //             }
-    //         });
-    //     }
-    // })
-
-    
-    // $('#careers').change(function() {
-    //     if ($(this).val() != '') {
-    //         $('#generation-select').show()
-    //         //Ajax semester
-    //         $.ajax({
-    //             url: "/load_career",
-    //             type: "get",
-    //             data: {
-    //                 semester_id: $('#semesters').val(),
-    //                 career : $('#careers option:selected').text(),
-    //             },
-    //             success: function(response) {
-    //                 const table = $("#data-table").DataTable();
-    //                 table.clear()
-    //                 $.each(response, function(i, student) {
-    //                     table.row.add(student).draw();
-    //                 });
-
-    //             },
-    //             error: function(xhr) {
-    //                 console.log(xhr)
-    //             }
-    //         });
-    //     }
-    //     console.log($('#careers option:selected').text());
-    // })
-    // $('#generations').change(function() {
-    //     if ($(this).val() != '') {
-    //         //Ajax generation
-    //         $.ajax({
-    //             url: "/load_generation",
-    //             type: "get",
-    //             data: {
-    //                 semester_id: $('#semesters').val(),
-    //                 career : $('#careers option:selected').text(),
-    //                 generation : $('#generations option:selected').text(),
-    //             },
-    //             success: function(response) {
-    //                 const table = $("#data-table").DataTable();
-    //                 table.clear()
-    //                 $.each(response, function(i, student) {
-    //                     table.row.add(student).draw();
-    //                 });
-
-    //             },
-    //             error: function(xhr) {
-    //                 console.log(xhr)
-    //             }
-    //         });
-    //     }
-    //     console.log($('#generations option:selected').text());
-    // })
-    
 </script>
 @endsection

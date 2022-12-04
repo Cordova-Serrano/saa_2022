@@ -103,7 +103,7 @@
 <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
 
 
-/**
+<!-- /**
 * RenderGraphs
 * 
 * Sends a POST request to the server to get a json with necessary data to render the graphs,
@@ -113,7 +113,7 @@
 * @param {array} records
 * 
 * @return {void}
-*/
+*/ -->
 <script type="text/javascript">
     function RenderGraphs(records) {
         const graphType = document.getElementById('select-graph').value;
