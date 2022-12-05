@@ -1,0 +1,35 @@
+\hypertarget{UserFactory_8php_source}{}\doxysection{User\+Factory.\+php}
+\label{UserFactory_8php_source}\index{database/factories/UserFactory.php@{database/factories/UserFactory.php}}
+\mbox{\hyperlink{UserFactory_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00003}\mbox{\hyperlink{namespaceDatabase_1_1Factories}{00003}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceDatabase_1_1Factories}{Database\(\backslash\)Factories}};}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00005}00005 use Illuminate\(\backslash\)Database\(\backslash\)Eloquent\(\backslash\)Factories\(\backslash\)Factory;}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00006}00006 use Illuminate\(\backslash\)Support\(\backslash\)Str;}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00008}\mbox{\hyperlink{classDatabase_1_1Factories_1_1UserFactory}{00008}} \textcolor{keyword}{class }\mbox{\hyperlink{classDatabase_1_1Factories_1_1UserFactory}{UserFactory}} \textcolor{keyword}{extends} Factory}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00015}\mbox{\hyperlink{classDatabase_1_1Factories_1_1UserFactory_a3cb5eba0025a08b88f5b15f18367e34a}{00015}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classDatabase_1_1Factories_1_1UserFactory_a3cb5eba0025a08b88f5b15f18367e34a}{definition}}()}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00017}00017         \textcolor{keywordflow}{return} [}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00018}00018             \textcolor{stringliteral}{'name'} => \$this-\/>faker-\/>name(),}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00019}00019             \textcolor{stringliteral}{'email'} => \$this-\/>faker-\/>unique()-\/>safeEmail(),}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00020}00020             \textcolor{stringliteral}{'email\_verified\_at'} => now(),}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00021}00021             \textcolor{stringliteral}{'password'} => \textcolor{stringliteral}{'\$2y\$10\$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'}, \textcolor{comment}{// password}}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00022}00022             \textcolor{stringliteral}{'remember\_token'} => Str::random(10),}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00023}00023         ];}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00024}00024     \}}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00031}\mbox{\hyperlink{classDatabase_1_1Factories_1_1UserFactory_abf82e30f5223866bb6bcf816c7df94de}{00031}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classDatabase_1_1Factories_1_1UserFactory_abf82e30f5223866bb6bcf816c7df94de}{unverified}}()}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00032}00032     \{}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00033}00033         \textcolor{keywordflow}{return} \$this-\/>state(\textcolor{keyword}{function} (array \$attributes) \{}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00034}00034             \textcolor{keywordflow}{return} [}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00035}00035                 \textcolor{stringliteral}{'email\_verified\_at'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00036}00036             ];}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00037}00037         \});}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{UserFactory_8php_source_l00039}00039 \}}
+
+\end{DoxyCode}

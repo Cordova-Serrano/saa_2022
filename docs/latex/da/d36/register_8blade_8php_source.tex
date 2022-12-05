@@ -1,0 +1,152 @@
+\hypertarget{register_8blade_8php_source}{}\doxysection{register.\+blade.\+php}
+\label{register_8blade_8php_source}\index{resources/views/auth/register.blade.php@{resources/views/auth/register.blade.php}}
+\mbox{\hyperlink{register_8blade_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00001}00001 @extends(\textcolor{stringliteral}{'layouts.app'})}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00003}00003 @section(\textcolor{stringliteral}{'content'})}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00004}00004 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}container"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00005}00005     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}justify-\/content-\/center"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00006}00006         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00007}00007             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}overlay"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}overlay"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00008}00008                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/2x fa-\/sync fa-\/spin"{}}></i>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00009}00009             </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00010}00010             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/body login-\/card-\/body"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00011}00011                 <p \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}login-\/box-\/msg"{}}>Regístrate para continuar</p>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00012}00012                 @\textcolor{keywordflow}{if} (\$errors-\/>any())}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00013}00013                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert alert-\/danger alert-\/dismissible text-\/justify"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}error-\/alert"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00014}00014                     <button aria-\/hidden=\textcolor{stringliteral}{"{}true"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}close"{}} data-\/dismiss=\textcolor{stringliteral}{"{}alert"{}} type=\textcolor{stringliteral}{"{}button"{}}>\&times;</button>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00015}00015                     <h6><i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}icon fal fa-\/times-\/circle"{}}></i>¡Error!</h6>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00016}00016                     @\textcolor{keywordflow}{foreach} (\$errors-\/>all() as \$error)}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00017}00017                     \{\{ \$error \}\}<br>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00018}00018                     \textcolor{keyword}{@end}\textcolor{keywordflow}{foreach}}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00019}00019                 </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00020}00020                 \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00022}00022                 <form method=\textcolor{stringliteral}{"{}POST"{}} action=\textcolor{stringliteral}{"{}\{\{ route('register') \}\}"{}} autocomplete=\textcolor{stringliteral}{"{}off"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}register-\/form"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00023}00023                     @csrf}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00024}00024                     <!-\/-\/ NAME -\/-\/>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00025}00025                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group mb-\/3"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00026}00026                         <input \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}name"{}} type=\textcolor{stringliteral}{"{}text"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control @error('name') is-\/invalid @enderror"{}} name=\textcolor{stringliteral}{"{}name"{}} value=\textcolor{stringliteral}{"{}\{\{ old('name') \}\}"{}} required autocomplete=\textcolor{stringliteral}{"{}name"{}} autofocus placeholder=\textcolor{stringliteral}{"{}Nombre"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00027}00027                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/append"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00028}00028                             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/text"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00029}00029                                 <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/user"{}}></span>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00030}00030                             </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00031}00031                         </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00032}00032                         @error(\textcolor{stringliteral}{'name'})}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00033}00033                         <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}invalid-\/feedback"{}} role=\textcolor{stringliteral}{"{}alert"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00034}00034                             <strong>\{\{ \$message \}\}</strong>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00035}00035                         </span>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00036}00036                         \textcolor{keyword}{@end}error}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00037}00037                     </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00038}00038                     <!-\/-\/ /NAME -\/-\/>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00039}00039                     <!-\/-\/ EMAIL -\/-\/>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00040}00040                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group mb-\/3"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00041}00041                         <input \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}email"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control @error('email') is-\/invalid @enderror"{}} name=\textcolor{stringliteral}{"{}email"{}} placeholder=\textcolor{stringliteral}{"{}Correo electrónico"{}} required type=\textcolor{stringliteral}{"{}email"{}} value=\textcolor{stringliteral}{"{}\{\{ old('email') \}\}"{}} autocomplete=\textcolor{stringliteral}{"{}email"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00042}00042                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/append"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00043}00043                             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/text"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00044}00044                                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/envelope"{}}></i>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00045}00045                             </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00046}00046                         </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00047}00047                         @error(\textcolor{stringliteral}{'email'})}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00048}00048                         <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}invalid-\/feedback"{}} role=\textcolor{stringliteral}{"{}alert"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00049}00049                             <strong>\{\{ \$message \}\}</strong>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00050}00050                         </span>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00051}00051                         \textcolor{keyword}{@end}error}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00052}00052                     </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00053}00053                     <!-\/-\/ /EMAIL -\/-\/>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00054}00054                     <!-\/-\/ PASSWORD -\/-\/>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00055}00055                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group mb-\/3"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00056}00056                         <input \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}password"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control @error('password') is-\/invalid @enderror"{}} name=\textcolor{stringliteral}{"{}password"{}} placeholder=\textcolor{stringliteral}{"{}Contraseña"{}} required type=\textcolor{stringliteral}{"{}password"{}} autocomplete=\textcolor{stringliteral}{"{}new-\/password"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00057}00057                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/append"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00058}00058                             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/text"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00059}00059                                 <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/lock-\/alt"{}}></span>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00060}00060                             </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00061}00061                         </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00062}00062                         @error(\textcolor{stringliteral}{'password'})}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00063}00063                         <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}invalid-\/feedback"{}} role=\textcolor{stringliteral}{"{}alert"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00064}00064                             <strong>\{\{ \$message \}\}</strong>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00065}00065                         </span>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00066}00066                         \textcolor{keyword}{@end}error}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00067}00067                     </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00068}00068                     <!-\/-\/ /PASSWORD -\/-\/>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00069}00069                     <!-\/-\/ CONFIRM PASSWORD -\/-\/>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00070}00070                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group mb-\/3"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00071}00071                         <input \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}password-\/confirm"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control"{}} name=\textcolor{stringliteral}{"{}password\_confirmation"{}} placeholder=\textcolor{stringliteral}{"{}Confirma contraseña"{}} required type=\textcolor{stringliteral}{"{}password"{}} autocomplete=\textcolor{stringliteral}{"{}new-\/password"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00072}00072                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/append"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00073}00073                             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/text"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00074}00074                                 <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/lock-\/alt"{}}></span>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00075}00075                             </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00076}00076                         </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00077}00077                     </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00078}00078                     <!-\/-\/ /CONFIRM PASSWORD -\/-\/>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00079}00079                     <!-\/-\/ BUTTON -\/-\/>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00080}00080                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}row mb-\/0"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00081}00081                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}col-\/12 text-\/center text-\/sm-\/right "{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00082}00082                             <button type=\textcolor{stringliteral}{"{}submit"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/sm btn-\/primary"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00083}00083                                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/sign-\/in mr-\/2"{}}></i>\{\{ \_\_(\textcolor{stringliteral}{'Regístrate'}) \}\}}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00084}00084                             </button>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00085}00085                             @guest}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00086}00086                             @\textcolor{keywordflow}{if} (Route::has(\textcolor{stringliteral}{'login'}))}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00087}00087                             <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/link"{}} href=\textcolor{stringliteral}{"{}\{\{ route('login') \}\}"{}}>\{\{ \_\_(\textcolor{stringliteral}{'Iniciar sesión'}) \}\}</a>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00088}00088                             \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00089}00089                             @\textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00090}00090                             <li \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/item dropdown"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00091}00091                                 <a \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}navbarDropdown"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/link dropdown-\/toggle"{}} href=\textcolor{stringliteral}{"{}\#"{}} role=\textcolor{stringliteral}{"{}button"{}} data-\/bs-\/toggle=\textcolor{stringliteral}{"{}dropdown"{}} aria-\/haspopup=\textcolor{stringliteral}{"{}true"{}} aria-\/expanded=\textcolor{stringliteral}{"{}false"{}} v-\/pre>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00092}00092                                     \{\{ Auth::user()-\/>name \}\}}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00093}00093                                 </a>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00095}00095                                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}dropdown-\/menu dropdown-\/menu-\/end"{}} aria-\/labelledby=\textcolor{stringliteral}{"{}navbarDropdown"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00096}00096                                     <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}dropdown-\/item"{}} href=\textcolor{stringliteral}{"{}\{\{ route('logout') \}\}"{}} onclick=\textcolor{stringliteral}{"{}event.preventDefault(); document.getElementById('logout-\/form').submit();"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00097}00097                                         \{\{ \_\_(\textcolor{stringliteral}{'Cerrar sesión'}) \}\}}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00098}00098                                     </a>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00100}00100                                     <form \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}logout-\/form"{}} action=\textcolor{stringliteral}{"{}\{\{ route('logout') \}\}"{}} method=\textcolor{stringliteral}{"{}POST"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}d-\/none"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00101}00101                                         @csrf}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00102}00102                                     </form>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00103}00103                                 </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00104}00104                             </li>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00105}00105                             \textcolor{keyword}{@end}guest}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00106}00106                         </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00107}00107                     </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00108}00108                     <!-\/-\/ /BUTTON -\/-\/>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00109}00109                 </form>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00110}00110             </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00111}00111         </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00112}00112     </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00113}00113 </div>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00114}00114 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00116}00116 @section (\textcolor{stringliteral}{'plugins'})}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00117}00117 <!-\/-\/ Form Validations -\/-\/>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00118}00118 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/jquery-\/validation/jquery.validate.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00119}00119 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/jquery-\/validation/localization/messages\_es.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00120}00120 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00122}00122 @section (\textcolor{stringliteral}{'scripts'})}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00123}00123 <script type=\textcolor{stringliteral}{"{}text/javascript"{}}>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00124}00124     \$(\textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00125}00125         \$(\textcolor{stringliteral}{'\#register-\/form'}).validate(\{}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00126}00126                 errorPlacement: \textcolor{keyword}{function} (error, element) \{}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00127}00127                     error.addClass(\textcolor{stringliteral}{'form-\/check-\/label invalid-\/feedback'});}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00128}00128                     element.closest(\textcolor{stringliteral}{'.input-\/group'}).append(error);}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00129}00129                 \}, }
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00130}00130                 highlight: \textcolor{keyword}{function} (element, errorClass, validClass) \{}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00131}00131                     \$(element).addClass(\textcolor{stringliteral}{'is-\/invalid'});}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00132}00132                 \}, }
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00133}00133                 unhighlight: \textcolor{keyword}{function} (element, errorClass, validClass) \{}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00134}00134                     \$(element).removeClass(\textcolor{stringliteral}{'is-\/invalid'});}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00135}00135                 \}, }
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00136}00136                 submitHandler: \textcolor{keyword}{function} (form) \{}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00137}00137                     \$(\textcolor{stringliteral}{'\#overlay'}).show();}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00139}00139                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00140}00140                 \}}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00141}00141             \});}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00143}00143         \$(\textcolor{stringliteral}{'\#overlay'}).hide();}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00144}00144     \})}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00145}00145 </script>}
+\DoxyCodeLine{\Hypertarget{register_8blade_8php_source_l00146}00146 @endsection}
+
+\end{DoxyCode}

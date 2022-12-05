@@ -1,0 +1,34 @@
+\hypertarget{2014__10__12__000000__create__users__table_8php_source}{}\doxysection{2014\+\_\+10\+\_\+12\+\_\+000000\+\_\+create\+\_\+users\+\_\+table.\+php}
+\label{2014__10__12__000000__create__users__table_8php_source}\index{database/migrations/2014\_10\_12\_000000\_create\_users\_table.php@{database/migrations/2014\_10\_12\_000000\_create\_users\_table.php}}
+\mbox{\hyperlink{2014__10__12__000000__create__users__table_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00003}00003 use Illuminate\(\backslash\)Database\(\backslash\)Migrations\(\backslash\)Migration;}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00004}00004 use Illuminate\(\backslash\)Database\(\backslash\)Schema\(\backslash\)Blueprint;}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00005}00005 use Illuminate\(\backslash\)Support\(\backslash\)Facades\(\backslash\)Schema;}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00007}\mbox{\hyperlink{classCreateUsersTable}{00007}} \textcolor{keyword}{class }\mbox{\hyperlink{classCreateUsersTable}{CreateUsersTable}} \textcolor{keyword}{extends} Migration}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00014}\mbox{\hyperlink{classCreateUsersTable_a447d2e36994fcbfedf9a11613e4dccfb}{00014}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classCreateUsersTable_a447d2e36994fcbfedf9a11613e4dccfb}{up}}()}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00016}00016         Schema::create(\textcolor{stringliteral}{'users'}, \textcolor{keyword}{function} (Blueprint \$table) \{}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00017}00017             \$table-\/>id();}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00018}00018             \$table-\/>string(\textcolor{stringliteral}{'name'});}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00019}00019             \$table-\/>string(\textcolor{stringliteral}{'email'})-\/>unique();}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00020}00020             \$table-\/>string(\textcolor{stringliteral}{'username'}, 50)-\/>unique();}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00021}00021             \$table-\/>timestamp(\textcolor{stringliteral}{'email\_verified\_at'})-\/>nullable();}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00022}00022             \$table-\/>string(\textcolor{stringliteral}{'password'});}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00023}00023             \$table-\/>rememberToken();}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00024}00024             \$table-\/>timestamps();}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00025}00025             \$table-\/>softDeletes();}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00026}00026         \});}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00034}\mbox{\hyperlink{classCreateUsersTable_a78005ea3ac54a819ad5e5098abd1b60c}{00034}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classCreateUsersTable_a78005ea3ac54a819ad5e5098abd1b60c}{down}}()}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00035}00035     \{}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00036}00036         Schema::dropIfExists(\textcolor{stringliteral}{'users'});}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{2014__10__12__000000__create__users__table_8php_source_l00038}00038 \}}
+
+\end{DoxyCode}

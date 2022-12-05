@@ -1,0 +1,71 @@
+\hypertarget{sanctum_8php_source}{}\doxysection{sanctum.\+php}
+\label{sanctum_8php_source}\index{config/sanctum.php@{config/sanctum.php}}
+\mbox{\hyperlink{sanctum_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00003}\mbox{\hyperlink{sanctum_8php_a1fce65bc28427581f0493d67bdf44b9e}{00003}} \textcolor{keywordflow}{return} [}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00005}00005     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00006}00006 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00007}00007 \textcolor{comment}{    | Stateful Domains}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00008}00008 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00009}00009 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00010}00010 \textcolor{comment}{    | Requests from the following domains / hosts will receive stateful API}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00011}00011 \textcolor{comment}{    | authentication cookies. Typically, these should include your local}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00012}00012 \textcolor{comment}{    | and production domains which access your API via a frontend SPA.}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00013}00013 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00014}00014 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00016}00016     \textcolor{stringliteral}{'stateful'} => explode(\textcolor{charliteral}{','}, env(\textcolor{stringliteral}{'SANCTUM\_STATEFUL\_DOMAINS'}, sprintf(}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00017}00017         \textcolor{stringliteral}{'\%s\%s'},}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00018}00018         \textcolor{stringliteral}{'localhost,localhost:3000,127.0.0.1,127.0.0.1:8000,::1'},}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00019}00019         env(\textcolor{stringliteral}{'APP\_URL'}) ? \textcolor{charliteral}{','}.parse\_url(env(\textcolor{stringliteral}{'APP\_URL'}), PHP\_URL\_HOST) : \textcolor{stringliteral}{''}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00020}00020     ))),}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00022}00022     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00023}00023 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00024}00024 \textcolor{comment}{    | Sanctum Guards}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00025}00025 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00026}00026 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00027}00027 \textcolor{comment}{    | This array contains the authentication guards that will be checked when}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00028}00028 \textcolor{comment}{    | Sanctum is trying to authenticate a request. If none of these guards}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00029}00029 \textcolor{comment}{    | are able to authenticate the request, Sanctum will use the bearer}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00030}00030 \textcolor{comment}{    | token that's present on an incoming request for authentication.}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00031}00031 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00032}00032 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00034}00034     \textcolor{stringliteral}{'guard'} => [\textcolor{stringliteral}{'web'}],}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00036}00036     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00037}00037 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00038}00038 \textcolor{comment}{    | Expiration Minutes}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00039}00039 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00040}00040 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00041}00041 \textcolor{comment}{    | This value controls the number of minutes until an issued token will be}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00042}00042 \textcolor{comment}{    | considered expired. If this value is null, personal access tokens do}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00043}00043 \textcolor{comment}{    | not expire. This won't tweak the lifetime of first-\/party sessions.}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00044}00044 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00045}00045 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00047}00047     \textcolor{stringliteral}{'expiration'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00049}00049     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00050}00050 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00051}00051 \textcolor{comment}{    | Sanctum Middleware}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00052}00052 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00053}00053 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00054}00054 \textcolor{comment}{    | When authenticating your first-\/party SPA with Sanctum you may need to}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00055}00055 \textcolor{comment}{    | customize some of the middleware Sanctum uses while processing the}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00056}00056 \textcolor{comment}{    | request. You may change the middleware listed below as required.}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00057}00057 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00058}00058 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00060}00060     \textcolor{stringliteral}{'middleware'} => [}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00061}00061         \textcolor{stringliteral}{'verify\_csrf\_token'} => App\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)VerifyCsrfToken::class,}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00062}00062         \textcolor{stringliteral}{'encrypt\_cookies'} => App\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)EncryptCookies::class,}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00063}00063     ],}
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{sanctum_8php_source_l00065}00065 ];}
+
+\end{DoxyCode}

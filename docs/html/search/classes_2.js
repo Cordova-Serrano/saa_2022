@@ -1,23 +1,4 @@
 var searchData=
 [
-  ['career_0',['Career',['../d2/dbc/classApp_1_1Models_1_1Career.html',1,'App::Models']]],
-  ['careercontroller_1',['CareerController',['../de/dde/classApp_1_1Http_1_1Controllers_1_1CareerController.html',1,'App::Http::Controllers']]],
-  ['checkrole_2',['CheckRole',['../d6/d26/classApp_1_1Http_1_1Middleware_1_1CheckRole.html',1,'App::Http::Middleware']]],
-  ['confirmpasswordcontroller_3',['ConfirmPasswordController',['../df/d12/classApp_1_1Http_1_1Controllers_1_1Auth_1_1ConfirmPasswordController.html',1,'App::Http::Controllers::Auth']]],
-  ['consultcontroller_4',['ConsultController',['../d2/d6c/classApp_1_1Http_1_1Controllers_1_1ConsultController.html',1,'App::Http::Controllers']]],
-  ['controller_5',['Controller',['../d8/d70/classApp_1_1Http_1_1Controllers_1_1Controller.html',1,'App::Http::Controllers']]],
-  ['createcareerstable_6',['CreateCareersTable',['../d2/dd5/classCreateCareersTable.html',1,'']]],
-  ['createdatatable_7',['CreateDataTable',['../db/daf/classCreateDataTable.html',1,'']]],
-  ['createfailedjobstable_8',['CreateFailedJobsTable',['../d2/df9/classCreateFailedJobsTable.html',1,'']]],
-  ['createfilestable_9',['CreateFilesTable',['../da/ddd/classCreateFilesTable.html',1,'']]],
-  ['createpersonalaccesstokenstable_10',['CreatePersonalAccessTokensTable',['../d6/da5/classCreatePersonalAccessTokensTable.html',1,'']]],
-  ['createrolestable_11',['CreateRolesTable',['../d9/d25/classCreateRolesTable.html',1,'']]],
-  ['createroleusertable_12',['CreateRoleUserTable',['../df/d92/classCreateRoleUserTable.html',1,'']]],
-  ['createsemesterstable_13',['CreateSemestersTable',['../dc/d11/classCreateSemestersTable.html',1,'']]],
-  ['createstudentdatasemestertable_14',['CreateStudentDataSemesterTable',['../da/d77/classCreateStudentDataSemesterTable.html',1,'']]],
-  ['createstudentstable_15',['CreateStudentsTable',['../de/d7a/classCreateStudentsTable.html',1,'']]],
-  ['createuserstable_16',['CreateUsersTable',['../da/d7f/classCreateUsersTable.html',1,'']]],
-  ['csv_17',['CSV',['../dc/d00/classApp_1_1Models_1_1CSV.html',1,'App::Models']]],
-  ['csvcontroller_18',['CSVController',['../d4/d30/classApp_1_1Http_1_1Controllers_1_1CSVController.html',1,'App::Http::Controllers']]],
-  ['csvimport_19',['CSVImport',['../d5/d1b/classApp_1_1Imports_1_1CSVImport.html',1,'App::Imports']]]
+  ['exampletest_0',['ExampleTest',['../db/d27/classTests_1_1Feature_1_1ExampleTest.html',1,'Tests\Feature\ExampleTest'],['../d1/d5b/classTests_1_1Unit_1_1ExampleTest.html',1,'Tests\Unit\ExampleTest']]]
 ];

@@ -1,0 +1,24 @@
+\hypertarget{TrustProxies_8php_source}{}\doxysection{Trust\+Proxies.\+php}
+\label{TrustProxies_8php_source}\index{app/Http/Middleware/TrustProxies.php@{app/Http/Middleware/TrustProxies.php}}
+\mbox{\hyperlink{TrustProxies_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Http_1_1Middleware}{App\(\backslash\)Http\(\backslash\)Middleware}};}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00005}00005 use Illuminate\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)TrustProxies as Middleware;}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00006}00006 use Illuminate\(\backslash\)Http\(\backslash\)Request;}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00008}\mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1TrustProxies}{00008}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1TrustProxies}{TrustProxies}} \textcolor{keyword}{extends} Middleware}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00015}\mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1TrustProxies_aa75f2b478b6538ec7d77e25b809b37a1}{00015}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1TrustProxies_aa75f2b478b6538ec7d77e25b809b37a1}{\$proxies}};}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00022}\mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1TrustProxies_a626396cec923533d240c75214e1076c2}{00022}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1TrustProxies_a626396cec923533d240c75214e1076c2}{\$headers}} =}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00023}00023         Request::HEADER\_X\_FORWARDED\_FOR |}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00024}00024         Request::HEADER\_X\_FORWARDED\_HOST |}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00025}00025         Request::HEADER\_X\_FORWARDED\_PORT |}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00026}00026         Request::HEADER\_X\_FORWARDED\_PROTO |}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00027}00027         Request::HEADER\_X\_FORWARDED\_AWS\_ELB;}
+\DoxyCodeLine{\Hypertarget{TrustProxies_8php_source_l00028}00028 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,90 @@
+\hypertarget{web_8php_source}{}\doxysection{web.\+php}
+\label{web_8php_source}\index{routes/web.php@{routes/web.php}}
+\mbox{\hyperlink{web_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00003}00003 use App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)Auth\(\backslash\)RegisterController;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00004}00004 use Illuminate\(\backslash\)Support\(\backslash\)Facades\(\backslash\)Route;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00005}00005 use Illuminate\(\backslash\)Support\(\backslash\)Facades\(\backslash\)Auth;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00006}00006 use App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)CSVController;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00007}00007 use App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)GraphsController;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00008}00008 use App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)ConsultController;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00009}00009 use App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)UserController;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00010}00010 use App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)CareerController;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00011}00011 use App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)GenerationController;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00012}00012 use App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)QueryController;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00013}00013 use App\(\backslash\)Models\(\backslash\)Student;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00014}00014 use App\(\backslash\)Models\(\backslash\)Semester;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00015}00015 use App\(\backslash\)Models\(\backslash\)Career;}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00016}00016 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00017}00017 \textcolor{comment}{|-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00018}00018 \textcolor{comment}{| Web Routes}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00019}00019 \textcolor{comment}{|-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00020}00020 \textcolor{comment}{|}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00021}00021 \textcolor{comment}{| Here is where you can register web routes for your application. These}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00022}00022 \textcolor{comment}{| routes are loaded by the RouteServiceProvider within a group which}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00023}00023 \textcolor{comment}{| contains the "{}web"{} middleware group. Now create something great!}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00024}00024 \textcolor{comment}{|}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00025}00025 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00027}00027 \textcolor{comment}{// Ruta login, es la que muestra al usuario cuando inicia el sistema}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00028}00028 Route::get(\textcolor{charliteral}{'/'}, \textcolor{keyword}{function} () \{}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00029}00029     \textcolor{keywordflow}{return} view(\textcolor{stringliteral}{'login'});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00030}00030 \});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00032}00032 \textcolor{comment}{// Ruta de redireccionamiento cuando el usuario esta autenticado}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00033}00033 Route::get(\textcolor{stringliteral}{'/home'}, \textcolor{keyword}{function} () \{}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00034}00034     \textcolor{keywordflow}{return} view(\textcolor{stringliteral}{'welcome'});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00035}00035 \});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00037}00037 \textcolor{comment}{// Ruta de inicio del sistema cuando el usuario haya sido autenticado}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00038}00038 Route::middleware([\textcolor{stringliteral}{'auth'}])-\/>group(\textcolor{keyword}{function} () \{}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00039}00039     Route::get(\textcolor{charliteral}{'/'}, \textcolor{keyword}{function} () \{}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00040}00040         \textcolor{keywordflow}{return} view(\textcolor{stringliteral}{'welcome'});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00041}00041     \})-\/>name(\textcolor{stringliteral}{'home'});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00042}00042 \});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00044}00044 Route::middleware([\textcolor{stringliteral}{'check.role:super'}])-\/>group(\textcolor{keyword}{function} () \{}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00045}00045     \$routes = [\textcolor{stringliteral}{'except'} => [\textcolor{stringliteral}{'show'}]];}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00046}00046     Route::resource(\textcolor{stringliteral}{'users'}, UserController::class, \$routes);}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00048}00048     \textcolor{comment}{//Route::get('/users/\{user\}/edit', [UserController::class, 'edit']);}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00049}00049     \textcolor{comment}{//Route::put('/users/update', [UserController::class, 'update']);}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00050}00050     Route::get(\textcolor{stringliteral}{'/users/\{user\}'}, [UserController::class, \textcolor{stringliteral}{'destroy'}])-\/>name(\textcolor{stringliteral}{'users.destroy'});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00051}00051     \textcolor{comment}{//Route::delete('/users/\{user\}/destroy', [UserController::class, 'destroy']);}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00052}00052 \});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00054}00054 Route::middleware([\textcolor{stringliteral}{'auth'}])-\/>group(\textcolor{keyword}{function} () \{}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00055}00055     \textcolor{comment}{// \$routes = ['except' => ['show']];}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00056}00056     \textcolor{comment}{// Route::resource('csv', CSVController::class,\$routes);}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00057}00057     }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00058}00058     Route::get(\textcolor{stringliteral}{'/csv/import'}, [CSVController::class, \textcolor{stringliteral}{'import'}])-\/>name(\textcolor{stringliteral}{'csv.import'});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00059}00059 \});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00060}00060 Route::resource(\textcolor{stringliteral}{'csv'}, CSVController::class)-\/>middleware(\textcolor{stringliteral}{'auth'});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00062}00062 \textcolor{comment}{//Login template}}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00063}00063 Route::get(\textcolor{stringliteral}{'/login\_test'}, \textcolor{keyword}{function} () \{}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00064}00064     \textcolor{keywordflow}{return} view(\textcolor{stringliteral}{'test.login'});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00065}00065 \});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00068}00068 Route::resource(\textcolor{stringliteral}{'graphs'}, GraphsController::class)-\/>middleware(\textcolor{stringliteral}{'auth'});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00069}00069 Route::resource(\textcolor{stringliteral}{'consult'}, ConsultController::class)-\/>middleware(\textcolor{stringliteral}{'auth'});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00071}00071 Route::get(\textcolor{stringliteral}{'/update'}, [CSVController::class, \textcolor{stringliteral}{'updateDoc'}]);}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00073}00073 Route::get(\textcolor{stringliteral}{'/load\_query'}, [QueryController::class, \textcolor{stringliteral}{'loadQuery'}]);}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00074}00074 Route::get(\textcolor{stringliteral}{'/clean\_query'}, [QueryController::class, \textcolor{stringliteral}{'cleanQuery'}]);}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00076}00076 Route::get(\textcolor{stringliteral}{'/test'}, [ConsultController::class, \textcolor{stringliteral}{'test'}])-\/>name(\textcolor{stringliteral}{'consult.test'});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00080}00080 Auth::routes();}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00082}00082 Route::get(\textcolor{charliteral}{'/'}, [App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)HomeController::class, \textcolor{stringliteral}{'index'}])-\/>name(\textcolor{stringliteral}{'home'});}
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{web_8php_source_l00084}00084 }
+
+\end{DoxyCode}

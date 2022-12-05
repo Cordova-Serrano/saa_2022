@@ -1,0 +1,37 @@
+\hypertarget{LoginController_8php_source}{}\doxysection{Login\+Controller.\+php}
+\label{LoginController_8php_source}\index{app/Http/Controllers/Auth/LoginController.php@{app/Http/Controllers/Auth/LoginController.php}}
+\mbox{\hyperlink{LoginController_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Http_1_1Controllers_1_1Auth}{App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)Auth}};}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00005}00005 use \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Controller}{App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)Controller}};}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00006}00006 use \mbox{\hyperlink{classApp_1_1Providers_1_1RouteServiceProvider}{App\(\backslash\)Providers\(\backslash\)RouteServiceProvider}};}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00007}00007 use Illuminate\(\backslash\)Foundation\(\backslash\)Auth\(\backslash\)AuthenticatesUsers;}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00009}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1LoginController}{00009}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1LoginController}{LoginController}} \textcolor{keyword}{extends} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Controller}{Controller}}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00011}00011     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00012}00012 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00013}00013 \textcolor{comment}{    | Login Controller}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00014}00014 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00015}00015 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00016}00016 \textcolor{comment}{    | Este controlador maneja la autenticación de los usuarios para la aplicación y}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00017}00017 \textcolor{comment}{    | redirigirlos a su pantalla de inicio. El controlador usa un rasgo}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00018}00018 \textcolor{comment}{    | para proporcionar convenientemente su funcionalidad a sus aplicaciones.}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00019}00019 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00020}00020 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00022}00022     use AuthenticatesUsers;}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00029}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1LoginController_a964f34fc675aba457e3a5f38e6739f6c}{00029}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1LoginController_a964f34fc675aba457e3a5f38e6739f6c}{\$redirectTo}} = RouteServiceProvider::HOME;}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00036}00036     \textcolor{comment}{// Consturctor donde usamos un middleware con invitado}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00037}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1LoginController_a26310c2d82f1ff2c15652a02ce1335a2}{00037}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1LoginController_a26310c2d82f1ff2c15652a02ce1335a2}{\_\_construct}}()}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00038}00038     \{}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00039}00039         \$this-\/>middleware(\textcolor{stringliteral}{'guest'})-\/>except(\textcolor{stringliteral}{'logout'});}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{LoginController_8php_source_l00041}00041 \}}
+
+\end{DoxyCode}

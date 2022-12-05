@@ -1,0 +1,2708 @@
+!\mbox{[}\mbox{]}\mbox{[}1\mbox{]}
+
++-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Integrantes\+:}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ -\/ Córdova Serrano Eduardo Javier    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Integrantes\+:}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ -\/ Córdova Serrano Eduardo Javier    }\\\cline{1-2}
+\endhead
+&-\/ Gómez Arreguín Sonni Augusto    \\\cline{1-2}
+&\\\cline{1-2}
+&-\/ Hernandéz Hernandéz Bernardo    \\\cline{1-2}
+&\\\cline{1-2}
+&-\/ Llamas de la Torre María Jocelyn    \\\cline{1-2}
+&\\\cline{1-2}
+&-\/ Martínez Astello Aldair Marcelo   \\\cline{1-2}
+\end{longtabu}
++==========================+===========================================+ $\vert$ {\bfseries{Profesor\+:}} $\vert$ Francisco Eduardo Martínez Pérez $\vert$ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ $\vert$ {\bfseries{Semestre\+:}} $\vert$ 2022-\/2023 l $\vert$ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+
+
+{\bfseries{Control de versiones}}
+
+\DoxyHorRuler{0}
+ {\bfseries{Versión}} {\bfseries{Fecha}} {\bfseries{Descripción del cambio}} {\bfseries{Elaboró}} {\bfseries{Autorizó}} \DoxyHorRuler{0}
+ 1.\+0 01/12/2022 Creación del documento de manual de desarrollador Equipo de desarrollo SAA ~\newline
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_modulo_csv_autotoc_md2}{}\doxysubsection{Índice \{\#índice .\+TOC-\/\+Heading\}}\label{md_modulo_csv_autotoc_md2}
+Descargas \mbox{[}4\mbox{]}
+
+Instalación del sistema \mbox{[}4\mbox{]}\mbox{[}2\mbox{]}
+
+Desarrollador \mbox{[}9\mbox{]}
+
+Módulo Archivo CSV \mbox{[}27\mbox{]}
+
+4.1 Diseño de vista \mbox{[}27\mbox{]}\mbox{[}3\mbox{]}
+
+4.2 Control de archivos \mbox{[}28\mbox{]}
+
+4.2.1 Lectura \mbox{[}28\mbox{]}\mbox{[}5\mbox{]}
+
+Anexos \mbox{[}30\mbox{]}\hypertarget{md_modulo_csv_autotoc_md3}{}\doxysubsection{Descargas}\label{md_modulo_csv_autotoc_md3}
+Laragon\+: \href{https://laragon.org/download/index.html}{\texttt{ https\+://laragon.\+org/download/index.\+html}}
+
+!\mbox{[}Graphical user interface, text, application Description automatically generated\mbox{]}\hypertarget{md_modulo_csv_autotoc_md4}{}\doxysubsection{Instalación del sistema}\label{md_modulo_csv_autotoc_md4}
+Una vez instalado Laragon, procedemos a clonar el repositorio en el que se encuentra el proyecto\+:
+
+\href{https://github.com/Cordova-Serrano/saa_2022.git}{\texttt{ https\+://github.\+com/\+Cordova-\/\+Serrano/saa\+\_\+2022.\+git}}
+
+Copiamos el link del código y nos dirigimos a una terminal, ya sea CMD, Power\+Shell o Git\+Bash, para clonar el repositorio.
+
+!\mbox{[}\mbox{]}\mbox{[}6\mbox{]}
+
+Una vez en la terminal accedemos al directorio {\bfseries{C\+:/laragon/www}} e ingresamos el comando {\bfseries{git clone \href{https://github.com/Cordova-Serrano/saa_2022.git}{\texttt{ https\+://github.\+com/\+Cordova-\/\+Serrano/saa\+\_\+2022.\+git}}}}.
+
+!\mbox{[}Graphical user interface Description automatically generated with medium confidence\mbox{]}
+
+Después de clonar el repositorio se deben ejecutar los siguientes comandos\+:
+
+!\mbox{[}A picture containing shape Description automatically generated\mbox{]}
+
+A continuación, nos dirigimos a la ventana de Laragon y hacemos clic en {\bfseries{Base de Datos}}.
+
+!\mbox{[}Graphical user interface, text, application Description automatically generated\mbox{]}\mbox{[}7\mbox{]}
+
+Abrirá la siguiente ventana y daremos clic en {\bfseries{Nuevo}} y le damos el nombre {\bfseries{laragon}}, daremos clic en {\bfseries{Abrir.}}
+
+!\mbox{[}Graphical user interface, application Description automatically generated\mbox{]}
+
+Después hacemos clic derecho en {\bfseries{Laravel}} y creamos una base de datos llamada {\bfseries{saa}}.
+
+!\mbox{[}Graphical user interface, application Description automatically generated\mbox{]}\mbox{[}8\mbox{]}
+
+!\mbox{[}Graphical user interface, text, application, email Description automatically generated\mbox{]}
+
+Una vez creada la base de datos iremos a la terminal de Laragon e ingresamos los siguientes comandos\+:
+
+!\mbox{[}\mbox{]}\mbox{[}10\mbox{]}
+
+!\mbox{[}\mbox{]}\mbox{[}11\mbox{]}
+
+{\bfseries{Para iniciar el servidor Python.}}
+
+Si es la primera vez que se ejecuta el servidor, se debe crear un entorno virtual de python y activarlo. Para esto, se debe ejecutar el siguiente comando en la carpeta del proyecto\+:
+
+!\mbox{[}Shape Description automatically generated with low confidence\mbox{]}
+
+{\bfseries{Activar entorno virtual.}}
+
+!\mbox{[}Graphical user interface, application Description automatically generated\mbox{]}\mbox{[}12\mbox{]}
+
+{\bfseries{Instalar dependencias.}}
+
+!\mbox{[}\mbox{]}\mbox{[}13\mbox{]}
+
+{\bfseries{Ejecutar servidor.}}
+
+!\mbox{[}\mbox{]}\mbox{[}14\mbox{]}\hypertarget{md_modulo_csv_autotoc_md5}{}\doxysubsection{Desarrollador}\label{md_modulo_csv_autotoc_md5}
+Para visualizar o cambiar el nombre de la base de datos dirígete al archivo $\ast$$\ast$.env$\ast$$\ast$ y lo podrás visualizar o modificar en la línea 14.
+
+!\mbox{[}Text Description automatically generated\mbox{]}
+
+{\bfseries{REQ\+\_\+01, ACCESO AL SISTEMA}}
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Diseño de vista }}
+\end{DoxyEnumerate}
+
+El código del diseño de la vista está desarrollado con {\bfseries{blade.\+php}} este archivo se encuentra en la dirección {\bfseries{resources\texorpdfstring{$>$}{>}views\texorpdfstring{$>$}{>}auth\texorpdfstring{$>$}{>}login.\+blade.\+php.}}
+
+El formulario de la vista está contenido en un {\bfseries{card}} en el que se verificara si existe algún error de autenticación y en caso de haber errores mostrara una alerta al usuario. Nuestro formulario contendrá el método {\bfseries{POST}} para mandar la información ingresada y que el sistema pueda validar las credenciales ingresadas. Además de que se hace uso de {\bfseries{javascript}} para mostrar los errores correspondientes.
+
+El código es mostrado en la sección de anexos {\bfseries{imagen 1}}.
+
+Para que la vista se pueda mostrar en el sitio web, se creó una ruta en el archivo que se encuentra en {\bfseries{routes\texorpdfstring{$>$}{>}web.\+php}}. Esta ruta esta especificada como $\ast$$\ast$\textquotesingle{}/\textquotesingle{}$\ast$$\ast$ ya que es la ruta inicial a la hora de iniciar el sistema.
+
+El código es mostrado en la sección de anexos {\bfseries{imagen 1.\+2}}.
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Validación}}
+\end{DoxyEnumerate}
+
+El código de validación de credenciales del formulario de login, se encuentra en la ruta {\bfseries{app\texorpdfstring{$>$}{>}Http\texorpdfstring{$>$}{>}Controllers\texorpdfstring{$>$}{>}Auth\texorpdfstring{$>$}{>}Login\+Controller.\+php}} en este controlador está en primera instancia la autenticación de usuarios el cual se encuentra en la ruta {\bfseries{vendor\texorpdfstring{$>$}{>}laravel\texorpdfstring{$>$}{>}ui\texorpdfstring{$>$}{>}auth-\/backend\texorpdfstring{$>$}{>}Authenticates\+Users.\+php}} en esta autenticación mostramos el formulario del inicio de sesión a través de una función que retorna la vista de {\bfseries{login.\+blade.\+php}}, después se hace una solicitud de inicio de sesión al sistema, se hace una condición en donde se verifica si la clase usa {\bfseries{Throttles\+Logins}} y así se acelera el proceso automáticamente, el proceso tiene un numero de intentos así que si el intento de inicio de sesión es fallido este número de incrementos se incrementará para iniciar sesión y que el usuario pueda entrar a la vista de inicio del sistema. Pero si el usuario supero el número de intentos de acceso se bloqueará, estas funciones se encuentran en el mismo archivo.
+
+Si se deseara acceder con el email del usuario en vez del {\bfseries{username}} basta con cambiar la función de {\bfseries{username}} que se encuentra de la línea {\bfseries{158}} a la {\bfseries{161}} del archivo {\bfseries{Authenticates\+Users.\+php}}, cambiando el \char`\"{}username\char`\"{} por \char`\"{}email\char`\"{}.
+
+El código del archivo {\bfseries{Authenticates\+Users.\+php}} se encuentra en la sección de anexos {\bfseries{imagen 2}}.
+
+Siguiendo con el controlador de inicio de sesión después de hacer la autenticación del usuario se va a redirigir a \char`\"{}\+HOME\char`\"{} esta constante se encuentra en {\bfseries{app\texorpdfstring{$>$}{>}Providers\texorpdfstring{$>$}{>}Route\+Service\+Provide.\+php}} donde le damos el valor de la ruta a donde queremos redirigir al usuario en este caso sería la ruta $\ast$$\ast$\char`\"{}/home\char`\"{}$\ast$$\ast$ antes especificada en nuestro archivo de rutas {\bfseries{web.\+php}} (sección de anexos imagen 2.\+1).
+
+En el constructor se usa un middleware $\ast$$\ast$\textquotesingle{}guest\textquotesingle{}$\ast$$\ast$ el cual esta esta declarado en {\bfseries{app\texorpdfstring{$>$}{>}Http\texorpdfstring{$>$}{>}Kernel.\+php}} (sección de anexos imagen 2.\+2) este middleware se encuentra en {\bfseries{app\texorpdfstring{$>$}{>}Http\texorpdfstring{$>$}{>}Middleware\texorpdfstring{$>$}{>}Redirect\+If\+Authenticated.\+php}} y se encarga de manejar una solicitud entrante y redirigir si es que el usuario esta autenticado (sección de anexos imagen 2.\+3).
+
+Una vez autenticado el usuario será redirigido a la vista de inicio del sistema, esta ruta está declarada en {\bfseries{web.\+php}} (sección de anexos imagen 2.\+4) con un middleware de autenticación, asignando la ruta $\ast$$\ast$\textquotesingle{}/\textquotesingle{}$\ast$$\ast$ a la vista {\bfseries{welcome.\+blade.\+php}}.
+
+El middleware de autenticación esta declarado en {\bfseries{app\texorpdfstring{$>$}{>}Http\texorpdfstring{$>$}{>}Kernel.\+php}} (sección de anexos imagen 2.\+5) este middleware se encuentra en {\bfseries{app\texorpdfstring{$>$}{>}Http\texorpdfstring{$>$}{>}Middleware\texorpdfstring{$>$}{>}Authenticate.\+php}} y se encarga de retornar una ruta a la que se redirigirá al usuario cuando no está autenticado (sección de anexos imagen 2.\+6).
+
+Para la vista de inicio del sistema primero está el archivo donde se encuentra la estructura principal del html del sistema {\bfseries{resources\texorpdfstring{$>$}{>}views\texorpdfstring{$>$}{>}layout.\+blade.\+php}} (sección de anexos imagen 2.\+7), se importan las hojas de estilos utilizados en las vistas, se define el navbar en el que esta la foto del usuario en forma de dropdown para que muestre su nombre de usuario y la opción de cerrar sesión, se encuentra el sidebar con los links a los módulos y en caso de que el usuario este autenticado con el rol de \char`\"{}super\char`\"{} mostrara un link al módulo de configuración de usuarios. Para el contenido del sistema se encuentra una sección donde se define un wrapper y dentro de él se implementó un $\ast$@yield(\textquotesingle{}content\textquotesingle{})$\ast$ @yield permite mostrar el contenido desde otras vistas que estén referenciando al @yield del contenido. Finalmente, en este archivo se encuentra el footer.
+
+Para la vista de inicio en el encontramos en {\bfseries{resources\texorpdfstring{$>$}{>}views\texorpdfstring{$>$}{>}auth\texorpdfstring{$>$}{>}welcome.\+blade.\+php}} (sección de anexos imagen 2.\+8) y aquí encontramos el contenido donde simplemente se muestra un texto de bienvenida.
+
+$\ast$$\ast$\+REQ\+\_\+02, MÓ\+DULO\+: CONFIGURACIÓ\+N$\ast$$\ast$$\ast$ $\ast$
+
+$\ast$$\ast$2.1 Diseño de vistas $\ast$$\ast$ 
+
+El código de vistas del módulo de Configuración de usuarios se encuentra en la ruta {\itshape {\bfseries{resources\texorpdfstring{$>$}{>}views\texorpdfstring{$>$}{>}users\texorpdfstring{$>$}{>}index.\+blade.\+php}}}. El contenido de este módulo se encuentra contenido principalmente en un card, donde se encuentran el botón de crear nuevo usuario, y la cabecera de una tabla con el id \char`\"{}data-\/table\char`\"{}. Lo anterior se coloca de esa forma ya que la cabecera de la tabla no cambiará y siempre mostrará las mismas columnas.
+
+@extends (\textbackslash{}\textquotesingle{}layout\textbackslash{}\textquotesingle{})
+
+@section (\textbackslash{}\textquotesingle{}title\textbackslash{}\textquotesingle{}, \textbackslash{}\textquotesingle{}Seguimiento de Alumnos del Área $|$ Usuarios\textbackslash{}\textquotesingle{})
+
+@section (\textbackslash{}\textquotesingle{}styles\textbackslash{}\textquotesingle{})
+
+\texorpdfstring{$<$}{<}link href="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/datatables-\/bs4/css/data\+Tables.\+bootstrap4.\+css\textbackslash{}\textquotesingle{}) \}\}"{} rel="{}stylesheet"{}\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}link href="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/datatables-\/responsive/css/responsive.\+bootstrap4.\+css\textbackslash{}\textquotesingle{}) \}\}"{} rel="{}stylesheet"{}\texorpdfstring{$>$}{>}
+
+@endsection
+
+@section (\textbackslash{}\textquotesingle{}content\textbackslash{}\textquotesingle{})
+
+\texorpdfstring{$<$}{<}div class="{}row"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}div class="{}col-\/12"{}\texorpdfstring{$>$}{>}
+
+        @if (\$message = session(\textbackslash{}\textquotesingle{}success\textbackslash{}\textquotesingle{}))
+
+        \texorpdfstring{$<$}{<}div class="{}alert alert-\/success alert-\/dismissible text-\/justify"{} id="{}success-\/alert"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/check-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Realizado!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+            \{\{ \$message \}\}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        @if (\$message = session(\textbackslash{}\textquotesingle{}warning\textbackslash{}\textquotesingle{}))
+
+        \texorpdfstring{$<$}{<}div class="{}alert alert-\/warning alert-\/dismissible text-\/justify"{} id="{}warning-\/alert"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/check-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Advertencia!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+            \{\{ \$message \}\}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        @if (\$errors-\/\texorpdfstring{$>$}{>}any())
+
+        \texorpdfstring{$<$}{<}div class="{}alert alert-\/danger alert-\/dismissible text-\/justify"{} id="{}error-\/alert"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/times-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Error!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+            @foreach (\$errors-\/\texorpdfstring{$>$}{>}all() as \$error)
+
+            \{\{ \$error \}\}\texorpdfstring{$<$}{<}br\texorpdfstring{$>$}{>}
+
+            @endforeach
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        @if (\$message = Session\+::get(\textbackslash{}\textquotesingle{}error\textbackslash{}\textquotesingle{}))
+
+                \texorpdfstring{$<$}{<}div class="{}alert alert-\/danger alert-\/dismissible text-\/justify"{} id="{}success\+Message"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/times-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Error!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+                    \{\{ \$message \}\}\texorpdfstring{$<$}{<}br\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        \texorpdfstring{$<$}{<}div class="{}card card-\/outline card-\/reflex-\/blue"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div class="{}overlay"{} id="{}overlay"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}i class="{}fal fa-\/2x fa-\/sync fa-\/spin"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div class="{}card-\/header"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}div class="{}d-\/flex flex-\/wrap justify-\/content-\/between"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}h3 class="{}card-\/title my-\/auto"{}\texorpdfstring{$>$}{>}Usuarios\texorpdfstring{$<$}{<}/h3\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}a class="{}btn btn-\/sm btn-\/success"{} href="{}\{\{ route(\textbackslash{}\textquotesingle{}users.\+create\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}i class="{}fal fa-\/plus-\/circle mr-\/2"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}Nuevo
+
+                    \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div class="{}card-\/body"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}table class="{}table table-\/valign-\/middle table-\/hover"{} id="{}data-\/table"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}thead class="{}saa-\/table-\/header"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}tr\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}th\texorpdfstring{$>$}{>}\#\texorpdfstring{$<$}{<}/th\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}th\texorpdfstring{$>$}{>}Nombre\texorpdfstring{$<$}{<}/th\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}th\texorpdfstring{$>$}{>}Email\texorpdfstring{$<$}{<}/th\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}th\texorpdfstring{$>$}{>}Username\texorpdfstring{$<$}{<}/th\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}th\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/th\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/tr\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/thead\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}tbody\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/tbody\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/table\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}div aria-\/hidden="{}true"{} aria-\/labelledby="{}delete-\/record"{} class="{}modal fade"{} id="{}delete-\/modal"{} data-\/backdrop="{}static"{} data-\/keyboard="{}false"{} role="{}dialog"{} tabindex="{}-\/1"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}div class="{}modal-\/dialog modal-\/dialog-\/centered"{} role="{}document"{}\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}div class="{}modal-\/content"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div class="{}modal-\/header bg-\/danger"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}h4 class="{}modal-\/title"{}\texorpdfstring{$>$}{>}Eliminar Usuario\texorpdfstring{$<$}{<}/h4\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}button aria-\/label="{}Close"{} class="{}close"{} data-\/dismiss="{}modal"{} title="{}Cerrar"{} type="{}button"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}span aria-\/hidden="{}true"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/span\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div class="{}modal-\/body"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}p class="{}text-\/justify"{}\texorpdfstring{$>$}{>}¿\+Está seguro que desea eliminar al usuario?\texorpdfstring{$<$}{<}/p\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div class="{}modal-\/footer justify-\/content-\/between"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}button class="{}btn btn-\/sm btn-\/secondary"{} data-\/dismiss="{}modal"{} type="{}button"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}i class="{}fal fa-\/times-\/circle mr-\/2"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}Cancelar
+
+                \texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}form autocomplete="{}off"{} id="{}delete-\/form"{} method="{}post"{}\texorpdfstring{$>$}{>}
+
+                    @csrf
+
+                    @method (\textbackslash{}\textquotesingle{}DELETE\textbackslash{}\textquotesingle{})
+
+                    \texorpdfstring{$<$}{<}button class="{}btn btn-\/sm btn-\/danger"{} type="{}submit"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}i class="{}fal fa-\/trash-\/alt mr-\/2"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}Eliminar
+
+                    \texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/form\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+@endsection
+
+{\itshape {\bfseries{Imagen 1. Código de la vista configuración de usuarios}}}
+
+El código de la vista crear usuario se encuentra en la ruta {\itshape {\bfseries{resources\texorpdfstring{$>$}{>}views\texorpdfstring{$>$}{>}users\texorpdfstring{$>$}{>}create.\+blade.\+php.}}} En esta vista principalmente se encuentra un formulario que captura la información ingresada por el usuario. Se usa el método {\bfseries{POST}} para enviar la información ingresada al {\bfseries{User\+Controller}}, lo anterior después de que al presionar el botón {\bfseries{submit}} presente en este archivo, se redireccionará a la ruta {\bfseries{users.\+store}}.
+
+@extends (\textbackslash{}\textquotesingle{}layout\textbackslash{}\textquotesingle{})
+
+@section (\textbackslash{}\textquotesingle{}title\textbackslash{}\textquotesingle{}, \textbackslash{}\textquotesingle{}Seguimiento de Alumnos del Área $|$ Usuarios\textbackslash{}\textquotesingle{})
+
+@section (\textbackslash{}\textquotesingle{}styles\textbackslash{}\textquotesingle{})
+
+\texorpdfstring{$<$}{<}link href="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/datatables-\/bs4/css/data\+Tables.\+bootstrap4.\+css\textbackslash{}\textquotesingle{}) \}\}"{} rel="{}stylesheet"{}\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}link href="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/datatables-\/responsive/css/responsive.\+bootstrap4.\+css\textbackslash{}\textquotesingle{}) \}\}"{} rel="{}stylesheet"{}\texorpdfstring{$>$}{>}
+
+@endsection
+
+@section (\textbackslash{}\textquotesingle{}content\textbackslash{}\textquotesingle{})
+
+\texorpdfstring{$<$}{<}div class="{}row"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}div class="{}col-\/12"{}\texorpdfstring{$>$}{>}
+
+        @if (\$message = session(\textbackslash{}\textquotesingle{}success\textbackslash{}\textquotesingle{}))
+
+        \texorpdfstring{$<$}{<}div class="{}alert alert-\/success alert-\/dismissible text-\/justify"{} id="{}success-\/alert"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/check-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Realizado!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+            \{\{ \$message \}\}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        @if (\$message = session(\textbackslash{}\textquotesingle{}warning\textbackslash{}\textquotesingle{}))
+
+        \texorpdfstring{$<$}{<}div class="{}alert alert-\/warning alert-\/dismissible text-\/justify"{} id="{}warning-\/alert"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/check-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Advertencia!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+            \{\{ \$message \}\}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        @if (\$message = session(\textbackslash{}\textquotesingle{}duplicated\textbackslash{}\textquotesingle{}))
+
+        \texorpdfstring{$<$}{<}div class="{}alert alert-\/warning alert-\/dismissible text-\/justify"{} id="{}warning-\/alert"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/check-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Advertencia!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+            \{\{ \$message \}\}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        @if (\$errors-\/\texorpdfstring{$>$}{>}any())
+
+        \texorpdfstring{$<$}{<}div class="{}alert alert-\/danger alert-\/dismissible text-\/justify"{} id="{}error-\/alert"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/times-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Error!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+            @foreach (\$errors-\/\texorpdfstring{$>$}{>}all() as \$error)
+
+            \{\{ \$error \}\}\texorpdfstring{$<$}{<}br\texorpdfstring{$>$}{>}
+
+            @endforeach
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        \texorpdfstring{$<$}{<}div class="{}card card-\/outline card-\/reflex-\/blue"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div class="{}overlay"{} id="{}overlay"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}i class="{}fal fa-\/2x fa-\/sync fa-\/spin"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div class="{}card-\/header"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}div class="{}d-\/flex flex-\/wrap justify-\/content-\/between"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}h3 class="{}card-\/title my-\/auto"{}\texorpdfstring{$>$}{>}Nuevo Usuario\texorpdfstring{$<$}{<}/h3\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}form action="{}\{\{ route(\textbackslash{}\textquotesingle{}users.\+store\textbackslash{}\textquotesingle{}) \}\}"{} autocomplete="{}off"{} class="{}form-\/horizontal"{} id="{}user-\/form"{} method="{}post"{}\texorpdfstring{$>$}{>}
+
+                @csrf
+
+                \texorpdfstring{$<$}{<}div class="{}card-\/body"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}div class="{}row"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/6"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}div class="{}form-\/group row"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}label class="{}col-\/sm-\/3 col-\/form-\/label mt-\/2"{} for="{}name"{}\texorpdfstring{$>$}{>}Nombre\texorpdfstring{$<$}{<}/label\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/9 mt-\/2"{}\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}input class="{}form-\/control"{} maxlength="{}255"{} name="{}name"{} placeholder="{}Nombre"{} required type="{}text"{} value="{}\{\{ old(\textbackslash{}\textquotesingle{}name\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/6"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}div class="{}form-\/group row"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}label class="{}col-\/sm-\/3 col-\/form-\/label mt-\/2"{} for="{}name"{}\texorpdfstring{$>$}{>}Nombre de usuario\texorpdfstring{$<$}{<}/label\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/9 mt-\/2"{}\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}input class="{}form-\/control"{} maxlength="{}255"{} name="{}username"{} placeholder="{}Nombre de usuario"{} required type="{}text"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}  
+
+                        \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/6"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}div class="{}form-\/group row"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}label class="{}col-\/sm-\/3 col-\/form-\/label mt-\/2"{} for="{}name"{}\texorpdfstring{$>$}{>}Correo electrónico\texorpdfstring{$<$}{<}/label\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/9 mt-\/2"{}\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}input class="{}form-\/control"{} maxlength="{}255"{} name="{}email"{} placeholder="{}Correo electrónico"{} required type="{}text"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/6"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}div class="{}form-\/group row"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}label class="{}col-\/sm-\/3 col-\/form-\/label mt-\/2"{} for="{}name"{}\texorpdfstring{$>$}{>}Contraseña\texorpdfstring{$<$}{<}/label\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/9 mt-\/2"{}\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}input class="{}form-\/control"{} maxlength="{}255"{} name="{}password"{} placeholder="{}Contraseña"{} required type="{}password"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/6"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}label class="{}col-\/sm-\/3 col-\/form-\/label mt-\/2"{} for="{}name"{}\texorpdfstring{$>$}{>}Seleccionar rol\texorpdfstring{$<$}{<}/label\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}div class="{}form-\/group row"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}select class="{}form-\/control select2 select2-\/reflex-\/blue"{} style="{}width\+: 100\%"{} data-\/dropdown-\/css-\/class="{}select2-\/reflex-\/blue"{} data-\/placeholder="{}Seleccione generacion"{} id="{}rol"{} name="{}role"{} required\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}option selected value=\textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{}\texorpdfstring{$>$}{>}Seleccionar rol\texorpdfstring{$<$}{<}/option\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}option value="{}super"{}\texorpdfstring{$>$}{>}Super Administrador\texorpdfstring{$<$}{<}/option\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}option value="{}admin"{}\texorpdfstring{$>$}{>}Administrador\texorpdfstring{$<$}{<}/option\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}option value="{}user"{}\texorpdfstring{$>$}{>}Usuario\texorpdfstring{$<$}{<}/option\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/select\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}div class="{}card-\/footer"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}div class="{}d-\/flex justify-\/content-\/between"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}a class="{}btn btn-\/sm btn-\/secondary"{} href="{}\{\{ route(\textbackslash{}\textquotesingle{}users.\+index\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}i class="{}fal fa-\/times-\/circle mr-\/2"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}Cancelar
+
+                        \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}button class="{}btn btn-\/sm btn-\/primary"{} type="{}submit"{} id="{}save-\/btn"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}i class="{}fal fa-\/save mr-\/2"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}Guardar
+
+                        \texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/form\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+@endsection
+
+{\itshape {\bfseries{Imagen 2. Código de la vista crear usuario}}}
+
+El código de la vista {\bfseries{Editar}} usuario se encuentra en la ruta {\itshape {\bfseries{resources\texorpdfstring{$>$}{>}views\texorpdfstring{$>$}{>}users\texorpdfstring{$>$}{>}edit.\+blade.\+php.}}} El código es muy similar al del archivo de crear usuario, la diferencia es que en este archivo se llenan los campos del formulario con la información del usuario a editar, excepto el campo contraseña. Lo anterior, se realiza con ayuda de blade ya que el controlador al mandar a esta vista también manda una variable {\itshape user} donde se encuentra la información extraída de la base de datos.
+
+@extends (\textbackslash{}\textquotesingle{}layout\textbackslash{}\textquotesingle{})
+
+@section (\textbackslash{}\textquotesingle{}title\textbackslash{}\textquotesingle{}, \textbackslash{}\textquotesingle{}Seguimiento de Alumnos del Área $|$ Usuarios\textbackslash{}\textquotesingle{})
+
+@section (\textbackslash{}\textquotesingle{}styles\textbackslash{}\textquotesingle{})
+
+\texorpdfstring{$<$}{<}link href="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/datatables-\/bs4/css/data\+Tables.\+bootstrap4.\+css\textbackslash{}\textquotesingle{}) \}\}"{} rel="{}stylesheet"{}\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}link href="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/datatables-\/responsive/css/responsive.\+bootstrap4.\+css\textbackslash{}\textquotesingle{}) \}\}"{} rel="{}stylesheet"{}\texorpdfstring{$>$}{>}
+
+@endsection
+
+@section (\textbackslash{}\textquotesingle{}content\textbackslash{}\textquotesingle{})
+
+\texorpdfstring{$<$}{<}div class="{}row"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}div class="{}col-\/12"{}\texorpdfstring{$>$}{>}
+
+        @if (\$message = session(\textbackslash{}\textquotesingle{}success\textbackslash{}\textquotesingle{}))
+
+        \texorpdfstring{$<$}{<}div class="{}alert alert-\/success alert-\/dismissible text-\/justify"{} id="{}success-\/alert"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/check-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Realizado!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+            \{\{ \$message \}\}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        @if (\$message = session(\textbackslash{}\textquotesingle{}warning\textbackslash{}\textquotesingle{}))
+
+        \texorpdfstring{$<$}{<}div class="{}alert alert-\/warning alert-\/dismissible text-\/justify"{} id="{}warning-\/alert"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/check-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Advertencia!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+            \{\{ \$message \}\}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        @if (\$message = session(\textbackslash{}\textquotesingle{}duplicated\textbackslash{}\textquotesingle{}))
+
+        \texorpdfstring{$<$}{<}div class="{}alert alert-\/warning alert-\/dismissible text-\/justify"{} id="{}warning-\/alert"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/check-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Advertencia!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+            \{\{ \$message \}\}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        @if (\$errors-\/\texorpdfstring{$>$}{>}any())
+
+        \texorpdfstring{$<$}{<}div class="{}alert alert-\/danger alert-\/dismissible text-\/justify"{} id="{}error-\/alert"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/times-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Error!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+            @foreach (\$errors-\/\texorpdfstring{$>$}{>}all() as \$error)
+
+            \{\{ \$error \}\}\texorpdfstring{$<$}{<}br\texorpdfstring{$>$}{>}
+
+            @endforeach
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        \texorpdfstring{$<$}{<}div class="{}card card-\/outline card-\/reflex-\/blue"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div class="{}overlay"{} id="{}overlay"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}i class="{}fal fa-\/2x fa-\/sync fa-\/spin"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div class="{}card-\/header"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}div class="{}d-\/flex flex-\/wrap justify-\/content-\/between"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}h3 class="{}card-\/title my-\/auto"{}\texorpdfstring{$>$}{>}Editar Usuario \texorpdfstring{$<$}{<}/h3\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}form action="{}\{\{ route(\textbackslash{}\textquotesingle{}users.\+update\textbackslash{}\textquotesingle{}, \textbackslash{}\mbox{[}\textbackslash{}\textquotesingle{}user\textbackslash{}\textquotesingle{} =\texorpdfstring{$>$}{>} \textbackslash{}\textquotesingle{}\$user\textbackslash{}\textquotesingle{}\textbackslash{}\mbox{]}) \}\}"{} autocomplete="{}off"{} class="{}form-\/horizontal"{} id="{}user-\/form"{} method="{}post"{}\texorpdfstring{$>$}{>}
+
+                @csrf
+
+                @method(\textbackslash{}\textquotesingle{}put\textbackslash{}\textquotesingle{})
+
+                \texorpdfstring{$<$}{<}div class="{}card-\/body"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}div class="{}row"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/6"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}input type="{}hidden"{} value="{}\{\{\$user-\/\texorpdfstring{$>$}{>}id\}\}"{} name="{}id"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}div class="{}form-\/group row"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}label class="{}col-\/sm-\/3 col-\/form-\/label mt-\/2"{} for="{}name"{}\texorpdfstring{$>$}{>}Nombre\texorpdfstring{$<$}{<}/label\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/9 mt-\/2"{}\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}input class="{}form-\/control"{} maxlength="{}255"{} name="{}name"{} placeholder="{}Nombre"{} required type="{}text"{} value="{}\{\{ old(\textbackslash{}\textquotesingle{}name\textbackslash{}\textquotesingle{}, \$user-\/\texorpdfstring{$>$}{>}name) \}\}"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/6"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}div class="{}form-\/group row"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}label class="{}col-\/sm-\/3 col-\/form-\/label mt-\/2"{} for="{}name"{}\texorpdfstring{$>$}{>}Nombre de usuario\texorpdfstring{$<$}{<}/label\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/9 mt-\/2"{}\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}input class="{}form-\/control"{} maxlength="{}255"{} name="{}username"{} value="{}\{\{\$user-\/\texorpdfstring{$>$}{>}username\}\}"{} placeholder="{}Nombre de usuario"{} required type="{}text"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}  
+
+                        \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/6"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}div class="{}form-\/group row"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}label class="{}col-\/sm-\/3 col-\/form-\/label mt-\/2"{} for="{}name"{}\texorpdfstring{$>$}{>}Correo electrónico\texorpdfstring{$<$}{<}/label\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/9 mt-\/2"{}\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}input class="{}form-\/control"{} maxlength="{}255"{} name="{}email"{} placeholder="{}Correo electrónico"{} value="{}\{\{\$user-\/\texorpdfstring{$>$}{>}email\}\}"{} required type="{}text"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/6"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}div class="{}form-\/group row"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}label class="{}col-\/sm-\/3 col-\/form-\/label mt-\/2"{} for="{}name"{}\texorpdfstring{$>$}{>}Contraseña \texorpdfstring{$<$}{<}/label\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/9 mt-\/2"{}\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}input class="{}form-\/control"{} maxlength="{}255"{} name="{}password"{} placeholder="{}Contraseña"{} value="{}"{} required type="{}password"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div class="{}col-\/sm-\/6"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}label class="{}col-\/sm-\/3 col-\/form-\/label mt-\/2"{} for="{}name"{}\texorpdfstring{$>$}{>}Seleccionar rol\texorpdfstring{$<$}{<}/label\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}div class="{}form-\/group row"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}select class="{}form-\/control select2 select2-\/reflex-\/blue"{} style="{}width\+: 100\%"{} data-\/dropdown-\/css-\/class="{}select2-\/reflex-\/blue"{} data-\/placeholder="{}Seleccione generacion"{} id="{}rol"{} name="{}role"{} required\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}option selected value=\textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{}\texorpdfstring{$>$}{>}Seleccionar rol\texorpdfstring{$<$}{<}/option\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}option value="{}1"{} @if(\$user-\/\texorpdfstring{$>$}{>}roles\mbox{[}0\mbox{]}-\/\texorpdfstring{$>$}{>}name=="{}super"{}) selected @endif\texorpdfstring{$>$}{>}Super Administrador\texorpdfstring{$<$}{<}/option\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}option value="{}2"{} @if(\$user-\/\texorpdfstring{$>$}{>}roles\mbox{[}0\mbox{]}-\/\texorpdfstring{$>$}{>}name=="{}admin"{}) selected @endif\texorpdfstring{$>$}{>}Administrador\texorpdfstring{$<$}{<}/option\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}option value="{}3"{} @if(\$user-\/\texorpdfstring{$>$}{>}roles\mbox{[}0\mbox{]}-\/\texorpdfstring{$>$}{>}name=="{}user"{}) selected @endif\texorpdfstring{$>$}{>}Usuario\texorpdfstring{$<$}{<}/option\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/select\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}div class="{}card-\/footer"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}div class="{}d-\/flex justify-\/content-\/between"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}a class="{}btn btn-\/sm btn-\/secondary"{} href="{}\{\{ route(\textbackslash{}\textquotesingle{}users.\+index\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}i class="{}fal fa-\/times-\/circle mr-\/2"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}Cancelar
+
+                        \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}button class="{}btn btn-\/sm btn-\/primary"{} type="{}submit"{} id="{}save-\/btn"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}i class="{}fal fa-\/save mr-\/2"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}Guardar
+
+                        \texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/form\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+@endsection
+
+{\itshape {\bfseries{Imagen 3. Código de la vista editar usuario}}}
+
+$\ast$$\ast$2.2 Registro de usuarios y asignación de roles$\ast$$\ast$ 
+
+$\ast$$\ast$2.2.\+1 Lectura $\ast$$\ast$ 
+
+La información de los usuarios existentes en la base de datos se obtiene mediante una solicitud Ajax dentro del código javascript en el archivo {\itshape {\bfseries{resources\texorpdfstring{$>$}{>}views\texorpdfstring{$>$}{>}users\texorpdfstring{$>$}{>}index.\+blade.\+php.}}} La información llega al método y se renderiza usando {\bfseries{Data\+Table.}} La información se coloca en la tabla de acuerdo con los campos que se desean mostrar. Además, en la misma función se colocan los botones de editar y eliminar por cada registro encontrado.
+
+@section (\textbackslash{}\textquotesingle{}scripts\textbackslash{}\textquotesingle{})
+
+\texorpdfstring{$<$}{<}script type="{}text/javascript"{}\texorpdfstring{$>$}{>}
+
+    let dt = null;
+
+    \$(function() \{
+
+        dt = \$(\textbackslash{}\textquotesingle{}\#data-\/table\textbackslash{}\textquotesingle{}).Data\+Table(\{
+
+            page\+Length\+: 10,
+
+            auto\+Width\+: false,
+
+            processing\+: true,
+
+            responsive\+: true,
+
+            searching\+: true,
+
+            length\+Change\+: false,
+
+            language\+: \{
+
+                url\+: "{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/datatables/jquery.\+data\+Tables.\+spanish.\+json\textbackslash{}\textquotesingle{}) \}\}"{}
+
+            \},
+
+            ajax\+: "{}\{\{ route(\textbackslash{}\textquotesingle{}users.\+index\textbackslash{}\textquotesingle{}) \}\}"{},
+
+            column\+Defs\+: \mbox{[}\{
+
+                    class\+Name\+: \textbackslash{}\textquotesingle{}text-\/center\textbackslash{}\textquotesingle{},
+
+                    targets\+: \mbox{[}0, 1, 2, 3,4\mbox{]}
+
+                \},
+
+                \{
+
+                    orderable\+: false,
+
+                    searchable\+: false,
+
+                    targets\+: 4
+
+                \}
+
+            \mbox{]},
+
+            columns\+: \mbox{[}\{
+
+                    data\+: \textbackslash{}\textquotesingle{}id\textbackslash{}\textquotesingle{}
+
+                \},
+
+                \{
+
+                    data\+: \textbackslash{}\textquotesingle{}name\textbackslash{}\textquotesingle{}
+
+                \},
+
+                \{
+
+                    data\+: \textbackslash{}\textquotesingle{}email\textbackslash{}\textquotesingle{}
+
+                \},
+
+                \{
+
+                    data\+: \textbackslash{}\textquotesingle{}username\textbackslash{}\textquotesingle{}
+
+                \},
+
+                \{
+
+                    class\+Name\+: \textbackslash{}\textquotesingle{}text-\/center\textbackslash{}\textquotesingle{},
+
+                    default\+Content\+: \textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{},
+
+                    created\+Cell\+: function(td, cell\+Data, row\+Data, row, col, data, id, meta) \{
+
+                        \$(td).prepend(
+
+                            \`{}\texorpdfstring{$<$}{<}div class="{}btn-\/group"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}button type="{}button"{} class="{}update btn btn-\/sm btn-\/warning edit-\/user mr-\/1 update"{} title="{}Editar"{}\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}i class="{}fal fa-\/pencil-\/alt"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}button type="{}button"{} class="{}btn btn-\/sm btn-\/danger delete-\/user"{} title="{}Eliminar"{}\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}i class="{}fal fa-\/trash-\/alt"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}\`{}
+
+                        );
+
+                        \$(td).add\+Class(data);
+
+                    \}
+
+                \}
+
+            \mbox{]},
+
+            draw\+Callback\+: () =\texorpdfstring{$>$}{>} \{
+
+                \$(\textbackslash{}\textquotesingle{}.edit-\/user\textbackslash{}\textquotesingle{}).on(\textbackslash{}\textquotesingle{}click\textbackslash{}\textquotesingle{}, (e) =\texorpdfstring{$>$}{>} \{
+
+                    let user = dt.\+row(\$(e.\+current\+Target).closest(\textbackslash{}\textquotesingle{}tr\textbackslash{}\textquotesingle{})).data();
+
+                    console.\+log(user);
+
+                    edit\+Record(user);
+
+                \});
+
+               
+
+                \$(\textbackslash{}\textquotesingle{}.delete-\/user\textbackslash{}\textquotesingle{}).on(\textbackslash{}\textquotesingle{}click\textbackslash{}\textquotesingle{}, (e) =\texorpdfstring{$>$}{>} \{
+
+                    let user = dt.\+row(\$(e.\+current\+Target).closest(\textbackslash{}\textquotesingle{}tr\textbackslash{}\textquotesingle{})).data();
+
+                    delete\+Record(user);
+
+                \});
+
+            \}
+
+        \});
+
+        \$(\textbackslash{}\textquotesingle{}\#overlay\textbackslash{}\textquotesingle{}).hide();
+
+    \});
+
+    function edit\+Record(user) \{
+
+        let route = "{}\{\{ route(\textbackslash{}\textquotesingle{}users.\+edit\textbackslash{}\textquotesingle{}, \textbackslash{}\mbox{[}\textbackslash{}\textquotesingle{}user\textbackslash{}\textquotesingle{} =\texorpdfstring{$>$}{>} \textbackslash{}\textquotesingle{}id\textbackslash{}\textquotesingle{}\textbackslash{}\mbox{]}) \}\}"{};
+
+        route = route.\+replace(\textbackslash{}\textquotesingle{}id\textbackslash{}\textquotesingle{}, user.\+id);
+
+        window.\+location.\+href = route;
+
+    \}
+
+    function delete\+Record(user)\{
+
+        let route = "{}\{\{ route(\textbackslash{}\textquotesingle{}users.\+destroy\textbackslash{}\textquotesingle{}, \textbackslash{}\mbox{[}\textbackslash{}\textquotesingle{}user\textbackslash{}\textquotesingle{} =\texorpdfstring{$>$}{>} \textbackslash{}\textquotesingle{}id\textbackslash{}\textquotesingle{}\textbackslash{}\mbox{]}) \}\}"{};
+
+        route = route.\+replace(\textbackslash{}\textquotesingle{}id\textbackslash{}\textquotesingle{}, user.\+id);
+
+        let modal = \$(\textbackslash{}\textquotesingle{}\#delete-\/modal\textbackslash{}\textquotesingle{});
+
+        let form = modal.\+find(\textbackslash{}\textquotesingle{}form\+:first\textbackslash{}\textquotesingle{});
+
+        form.\+attr(\textbackslash{}\textquotesingle{}action\textbackslash{}\textquotesingle{}, route);
+
+        modal.\+modal(\textbackslash{}\textquotesingle{}show\textbackslash{}\textquotesingle{});
+
+    \}
+
+    set\+Timeout(function() \{\$(\textbackslash{}\textquotesingle{}\#success\+Message\textbackslash{}\textquotesingle{}).fade\+Out(\textbackslash{}\textquotesingle{}fast\textbackslash{}\textquotesingle{});\}, 3000);
+
+\texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}
+
+@endsection
+
+{\itshape {\bfseries{Imagen 4. Código de la función para realizar la solicitud AJAX, luego renderiza la información que llega como respuesta}}}
+
+Cabe mencionar que la función, al hacer la solicitud AJAX, redireccione a la función index del controlador. En esta función, se obtiene la información de la base de datos para que después de extraerla, es información se envía en formato JSON a la vista.
+
+ public function index(Request \$request)
+
+    \{
+
+        if (\$request-\/\texorpdfstring{$>$}{>}ajax()) \{
+
+            \$model = User\+::with(\textbackslash{}\textquotesingle{}roles\textbackslash{}\textquotesingle{})-\/\texorpdfstring{$>$}{>}get();
+
+            return Data\+Tables\+::of(\$model)-\/\texorpdfstring{$>$}{>}to\+Json();
+
+        \}
+
+        return view(\textbackslash{}\textquotesingle{}users.\+index\textbackslash{}\textquotesingle{});
+
+    \}
+
+{\itshape {\bfseries{Imagen 5. Código del controlador donde se extrae la información de la base de datos y se regresa en un objeto JSON}}}
+
+$\ast$$\ast$2.2.\+2 Creación $\ast$$\ast$ 
+
+La información de un usuario nuevo se captura en un formulario en el archivo users.\+create mostrado anteriormente. Una vez enviada la información, se manda a la función store dentro de User\+Controller.
+
+Ahí, se valida la información que viene en la request. Tanto el formato, como la longitud o si el valor este duplicado se revisa en la primera parte de esta función.
+
+Si todo esta correcto, se procede a almacenar la información de nombre, nombre de usuario, contraseña y correo electrónico dentro de la tabla users usando el modelo User.
+
+El valor del rol se almacena en la tabla roles\+\_\+users usando el modelo Role\+User.
+
+En ambos casos se usa la función save() para guardar la información en la base de datos.
+
+Finalmente, la función store() redirecciona a la vista de index de usuarios.
+
+/$\ast$$\ast$
+
+     $\ast$ @desc Guarda la información de un usuario nuevo
+
+     $\ast$ @params \{Request\} Información del usuario a almacenar
+
+     $\ast$ @returns Vista index de usuario
+
+    $\ast$/
+
+    public function store(Request \$request)
+
+    \{
+
+        if(User\+::where(\textbackslash{}\textquotesingle{}email\textbackslash{}\textquotesingle{},\$request-\/\texorpdfstring{$>$}{>}email)-\/\texorpdfstring{$>$}{>}exists())\{
+
+            return redirect()-\/\texorpdfstring{$>$}{>}route(\textbackslash{}\textquotesingle{}users.\+create\textbackslash{}\textquotesingle{})-\/\texorpdfstring{$>$}{>}with(\textbackslash{}\textquotesingle{}duplicated\textbackslash{}\textquotesingle{}, \textbackslash{}\textquotesingle{}El correo ingresado ya existe. Por favor, ingrese un correo diferente\textbackslash{}\textquotesingle{});
+
+        \}
+
+        \$role = 0;
+
+        \$validated = \$request-\/\texorpdfstring{$>$}{>}validate(\mbox{[}
+
+            \textbackslash{}\textquotesingle{}name\textbackslash{}\textquotesingle{} =\texorpdfstring{$>$}{>} \textbackslash{}\textquotesingle{}required$|$max\+:100\textbackslash{}\textquotesingle{},
+
+            \textbackslash{}\textquotesingle{}username\textbackslash{}\textquotesingle{} =\texorpdfstring{$>$}{>} \textbackslash{}\textquotesingle{}required$|$max\+:100\textbackslash{}\textquotesingle{},
+
+            \textbackslash{}\textquotesingle{}email\textbackslash{}\textquotesingle{} =\texorpdfstring{$>$}{>} \textbackslash{}\textquotesingle{}required$|$email\+:rfc\textbackslash{}\textquotesingle{},
+
+            \textbackslash{}\textquotesingle{}password\textbackslash{}\textquotesingle{} =\texorpdfstring{$>$}{>} \textbackslash{}\textquotesingle{}required$|$min\+:8$|$alpha\+\_\+num\textbackslash{}\textquotesingle{}
+
+        \mbox{]});
+
+        \$user = new User(\mbox{[}
+
+            "{}name"{} =\texorpdfstring{$>$}{>} \$request-\/\texorpdfstring{$>$}{>}name,
+
+            "{}username"{} =\texorpdfstring{$>$}{>} \$request-\/\texorpdfstring{$>$}{>}username,
+
+            "{}email"{} =\texorpdfstring{$>$}{>} \$request-\/\texorpdfstring{$>$}{>}email,
+
+            "{}password"{} =\texorpdfstring{$>$}{>} bcrypt(\$request-\/\texorpdfstring{$>$}{>}password)
+
+        \mbox{]});
+
+        \$user-\/\texorpdfstring{$>$}{>}save();
+
+        if(\$request-\/\texorpdfstring{$>$}{>}role == "{}super"{})
+
+            \$role = 1;
+
+        elseif(\$request-\/\texorpdfstring{$>$}{>}role == "{}admin"{})
+
+            \$role = 2;
+
+        else
+
+            \$role = 3;
+
+        \$role\+\_\+user = new Role\+User(\mbox{[}
+
+            "{}user\+\_\+id"{} =\texorpdfstring{$>$}{>} \$user-\/\texorpdfstring{$>$}{>}id,
+
+            "{}role\+\_\+id"{} =\texorpdfstring{$>$}{>} \$role
+
+        \mbox{]});
+
+        \$role\+\_\+user-\/\texorpdfstring{$>$}{>}save();
+
+        return view(\textbackslash{}\textquotesingle{}users.\+index\textbackslash{}\textquotesingle{});
+
+    \}
+
+{\itshape {\bfseries{Imagen 6. Código para almacenar un nuevo usuario en la base de datos}}}
+
+$\ast$$\ast$2.2.\+3 Actualización $\ast$$\ast$ 
+
+La información de un usuario a editar se captura en un formulario en el archivo users.\+edit mostrado anteriormente. Una vez enviada la información, se manda a la función update dentro de User\+Controller.
+
+Ahí, se valida la información que viene en la request. Tanto el formato, como la longitud o si el valor este duplicado se revisa en la primera parte de esta función.
+
+Si todo está correcto, se procede a actualizar la información que llega desde la request.
+
+Para ambos casos, se usa el valor \$request-\/\texorpdfstring{$>$}{>}id para obtener el registro correcto dentro de las tablas users y roles\+\_\+users. Una vez extraída la información, se asigna a cada variable el nuevo valor contenido en la variable \$request y nuevamente se utiliza la función save() para guardar los cambios.
+
+/$\ast$$\ast$
+
+     $\ast$ @desc Guarda la nueva información de usuario existente
+
+     $\ast$ @params \{Request\} Información nueva del usuario a almacenar
+
+     $\ast$ @returns Vista index de usuario
+
+   
+
+    $\ast$/
+
+    public function update(Request \$request)
+
+    \{
+
+        \$id = \$request-\/\texorpdfstring{$>$}{>}id;
+
+        \$user = User\+::where(\textbackslash{}\textquotesingle{}id\textbackslash{}\textquotesingle{}, \$id)-\/\texorpdfstring{$>$}{>}first();
+
+        if(User\+::where(\textbackslash{}\textquotesingle{}email\textbackslash{}\textquotesingle{},\$request-\/\texorpdfstring{$>$}{>}email)-\/\texorpdfstring{$>$}{>}exists() \&\& \$user-\/\texorpdfstring{$>$}{>}email != \$request-\/\texorpdfstring{$>$}{>}email)\{
+
+            return back()-\/\texorpdfstring{$>$}{>}with(\textbackslash{}\textquotesingle{}duplicated\textbackslash{}\textquotesingle{}, \textbackslash{}\textquotesingle{}El correo ingresado ya existe. Por favor, ingrese un correo diferente\textbackslash{}\textquotesingle{});
+
+        \}
+
+        \$validated = \$request-\/\texorpdfstring{$>$}{>}validate(\mbox{[}
+
+            \textbackslash{}\textquotesingle{}name\textbackslash{}\textquotesingle{} =\texorpdfstring{$>$}{>} \textbackslash{}\textquotesingle{}required$|$max\+:100\textbackslash{}\textquotesingle{},
+
+            \textbackslash{}\textquotesingle{}username\textbackslash{}\textquotesingle{} =\texorpdfstring{$>$}{>} \textbackslash{}\textquotesingle{}required$|$max\+:100\textbackslash{}\textquotesingle{},
+
+            \textbackslash{}\textquotesingle{}email\textbackslash{}\textquotesingle{} =\texorpdfstring{$>$}{>} \textbackslash{}\textquotesingle{}required$|$email\+:rfc\textbackslash{}\textquotesingle{},
+
+            \textbackslash{}\textquotesingle{}password\textbackslash{}\textquotesingle{} =\texorpdfstring{$>$}{>} \textbackslash{}\textquotesingle{}required$|$min\+:8$|$alpha\+\_\+num\textbackslash{}\textquotesingle{}
+
+        \mbox{]});
+
+        \$user-\/\texorpdfstring{$>$}{>}name = \$request-\/\texorpdfstring{$>$}{>}name;
+
+        \$user-\/\texorpdfstring{$>$}{>}email = \$request-\/\texorpdfstring{$>$}{>}email;
+
+        \$user-\/\texorpdfstring{$>$}{>}username = \$request-\/\texorpdfstring{$>$}{>}username;
+
+        \$user-\/\texorpdfstring{$>$}{>}password = bcrypt(\$request-\/\texorpdfstring{$>$}{>}password);
+
+        \$user-\/\texorpdfstring{$>$}{>}save();
+
+        \$role = Role\+User\+::where(\textbackslash{}\textquotesingle{}user\+\_\+id\textbackslash{}\textquotesingle{}, \$id)-\/\texorpdfstring{$>$}{>}first();
+
+        \$role-\/\texorpdfstring{$>$}{>}role\+\_\+id = \$request-\/\texorpdfstring{$>$}{>}role;
+
+        \$role-\/\texorpdfstring{$>$}{>}save();
+
+        return redirect()-\/\texorpdfstring{$>$}{>}route(\textbackslash{}\textquotesingle{}users.\+index\textbackslash{}\textquotesingle{});
+
+    \}
+
+{\itshape {\bfseries{Imagen 7. Código que permite actualizar la información de un usuario}}}
+
+{\bfseries{2.\+2.\+4 Eliminación}}
+
+La eliminación del usuario se realiza en la función destroy() dentro de User\+Controller. Se recibe una variable \$user del modelo User. Se usa el id dentro de esta variable para obtener el registro correspondiente en la tabla users y roles\+\_\+users. Una vez que se tienen ambos registros se usa la función delete() para eliminar al usuario dentro de la base de datos.
+
+/$\ast$$\ast$
+
+     $\ast$ @desc Elimina un usuario
+
+     $\ast$ @params \{User\} Usuario a eliminar
+
+     $\ast$ @returns Vista index de usuario
+
+    $\ast$/
+
+    public function destroy(User \$user)
+
+    \{
+
+        \$id = \$user-\/\texorpdfstring{$>$}{>}id;
+
+        \$role\+\_\+table = Role\+User\+::where(\textbackslash{}\textquotesingle{}user\+\_\+id\textbackslash{}\textquotesingle{}, \$id)-\/\texorpdfstring{$>$}{>}first();
+
+        if(\$role\+\_\+table-\/\texorpdfstring{$>$}{>}role\+\_\+id == 1)
+
+            return redirect()-\/\texorpdfstring{$>$}{>}route(\textbackslash{}\textquotesingle{}users.\+index\textbackslash{}\textquotesingle{})-\/\texorpdfstring{$>$}{>}with(\textbackslash{}\textquotesingle{}error\textbackslash{}\textquotesingle{}, \textbackslash{}\textquotesingle{}No se puede eliminar al superusuario\textbackslash{}\textquotesingle{});
+
+        \$role\+\_\+table-\/\texorpdfstring{$>$}{>}delete();
+
+        \$user\+\_\+table = User\+::where(\textbackslash{}\textquotesingle{}id\textbackslash{}\textquotesingle{}, \$id)-\/\texorpdfstring{$>$}{>}first();
+
+        \$user\+\_\+table-\/\texorpdfstring{$>$}{>}delete();
+
+        return redirect()-\/\texorpdfstring{$>$}{>}route(\textbackslash{}\textquotesingle{}users.\+index\textbackslash{}\textquotesingle{});
+
+    \}
+
+{\itshape {\bfseries{Imagen 8. Código para eliminar un usuario de la base de datos}}}
+
+$\ast$$\ast$\+REQ\+\_\+03, CIERRE DE SESIÓ\+N$\ast$$\ast$$\ast$ $\ast$
+
+$\ast$$\ast$3.1 Opción de cerrar sesión$\ast$$\ast$ 
+
+En el archivo {\bfseries{layout.\+blade.\+php}} (sección de anexos imagen 3) en la sección del navbar se encuentra un dropdown con la opción de cerrar sesión la cual va a la ruta {\itshape logout} esta ruta se dirige al constructor del login\+Controller (sección de anexos imagen 3.\+1).\hypertarget{md_modulo_csv_autotoc_md6}{}\doxysubsection{Módulo Archivo CSV}\label{md_modulo_csv_autotoc_md6}
+\hypertarget{md_modulo_csv_autotoc_md7}{}\doxysubsubsection{4.\+1 Diseño de vista}\label{md_modulo_csv_autotoc_md7}
+Este archivo se encuentra en {\bfseries{import.\+blade}}. El diseño de la vista para este módulo requiere de un formulario (imagen 4.\+1) capaz de recibir el archivo .csv con el que se alimentará el sistema, por ello, se cuenta con un formulario de tipo post que lleva a la ruta csv.\+strore, dicho formulario cuenta con una entrada para recibir archivos (línea 26) y una entrada oculta para saber qué tipo de proceso se requiere (sobreescritura o escritura).
+
+!\mbox{[}Text Description automatically generated\mbox{]}\mbox{[}15\mbox{]}
+
+{\bfseries{Imagen 4.\+1. Formulario de vista Archivo CSV.}}\hypertarget{md_modulo_csv_autotoc_md8}{}\doxysubsubsection{4.\+2 Control de archivos}\label{md_modulo_csv_autotoc_md8}
+\hypertarget{md_modulo_csv_autotoc_md9}{}\doxyparagraph{4.\+2.\+1 Lectura}\label{md_modulo_csv_autotoc_md9}
+El controlador de la vista {\bfseries{import.\+blade}} es {\bfseries{CSVController.\+php}}. El recorrido del archivo se realiza con un bucle for de 1 hasta el número de registros que contiene el archivo a subir (imagen 4.\+2).
+
+!\mbox{[}\mbox{]}\mbox{[}16\mbox{]}
+
+{\bfseries{Imagen 4.\+2. Bucle de procesamiento de archivo .csv}}
+
+Extrae el registro i del archivo y posteriormente, cada campo lo asigna a la variable de \$uaslp\+\_\+key, \$large\+\_\+key y \$name. Generación, clave de carrera y tipo de ingreso lo deja en null porque primero comprueba si el contenido de la clave larga es solamente numérico (imagen 4.\+3).
+
+!\mbox{[}Text Description automatically generated\mbox{]}\mbox{[}17\mbox{]}
+
+{\bfseries{Imagen 4.\+3. Información de alumno.}}
+
+Comprueba que \$large\+\_\+key contenga valor únicamente numérico y posteriormente le asigna valor a las variables de \$generacion\+\_\+lk, \$c\+\_\+key e \$ingreso\+\_\+lk.
+
+!\mbox{[}A screenshot of a computer Description automatically generated with medium confidence\mbox{]}
+
+{\bfseries{Imagen 4.\+4. Comprobación de campo de clave larga.}}
+
+Una vez que ya se cuenta con la información del alumno, se verifica si el alumno ya está en el sistema, en caso de que si, se actualiza el registro del alumno de la tabla student. En caso de que no se pueda realizar dicho proceso, se reportará un error (imagen 4.\+5).
+
+!\mbox{[}Text Description automatically generated\mbox{]}\mbox{[}18\mbox{]}
+
+{\bfseries{Imagen 4.\+5. Proceso de estudiante ya en sistema.}}
+
+Posteriormente a manipular la información del alumno, ahora se trabajará con la información semestral de él. Se creará un modelo de Data con los valores de dicho semestre perteneciente al alumno y guardará además de crear la relación con el id del semestre al que pertenece y al archivo del que provino (imagen 4.\+6).
+
+!\mbox{[}Text Description automatically generated\mbox{]}\mbox{[}19\mbox{]}
+
+{\bfseries{Imagen 4.\+6. Procesamiento de información semestral de alumno.}}
+
+En caso de que el estudiante no se encuentre en el sistema, se requerirá subirlo (imagen 4.\+7).
+
+!\mbox{[}Text Description automatically generated\mbox{]}\mbox{[}20\mbox{]}
+
+{\bfseries{Imagen 4.\+7. Registro de nuevo estudiante.}}
+
+Posteriormente se procesará los datos semestrales de dicho estudiante (imagen 4.\+8).
+
+!\mbox{[}Graphical user interface, text, chat or text message Description automatically generated\mbox{]}
+
+{\bfseries{Imagen 4.\+8. Procesamiento de información semestral de nuevo estudiante.}}
+
+Se intentará guardar el registro de estudiante creado (imagen 4.\+9).
+
+!\mbox{[}A screenshot of a computer Description automatically generated with medium confidence\mbox{]}\mbox{[}21\mbox{]}
+
+{\bfseries{Imagen 4.\+9. Guardado de registro de nuevo estudiante.}}
+
+Por último, solo se intentará guardar los datos semestrales del estudiante si el registro de estudiante fue creado de manera correcta. En caso de que haya ocurrido un fallo al momento de guardar la información semestral del alumno, se eliminará el registro del nuevo alumno creado (imagen 4.\+10).
+
+!\mbox{[}A screenshot of a computer Description automatically generated with medium confidence\mbox{]}\mbox{[}22\mbox{]}
+
+{\bfseries{Imagen 4.\+10. Guardado de información semestral de alumno nuevo.}}
+
+\label{md_modulo_csv_autotoc_md10}%
+\Hypertarget{md_modulo_csv_autotoc_md10}%
+ \doxysubparagraph*{Sobreescribir semestre}
+
+Comprueba si existe un semestre en base de datos coincidente con el nombre del archivo en proceso de subida. En caso de que exista, elimina todos los registros que existan en la tabla student\+\_\+data\+\_\+semester que sean coincidentes con el id del semestre encontrado (imagen 4.\+11).
+
+!\mbox{[}Text Description automatically generated\mbox{]}\mbox{[}23\mbox{]}
+
+{\bfseries{Imagen 4.\+11. Sobreescritura de información de semestre.}}
+
+\label{md_modulo_csv_autotoc_md11}%
+\Hypertarget{md_modulo_csv_autotoc_md11}%
+ \doxysubparagraph*{Subir csv}
+
+En caso de que no encuentre un semestre coincidente en el sistema, quiere decir que no existe y por lo tanto se debe de crear uno nuevo (imagen 4.\+12).
+
+!\mbox{[}Text Description automatically generated\mbox{]}\mbox{[}24\mbox{]}
+
+{\bfseries{Imagen 4.\+12. Escritura de nuevo semestre.}}\hypertarget{md_modulo_csv_autotoc_md12}{}\doxysubsection{Anexos}\label{md_modulo_csv_autotoc_md12}
+@extends(\textbackslash{}\textquotesingle{}layouts.\+app\textbackslash{}\textquotesingle{})
+
+@section(\textbackslash{}\textquotesingle{}content\textbackslash{}\textquotesingle{})
+
+\texorpdfstring{$<$}{<}div {\itshape class}="{}container"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}div {\itshape class}="{}justify-\/content-\/center"{}\texorpdfstring{$>$}{>}
+
+        $\ast$\texorpdfstring{$<$}{<}!-\/-\/ Card con el fomrulario de login -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+        \texorpdfstring{$<$}{<}div {\itshape class}="{}card"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div {\itshape class}="{}overlay"{} {\itshape id}="{}overlay"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}i {\itshape class}="{}fal fa-\/2x fa-\/sync fa-\/spin"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            $\ast$\texorpdfstring{$<$}{<}!-\/-\/ Contenido del card -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+            \texorpdfstring{$<$}{<}div {\itshape class}="{}card-\/body login-\/card-\/body"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}p {\itshape class}="{}login-\/box-\/msg"{}\texorpdfstring{$>$}{>}Ingresa para continuar\texorpdfstring{$<$}{<}/p\texorpdfstring{$>$}{>}
+
+                $\ast$\texorpdfstring{$<$}{<}!-\/-\/ Verifica si existe algun error y muestra una alerta en caso de error -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                @if (\$errors-\/\texorpdfstring{$>$}{>}any())
+
+                \texorpdfstring{$<$}{<}div {\itshape class}="{}alert alert-\/danger alert-\/dismissible text-\/justify"{} {\itshape id}="{}error-\/alert"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}button {\itshape aria-\/hidden}="{}true"{} {\itshape class}="{}close"{} {\itshape data-\/dismiss}="{}alert"{} {\itshape type}="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i {\itshape class}="{}icon fal fa-\/times-\/circle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Error!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+                    $\ast$\texorpdfstring{$<$}{<}!-\/-\/ Muestra el mensaje de error correspondiente -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                    @foreach (\$errors-\/\texorpdfstring{$>$}{>}all() as \$error)
+
+                    \{\{ \$error \}\}\texorpdfstring{$<$}{<}br\texorpdfstring{$>$}{>}
+
+                    @endforeach
+
+                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                @endif
+
+                $\ast$\texorpdfstring{$<$}{<}!-\/-\/ FORMULARIO DE LOGIN -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                \texorpdfstring{$<$}{<}form {\itshape method}="{}POST"{} {\itshape action}="{}\{\{ route(\textbackslash{}\textquotesingle{}login\textbackslash{}\textquotesingle{}) \}\}"{} {\itshape autocomplete}="{}off"{} {\itshape id}="{}login-\/form"{}\texorpdfstring{$>$}{>}
+
+                    @csrf
+
+                    $\ast$\texorpdfstring{$<$}{<}!-\/-\/ USERNAME -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                    \texorpdfstring{$<$}{<}div {\itshape class}="{}input-\/group mb-\/3"{}\texorpdfstring{$>$}{>}
+
+                        $\ast$\texorpdfstring{$<$}{<}!-\/-\/ input con id necesario para identificar el nombre de usuario ingresado-\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                        \texorpdfstring{$<$}{<}input {\itshape id}="{}username"{} {\itshape class}="{}form-\/control @error(\textbackslash{}\textquotesingle{}username\textbackslash{}\textquotesingle{}) is-\/invalid @enderror"{} {\itshape name}="{}username"{} {\itshape placeholder}="{}Nombre de usuario"{} {\itshape required} {\itshape autofocus} {\itshape type}="{}username"{} {\itshape value}="{}\{\{ old(\textbackslash{}\textquotesingle{}username\textbackslash{}\textquotesingle{}) \}\}"{} {\itshape autocomplete}="{}off"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div {\itshape class}="{}input-\/group-\/append"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}div {\itshape class}="{}input-\/group-\/text"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}span {\itshape class}="{}fal fa-\/user"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/span\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        $\ast$\texorpdfstring{$<$}{<}!-\/-\/ Si sale error de username va a mostrar una alerta -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                        @error(\textbackslash{}\textquotesingle{}username\textbackslash{}\textquotesingle{})
+
+                        \texorpdfstring{$<$}{<}span {\itshape class}="{}invalid-\/feedback"{} {\itshape role}="{}alert"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}strong\texorpdfstring{$>$}{>}\{\{ \$message \}\}\texorpdfstring{$<$}{<}/strong\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/span\texorpdfstring{$>$}{>}
+
+                        @enderror
+
+                    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                    $\ast$\texorpdfstring{$<$}{<}!-\/-\/ /\+USERNAME -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                    $\ast$\texorpdfstring{$<$}{<}!-\/-\/ PASSWORD -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                    \texorpdfstring{$<$}{<}div {\itshape class}="{}input-\/group mb-\/3"{}\texorpdfstring{$>$}{>}
+
+                        $\ast$\texorpdfstring{$<$}{<}!-\/-\/ input con id necesario para identificar la contraseña ingresada -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                        \texorpdfstring{$<$}{<}input {\itshape id}="{}password"{} {\itshape class}="{}form-\/control @error(\textbackslash{}\textquotesingle{}password\textbackslash{}\textquotesingle{}) is-\/invalid @enderror"{} {\itshape name}="{}password"{} {\itshape placeholder}="{}Contraseña"{} {\itshape required} {\itshape type}="{}password"{} {\itshape autocomplete}="{}current-\/password"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div {\itshape class}="{}input-\/group-\/append"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}div {\itshape class}="{}input-\/group-\/text"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}span {\itshape class}="{}fal fa-\/lock-\/alt"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/span\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        $\ast$\texorpdfstring{$<$}{<}!-\/-\/ Si sale error de password va a mostrar una alerta -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                        @error(\textbackslash{}\textquotesingle{}password\textbackslash{}\textquotesingle{})
+
+                        \texorpdfstring{$<$}{<}span {\itshape class}="{}invalid-\/feedback"{} {\itshape role}="{}alert"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}strong\texorpdfstring{$>$}{>}\{\{ \$message \}\}\texorpdfstring{$<$}{<}/strong\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/span\texorpdfstring{$>$}{>}
+
+                        @enderror
+
+                    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                    $\ast$\texorpdfstring{$<$}{<}!-\/-\/ /\+PASSWORD -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                    $\ast$\texorpdfstring{$<$}{<}!-\/-\/ BUTTON -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                    \texorpdfstring{$<$}{<}div {\itshape class}="{}row"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div {\itshape class}="{}col-\/12 text-\/center text-\/sm-\/right"{}\texorpdfstring{$>$}{>}
+
+                            $\ast$\texorpdfstring{$<$}{<}!-\/-\/ BOTON QUE ENVIA LA INFORMACION INGRESADA AL SISTEMA -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                            \texorpdfstring{$<$}{<}button {\itshape type}="{}submit"{} {\itshape class}="{}btn btn-\/sm btn-\/primary"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}i {\itshape class}="{}fal fa-\/sign-\/in mr-\/2"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}\{\{ \+\_\+\+\_\+(\textbackslash{}\textquotesingle{}Iniciar sesión\textbackslash{}\textquotesingle{}) \}\}
+
+                            \texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+$\ast$\texorpdfstring{$<$}{<}!-\/-\/ MANDA UN ITEM DE NAVBAR DONDE MOSTRARA UN DROPDOWN -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                            \texorpdfstring{$<$}{<}li {\itshape class}="{}nav-\/item dropdown"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}a {\itshape id}="{}navbar\+Dropdown"{} {\itshape class}="{}nav-\/link dropdown-\/toggle"{} {\itshape href}="{}\#"{} {\itshape role}="{}button"{} {\itshape data-\/bs-\/toggle}="{}dropdown"{} {\itshape aria-\/haspopup}="{}true"{} {\itshape aria-\/expanded}="{}false"{} {\itshape v-\/pre}\texorpdfstring{$>$}{>}
+
+                                    \{\{ Auth\+::user()-\/\texorpdfstring{$>$}{>}name \}\} $\ast$\texorpdfstring{$<$}{<}!-\/-\/ Obtiene el nombre del usuario que ingreso al sistema -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                                \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}div {\itshape class}="{}dropdown-\/menu dropdown-\/menu-\/end"{} {\itshape aria-\/labelledby}="{}navbar\+Dropdown"{}\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}a {\itshape class}="{}dropdown-\/item"{} {\itshape href}="{}\{\{ route(\textbackslash{}\textquotesingle{}logout\textbackslash{}\textquotesingle{}) \}\}"{} {\itshape onclick}="{}event.\+prevent\+Default();
+
+                                                     document.\+get\+Element\+By\+Id(\textbackslash{}\textquotesingle{}logout-\/form\textbackslash{}\textquotesingle{}).submit();"{}\texorpdfstring{$>$}{>} $\ast$\texorpdfstring{$<$}{<}!-\/-\/ Boton manda a ruta de cerrar sesion -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                                        \{\{ \+\_\+\+\_\+(\textbackslash{}\textquotesingle{}Cerrar sesión\textbackslash{}\textquotesingle{}) \}\}
+
+                                    \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                                    $\ast$\texorpdfstring{$<$}{<}!-\/-\/ Sale del sistema, mandando a la ruta de logouts -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                                    \texorpdfstring{$<$}{<}form {\itshape id}="{}logout-\/form"{} {\itshape action}="{}\{\{ route(\textbackslash{}\textquotesingle{}logout\textbackslash{}\textquotesingle{}) \}\}"{} {\itshape method}="{}POST"{} {\itshape class}="{}d-\/none"{}\texorpdfstring{$>$}{>}
+
+                                        @csrf
+
+                                    \texorpdfstring{$<$}{<}/form\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/li\texorpdfstring{$>$}{>}
+
+                            @endguest
+
+                        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                    $\ast$\texorpdfstring{$<$}{<}!-\/-\/ /\+BUTTON -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                \texorpdfstring{$<$}{<}/form\texorpdfstring{$>$}{>}
+
+                $\ast$\texorpdfstring{$<$}{<}!-\/-\/ /\+FORMULARIO DE LOGIN -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+@endsection
+
+@section (\textbackslash{}\textquotesingle{}plugins\textbackslash{}\textquotesingle{})
+
+$\ast$\texorpdfstring{$<$}{<}!-\/-\/ Form Validations -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+\texorpdfstring{$<$}{<}script {\itshape src}="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/jquery-\/validation/jquery.\+validate.\+js\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}
+
+$\ast$\texorpdfstring{$<$}{<}!-\/-\/\texorpdfstring{$<$}{<}script src="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/jquery-\/validation/localization/messages\+\_\+es.\+js\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}-\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+\texorpdfstring{$<$}{<}script {\itshape type}="{}text/javascript"{} {\itshape src}="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/jquery-\/validation/localization/messages\+\_\+es.\+js\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}
+
+@endsection
+
+@section (\textbackslash{}\textquotesingle{}scripts\textbackslash{}\textquotesingle{})
+
+\texorpdfstring{$<$}{<}script {\itshape type}="{}text/javascript"{}\texorpdfstring{$>$}{>}
+
+    $\ast$// Valida las credenciales ingresadas en el formulario$\ast$
+
+    \$({\itshape function}() \{
+
+        \$(\textbackslash{}\textquotesingle{}\#login-\/form\textbackslash{}\textquotesingle{}).validate(\{
+
+            lang\+: \textbackslash{}\textquotesingle{}es\textbackslash{}\textquotesingle{},
+
+            error\+Placement\+: {\itshape function}({\itshape error}, {\itshape element}) \{ $\ast$//define una clase para el elemento de error$\ast$
+
+                error.\+add\+Class(\textbackslash{}\textquotesingle{}form-\/check-\/label invalid-\/feedback\textbackslash{}\textquotesingle{});
+
+                element.\+closest(\textbackslash{}\textquotesingle{}.input-\/group\textbackslash{}\textquotesingle{}).append(error);
+
+            \},
+
+            highlight\+: {\itshape function}({\itshape element}, {\itshape error\+Class}, {\itshape valid\+Class}) \{ $\ast$//se invoca el metodo highlight sobre el elemento que se quiere destacar$\ast$
+
+                \$(element).add\+Class(\textbackslash{}\textquotesingle{}is-\/invalid\textbackslash{}\textquotesingle{});
+
+            \},
+
+            unhighlight\+: {\itshape function}({\itshape element}, {\itshape error\+Class}, {\itshape valid\+Class}) \{ $\ast$//se invoca el metodo unhighlight sobre el elemento que no se va a resaltar$\ast$
+
+                \$(element).remove\+Class(\textbackslash{}\textquotesingle{}is-\/invalid\textbackslash{}\textquotesingle{});
+
+            \},
+
+            submit\+Handler\+: {\itshape function}({\itshape form}) \{ $\ast$//se invoca el metodo submit\+Handler para el envio de datos$\ast$
+
+                \$(\textbackslash{}\textquotesingle{}\#overlay\textbackslash{}\textquotesingle{}).show();
+
+                {\itshape return} true;
+
+            \}
+
+        \});
+
+        \$(\textbackslash{}\textquotesingle{}\#overlay\textbackslash{}\textquotesingle{}).hide();
+
+    \})
+
+\texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}
+
+@endsection
+
+{\bfseries{Imagen 1. Código de vista login, archivo login.\+blade.\+php.}}
+
+$\ast$// Ruta login, es la que muestra al usuario cuando inicia el sistema$\ast$
+
+Route$\ast$\+::{\itshape get(\textbackslash{}\textquotesingle{}/\textbackslash{}\textquotesingle{}, $\ast$function} () \{
+
+    {\itshape return} view(\textbackslash{}\textquotesingle{}login\textbackslash{}\textquotesingle{});
+
+\});
+
+{\bfseries{Imagen 1.\+2. Código de ruta para mostrar la vista login, archivo web.\+php.}}
+
+\texorpdfstring{$<$}{<}?php
+
+{\itshape namespace} Illuminate\textbackslash{}Foundation\textbackslash{}Auth;
+
+{\itshape use} Illuminate\textbackslash{}Http\textbackslash{}Json\+Response;
+
+{\itshape use} Illuminate\textbackslash{}Http\textbackslash{}Request;
+
+{\itshape use} Illuminate\textbackslash{}Support\textbackslash{}Facades\textbackslash{}Auth;
+
+{\itshape use} Illuminate\textbackslash{}Validation\textbackslash{}Validation\+Exception;
+
+{\itshape trait} Authenticates\+Users
+
+\{
+
+    {\itshape use} Redirects\+Users, Throttles\+Logins;
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ Muestra el formulario de inicio de sesión del sistema}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @return \textbackslash{}Illuminate\textbackslash{}View\textbackslash{}View}
+
+{\itshape      $\ast$/}
+
+    {\itshape public} {\itshape function} show\+Login\+Form()
+
+    \{
+
+        {\itshape return} view(\textbackslash{}\textquotesingle{}auth.\+login\textbackslash{}\textquotesingle{});
+
+    \}
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ Manejar una solicitud de inicio de sesión al sistema}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @param  \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Request  \$request}
+
+{\itshape      $\ast$ @return \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Redirect\+Response$|$\textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Response$|$\textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Json\+Response}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @throws \textbackslash{}Illuminate\textbackslash{}Validation\textbackslash{}Validation\+Exception}
+
+{\itshape      $\ast$/}
+
+    {\itshape public} {\itshape function} login(Request \$request)
+
+    \{
+
+        $\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$validate\+Login(\$request);
+
+        $\ast$// Si la clase usa el rasgo Throttles\+Logins, podemos acelerar automáticamente$\ast$
+
+        $\ast$// los intentos de inicio de sesión para el sistema. Teclearemos esto por el nombre de usuario y$\ast$
+
+        $\ast$// la dirección IP del cliente que realiza estas solicitudes en el sistema.$\ast$
+
+        {\itshape if} (
+
+            method\+\_\+exists($\ast$\$this$\ast$, \textbackslash{}\textquotesingle{}has\+Too\+Many\+Login\+Attempts\textbackslash{}\textquotesingle{}) {\itshape \&\&}
+
+            $\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$has\+Too\+Many\+Login\+Attempts(\$request)
+
+        ) \{
+
+            $\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$fire\+Lockout\+Event(\$request);
+
+            {\itshape return} $\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$send\+Lockout\+Response(\$request);
+
+        \}
+
+        {\itshape if} ($\ast$\$this-\/\texorpdfstring{$>$}{>}{\itshape attempt\+Login(\$request)) \{}
+
+{\itshape             $\ast$if} (\$request$\ast$-\/\texorpdfstring{$>$}{>}{\itshape has\+Session()) \{}
+
+{\itshape                 \$request}-\/\texorpdfstring{$>$}{>}{\itshape session()}-\/\texorpdfstring{$>$}{>}$\ast$put(\textbackslash{}\textquotesingle{}auth.\+password\+\_\+confirmed\+\_\+at\textbackslash{}\textquotesingle{}, time());
+
+            \}
+
+            {\itshape return} $\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$send\+Login\+Response(\$request);
+
+        \}
+
+        $\ast$// Si el intento de inicio de sesión no tuvo éxito, incrementaremos el número de intentos$\ast$
+
+        $\ast$// para iniciar sesión y redirigir al usuario al formulario de inicio de sesión. Por supuesto, cuando$\ast$
+
+        $\ast$// el usuario supera su número máximo de intentos, será bloqueado.$\ast$
+
+        $\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$increment\+Login\+Attempts(\$request);
+
+        {\itshape return} $\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$send\+Failed\+Login\+Response(\$request);
+
+    \}
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ Validar la solicitud de inicio de sesión del usuario.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @param  \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Request  \$request}
+
+{\itshape      $\ast$ @return void}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @throws \textbackslash{}Illuminate\textbackslash{}Validation\textbackslash{}Validation\+Exception}
+
+{\itshape      $\ast$/}
+
+    {\itshape protected} {\itshape function} validate\+Login(Request \$request)
+
+    \{
+
+        \$request$\ast$-\/\texorpdfstring{$>$}{>}{\itshape validate(\mbox{[}}
+
+{\itshape             $\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$username() $\ast$=\texorpdfstring{$>$}{>}} \textbackslash{}\textquotesingle{}required$|$string\textbackslash{}\textquotesingle{},
+
+            \textbackslash{}\textquotesingle{}password\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}\textquotesingle{}required$|$string\textbackslash{}\textquotesingle{},
+
+        \mbox{]});
+
+    \}
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ Intente iniciar la sesión del usuario en la aplicación.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @param  \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Request  \$request}
+
+{\itshape      $\ast$ @return bool}
+
+{\itshape      $\ast$/}
+
+    {\itshape protected} {\itshape function} attempt\+Login(Request \$request)
+
+    \{
+
+        {\itshape return} $\ast$\$this-\/\texorpdfstring{$>$}{>}{\itshape guard()}-\/\texorpdfstring{$>$}{>}$\ast$attempt(
+
+            $\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$credentials(\$request),
+
+            \$request$\ast$-\/\texorpdfstring{$>$}{>}$\ast$boolean(\textbackslash{}\textquotesingle{}remember\textbackslash{}\textquotesingle{})
+
+        );
+
+    \}
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ Obtiene las credenciales de autorización necesarias de la solicitud.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @param  \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Request  \$request}
+
+{\itshape      $\ast$ @return array}
+
+{\itshape      $\ast$/}
+
+    {\itshape protected} {\itshape function} credentials(Request \$request)
+
+    \{
+
+        {\itshape return} \$request$\ast$-\/\texorpdfstring{$>$}{>}$\ast$only($\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$username(), \textbackslash{}\textquotesingle{}password\textbackslash{}\textquotesingle{});
+
+    \}
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ Envía la respuesta después de que el usuario se haya autenticado.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @param  \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Request  \$request}
+
+{\itshape      $\ast$ @return \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Redirect\+Response$|$\textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Json\+Response}
+
+{\itshape      $\ast$/}
+
+    {\itshape protected} {\itshape function} send\+Login\+Response(Request \$request)
+
+    \{
+
+        \$request$\ast$-\/\texorpdfstring{$>$}{>}{\itshape session()}-\/\texorpdfstring{$>$}{>}$\ast$regenerate();
+
+        $\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$clear\+Login\+Attempts(\$request);
+
+        {\itshape if} (\$response $\ast$=$\ast$ $\ast$\$this-\/\texorpdfstring{$>$}{>}{\itshape authenticated(\$request, $\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$guard()}-\/\texorpdfstring{$>$}{>}{\itshape user())) \{}
+
+{\itshape             $\ast$return} \$response;
+
+        \}
+
+        {\itshape return} \$request$\ast$-\/\texorpdfstring{$>$}{>}$\ast$wants\+Json()
+
+            {\itshape ?} {\itshape new} Json\+Response(\mbox{[}$\,$\mbox{]}, 204)
+
+            $\ast$\+:$\ast$ redirect()$\ast$-\/\texorpdfstring{$>$}{>}$\ast$intended($\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$redirect\+Path());
+
+    \}
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ El usuario ha sido autenticado.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @param  \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Request  \$request}
+
+{\itshape      $\ast$ @param  mixed  \$user}
+
+{\itshape      $\ast$ @return mixed}
+
+{\itshape      $\ast$/}
+
+    {\itshape protected} {\itshape function} authenticated(Request \$request, \$user)
+
+    \{
+
+        $\ast$//$\ast$
+
+    \}
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ Obtiene la instancia de respuesta de inicio de sesión fallida.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @param  \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Request  \$request}
+
+{\itshape      $\ast$ @return \textbackslash{}Symfony\textbackslash{}Component\textbackslash{}Http\+Foundation\textbackslash{}Response}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @throws \textbackslash{}Illuminate\textbackslash{}Validation\textbackslash{}Validation\+Exception}
+
+{\itshape      $\ast$/}
+
+    {\itshape protected} {\itshape function} send\+Failed\+Login\+Response(Request \$request)
+
+    \{
+
+        {\itshape throw} Validation\+Exception$\ast$\+::{\itshape with\+Messages(\mbox{[}}
+
+{\itshape             $\ast$\$this-\/\texorpdfstring{$>$}{>}$\ast$username() $\ast$=\texorpdfstring{$>$}{>}} \mbox{[}trans(\textbackslash{}\textquotesingle{}auth.\+failed\textbackslash{}\textquotesingle{})\mbox{]},
+
+        \mbox{]});
+
+    \}
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$  \+Obtiene el nombre de usuario de inicio de sesión que utilizará el controlador.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @return string}
+
+{\itshape      $\ast$/}
+
+    {\itshape public} {\itshape function} username()
+
+    \{
+
+        {\itshape return} \textbackslash{}\textquotesingle{}username\textbackslash{}\textquotesingle{};
+
+    \}
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ Cerrar la sesión del usuario de la aplicación.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @param  \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Request  \$request}
+
+{\itshape      $\ast$ @return \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Redirect\+Response$|$\textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Json\+Response}
+
+{\itshape      $\ast$/}
+
+    {\itshape public} {\itshape function} logout(Request \$request)
+
+    \{
+
+        $\ast$\$this-\/\texorpdfstring{$>$}{>}{\itshape guard()}-\/\texorpdfstring{$>$}{>}$\ast$logout();
+
+        \$request$\ast$-\/\texorpdfstring{$>$}{>}{\itshape session()}-\/\texorpdfstring{$>$}{>}$\ast$invalidate();
+
+        \$request$\ast$-\/\texorpdfstring{$>$}{>}{\itshape session()}-\/\texorpdfstring{$>$}{>}$\ast$regenerate\+Token();
+
+        {\itshape if} (\$response $\ast$=$\ast$ $\ast$\$this-\/\texorpdfstring{$>$}{>}{\itshape logged\+Out(\$request)) \{}
+
+{\itshape             $\ast$return} \$response;
+
+        \}
+
+        {\itshape return} \$request$\ast$-\/\texorpdfstring{$>$}{>}$\ast$wants\+Json()
+
+            {\itshape ?} {\itshape new} Json\+Response(\mbox{[}$\,$\mbox{]}, 204)
+
+            $\ast$\+:$\ast$ redirect(\textbackslash{}\textquotesingle{}/\textbackslash{}\textquotesingle{});
+
+    \}
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ El usuario ha cerrado sesión en la aplicación.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @param  \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Request  \$request}
+
+{\itshape      $\ast$ @return mixed}
+
+{\itshape      $\ast$/}
+
+    {\itshape protected} {\itshape function} logged\+Out(Request \$request)
+
+    \{
+
+        $\ast$//$\ast$
+
+    \}
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ Obtiene el protector que se usará durante la autenticación.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @return \textbackslash{}Illuminate\textbackslash{}Contracts\textbackslash{}Auth\textbackslash{}Stateful\+Guard}
+
+{\itshape      $\ast$/}
+
+    {\itshape protected} {\itshape function} guard()
+
+    \{
+
+        {\itshape return} Auth$\ast$\+::$\ast$guard();
+
+    \}
+
+\}
+
+{\bfseries{Imagen 2. Código de autenticación de usuarios, archivo Authenticates\+Users.\+php.}}
+
+!\mbox{[}\mbox{]}\mbox{[}25\mbox{]}
+
+{\bfseries{Imagen 2.\+1. Código de ruta para redireccionar al inicio del sistema una vez autenticado el usuario, archivo web.\+php.}}
+
+\texorpdfstring{$<$}{<}?php
+
+{\itshape namespace} App\textbackslash{}Http;
+
+{\itshape use} Illuminate\textbackslash{}Foundation\textbackslash{}Http\textbackslash{}Kernel {\itshape as} Http\+Kernel;
+
+{\itshape class} Kernel {\itshape extends} Http\+Kernel
+
+\{
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ The application\textbackslash{}\textquotesingle{}s global HTTP middleware stack.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ These middleware are run during every request to your application.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @var array\texorpdfstring{$<$}{<}int, class-\/string$|$string\texorpdfstring{$>$}{>}}
+
+{\itshape      $\ast$/}
+
+    {\itshape protected} \$middleware $\ast$=$\ast$ \mbox{[}
+
+        $\ast$// \textbackslash{}App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Trust\+Hosts\+::class,$\ast$
+
+        \textbackslash{}App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Trust\+Proxies$\ast$\+::class$\ast$,
+
+        \textbackslash{}Fruitcake\textbackslash{}Cors\textbackslash{}Handle\+Cors$\ast$\+::class$\ast$,
+
+        \textbackslash{}App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Prevent\+Requests\+During\+Maintenance$\ast$\+::class$\ast$,
+
+        \textbackslash{}Illuminate\textbackslash{}Foundation\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Validate\+Post\+Size$\ast$\+::class$\ast$,
+
+        \textbackslash{}App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Trim\+Strings$\ast$\+::class$\ast$,
+
+        \textbackslash{}Illuminate\textbackslash{}Foundation\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Convert\+Empty\+Strings\+To\+Null$\ast$\+::class$\ast$,
+
+    \mbox{]};
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ The application\textbackslash{}\textquotesingle{}s route middleware groups.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @var array\texorpdfstring{$<$}{<}string, array\texorpdfstring{$<$}{<}int, class-\/string$|$string\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}}
+
+{\itshape      $\ast$/}
+
+    {\itshape protected} \$middleware\+Groups $\ast$=$\ast$ \mbox{[}
+
+        \textbackslash{}\textquotesingle{}web\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \mbox{[}
+
+            \textbackslash{}App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Encrypt\+Cookies$\ast$\+::class$\ast$,
+
+            \textbackslash{}Illuminate\textbackslash{}Cookie\textbackslash{}Middleware\textbackslash{}Add\+Queued\+Cookies\+To\+Response$\ast$\+::class$\ast$,
+
+            \textbackslash{}Illuminate\textbackslash{}Session\textbackslash{}Middleware\textbackslash{}Start\+Session$\ast$\+::class$\ast$,
+
+            $\ast$// \textbackslash{}Illuminate\textbackslash{}Session\textbackslash{}Middleware\textbackslash{}Authenticate\+Session\+::class,$\ast$
+
+            \textbackslash{}Illuminate\textbackslash{}View\textbackslash{}Middleware\textbackslash{}Share\+Errors\+From\+Session$\ast$\+::class$\ast$,
+
+            \textbackslash{}App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Verify\+Csrf\+Token$\ast$\+::class$\ast$,
+
+            \textbackslash{}Illuminate\textbackslash{}Routing\textbackslash{}Middleware\textbackslash{}Substitute\+Bindings$\ast$\+::class$\ast$,
+
+        \mbox{]},
+
+        \textbackslash{}\textquotesingle{}api\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \mbox{[}
+
+            \textbackslash{}\textquotesingle{}throttle\+:api\textbackslash{}\textquotesingle{},
+
+            \textbackslash{}Illuminate\textbackslash{}Routing\textbackslash{}Middleware\textbackslash{}Substitute\+Bindings$\ast$\+::class$\ast$,
+
+        \mbox{]},
+
+    \mbox{]};
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ The application\textbackslash{}\textquotesingle{}s route middleware.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ These middleware may be assigned to groups or used individually.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @var array\texorpdfstring{$<$}{<}string, class-\/string$|$string\texorpdfstring{$>$}{>}}
+
+{\itshape      $\ast$/}
+
+    {\itshape protected} \$route\+Middleware $\ast$=$\ast$ \mbox{[}
+
+        \textbackslash{}\textquotesingle{}auth\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Authenticate$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}auth.\+basic\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Auth\textbackslash{}Middleware\textbackslash{}Authenticate\+With\+Basic\+Auth$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}cache.\+headers\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Set\+Cache\+Headers$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}can\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Auth\textbackslash{}Middleware\textbackslash{}Authorize$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}guest\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Redirect\+If\+Authenticated$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}password.\+confirm\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Auth\textbackslash{}Middleware\textbackslash{}Require\+Password$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}signed\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Routing\textbackslash{}Middleware\textbackslash{}Validate\+Signature$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}throttle\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Routing\textbackslash{}Middleware\textbackslash{}Throttle\+Requests$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}verified\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Auth\textbackslash{}Middleware\textbackslash{}Ensure\+Email\+Is\+Verified$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}check.\+role\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Check\+Role$\ast$\+::class$\ast$,
+
+    \mbox{]};
+
+\}
+
+{\bfseries{Imagen 2.\+2. Código de declaración del middleware \char`\"{}guest\char`\"{}, archivo kernel.\+php.}}
+
+\texorpdfstring{$<$}{<}?php
+
+{\itshape namespace} App\textbackslash{}Http\textbackslash{}Middleware;
+
+{\itshape use} App\textbackslash{}Providers\textbackslash{}Route\+Service\+Provider;
+
+{\itshape use} Closure;
+
+{\itshape use} Illuminate\textbackslash{}Http\textbackslash{}Request;
+
+{\itshape use} Illuminate\textbackslash{}Support\textbackslash{}Facades\textbackslash{}Auth;
+
+{\itshape class}
+
+\{
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ Manejar una solicitud entrante.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @param  \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Request  \$request}
+
+{\itshape      $\ast$ @param  \textbackslash{}Closure(\textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Request)\+: (\textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Response$|$\textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Redirect\+Response)  \$next}
+
+{\itshape      $\ast$ @param  string$|$null  ...\$guards}
+
+{\itshape      $\ast$ @return \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Response$|$\textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Redirect\+Response}
+
+{\itshape      $\ast$/}
+
+    {\itshape public} {\itshape function} handle(Request \$request, Closure \$next, $\ast$...$\ast$\$guards)
+
+    \{
+
+        \$guards $\ast$=$\ast$ empty(\$guards) {\itshape ?} \mbox{[}null\mbox{]} $\ast$\+:$\ast$ \$guards;
+
+        {\itshape foreach} (\$guards {\itshape as} \$guard) \{
+
+            {\itshape if} (Auth$\ast$\+::{\itshape guard(\$guard)}-\/\texorpdfstring{$>$}{>}{\itshape check()) \{}
+
+{\itshape                 $\ast$return} redirect(\+Route\+Service\+Provider$\ast$\+::$\ast$\+HOME);
+
+            \}
+
+        \}
+
+        {\itshape return} \$next(\$request);
+
+    \}
+
+\}
+
+{\bfseries{Imagen 2.\+3. Código de middleware \char`\"{}guest\char`\"{}, archivo Redirect\+If\+Authenticated.\+php.}}
+
+!\mbox{[}\mbox{]}\mbox{[}26\mbox{]}
+
+{\bfseries{Imagen 2.\+4. Código de ruta para redireccionar al inicio del sistema una vez autenticado el usuario usando el middleware de autenticación, archivo web.\+php.}}
+
+{\itshape protected} \$route\+Middleware $\ast$=$\ast$ \mbox{[}
+
+        \textbackslash{}\textquotesingle{}auth\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Authenticate$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}auth.\+basic\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Auth\textbackslash{}Middleware\textbackslash{}Authenticate\+With\+Basic\+Auth$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}cache.\+headers\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Set\+Cache\+Headers$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}can\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Auth\textbackslash{}Middleware\textbackslash{}Authorize$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}guest\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Redirect\+If\+Authenticated$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}password.\+confirm\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Auth\textbackslash{}Middleware\textbackslash{}Require\+Password$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}signed\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Routing\textbackslash{}Middleware\textbackslash{}Validate\+Signature$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}throttle\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Routing\textbackslash{}Middleware\textbackslash{}Throttle\+Requests$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}verified\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}Illuminate\textbackslash{}Auth\textbackslash{}Middleware\textbackslash{}Ensure\+Email\+Is\+Verified$\ast$\+::class$\ast$,
+
+        \textbackslash{}\textquotesingle{}check.\+role\textbackslash{}\textquotesingle{} $\ast$=\texorpdfstring{$>$}{>}$\ast$ \textbackslash{}App\textbackslash{}Http\textbackslash{}Middleware\textbackslash{}Check\+Role$\ast$\+::class$\ast$,
+
+    \mbox{]};
+
+{\bfseries{Imagen 2.\+5. Código de declaración del middleware \char`\"{}auth\char`\"{}, archivo kernel.\+php.}}
+
+\texorpdfstring{$<$}{<}?php
+
+{\itshape namespace} App\textbackslash{}Http\textbackslash{}Middleware;
+
+{\itshape use} Illuminate\textbackslash{}Auth\textbackslash{}Middleware\textbackslash{}Authenticate {\itshape as} Middleware;
+
+{\itshape class} Authenticate {\itshape extends} Middleware
+
+\{
+
+    $\ast$/$\ast$$\ast$$\ast$
+
+{\itshape      $\ast$ Obtiene la ruta a la que se debe redirigir al usuario cuando no está autenticado.}
+
+{\itshape      $\ast$}
+
+{\itshape      $\ast$ @param  \textbackslash{}Illuminate\textbackslash{}Http\textbackslash{}Request  \$request}
+
+{\itshape      $\ast$ @return string$|$null}
+
+{\itshape      $\ast$/}
+
+    {\itshape protected} {\itshape function} redirect\+To(\$request)
+
+    \{
+
+        {\itshape if} ({\itshape !} \$request$\ast$-\/\texorpdfstring{$>$}{>}{\itshape expects\+Json()) \{}
+
+{\itshape             $\ast$return} route(\textbackslash{}\textquotesingle{}login\textbackslash{}\textquotesingle{});
+
+        \}
+
+    \}
+
+\}
+
+{\bfseries{Imagen 2.\+6. Código de middleware \char`\"{}auth\char`\"{}, archivo Authenticate.\+php.}}
+
+@php
+
+\$route = Route\+::current\+Route\+Name();
+
+@endphp
+
+\texorpdfstring{$<$}{<}!\+DOCTYPE {\itshape html}\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}html {\itshape lang}="{}es"{}\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}head\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}meta {\itshape name}="{}csrf-\/token"{} {\itshape content}="{}\{\{ csrf\+\_\+token() \}\}"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}meta {\itshape charset}="{}utf-\/8"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}meta {\itshape content}="{}width=device-\/width, initial-\/scale=1"{} {\itshape name}="{}viewport"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}title\texorpdfstring{$>$}{>}@yield (\textbackslash{}\textquotesingle{}title\textbackslash{}\textquotesingle{})\texorpdfstring{$<$}{<}/title\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}link {\itshape href}="{}\href{https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback}{\texttt{ https\+://fonts.\+googleapis.\+com/css?family=\+Source+\+Sans+\+Pro\+:300,400,400i,700\&display=fallback}}"{} {\itshape rel}="{}stylesheet"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}link {\itshape href}="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/font-\/awesome-\/pro/css/all.\+css\textbackslash{}\textquotesingle{}) \}\}"{} {\itshape rel}="{}stylesheet"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}script {\itshape src}="{}\href{https://cdn.plot.ly/plotly-latest.min.js}{\texttt{ https\+://cdn.\+plot.\+ly/plotly-\/latest.\+min.\+js}}"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}
+
+    $\ast$\texorpdfstring{$<$}{<}!-\/-\/ etc. -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+    @yield (\textbackslash{}\textquotesingle{}styles\textbackslash{}\textquotesingle{})
+
+    \texorpdfstring{$<$}{<}link {\itshape href}="{}\{\{ asset(\textbackslash{}\textquotesingle{}core/css/adminlte.\+css\textbackslash{}\textquotesingle{}) \}\}"{} {\itshape rel}="{}stylesheet"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}link {\itshape href}="{}\{\{ asset(\textbackslash{}\textquotesingle{}css/custom.\+css\textbackslash{}\textquotesingle{}) \}\}"{} {\itshape rel}="{}stylesheet"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}link {\itshape href}="{}\{\{ asset(\textbackslash{}\textquotesingle{}favicon.\+ico\textbackslash{}\textquotesingle{}) \}\}"{} {\itshape rel}="{}icon"{} {\itshape type}="{}image/x-\/icon"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}link {\itshape href}="{}\{\{ asset(\textbackslash{}\textquotesingle{}favicon.\+ico\textbackslash{}\textquotesingle{}) \}\}"{} {\itshape rel}="{}shortcut icon"{} {\itshape type}="{}image/x-\/icon"{}\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}/head\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}body {\itshape class}="{}hold-\/transition sidebar-\/mini"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}div {\itshape class}="{}wrapper"{}\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}nav {\itshape class}="{}main-\/header navbar navbar-\/expand navbar-\/light navbar-\/1235c"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}ul {\itshape class}="{}navbar-\/nav"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}li {\itshape class}="{}nav-\/item"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}a {\itshape class}="{}nav-\/link"{} {\itshape data-\/widget}="{}pushmenu"{} {\itshape href}="{}javascript\+:void(0)"{} {\itshape role}="{}button"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}i {\itshape class}="{}fal fa-\/bars"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/li\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/ul\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}ul {\itshape class}="{}navbar-\/nav ml-\/auto"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}li {\itshape class}="{}nav-\/item dropdown"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}a {\itshape class}="{}nav-\/link mr-\/1 p-\/0"{} {\itshape data-\/toggle}="{}dropdown"{} {\itshape href}="{}javascript\+:void(0)"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}img {\itshape class}="{}h-\/100 img-\/circle elevation-\/1"{} {\itshape src}="{}\{\{ asset(\textbackslash{}\textquotesingle{}core/img/logo\+\_\+minimal\+\_\+test.\+jpg\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}div {\itshape class}="{}dropdown-\/menu dropdown-\/menu-\/lg dropdown-\/menu-\/right"{}\texorpdfstring{$>$}{>}
+
+                        $\ast$\texorpdfstring{$<$}{<}!-\/-\/ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                        \texorpdfstring{$<$}{<}a {\itshape id}="{}navbar\+Dropdown"{} {\itshape class}="{}dropdown-\/item dropdown-\/header"{} {\itshape href}="{}\#"{} {\itshape role}="{}button"{} {\itshape data-\/bs-\/toggle}="{}dropdown"{} {\itshape aria-\/haspopup}="{}true"{} {\itshape aria-\/expanded}="{}false"{} {\itshape v-\/pre}\texorpdfstring{$>$}{>}
+
+                            \{\{ Auth\+::user()-\/\texorpdfstring{$>$}{>}name \}\}
+
+                        \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                        $\ast$\texorpdfstring{$<$}{<}!-\/-\/ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                        \texorpdfstring{$<$}{<}div {\itshape class}="{}dropdown-\/divider"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}form {\itshape action}="{}\{\{ route(\textbackslash{}\textquotesingle{}logout\textbackslash{}\textquotesingle{}) \}\}"{} {\itshape autocomplete}="{}off"{} {\itshape method}="{}post"{}\texorpdfstring{$>$}{>}
+
+                            @csrf
+
+                            \texorpdfstring{$<$}{<}a {\itshape class}="{}dropdown-\/item"{} {\itshape href}="{}javascript\+:void(0)"{} {\itshape onclick}="{}event.\+prevent\+Default(); $\ast$this$\ast$.closest(\textbackslash{}\textquotesingle{}form\textbackslash{}\textquotesingle{}).submit();"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}i {\itshape class}="{}fal fa-\/sign-\/out mr-\/2"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}Cerrar Sesión
+
+                            \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/form\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div {\itshape class}="{}dropdown-\/divider"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        $\ast$\texorpdfstring{$<$}{<}!-\/-\/ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                        \texorpdfstring{$<$}{<}/form\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/li\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/ul\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}/nav\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}aside {\itshape class}="{}main-\/sidebar sidebar-\/light-\/reflex-\/blue elevation-\/4"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}a {\itshape class}="{}brand-\/link"{} {\itshape href}="{}"{} {\itshape style}="{}background-\/color\+: \#004A98 !important;"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}img {\itshape alt}="{}Isotipo"{} {\itshape class}="{}brand-\/image"{} {\itshape src}="{}\{\{ asset(\textbackslash{}\textquotesingle{}core/img/logo\+\_\+uaslp.\+png\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}span {\itshape class}="{}brand-\/text"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}img {\itshape alt}="{}Logotipo"{} {\itshape height}="{}30"{} {\itshape src}="{}\{\{ asset(\textbackslash{}\textquotesingle{}core/img/logo\+\_\+ing\+\_\+uaslp.\+png\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/span\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div {\itshape class}="{}sidebar"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}nav {\itshape class}="{}mt-\/2"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}ul {\itshape class}="{}nav nav-\/pills nav-\/sidebar flex-\/column"{} {\itshape data-\/accordion}="{}false"{} {\itshape data-\/widget}="{}treeview"{} {\itshape role}="{}menu"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}li {\itshape class}="{}nav-\/item"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}a {\itshape class}="{}nav-\/link \{\{ str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}home\textbackslash{}\textquotesingle{}) ? \textbackslash{}\textquotesingle{}active\textbackslash{}\textquotesingle{} \+: \textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{} \}\}"{} {\itshape href}="{}/home"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}i {\itshape class}="{}nav-\/icon fas fa-\/clinic-\/medical"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}p\texorpdfstring{$>$}{>}Inicio\texorpdfstring{$<$}{<}/p\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/li\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}li {\itshape class}="{}nav-\/item"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}a {\itshape class}="{}nav-\/link \{\{ str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}csv\textbackslash{}\textquotesingle{}) ? \textbackslash{}\textquotesingle{}active\textbackslash{}\textquotesingle{} \+: \textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{} \}\}"{} {\itshape href}="{}\{\{ route(\textbackslash{}\textquotesingle{}csv.\+index\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}i {\itshape class}="{}nav-\/icon fas fa-\/file-\/csv"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}p\texorpdfstring{$>$}{>}Archivo CSV\texorpdfstring{$<$}{<}/p\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/li\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}li {\itshape class}="{}nav-\/item"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}a {\itshape class}="{}nav-\/link \{\{ str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}graphs\textbackslash{}\textquotesingle{}) ? \textbackslash{}\textquotesingle{}active\textbackslash{}\textquotesingle{} \+: \textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{} \}\}"{} {\itshape href}="{}\{\{ route(\textbackslash{}\textquotesingle{}graphs.\+index\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}i {\itshape class}="{}nav-\/icon fas fa-\/chart-\/bar"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}p\texorpdfstring{$>$}{>}Ver gráficas\texorpdfstring{$<$}{<}/p\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/li\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}li {\itshape class}="{}nav-\/item"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}a {\itshape class}="{}nav-\/link \{\{ str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}consult\textbackslash{}\textquotesingle{}) ? \textbackslash{}\textquotesingle{}active\textbackslash{}\textquotesingle{} \+: \textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{} \}\}"{} {\itshape href}="{}\{\{ route(\textbackslash{}\textquotesingle{}consult.\+index\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}i {\itshape class}="{}nav-\/icon fas fa-\/users"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}p\texorpdfstring{$>$}{>}Consulta de alumnos\texorpdfstring{$<$}{<}/p\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/li\texorpdfstring{$>$}{>}
+
+                        @if (Auth\+::user()-\/\texorpdfstring{$>$}{>}has\+Role(\textbackslash{}\textquotesingle{}super\textbackslash{}\textquotesingle{}))
+
+                        \texorpdfstring{$<$}{<}li {\itshape class}="{}nav-\/item \{\{ (str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}classifications\textbackslash{}\textquotesingle{}) $|$$|$ str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}settings\textbackslash{}\textquotesingle{}) $|$$|$ str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}suppliers\textbackslash{}\textquotesingle{}) $|$$|$ str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}users\textbackslash{}\textquotesingle{}))$|$$|$  str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}fees\textbackslash{}\textquotesingle{}) $|$$|$str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}charge-\/vouchers\textbackslash{}\textquotesingle{}) $|$$|$  str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}type\textbackslash{}\textquotesingle{}) ? \textbackslash{}\textquotesingle{}menu-\/open\textbackslash{}\textquotesingle{} \+: \textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{} \}\}"{}\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}a {\itshape class}="{}nav-\/link \{\{ (str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}classifications\textbackslash{}\textquotesingle{}) $|$$|$ str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}settings\textbackslash{}\textquotesingle{}) $|$$|$ str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}suppliers\textbackslash{}\textquotesingle{}) $|$$|$ str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}users\textbackslash{}\textquotesingle{})) $|$$|$ str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}charge-\/vouchers\textbackslash{}\textquotesingle{}) $|$$|$  str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}fees\textbackslash{}\textquotesingle{}) ? \textbackslash{}\textquotesingle{}active\textbackslash{}\textquotesingle{} \+: \textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{} \}\}"{} {\itshape href}="{}javascript\+:void(0)"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}i {\itshape class}="{}nav-\/icon fas fa-\/tools"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}p\texorpdfstring{$>$}{>}
+
+                                    Configuración
+
+                                    \texorpdfstring{$<$}{<}i {\itshape class}="{}right fal fa-\/angle-\/left"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/p\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}ul {\itshape class}="{}nav nav-\/treeview"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}li {\itshape class}="{}nav-\/item"{}\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}a {\itshape class}="{}nav-\/link \{\{ str\+\_\+starts\+\_\+with(\$route, \textbackslash{}\textquotesingle{}users\textbackslash{}\textquotesingle{}) ? \textbackslash{}\textquotesingle{}active\textbackslash{}\textquotesingle{} \+: \textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{} \}\}"{} {\itshape href}="{}\{\{ route(\textbackslash{}\textquotesingle{}users.\+index\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}
+
+                                        \texorpdfstring{$<$}{<}i {\itshape class}="{}nav-\/icon fal fa-\/users"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+                                        \texorpdfstring{$<$}{<}p\texorpdfstring{$>$}{>}Usuarios\texorpdfstring{$<$}{<}/p\texorpdfstring{$>$}{>}
+
+                                    \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}/li\texorpdfstring{$>$}{>}
+
+                            \texorpdfstring{$<$}{<}/ul\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/li\texorpdfstring{$>$}{>}
+
+                        @endif
+
+                    \texorpdfstring{$<$}{<}/ul\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/nav\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}/aside\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}div {\itshape class}="{}content-\/wrapper"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}section {\itshape class}="{}content-\/header"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/section\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}section {\itshape class}="{}content"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}div {\itshape class}="{}container-\/fluid"{}\texorpdfstring{$>$}{>}
+
+                    @yield (\textbackslash{}\textquotesingle{}content\textbackslash{}\textquotesingle{})
+
+                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/section\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}footer {\itshape class}="{}main-\/footer text-\/center text-\/sm-\/left"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div {\itshape class}="{}float-\/right d-\/none d-\/sm-\/block"{}\texorpdfstring{$>$}{>}
+
+                v1.\+0
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \copyright{} \{\{ date(\textbackslash{}\textquotesingle{}Y\textbackslash{}\textquotesingle{}) \}\} \texorpdfstring{$<$}{<}a {\itshape href}="{}javascript\+:void(0)"{}\texorpdfstring{$>$}{>}Facultad de Ingeniería, Área de Ciencias de la Computación\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}.
+
+            Todos los derechos reservados.
+
+        \texorpdfstring{$<$}{<}/footer\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}script {\itshape src}="{}\{!! mix(\textbackslash{}\textquotesingle{}js/app.\+js\textbackslash{}\textquotesingle{}) !!\}"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}script {\itshape src}="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/jquery/jquery.\+js\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}script {\itshape src}="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/bootstrap/js/bootstrap.\+bundle.\+js\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}script {\itshape src}="{}\{\{ asset(\textbackslash{}\textquotesingle{}plugins/inputmask/jquery.\+inputmask.\+js\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}
+
+    @yield (\textbackslash{}\textquotesingle{}plugins\textbackslash{}\textquotesingle{})
+
+    \texorpdfstring{$<$}{<}script {\itshape src}="{}\{\{ asset(\textbackslash{}\textquotesingle{}core/js/adminlte.\+js\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}script {\itshape src}="{}\{\{ asset(\textbackslash{}\textquotesingle{}core/js/demo.\+js\textbackslash{}\textquotesingle{}) \}\}"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}script {\itshape type}="{}text/javascript"{}\texorpdfstring{$>$}{>}
+
+        String.\+prototype.\+capitalize $\ast$=$\ast$ {\itshape function}() \{
+
+            {\itshape return} {\itshape this}.to\+Lower\+Case().split(\textbackslash{}\textquotesingle{} \textbackslash{}\textquotesingle{}).map({\itshape word} $\ast$=\texorpdfstring{$>$}{>}$\ast$ word.\+char\+At(0).to\+Upper\+Case() {\itshape +} word.\+slice(1)).join(\textbackslash{}\textquotesingle{} \textbackslash{}\textquotesingle{});
+
+        \}
+
+        Inputmask.\+extend\+Aliases(\{
+
+            currency\+: \{
+
+                digits\+: 2,
+
+                prefix\+: \textbackslash{}\textquotesingle{}\$\textbackslash{}\textquotesingle{},
+
+                allow\+Minus\+: $\ast$!$\ast$1,
+
+                alias\+: \textbackslash{}\textquotesingle{}numeric\textbackslash{}\textquotesingle{},
+
+                digits\+Optional\+: $\ast$!$\ast$1,
+
+            \},
+
+            integer\+: \{
+
+                digits\+: 0,
+
+                allow\+Minus\+: $\ast$!$\ast$1,
+
+                alias\+: \textbackslash{}\textquotesingle{}numeric\textbackslash{}\textquotesingle{}
+
+            \},
+
+            percentage\+: \{
+
+                max\+: 100,
+
+                digits\+: 2,
+
+                suffix\+: \textbackslash{}\textquotesingle{}\%\textbackslash{}\textquotesingle{},
+
+                allow\+Minus\+: $\ast$!$\ast$1,
+
+                alias\+: \textbackslash{}\textquotesingle{}numeric\textbackslash{}\textquotesingle{},
+
+                digits\+Optional\+: $\ast$!$\ast$1
+
+            \},
+
+            decimal\+: \{
+
+                max\+: 100,
+
+                digits\+: 2,
+
+                allow\+Minus\+: $\ast$!$\ast$1,
+
+                alias\+: \textbackslash{}\textquotesingle{}numeric\textbackslash{}\textquotesingle{},
+
+                digits\+Optional\+: $\ast$!$\ast$1
+
+            \},
+
+        \});
+
+        \$({\itshape function}() \{
+
+            \$(\textbackslash{}\textquotesingle{}.inputmask\textbackslash{}\textquotesingle{}).inputmask(\{
+
+                right\+Align\+: false,
+
+                show\+Mask\+On\+Focus\+: false,
+
+                show\+Mask\+On\+Hover\+: false,
+
+                remove\+Mask\+On\+Submit\+: true
+
+            \});
+
+            \$(\textbackslash{}\textquotesingle{}\#error-\/alert, \#success-\/alert, \#warning-\/alert\textbackslash{}\textquotesingle{}).fade\+To(5000, 1, {\itshape function}() \{
+
+                \$({\itshape this}).slide\+Up(1000);
+
+            \});
+
+        \});
+
+        {\itshape function} draw\+Alert({\itshape parent}, {\itshape type}, {\itshape message}) \{
+
+            {\itshape let} icon $\ast$=$\ast$ \textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{};
+
+            {\itshape let} title $\ast$=$\ast$ \textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{};
+
+            {\itshape let} element $\ast$=$\ast$ {\itshape new} Date().to\+Locale\+Time\+String().replace\+All(\textbackslash{}\textquotesingle{}\+:\textbackslash{}\textquotesingle{}, \textbackslash{}\textquotesingle{}\textbackslash{}\textquotesingle{});
+
+            {\itshape switch} (type) \{
+
+                {\itshape case} \textbackslash{}\textquotesingle{}danger\textbackslash{}\textquotesingle{}\+:
+
+                    title $\ast$=$\ast$ \textbackslash{}\textquotesingle{}Error\textbackslash{}\textquotesingle{};
+
+                    icon $\ast$=$\ast$ \textbackslash{}\textquotesingle{}times-\/circle\textbackslash{}\textquotesingle{};
+
+                    {\itshape break};
+
+                {\itshape case} \textbackslash{}\textquotesingle{}success\textbackslash{}\textquotesingle{}\+:
+
+                    title $\ast$=$\ast$ \textbackslash{}\textquotesingle{}Realizado\textbackslash{}\textquotesingle{};
+
+                    icon $\ast$=$\ast$ \textbackslash{}\textquotesingle{}check-\/circle\textbackslash{}\textquotesingle{};
+
+                    {\itshape break};
+
+                {\itshape case} \textbackslash{}\textquotesingle{}warning\textbackslash{}\textquotesingle{}\+:
+
+                    title $\ast$=$\ast$ \textbackslash{}\textquotesingle{}Advertencia\textbackslash{}\textquotesingle{};
+
+                    icon $\ast$=$\ast$ \textbackslash{}\textquotesingle{}exclamation-\/triangle\textbackslash{}\textquotesingle{};
+
+                    {\itshape break};
+
+            \}
+
+            \$(\`{}\#\$\{ parent \}\`{}).prepend(
+
+                \`{}\texorpdfstring{$<$}{<}div class="{}alert alert-\/\$\{ type \} alert-\/dismissible text-\/justify"{} id="{}\$\{ element \}"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}button aria-\/hidden="{}true"{} class="{}close"{} data-\/dismiss="{}alert"{} type="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i class="{}icon fal fa-\/\$\{ icon \}"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\$\{ title \}!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+                    \$\{ message \}
+
+                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}\`{}
+
+            );
+
+            \$(\`{}\#\$\{ element \}\`{}).fade\+To(5000, 1, {\itshape function}() \{
+
+                \$({\itshape this}).slide\+Up(1000);
+
+            \});
+
+            window.\+scroll\+To(0, 0);
+
+        \}
+
+        \$.ajax\+Setup(\{
+
+            headers\+: \{
+
+                \textbackslash{}\textquotesingle{}X-\/\+CSRF-\/\+TOKEN\textbackslash{}\textquotesingle{}\+: \$(\textbackslash{}\textquotesingle{}meta\mbox{[}name="{}csrf-\/token"{}\mbox{]}\textbackslash{}\textquotesingle{}).attr(\textbackslash{}\textquotesingle{}content\textbackslash{}\textquotesingle{})
+
+            \}
+
+        \})
+
+    \texorpdfstring{$<$}{<}/script\texorpdfstring{$>$}{>}
+
+    @yield (\textbackslash{}\textquotesingle{}scripts\textbackslash{}\textquotesingle{})
+
+\texorpdfstring{$<$}{<}/body\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}/html\texorpdfstring{$>$}{>}
+
+{\bfseries{Imagen 2.\+7. Código de la vista layout, archivo layout.\+blade.\+php.}}
+
+@extends (\textbackslash{}\textquotesingle{}layout\textbackslash{}\textquotesingle{})
+
+@section (\textbackslash{}\textquotesingle{}title\textbackslash{}\textquotesingle{}, \textbackslash{}\textquotesingle{}Seguimiento de Alumnos del Área $|$ Inicio\textbackslash{}\textquotesingle{})
+
+@section (\textbackslash{}\textquotesingle{}content\textbackslash{}\textquotesingle{})
+
+\texorpdfstring{$<$}{<}div {\itshape class}="{}row"{}\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}div {\itshape class}="{}col-\/12"{}\texorpdfstring{$>$}{>}
+
+        @if (\$message = session(\textbackslash{}\textquotesingle{}warning\textbackslash{}\textquotesingle{}))
+
+            \texorpdfstring{$<$}{<}div {\itshape class}="{}alert alert-\/warning alert-\/dismissible text-\/justify"{} {\itshape id}="{}warning-\/alert"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}button {\itshape aria-\/hidden}="{}true"{} {\itshape class}="{}close"{} {\itshape data-\/dismiss}="{}alert"{} {\itshape type}="{}button"{}\texorpdfstring{$>$}{>}{$\times$}\texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}h6\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}i {\itshape class}="{}icon fal fa-\/exclamation-\/triangle"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}¡\+Advertencia!\texorpdfstring{$<$}{<}/h6\texorpdfstring{$>$}{>}
+
+                \{\{ \$message \}\}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        @endif
+
+        \texorpdfstring{$<$}{<}div {\itshape class}="{}card card-\/outline card-\/reflex-\/blue"{}\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div {\itshape class}="{}card-\/header"{}\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}h3 {\itshape class}="{}card-\/title"{}\texorpdfstring{$>$}{>}Bienvenido\texorpdfstring{$<$}{<}/h3\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}div {\itshape class}="{}card-\/tools"{}\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}button {\itshape class}="{}btn btn-\/tool"{} {\itshape data-\/card-\/widget}="{}collapse"{} {\itshape title}="{}Minimizar"{} {\itshape type}="{}button"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}i {\itshape class}="{}fal fa-\/minus"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}button {\itshape class}="{}btn btn-\/tool"{} {\itshape data-\/card-\/widget}="{}remove"{} {\itshape title}="{}Cerrar"{} {\itshape type}="{}button"{}\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}i {\itshape class}="{}fal fa-\/times"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/button\texorpdfstring{$>$}{>}
+
+                \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+            \texorpdfstring{$<$}{<}div {\itshape class}="{}card-\/body"{}\texorpdfstring{$>$}{>}
+
+                Bienvenido.
+
+            \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+        \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+@endsection
+
+{\bfseries{Imagen 2.\+8. Código de la vista welcome, archivo welcome.\+blade.\+php.}}
+
+ \texorpdfstring{$<$}{<}div {\itshape class}="{}dropdown-\/menu dropdown-\/menu-\/lg dropdown-\/menu-\/right"{}\texorpdfstring{$>$}{>}
+
+                        $\ast$\texorpdfstring{$<$}{<}!-\/-\/ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                        \texorpdfstring{$<$}{<}a {\itshape id}="{}navbar\+Dropdown"{} {\itshape class}="{}dropdown-\/item dropdown-\/header"{} {\itshape href}="{}\#"{} {\itshape role}="{}button"{} {\itshape data-\/bs-\/toggle}="{}dropdown"{} {\itshape aria-\/haspopup}="{}true"{} {\itshape aria-\/expanded}="{}false"{} {\itshape v-\/pre}\texorpdfstring{$>$}{>}
+
+                            \{\{ Auth\+::user()-\/\texorpdfstring{$>$}{>}name \}\}
+
+                        \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                        $\ast$\texorpdfstring{$<$}{<}!-\/-\/ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                        \texorpdfstring{$<$}{<}div {\itshape class}="{}dropdown-\/divider"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}form {\itshape action}="{}\{\{ route(\textbackslash{}\textquotesingle{}logout\textbackslash{}\textquotesingle{}) \}\}"{} {\itshape autocomplete}="{}off"{} {\itshape method}="{}post"{}\texorpdfstring{$>$}{>}
+
+                            @csrf
+
+                            \texorpdfstring{$<$}{<}a {\itshape class}="{}dropdown-\/item"{} {\itshape href}="{}javascript\+:void(0)"{} {\itshape onclick}="{}event.\+prevent\+Default(); $\ast$this$\ast$.closest(\textbackslash{}\textquotesingle{}form\textbackslash{}\textquotesingle{}).submit();"{}\texorpdfstring{$>$}{>}
+
+                                \texorpdfstring{$<$}{<}i {\itshape class}="{}fal fa-\/sign-\/out mr-\/2"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/i\texorpdfstring{$>$}{>}Cerrar Sesión
+
+                            \texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}/form\texorpdfstring{$>$}{>}
+
+                        \texorpdfstring{$<$}{<}div {\itshape class}="{}dropdown-\/divider"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+                        $\ast$\texorpdfstring{$<$}{<}!-\/-\/ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ -\/-\/\texorpdfstring{$>$}{>}$\ast$
+
+                        \texorpdfstring{$<$}{<}/form\texorpdfstring{$>$}{>}
+
+                    \texorpdfstring{$<$}{<}/div\texorpdfstring{$>$}{>}
+
+{\bfseries{Imagen 3. Código dropdown logout, archivo layout.\+blade.\+php.}}
+
+!\mbox{[}Text Description automatically generated with medium confidence\mbox{]}
+
+{\bfseries{Imagen 3.\+1. Función a la que va la ruta de logout, archivo Login\+Controller.\+php.}}
+
+\mbox{[}1\mbox{]}\+: docs/media/media/image1.\+jpg \{width=\char`\"{}3.\+2090277777777776in\char`\"{} height=\char`\"{}1.\+5520833333333333in\char`\"{}\}
+
+\mbox{[}Graphical user interface, text, application Description automatically generated\mbox{]}\+: docs/media/media/image2.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}3.\+61875in\char`\"{}\} \mbox{[}6\mbox{]}\+: docs/media/media/image3.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}3.\+182638888888889in\char`\"{}\} \mbox{[}Graphical user interface Description automatically generated with medium confidence\mbox{]}\+: docs/media/media/image4.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}0.\+7333333333333333in\char`\"{}\} \mbox{[}A picture containing shape Description automatically generated\mbox{]}\+: docs/media/media/image5.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}0.\+8604166666666667in\char`\"{}\} \mbox{[}7\mbox{]}\+: docs/media/media/image6.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}4.\+101388888888889in\char`\"{}\} \mbox{[}Graphical user interface, application Description automatically generated\mbox{]}\+: docs/media/media/image7.\+png \{width=\char`\"{}5.\+535701006124235in\char`\"{} height=\char`\"{}3.\+911570428696413in\char`\"{}\} \mbox{[}8\mbox{]}\+: docs/media/media/image8.\+png \{width=\char`\"{}3.\+2966633858267715in\char`\"{} height=\char`\"{}3.\+528675634295713in\char`\"{}\} \mbox{[}Graphical user interface, text, application, email Description automatically generated\mbox{]}\+: docs/media/media/image9.\+png \{width=\char`\"{}3.\+578601268591426in\char`\"{} height=\char`\"{}2.\+7982458442694664in\char`\"{}\} \mbox{[}10\mbox{]}\+: docs/media/media/image10.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}0.\+7208333333333333in\char`\"{}\} \mbox{[}11\mbox{]}\+: docs/media/media/image11.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}0.\+5340277777777778in\char`\"{}\} \mbox{[}Shape Description automatically generated with low confidence\mbox{]}\+: docs/media/media/image12.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}0.\+5611111111111111in\char`\"{}\} \mbox{[}12\mbox{]}\+: docs/media/media/image13.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}2.\+9145833333333333in\char`\"{}\} \mbox{[}13\mbox{]}\+: docs/media/media/image14.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}0.\+5590277777777778in\char`\"{}\} \mbox{[}14\mbox{]}\+: docs/media/media/image15.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}0.\+5916666666666667in\char`\"{}\} \mbox{[}Text Description automatically generated\mbox{]}\+: docs/media/media/image16.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}5.\+275in\char`\"{}\} \mbox{[}15\mbox{]}\+: docs/media/media/image17.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}2.\+577777777777778in\char`\"{}\} \mbox{[}16\mbox{]}\+: docs/media/media/image18.\+png \{width=\char`\"{}4.\+531882108486439in\char`\"{} height=\char`\"{}0.\+39588910761154855in\char`\"{}\} \mbox{[}17\mbox{]}\+: docs/media/media/image19.\+png \{width=\char`\"{}5.\+854983595800525in\char`\"{} height=\char`\"{}1.\+5835542432195975in\char`\"{}\} \mbox{[}A screenshot of a computer Description automatically generated with medium confidence\mbox{]}\+: docs/media/media/image20.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}0.\+8006944444444445in\char`\"{}\} \mbox{[}18\mbox{]}\+: docs/media/media/image21.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}1.\+5055555555555555in\char`\"{}\} \mbox{[}19\mbox{]}\+: docs/media/media/image22.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}2.\+598611111111111in\char`\"{}\} \mbox{[}20\mbox{]}\+: docs/media/media/image23.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}1.\+3020833333333333in\char`\"{}\} \mbox{[}Graphical user interface, text, chat or text message Description automatically generated\mbox{]}\+: docs/media/media/image24.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}2.\+060416666666667in\char`\"{}\} \mbox{[}21\mbox{]}\+: docs/media/media/image25.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}0.\+9506944444444444in\char`\"{}\} \mbox{[}22\mbox{]}\+: docs/media/media/image26.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}1.\+2847222222222223in\char`\"{}\} \mbox{[}23\mbox{]}\+: docs/media/media/image27.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}0.\+575in\char`\"{}\} \mbox{[}24\mbox{]}\+: docs/media/media/image27.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}0.\+65in\char`\"{}\} \mbox{[}25\mbox{]}\+: docs/media/media/image28.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}0.\+9006944444444445in\char`\"{}\} \mbox{[}26\mbox{]}\+: docs/media/media/image29.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}1.\+2277777777777779in\char`\"{}\} \mbox{[}Text Description automatically generated with medium confidence\mbox{]}\+: docs/media/media/image30.\+png \{width=\char`\"{}6.\+1375in\char`\"{} height=\char`\"{}1.\+2256944444444444in\char`\"{}\} 

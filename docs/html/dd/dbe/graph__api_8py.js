@@ -1,14 +1,14 @@
 var graph__api_8py =
 [
-    [ "graph.graph_api.Student", "d5/dbd/classgraph_1_1graph__api_1_1Student.html", null ],
-    [ "graph.graph_api.StudentList", "d6/d37/classgraph_1_1graph__api_1_1StudentList.html", null ],
-    [ "bar_plot", "dd/dbe/graph__api_8py.html#a7f1f860244a80d1f5c97ef0905aa90c6", null ],
-    [ "get_dataframe", "dd/dbe/graph__api_8py.html#a706674d43715b8914878b0673d0386e1", null ],
-    [ "root", "dd/dbe/graph__api_8py.html#abcafbbeb818016e468a4ad7d4fe4773d", null ],
-    [ "scatter_plot", "dd/dbe/graph__api_8py.html#ae64a646121b5f119dd7681f45cd2517b", null ],
-    [ "allow_credentials", "dd/dbe/graph__api_8py.html#a97227aa6dc1c47b001ea402af3539977", null ],
-    [ "allow_headers", "dd/dbe/graph__api_8py.html#a6025cd6b1c01946f3ca0e57f56733330", null ],
-    [ "allow_methods", "dd/dbe/graph__api_8py.html#a00d200090851ef9c00fce8802cb1cfd0", null ],
-    [ "allow_origins", "dd/dbe/graph__api_8py.html#ae56dc6644e50d231a447eb9064838202", null ],
-    [ "graphAPI", "dd/dbe/graph__api_8py.html#ab65e0e17a5cad97ac6a5528a97baaabb", null ]
+    [ "graph_api.Student", "db/d03/classgraph__api_1_1Student.html", null ],
+    [ "graph_api.StudentList", "d0/d51/classgraph__api_1_1StudentList.html", null ],
+    [ "bar_plot", "dd/dbe/graph__api_8py.html#a58853d18b4378ca3222031464068344f", null ],
+    [ "get_dataframe", "dd/dbe/graph__api_8py.html#aaf5f12f4b2b1352aa0b8094a08453bc4", null ],
+    [ "root", "dd/dbe/graph__api_8py.html#a818636356dc2c78613b59afcf44008b5", null ],
+    [ "scatter_plot", "dd/dbe/graph__api_8py.html#a19c2fc0e6477723268221338fb9ac2bf", null ],
+    [ "allow_credentials", "dd/dbe/graph__api_8py.html#af62ec03b4a05cc8b7635b19de57fb4e5", null ],
+    [ "allow_headers", "dd/dbe/graph__api_8py.html#a0bbf491b4c8d30f79ac2fc1b3793a059", null ],
+    [ "allow_methods", "dd/dbe/graph__api_8py.html#af86a38f8b6addee3c19bfc76f76ae8aa", null ],
+    [ "allow_origins", "dd/dbe/graph__api_8py.html#abdb5cf0082d034e3507501d3e5fa379f", null ],
+    [ "graphAPI", "dd/dbe/graph__api_8py.html#a693a88a80afce44360b51da9cd8d4f7f", null ]
 ];

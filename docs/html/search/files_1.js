@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5f_5finit_5f_5f_2epy_0',['__init__.py',['../d3/d9a/____init_____8py.html',1,'']]]
+  ['plotly_2ejs_0',['plotly.js',['../d3/ddb/plotly_8js.html',1,'']]]
 ];

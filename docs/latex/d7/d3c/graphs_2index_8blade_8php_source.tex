@@ -1,0 +1,324 @@
+\hypertarget{graphs_2index_8blade_8php_source}{}\doxysection{index.\+blade.\+php}
+\label{graphs_2index_8blade_8php_source}\index{resources/views/graphs/index.blade.php@{resources/views/graphs/index.blade.php}}
+\mbox{\hyperlink{graphs_2index_8blade_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00001}00001 @extends (\textcolor{stringliteral}{'layout'})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00003}00003 @section (\textcolor{stringliteral}{'title'}, \textcolor{stringliteral}{'Seguimiento de Alumnos del Área | Ver gráficas'})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00005}00005 @section (\textcolor{stringliteral}{'styles'})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00006}00006 <!-\/-\/ Select2 -\/-\/>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00007}00007 <link href=\textcolor{stringliteral}{"{}\{\{ asset('plugins/select2/css/select2.css') \}\}"{}} rel=\textcolor{stringliteral}{"{}stylesheet"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00008}00008 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00010}00010 @section (\textcolor{stringliteral}{'content'})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00011}00011 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}row"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00012}00012     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}col-\/12"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00013}00013         @\textcolor{keywordflow}{if} (\$message = session(\textcolor{stringliteral}{'warning'}))}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00014}00014         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert alert-\/warning alert-\/dismissible text-\/justify"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}warning-\/alert"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00015}00015             <button aria-\/hidden=\textcolor{stringliteral}{"{}true"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}close"{}} data-\/dismiss=\textcolor{stringliteral}{"{}alert"{}} type=\textcolor{stringliteral}{"{}button"{}}>\&times;</button>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00016}00016             <h6><i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}icon fal fa-\/exclamation-\/triangle"{}}></i>¡Advertencia!</h6>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00017}00017             \{\{ \$message \}\}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00018}00018         </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00019}00019         \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00020}00020         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card card-\/outline card-\/reflex-\/blue"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00021}00021             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/header"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00022}00022                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}d-\/flex flex-\/wrap justify-\/content-\/between"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00023}00023                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}col d-\/flex"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00024}00024                         <h3 \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/title my-\/auto"{}}>Ver gráficas</h3>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00025}00025                     </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00026}00026                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}col d-\/flex justify-\/content-\/end"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00027}00027                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn-\/group"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00028}00028                             <select \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control select2"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}select-\/graph"{}} style=\textcolor{stringliteral}{"{}width: 100\%;"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00029}00029                                 <option value=\textcolor{stringliteral}{"{}scatter"{}} selected>Créditos Acumulados</option>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00030}00030                                 <option value=\textcolor{stringliteral}{"{}bar"{}}>Rezago Académico</option>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00031}00031                             </select>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00032}00032                         </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00033}00033                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}mr-\/2"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00034}00034                             <select \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control select2 select2-\/reflex-\/blue"{}} style=\textcolor{stringliteral}{"{}width: 100\%"{}} data-\/dropdown-\/css-\/\textcolor{keyword}{class}=\textcolor{stringliteral}{"{}select2-\/reflex-\/blue"{}} data-\/placeholder=\textcolor{stringliteral}{"{}Seleccione el semestre"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}semesters"{}} name=\textcolor{stringliteral}{"{}"{}} required>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00035}00035                             \{\{-\/-\/ <option selected value=\textcolor{stringliteral}{''}>Seleccionar semestre</option> -\/-\/\}\}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00036}00036                             </select>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00037}00037                         </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00038}00038                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}career-\/select2"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00039}00039                             <select \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control select2 select2-\/reflex-\/blue"{}} style=\textcolor{stringliteral}{"{}width: 100\%"{}} data-\/dropdown-\/css-\/\textcolor{keyword}{class}=\textcolor{stringliteral}{"{}select2-\/reflex-\/blue"{}} data-\/placeholder=\textcolor{stringliteral}{"{}Seleccione la carrera"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}careers"{}} name=\textcolor{stringliteral}{"{}"{}} required>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00040}00040                                 \{\{-\/-\/ <option selected value=\textcolor{stringliteral}{''}>Seleccionar carrera</option> -\/-\/\}\}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00041}00041                                 \{\{-\/-\/ <option value=\textcolor{stringliteral}{"{}"{}}></option> -\/-\/\}\}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00042}00042                             </select>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00043}00043                         </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00044}00044                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}generation-\/select"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00045}00045                             <select \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control select2 select2-\/reflex-\/blue"{}} style=\textcolor{stringliteral}{"{}width: 100\%"{}} data-\/dropdown-\/css-\/\textcolor{keyword}{class}=\textcolor{stringliteral}{"{}select2-\/reflex-\/blue"{}} data-\/placeholder=\textcolor{stringliteral}{"{}Seleccione generacion"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}generations"{}} name=\textcolor{stringliteral}{"{}"{}} required>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00046}00046                                 \{\{-\/-\/ <option selected value=\textcolor{stringliteral}{''}>Seleccionar generación</option> -\/-\/\}\}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00047}00047                                 \{\{-\/-\/ <option value=\textcolor{stringliteral}{"{}"{}}></option> -\/-\/\}\}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00048}00048                             </select>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00049}00049                         </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00050}00050                     </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00051}00051                 </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00052}00052             </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00053}00053             <div \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}graph"{}} style=\textcolor{stringliteral}{"{}text-\/align: center; min-\/height: 500;"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00054}00054             </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00055}00055         </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00056}00056     </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00057}00057 </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00059}00059 <!-\/-\/ Modal Variable -\/-\/>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00060}00060 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal fade"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}modal-\/var"{}} data-\/bs-\/backdrop=\textcolor{stringliteral}{"{}static"{}} data-\/bs-\/keyboard=\textcolor{stringliteral}{"{}false"{}} tabindex=\textcolor{stringliteral}{"{}-\/1"{}} aria-\/labelledby=\textcolor{stringliteral}{"{}staticBackdropLabel"{}} aria-\/hidden=\textcolor{stringliteral}{"{}true"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00061}00061     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/dialog modal-\/dialog-\/centered"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00062}00062         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/content"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00063}00063             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/header"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00064}00064                 <h5 \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/title-\/saa"{}}>Cálculo de rezago</h5>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00065}00065                 <button type=\textcolor{stringliteral}{"{}button"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}close"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}close-\/modal"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00066}00066                     <span aria-\/hidden=\textcolor{stringliteral}{"{}true"{}}>\&times;</span>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00067}00067                 </button>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00068}00068             </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00069}00069             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/body"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00070}00070                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}d-\/flex"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00071}00071                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}text-\/center d-\/flex justify-\/content-\/center align-\/items-\/center mr-\/2"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00072}00072                         <label \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}"{}}>Variable:</label>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00073}00073                     </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00074}00074                     <input type=\textcolor{stringliteral}{"{}number"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}var"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00075}00075                 </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00076}00076             </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00077}00077             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/footer justify-\/content-\/between"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00078}00078             <button type=\textcolor{stringliteral}{"{}button"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/secondary"{}} data-\/bs-\/dismiss=\textcolor{stringliteral}{"{}modal"{}}>Cancelar</button>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00079}00079                 <button type=\textcolor{stringliteral}{"{}button"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/success"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}accept-\/var"{}}>Aceptar</button>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00080}00080             </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00081}00081         </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00082}00082     </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00083}00083 </div>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00084}00084 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00086}00086 @section (\textcolor{stringliteral}{'plugins'})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00087}00087 <!-\/-\/ Form Validations -\/-\/>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00088}00088 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/jquery-\/validation/jquery.validate.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00089}00089 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/jquery-\/validation/localization/messages\_es.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00090}00090 <!-\/-\/ Datatables -\/-\/>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00091}00091 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/datatables/jquery.dataTables.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00092}00092 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/datatables-\/bs4/js/dataTables.bootstrap4.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00093}00093 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/datatables-\/responsive/js/dataTables.responsive.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00094}00094 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/datatables-\/responsive/js/responsive.bootstrap4.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00095}00095 <!-\/-\/ Files -\/-\/>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00096}00096 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/bs-\/custom-\/file-\/input/bs-\/custom-\/file-\/input.min.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00097}00097 <!-\/-\/-\/Select2-\/-\/>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00098}00098 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/select2/js/select2.full.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00099}00099 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/select2/js/i18n/es.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00100}00100 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00102}00102 @section (\textcolor{stringliteral}{'scripts'})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00103}00103 <script src=\textcolor{stringliteral}{"{}https://cdn.plot.ly/plotly-\/2.14.0.min.js"{}}></script>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00106}00106 <script type=\textcolor{stringliteral}{"{}text/javascript"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00116}00116     \textcolor{keyword}{function} \mbox{\hyperlink{plotly_8js_ac4b47bc0c430737097b2d183857ec816}{RenderGraphs}}(records) \{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00117}00117         \textcolor{keyword}{const} graphType = document.getElementById(\textcolor{stringliteral}{'select-\/graph'}).value;}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00118}00118         \textcolor{keyword}{const} URL = \textcolor{stringliteral}{"{}http://127.0.0.1:8000/graph/"{}} + graphType;}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00119}00119         \textcolor{keyword}{const} request = \{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00120}00120             method: \textcolor{stringliteral}{"{}POST"{}},}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00121}00121             headers: \{\textcolor{stringliteral}{"{}content-\/type"{}}: \textcolor{stringliteral}{"{}application/json"{}}, \textcolor{stringliteral}{"{}accept"{}}: \textcolor{stringliteral}{"{}application/json"{}}\},}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00122}00122             body: JSON.stringify(\{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00123}00123                 records: records}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00124}00124             \}),}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00125}00125         \}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00126}00126         console.log(request);}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00127}00127         fetch(URL, request)}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00128}00128             .then(response => response.json())}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00129}00129             .then(data => \{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00130}00130                 json\_graph = JSON.parse(data);}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00132}00132                 \mbox{\hyperlink{app_8js_a187773a8b4af7d9076cf2de9cbc6fe06}{Plotly}}.newPlot(\textcolor{stringliteral}{'graph'}, json\_graph);}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00133}00133             \}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00134}00134         );}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00135}00135     \}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00136}00136 </script>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00137}00137 <script type=\textcolor{stringliteral}{"{}text/javascript"{}}>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00138}00138     \textcolor{comment}{//Initialize Select2 Elements}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00139}00139     \$(\textcolor{stringliteral}{'.select2'}).select2()}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00141}00141     \textcolor{comment}{//Initialize Select2 Elements}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00142}00142     \$(\textcolor{stringliteral}{'.select2bs4'}).select2(\{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00143}00143         theme: \textcolor{stringliteral}{'bootstrap4'}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00144}00144     \})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00146}00146     let dt = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00156}00156     \$(\textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00157}00157         \textcolor{comment}{//Semesters}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00158}00158         var semesters = @json(\$semesters);}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00159}00159         console.log(semesters)}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00160}00160         let select\_semesters = \$(\textcolor{stringliteral}{'\#semesters'})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00161}00161         var newOption = new Option("{}Selecciona semestre"{}, '0', false, false);}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00162}00162             select\_semesters.append(newOption).trigger('change');}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00163}00163         \$.each(semesters, function(i, semester) \{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00164}00164             var newOption = \textcolor{keyword}{new} Option(semester.semester, semester.id, \textcolor{keyword}{false}, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00165}00165             select\_semesters.append(newOption).trigger(\textcolor{stringliteral}{'change'});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00166}00166         \});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00167}00167         \textcolor{comment}{//Careers}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00168}00168         var careers = @json(\$careers);}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00169}00169         let select\_careers = \$(\textcolor{stringliteral}{'\#careers'})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00170}00170         var newOption = new Option("{}Selecciona carrera"{}, "{}0"{}, false, false);}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00171}00171             select\_careers.append(newOption).trigger('change');}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00172}00172         \$.each(careers, function(i, career) \{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00173}00173             var newOption = \textcolor{keyword}{new} Option(career.name, career.name, \textcolor{keyword}{false}, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00174}00174             select\_careers.append(newOption).trigger(\textcolor{stringliteral}{'change'});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00175}00175         \});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00176}00176         var generations = @json(\$gen);}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00177}00177         let select\_generations = \$(\textcolor{stringliteral}{'\#generations'})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00178}00178         var newOption = new Option("{}Selecciona generación"{}, "{}0"{}, false, false);}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00179}00179             select\_generations.append(newOption).trigger('change');}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00180}00180         \$.each(generations, function(i, generations) \{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00181}00181             var newOption = \textcolor{keyword}{new} Option(generations.generation, generations.generation, \textcolor{keyword}{false}, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00182}00182             select\_generations.append(newOption).trigger(\textcolor{stringliteral}{'change'});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00183}00183         \});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00185}00185         \$(\textcolor{stringliteral}{'\#overlay'}).hide();}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00186}00186     \});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00198}00198     \textcolor{keyword}{function} make\_query()\{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00199}00199         var semester = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00200}00200         \textcolor{keywordflow}{if} (\$(\textcolor{stringliteral}{'\#semesters'}).val() != \textcolor{stringliteral}{"{}0"{}})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00201}00201          semester = \$(\textcolor{stringliteral}{'\#semesters'}).val();}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00202}00202         var career = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00203}00203         \textcolor{keywordflow}{if} (\$(\textcolor{stringliteral}{'\#careers'}).val() != \textcolor{stringliteral}{"{}0"{}})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00204}00204             career = \$(\textcolor{stringliteral}{'\#careers'}).val();}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00205}00205         var generation = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00206}00206         \textcolor{keywordflow}{if} (\$(\textcolor{stringliteral}{'\#generations'}).val() != \textcolor{stringliteral}{"{}0"{}})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00207}00207             generation = \$(\textcolor{stringliteral}{'\#generations'}).val();}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00208}00208         \textcolor{comment}{//Ajax semester}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00209}00209         \textcolor{keywordflow}{if}((semester != \textcolor{keyword}{null})||(career != \textcolor{keyword}{null})||(generation != \textcolor{keyword}{null}))}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00210}00210         \$.ajax(\{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00211}00211                 url: \textcolor{stringliteral}{"{}/load\_query"{}},}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00212}00212                 type: \textcolor{stringliteral}{"{}get"{}},}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00213}00213                 data: \{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00214}00214                     semester\_id: semester,}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00215}00215                     career : career,}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00216}00216                     generation : generation,}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00217}00217                 \},}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00218}00218                 success: \textcolor{keyword}{function}(response) \{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00219}00219                     console.log(response)}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00220}00220 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00221}00221                     \mbox{\hyperlink{plotly_8js_ac4b47bc0c430737097b2d183857ec816}{RenderGraphs}}(response);}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00222}00222                     }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00223}00223                     \textcolor{keywordflow}{if}(response.length <= 0)}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00224}00224                         console.log(\textcolor{stringliteral}{"{}No hay datos"{}});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00225}00225                         \textcolor{comment}{//funcion para mostrar alerta o algo para hacerle saber al usuario que no hay registros coincidentes}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00226}00226                 \},}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00227}00227                 error: \textcolor{keyword}{function}(xhr) \{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00228}00228                     console.log(xhr)}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00229}00229                 \}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00230}00230             \});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00231}00231     \}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00232}00232 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00233}00233     \$(\textcolor{stringliteral}{'\#semesters'}).change(\textcolor{keyword}{function}()\{\textcolor{comment}{//make query when semesters change}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00234}00234         make\_query();}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00235}00235     \})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00236}00236 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00237}00237     \$(\textcolor{stringliteral}{'\#careers'}).change(\textcolor{keyword}{function}()\{\textcolor{comment}{//make query when careers change}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00238}00238         make\_query();}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00239}00239     \})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00240}00240     }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00241}00241     \$(\textcolor{stringliteral}{'\#generations'}).change(\textcolor{keyword}{function}()\{\textcolor{comment}{//make query when generations change}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00242}00242         make\_query();}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00243}00243     \})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00245}00245     \$(\textcolor{stringliteral}{'\#select-\/graph'}).change(\textcolor{keyword}{function}()\{\textcolor{comment}{//make query when graph type change}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00246}00246         \textcolor{keywordflow}{if}(\$(\textcolor{keyword}{this}).val() === \textcolor{stringliteral}{'bar'})\{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00247}00247             console.log(\$(\textcolor{keyword}{this}).val());}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00248}00248             \textcolor{comment}{//Clear current graph }}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00249}00249             \textcolor{comment}{//Open Modal}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00250}00250             \$(\textcolor{stringliteral}{'\#modal-\/var'}).modal(\textcolor{stringliteral}{'show'});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00251}00251         \}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00252}00252         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00253}00253             make\_query();}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00254}00254         \} }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00255}00255     \})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00256}00256 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00257}00257     \$(\textcolor{stringliteral}{'\#close-\/modal'}).click(\textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00258}00258         \$(\textcolor{stringliteral}{'\#modal-\/var'}).modal(\textcolor{stringliteral}{'hide'});}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00259}00259     \})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00260}00260 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00261}00261     \$(\textcolor{stringliteral}{'\#accept-\/var'}).click(\textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00262}00262         \textcolor{comment}{//AÑadir funcion para mandar variable a graph}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00263}00263     \})}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00264}00264     \textcolor{comment}{// \$('\#semesters').change(function() \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00265}00265     \textcolor{comment}{//     if (\$(this).val() != '') \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00266}00266     \textcolor{comment}{//         \$('\#career-\/select2').show()}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00267}00267     \textcolor{comment}{//         //Ajax semester}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00268}00268     \textcolor{comment}{//         \$.ajax(\{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00269}00269     \textcolor{comment}{//             url: "{}/load\_semester"{},}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00270}00270     \textcolor{comment}{//             type: "{}get"{},}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00271}00271     \textcolor{comment}{//             data: \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00272}00272     \textcolor{comment}{//                 semester\_id: \$(this).val(),}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00273}00273     \textcolor{comment}{//             \},}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00274}00274     \textcolor{comment}{//             success: function(response) \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00275}00275     \textcolor{comment}{//                 const table = \$("{}\#data-\/table"{}).DataTable();}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00276}00276     \textcolor{comment}{//                 table.clear()}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00277}00277     \textcolor{comment}{//                 \$.each(response, function(i, student) \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00278}00278     \textcolor{comment}{//                     table.row.add(student).draw();}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00279}00279     \textcolor{comment}{//                 \});}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00280}00280 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00281}00281     \textcolor{comment}{//             \},}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00282}00282     \textcolor{comment}{//             error: function(xhr) \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00283}00283     \textcolor{comment}{//                 console.log(xhr)}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00284}00284     \textcolor{comment}{//             \}}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00285}00285     \textcolor{comment}{//         \});}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00286}00286     \textcolor{comment}{//     \}}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00287}00287     \textcolor{comment}{// \})}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00288}00288 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00289}00289     }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00290}00290     \textcolor{comment}{// \$('\#careers').change(function() \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00291}00291     \textcolor{comment}{//     if (\$(this).val() != '') \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00292}00292     \textcolor{comment}{//         \$('\#generation-\/select').show()}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00293}00293     \textcolor{comment}{//         //Ajax semester}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00294}00294     \textcolor{comment}{//         \$.ajax(\{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00295}00295     \textcolor{comment}{//             url: "{}/load\_career"{},}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00296}00296     \textcolor{comment}{//             type: "{}get"{},}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00297}00297     \textcolor{comment}{//             data: \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00298}00298     \textcolor{comment}{//                 semester\_id: \$('\#semesters').val(),}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00299}00299     \textcolor{comment}{//                 career : \$('\#careers option:selected').text(),}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00300}00300     \textcolor{comment}{//             \},}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00301}00301     \textcolor{comment}{//             success: function(response) \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00302}00302     \textcolor{comment}{//                 const table = \$("{}\#data-\/table"{}).DataTable();}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00303}00303     \textcolor{comment}{//                 table.clear()}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00304}00304     \textcolor{comment}{//                 \$.each(response, function(i, student) \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00305}00305     \textcolor{comment}{//                     table.row.add(student).draw();}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00306}00306     \textcolor{comment}{//                 \});}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00307}00307 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00308}00308     \textcolor{comment}{//             \},}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00309}00309     \textcolor{comment}{//             error: function(xhr) \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00310}00310     \textcolor{comment}{//                 console.log(xhr)}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00311}00311     \textcolor{comment}{//             \}}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00312}00312     \textcolor{comment}{//         \});}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00313}00313     \textcolor{comment}{//     \}}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00314}00314     \textcolor{comment}{//     console.log(\$('\#careers option:selected').text());}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00315}00315     \textcolor{comment}{// \})}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00316}00316     \textcolor{comment}{// \$('\#generations').change(function() \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00317}00317     \textcolor{comment}{//     if (\$(this).val() != '') \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00318}00318     \textcolor{comment}{//         //Ajax generation}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00319}00319     \textcolor{comment}{//         \$.ajax(\{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00320}00320     \textcolor{comment}{//             url: "{}/load\_generation"{},}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00321}00321     \textcolor{comment}{//             type: "{}get"{},}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00322}00322     \textcolor{comment}{//             data: \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00323}00323     \textcolor{comment}{//                 semester\_id: \$('\#semesters').val(),}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00324}00324     \textcolor{comment}{//                 career : \$('\#careers option:selected').text(),}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00325}00325     \textcolor{comment}{//                 generation : \$('\#generations option:selected').text(),}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00326}00326     \textcolor{comment}{//             \},}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00327}00327     \textcolor{comment}{//             success: function(response) \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00328}00328     \textcolor{comment}{//                 const table = \$("{}\#data-\/table"{}).DataTable();}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00329}00329     \textcolor{comment}{//                 table.clear()}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00330}00330     \textcolor{comment}{//                 \$.each(response, function(i, student) \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00331}00331     \textcolor{comment}{//                     table.row.add(student).draw();}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00332}00332     \textcolor{comment}{//                 \});}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00333}00333 }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00334}00334     \textcolor{comment}{//             \},}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00335}00335     \textcolor{comment}{//             error: function(xhr) \{}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00336}00336     \textcolor{comment}{//                 console.log(xhr)}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00337}00337     \textcolor{comment}{//             \}}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00338}00338     \textcolor{comment}{//         \});}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00339}00339     \textcolor{comment}{//     \}}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00340}00340     \textcolor{comment}{//     console.log(\$('\#generations option:selected').text());}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00341}00341     \textcolor{comment}{// \})}}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00342}00342     }
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00343}00343 </script>}
+\DoxyCodeLine{\Hypertarget{graphs_2index_8blade_8php_source_l00344}00344 @endsection}
+
+\end{DoxyCode}

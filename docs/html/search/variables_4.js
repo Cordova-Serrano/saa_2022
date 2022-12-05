@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['home_0',['HOME',['../da/d61/classApp_1_1Providers_1_1RouteServiceProvider.html#ab3578e1d8c69b5c43a6656958a68573d',1,'App::Providers::RouteServiceProvider']]]
+  ['graphapi_0',['graphAPI',['../d6/d95/namespacegraph__api.html#a693a88a80afce44360b51da9cd8d4f7f',1,'graph_api']]]
 ];

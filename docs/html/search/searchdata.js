@@ -1,12 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "$2_abcdefghijklmpqrstuvw",
-  1: "abcdefghklmpqrstuv",
-  2: "adilt",
-  3: "2_abcdefghiklmpqrstuvw",
-  4: "_abcdeghijlmrstuv",
-  5: "$_achimprt",
-  6: "gs"
+  0: "abgprs",
+  1: "s",
+  2: "g",
+  3: "gp",
+  4: "bgrs",
+  5: "ag"
 };
 
 var indexSectionNames =
@@ -16,8 +15,7 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "variables",
-  6: "pages"
+  5: "variables"
 };
 
 var indexSectionLabels =
@@ -27,7 +25,6 @@ var indexSectionLabels =
   2: "Namespaces",
   3: "Files",
   4: "Functions",
-  5: "Variables",
-  6: "Pages"
+  5: "Variables"
 };
 

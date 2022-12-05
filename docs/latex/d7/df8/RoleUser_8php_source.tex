@@ -1,0 +1,33 @@
+\hypertarget{RoleUser_8php_source}{}\doxysection{Role\+User.\+php}
+\label{RoleUser_8php_source}\index{app/Models/RoleUser.php@{app/Models/RoleUser.php}}
+\mbox{\hyperlink{RoleUser_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Models}{App\(\backslash\)Models}};}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00005}00005 use Illuminate\(\backslash\)Database\(\backslash\)Eloquent\(\backslash\)Model;}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00006}00006 use Illuminate\(\backslash\)Database\(\backslash\)Eloquent\(\backslash\)SoftDeletes;}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00007}00007 use Illuminate\(\backslash\)Database\(\backslash\)Eloquent\(\backslash\)Factories\(\backslash\)HasFactory;}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00009}\mbox{\hyperlink{classApp_1_1Models_1_1RoleUser}{00009}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Models_1_1RoleUser}{RoleUser}} \textcolor{keyword}{extends} Model }
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00011}00011     use HasFactory;}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00013}\mbox{\hyperlink{classApp_1_1Models_1_1RoleUser_a32a9cf260589205b46828ed2b7b9bd9a}{00013}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Models_1_1RoleUser_a32a9cf260589205b46828ed2b7b9bd9a}{\$table}} = \textcolor{stringliteral}{'role\_user'};}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00015}\mbox{\hyperlink{classApp_1_1Models_1_1RoleUser_a43ab9c597391688db296456dcd097efa}{00015}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Models_1_1RoleUser_a43ab9c597391688db296456dcd097efa}{\$primaryKey}} = \textcolor{stringliteral}{'user\_id'};}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00017}\mbox{\hyperlink{classApp_1_1Models_1_1RoleUser_af49e34f6fdd51f2e005b4cb3c029498f}{00017}}     \textcolor{keyword}{public} \mbox{\hyperlink{classApp_1_1Models_1_1RoleUser_af49e34f6fdd51f2e005b4cb3c029498f}{\$timestamps}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00019}\mbox{\hyperlink{classApp_1_1Models_1_1RoleUser_af4109a320ef86a6b824c3a305fde000c}{00019}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Models_1_1RoleUser_af4109a320ef86a6b824c3a305fde000c}{\$fillable}} = [}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00020}00020         \textcolor{stringliteral}{'user\_id'}, \textcolor{stringliteral}{'role\_id'}}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00021}00021     ];}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00023}\mbox{\hyperlink{classApp_1_1Models_1_1RoleUser_afa113b0ca45aecadf94794cfd78f70d1}{00023}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Models_1_1RoleUser_afa113b0ca45aecadf94794cfd78f70d1}{roleUsers}}() }
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00024}00024     \{}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00025}00025         \textcolor{keywordflow}{return} \$this-\/>belongsToMany(User::class, Role::class);}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{RoleUser_8php_source_l00027}00027 \}}
+
+\end{DoxyCode}

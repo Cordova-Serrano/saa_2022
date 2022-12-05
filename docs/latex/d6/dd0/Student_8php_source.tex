@@ -1,0 +1,37 @@
+\hypertarget{Student_8php_source}{}\doxysection{Student.\+php}
+\label{Student_8php_source}\index{app/Models/Student.php@{app/Models/Student.php}}
+\mbox{\hyperlink{Student_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Models}{App\(\backslash\)Models}};}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00005}00005 use Illuminate\(\backslash\)Database\(\backslash\)Eloquent\(\backslash\)Factories\(\backslash\)HasFactory;}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00006}00006 use Illuminate\(\backslash\)Database\(\backslash\)Eloquent\(\backslash\)Model;}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00007}00007 use Illuminate\(\backslash\)Database\(\backslash\)Eloquent\(\backslash\)SoftDeletes;}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00009}\mbox{\hyperlink{classApp_1_1Models_1_1Student}{00009}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Models_1_1Student}{Student}} \textcolor{keyword}{extends} Model}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00011}00011     use HasFactory, SoftDeletes;}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00013}\mbox{\hyperlink{classApp_1_1Models_1_1Student_afc70455c64362bb3f82ffefb79f8d8d7}{00013}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Models_1_1Student_afc70455c64362bb3f82ffefb79f8d8d7}{\$fillable}} = [}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00014}00014         \textcolor{stringliteral}{'uaslp\_key'}, \textcolor{stringliteral}{'large\_key'}, \textcolor{stringliteral}{'generation'}, \textcolor{stringliteral}{'name'}, \textcolor{stringliteral}{'career\_id'}}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00015}00015     ];}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00017}\mbox{\hyperlink{classApp_1_1Models_1_1Student_aefb246f1ea9eb6b2f64abae2d07c3caa}{00017}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Models_1_1Student_aefb246f1ea9eb6b2f64abae2d07c3caa}{\$hidden}} = [}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00018}00018         \textcolor{stringliteral}{'created\_at'}, \textcolor{stringliteral}{'updated\_at'}, \textcolor{stringliteral}{'deleted\_at'}}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00019}00019     ];}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00021}\mbox{\hyperlink{classApp_1_1Models_1_1Student_acdf6fcbad07df7f3344cb541fb57a225}{00021}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Models_1_1Student_acdf6fcbad07df7f3344cb541fb57a225}{data}}()}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00023}00023         \textcolor{keywordflow}{return} \$this-\/>belongsToMany(Data::class, \textcolor{stringliteral}{'student\_data\_semester'}, \textcolor{stringliteral}{'student\_id'}, \textcolor{stringliteral}{'data\_id'})}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00024}00024             -\/>withPivot(\textcolor{stringliteral}{'semester\_id'},\textcolor{stringliteral}{'file\_id'});}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00027}\mbox{\hyperlink{classApp_1_1Models_1_1Student_a7668faeba92bff0de1d8185761af32c1}{00027}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Models_1_1Student_a7668faeba92bff0de1d8185761af32c1}{career}}()}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00028}00028     \{}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00029}00029         \textcolor{keywordflow}{return} \$this-\/>belongsTo(Career::class);}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00030}00030     \}}
+\DoxyCodeLine{\Hypertarget{Student_8php_source_l00031}00031 \}}
+
+\end{DoxyCode}

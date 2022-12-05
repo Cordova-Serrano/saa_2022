@@ -1,0 +1,55 @@
+\hypertarget{Http_2Kernel_8php_source}{}\doxysection{Kernel.\+php}
+\label{Http_2Kernel_8php_source}\index{app/Http/Kernel.php@{app/Http/Kernel.php}}
+\mbox{\hyperlink{Http_2Kernel_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Http}{App\(\backslash\)Http}};}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00005}00005 use Illuminate\(\backslash\)Foundation\(\backslash\)Http\(\backslash\)Kernel as HttpKernel;}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00007}\mbox{\hyperlink{classApp_1_1Http_1_1Kernel}{00007}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Http_1_1Kernel}{Kernel}} \textcolor{keyword}{extends} HttpKernel}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00016}\mbox{\hyperlink{classApp_1_1Http_1_1Kernel_a86a97ee57a2141da9d08bf9878df7491}{00016}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Http_1_1Kernel_a86a97ee57a2141da9d08bf9878df7491}{\$middleware}} = [}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00017}00017         \textcolor{comment}{// \(\backslash\)App\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)TrustHosts::class,}}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00018}00018         \(\backslash\)App\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)TrustProxies::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00019}00019         \(\backslash\)Fruitcake\(\backslash\)Cors\(\backslash\)HandleCors::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00020}00020         \(\backslash\)App\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)PreventRequestsDuringMaintenance::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00021}00021         \(\backslash\)Illuminate\(\backslash\)Foundation\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)ValidatePostSize::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00022}00022         \(\backslash\)App\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)TrimStrings::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00023}00023         \(\backslash\)Illuminate\(\backslash\)Foundation\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)ConvertEmptyStringsToNull::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00024}00024     ];}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00031}\mbox{\hyperlink{classApp_1_1Http_1_1Kernel_a7ea2230a290c57e18ea58cdbc6480909}{00031}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Http_1_1Kernel_a7ea2230a290c57e18ea58cdbc6480909}{\$middlewareGroups}} = [}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00032}00032         \textcolor{stringliteral}{'web'} => [}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00033}00033             \(\backslash\)App\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)EncryptCookies::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00034}00034             \(\backslash\)Illuminate\(\backslash\)Cookie\(\backslash\)Middleware\(\backslash\)AddQueuedCookiesToResponse::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00035}00035             \(\backslash\)Illuminate\(\backslash\)Session\(\backslash\)Middleware\(\backslash\)StartSession::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00036}00036             \textcolor{comment}{// \(\backslash\)Illuminate\(\backslash\)Session\(\backslash\)Middleware\(\backslash\)AuthenticateSession::class,}}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00037}00037             \(\backslash\)Illuminate\(\backslash\)View\(\backslash\)Middleware\(\backslash\)ShareErrorsFromSession::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00038}00038             \(\backslash\)App\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)VerifyCsrfToken::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00039}00039             \(\backslash\)Illuminate\(\backslash\)Routing\(\backslash\)Middleware\(\backslash\)SubstituteBindings::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00040}00040         ],}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00042}00042         \textcolor{stringliteral}{'api'} => [}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00043}00043             \textcolor{comment}{// \(\backslash\)Laravel\(\backslash\)Sanctum\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)EnsureFrontendRequestsAreStateful::class,}}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00044}00044             \textcolor{stringliteral}{'throttle:api'},}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00045}00045             \(\backslash\)Illuminate\(\backslash\)Routing\(\backslash\)Middleware\(\backslash\)SubstituteBindings::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00046}00046         ],}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00047}00047     ];}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00056}\mbox{\hyperlink{classApp_1_1Http_1_1Kernel_ae03e7f0ff8525fdd0e6165c66232d588}{00056}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Http_1_1Kernel_ae03e7f0ff8525fdd0e6165c66232d588}{\$routeMiddleware}} = [}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00057}00057         \textcolor{stringliteral}{'auth'} => \(\backslash\)App\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)Authenticate::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00058}00058         \textcolor{stringliteral}{'auth.basic'} => \(\backslash\)Illuminate\(\backslash\)Auth\(\backslash\)Middleware\(\backslash\)AuthenticateWithBasicAuth::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00059}00059         \textcolor{stringliteral}{'cache.headers'} => \(\backslash\)Illuminate\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)SetCacheHeaders::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00060}00060         \textcolor{stringliteral}{'can'} => \(\backslash\)Illuminate\(\backslash\)Auth\(\backslash\)Middleware\(\backslash\)Authorize::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00061}00061         \textcolor{stringliteral}{'guest'} => \(\backslash\)App\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)RedirectIfAuthenticated::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00062}00062         \textcolor{stringliteral}{'password.confirm'} => \(\backslash\)Illuminate\(\backslash\)Auth\(\backslash\)Middleware\(\backslash\)RequirePassword::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00063}00063         \textcolor{stringliteral}{'signed'} => \(\backslash\)Illuminate\(\backslash\)Routing\(\backslash\)Middleware\(\backslash\)ValidateSignature::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00064}00064         \textcolor{stringliteral}{'throttle'} => \(\backslash\)Illuminate\(\backslash\)Routing\(\backslash\)Middleware\(\backslash\)ThrottleRequests::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00065}00065         \textcolor{stringliteral}{'verified'} => \(\backslash\)Illuminate\(\backslash\)Auth\(\backslash\)Middleware\(\backslash\)EnsureEmailIsVerified::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00066}00066         \textcolor{stringliteral}{'check.role'} => \(\backslash\)App\(\backslash\)Http\(\backslash\)Middleware\(\backslash\)CheckRole::class,}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00067}00067     ];}
+\DoxyCodeLine{\Hypertarget{Http_2Kernel_8php_source_l00068}00068 \}}
+
+\end{DoxyCode}

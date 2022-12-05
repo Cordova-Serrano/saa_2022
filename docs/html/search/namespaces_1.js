@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['factories_0',['Factories',['../d8/dde/namespaceDatabase_1_1Factories.html',1,'Database']]],
-  ['seeders_1',['Seeders',['../d0/def/namespaceDatabase_1_1Seeders.html',1,'Database']]]
+  ['graph_5fapi_0',['graph_api',['../d6/d95/namespacegraph__api.html',1,'']]]
 ];

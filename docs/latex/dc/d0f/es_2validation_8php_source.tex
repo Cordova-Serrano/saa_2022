@@ -1,0 +1,169 @@
+\hypertarget{es_2validation_8php_source}{}\doxysection{validation.\+php}
+\label{es_2validation_8php_source}\index{resources/lang/es/validation.php@{resources/lang/es/validation.php}}
+\mbox{\hyperlink{es_2validation_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00003}\mbox{\hyperlink{es_2validation_8php_ae52dd2a4e79626b35aeeac3d135511c2}{00003}} \textcolor{keywordflow}{return} [}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00005}00005     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00006}00006 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00007}00007 \textcolor{comment}{    | Validación del idioma}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00008}00008 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00009}00009 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00010}00010 \textcolor{comment}{    | Las siguientes líneas de idioma contienen los mensajes de error predeterminados utilizados por}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00011}00011 \textcolor{comment}{    | La clase validadora. Algunas de estas reglas tienen múltiples versiones tales}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00012}00012 \textcolor{comment}{    | como las reglas de tamaño. Siéntase libre de modificar cada uno de estos mensajes aquí.}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00013}00013 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00014}00014 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00016}00016     \textcolor{stringliteral}{'accepted'} => \textcolor{stringliteral}{'El campo :attribute debe ser aceptado.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00017}00017     \textcolor{stringliteral}{'accepted\_if'} => \textcolor{stringliteral}{'El campo :attribute debe ser aceptado cuando :other es :value.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00018}00018     \textcolor{stringliteral}{'active\_url'} => \textcolor{stringliteral}{'El campo :attribute no es una URL válida.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00019}00019     \textcolor{stringliteral}{'after'} => \textcolor{stringliteral}{'El campo :attribute debe ser una fecha después de :date.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00020}00020     \textcolor{stringliteral}{'after\_or\_equal'} => \textcolor{stringliteral}{'El campo :attribute debe ser una fecha después o igual a :date.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00021}00021     \textcolor{stringliteral}{'alpha'} => \textcolor{stringliteral}{'El campo :attribute sólo puede contener letras.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00022}00022     \textcolor{stringliteral}{'alpha\_dash'} => \textcolor{stringliteral}{'El campo :attribute sólo puede contener letras, números y guiones.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00023}00023     \textcolor{stringliteral}{'alpha\_num'} => \textcolor{stringliteral}{'El campo :attribute sólo puede contener letras y números.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00024}00024     \textcolor{stringliteral}{'array'} => \textcolor{stringliteral}{'El campo :attribute debe ser un arreglo.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00025}00025     \textcolor{stringliteral}{'before'} => \textcolor{stringliteral}{'El campo :attribute debe ser una fecha antes de :date.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00026}00026     \textcolor{stringliteral}{'before\_or\_equal'} => \textcolor{stringliteral}{'El campo :attribute debe ser una fecha antes o igual a :date.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00027}00027     \textcolor{stringliteral}{'between'} => [}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00028}00028         \textcolor{stringliteral}{'numeric'} => \textcolor{stringliteral}{'El campo :attribute debe estar entre :min -\/ :max.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00029}00029         \textcolor{stringliteral}{'file'} => \textcolor{stringliteral}{'El campo :attribute debe estar entre :min -\/ :max kilobytes.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00030}00030         \textcolor{stringliteral}{'string'} => \textcolor{stringliteral}{'El campo :attribute debe estar entre :min -\/ :max caracteres.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00031}00031         \textcolor{stringliteral}{'array'} => \textcolor{stringliteral}{'El campo :attribute debe tener entre :min y :max elementos.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00032}00032     ],}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00033}00033     \textcolor{stringliteral}{'boolean'} => \textcolor{stringliteral}{'El campo :attribute debe ser verdadero o falso.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00034}00034     \textcolor{stringliteral}{'confirmed'} => \textcolor{stringliteral}{'El campo de confirmación de :attribute no coincide.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00035}00035     \textcolor{stringliteral}{'current\_password'} => \textcolor{stringliteral}{'La contraseña actual no es correcta'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00036}00036     \textcolor{stringliteral}{'date'} => \textcolor{stringliteral}{'El campo :attribute no es una fecha válida.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00037}00037     \textcolor{stringliteral}{'date\_equals'} => \textcolor{stringliteral}{'El campo :attribute debe ser una fecha igual a :date.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00038}00038     \textcolor{stringliteral}{'date\_format'} => \textcolor{stringliteral}{'El campo :attribute no corresponde con el formato :format.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00039}00039     \textcolor{stringliteral}{'declined'} => \textcolor{stringliteral}{'El campo :attribute debe marcar como rechazado.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00040}00040     \textcolor{stringliteral}{'declined\_if'} => \textcolor{stringliteral}{'El campo :attribute debe marcar como rechazado cuando :other es :value.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00041}00041     \textcolor{stringliteral}{'different'} => \textcolor{stringliteral}{'Los campos :attribute y :other deben ser diferentes.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00042}00042     \textcolor{stringliteral}{'digits'} => \textcolor{stringliteral}{'El campo :attribute debe ser de :digits dígitos.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00043}00043     \textcolor{stringliteral}{'digits\_between'} => \textcolor{stringliteral}{'El campo :attribute debe tener entre :min y :max dígitos.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00044}00044     \textcolor{stringliteral}{'dimensions'} => \textcolor{stringliteral}{'El campo :attribute no tiene una dimensión válida.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00045}00045     \textcolor{stringliteral}{'distinct'} => \textcolor{stringliteral}{'El campo :attribute tiene un valor duplicado.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00046}00046     \textcolor{stringliteral}{'email'} => \textcolor{stringliteral}{'El formato del :attribute no es válido.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00047}00047     \textcolor{stringliteral}{'ends\_with'} => \textcolor{stringliteral}{'El campo :attribute debe terminar con alguno de los valores: :values.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00048}00048     \textcolor{stringliteral}{'enum'} => \textcolor{stringliteral}{'El campo seleccionado en :attribute no es válido.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00049}00049     \textcolor{stringliteral}{'exists'} => \textcolor{stringliteral}{'El campo :attribute seleccionado no es válido.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00050}00050     \textcolor{stringliteral}{'file'} => \textcolor{stringliteral}{'El campo :attribute debe ser un archivo.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00051}00051     \textcolor{stringliteral}{'filled'} => \textcolor{stringliteral}{'El campo :attribute es requerido.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00052}00052     \textcolor{stringliteral}{'gt'} => [}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00053}00053         \textcolor{stringliteral}{'numeric'} => \textcolor{stringliteral}{'El campo :attribute debe ser mayor que :value.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00054}00054         \textcolor{stringliteral}{'file'} => \textcolor{stringliteral}{'El campo :attribute debe ser mayor que :value kilobytes.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00055}00055         \textcolor{stringliteral}{'string'} => \textcolor{stringliteral}{'El campo :attribute debe ser mayor que :value caracteres.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00056}00056         \textcolor{stringliteral}{'array'} => \textcolor{stringliteral}{'El campo :attribute puede tener hasta :value elementos.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00057}00057     ],}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00058}00058     \textcolor{stringliteral}{'gte'} => [}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00059}00059         \textcolor{stringliteral}{'numeric'} => \textcolor{stringliteral}{'El campo :attribute debe ser mayor o igual que :value.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00060}00060         \textcolor{stringliteral}{'file'} => \textcolor{stringliteral}{'El campo :attribute debe ser mayor o igual que :value kilobytes.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00061}00061         \textcolor{stringliteral}{'string'} => \textcolor{stringliteral}{'El campo :attribute debe ser mayor o igual que :value caracteres.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00062}00062         \textcolor{stringliteral}{'array'} => \textcolor{stringliteral}{'El campo :attribute puede tener :value elementos o más.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00063}00063     ],}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00064}00064     \textcolor{stringliteral}{'image'} => \textcolor{stringliteral}{'El campo :attribute debe ser una imagen.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00065}00065     \textcolor{stringliteral}{'in'} => \textcolor{stringliteral}{'El campo :attribute seleccionado no es válido.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00066}00066     \textcolor{stringliteral}{'in\_array'} => \textcolor{stringliteral}{'El campo :attribute no existe en :other.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00067}00067     \textcolor{stringliteral}{'integer'} => \textcolor{stringliteral}{'El campo :attribute debe ser un entero.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00068}00068     \textcolor{stringliteral}{'ip'} => \textcolor{stringliteral}{'El campo :attribute debe ser una dirección IP válida.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00069}00069     \textcolor{stringliteral}{'ipv4'} => \textcolor{stringliteral}{'El campo :attribute debe ser una dirección IPv4 válida.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00070}00070     \textcolor{stringliteral}{'ipv6'} => \textcolor{stringliteral}{'El campo :attribute debe ser una dirección IPv6 válida.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00071}00071     \textcolor{stringliteral}{'json'} => \textcolor{stringliteral}{'El campo :attribute debe ser una cadena JSON válida.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00072}00072     \textcolor{stringliteral}{'lt'} => [}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00073}00073         \textcolor{stringliteral}{'numeric'} => \textcolor{stringliteral}{'El campo :attribute debe ser menor que :max.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00074}00074         \textcolor{stringliteral}{'file'} => \textcolor{stringliteral}{'El campo :attribute debe ser menor que :max kilobytes.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00075}00075         \textcolor{stringliteral}{'string'} => \textcolor{stringliteral}{'El campo :attribute debe ser menor que :max caracteres.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00076}00076         \textcolor{stringliteral}{'array'} => \textcolor{stringliteral}{'El campo :attribute puede tener hasta :max elementos.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00077}00077     ],}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00078}00078     \textcolor{stringliteral}{'lte'} => [}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00079}00079         \textcolor{stringliteral}{'numeric'} => \textcolor{stringliteral}{'El campo :attribute debe ser menor o igual que :max.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00080}00080         \textcolor{stringliteral}{'file'} => \textcolor{stringliteral}{'El campo :attribute debe ser menor o igual que :max kilobytes.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00081}00081         \textcolor{stringliteral}{'string'} => \textcolor{stringliteral}{'El campo :attribute debe ser menor o igual que :max caracteres.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00082}00082         \textcolor{stringliteral}{'array'} => \textcolor{stringliteral}{'El campo :attribute no puede tener más que :max elementos.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00083}00083     ],}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00084}00084     \textcolor{stringliteral}{'mac\_address'} => \textcolor{stringliteral}{'El campo :attribute debe ser una dirección MAC válida.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00085}00085     \textcolor{stringliteral}{'max'} => [}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00086}00086         \textcolor{stringliteral}{'numeric'} => \textcolor{stringliteral}{'El campo :attribute debe ser menor que :max.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00087}00087         \textcolor{stringliteral}{'file'} => \textcolor{stringliteral}{'El campo :attribute debe ser menor que :max kilobytes.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00088}00088         \textcolor{stringliteral}{'string'} => \textcolor{stringliteral}{'El campo :attribute debe ser menor que :max caracteres.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00089}00089         \textcolor{stringliteral}{'array'} => \textcolor{stringliteral}{'El campo :attribute puede tener hasta :max elementos.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00090}00090     ],}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00091}00091     \textcolor{stringliteral}{'mimes'} => \textcolor{stringliteral}{'El campo :attribute debe ser un archivo de tipo: :values.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00092}00092     \textcolor{stringliteral}{'mimetypes'} => \textcolor{stringliteral}{'El campo :attribute debe ser un archivo de tipo: :values.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00093}00093     \textcolor{stringliteral}{'min'} => [}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00094}00094         \textcolor{stringliteral}{'numeric'} => \textcolor{stringliteral}{'El campo :attribute debe tener al menos :min.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00095}00095         \textcolor{stringliteral}{'file'} => \textcolor{stringliteral}{'El campo :attribute debe tener al menos :min kilobytes.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00096}00096         \textcolor{stringliteral}{'string'} => \textcolor{stringliteral}{'El campo :attribute debe tener al menos :min caracteres.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00097}00097         \textcolor{stringliteral}{'array'} => \textcolor{stringliteral}{'El campo :attribute debe tener al menos :min elementos.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00098}00098     ],}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00099}00099     \textcolor{stringliteral}{'multiple\_of'} => \textcolor{stringliteral}{'El campo :attribute debe ser un múltiplo de :value.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00100}00100     \textcolor{stringliteral}{'not\_in'} => \textcolor{stringliteral}{'El campo :attribute seleccionado es invalido.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00101}00101     \textcolor{stringliteral}{'not\_regex'} => \textcolor{stringliteral}{'El formato del campo :attribute no es válido.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00102}00102     \textcolor{stringliteral}{'numeric'} => \textcolor{stringliteral}{'El campo :attribute debe ser un número.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00103}00103     \textcolor{stringliteral}{'password'} => \textcolor{stringliteral}{'La contraseña es incorrecta.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00104}00104     \textcolor{stringliteral}{'present'} => \textcolor{stringliteral}{'El campo :attribute debe estar presente.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00105}00105     \textcolor{stringliteral}{'prohibited'} => \textcolor{stringliteral}{'El campo :attribute no está permitido.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00106}00106     \textcolor{stringliteral}{'prohibited\_if'} => \textcolor{stringliteral}{'El campo :attribute no está permitido cuando :other es :value.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00107}00107     \textcolor{stringliteral}{'prohibited\_unless'} => \textcolor{stringliteral}{'El campo :attribute no está permitido si :other no está en :values.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00108}00108     \textcolor{stringliteral}{'prohibits'} => \textcolor{stringliteral}{'El campo :attribute no permite que :other esté presente.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00109}00109     \textcolor{stringliteral}{'regex'} => \textcolor{stringliteral}{'El formato del campo :attribute no es válido.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00110}00110     \textcolor{stringliteral}{'required'} => \textcolor{stringliteral}{'El campo :attribute es requerido.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00111}00111     \textcolor{stringliteral}{'required\_array\_keys'} => \textcolor{stringliteral}{'El campo :attribute debe contener entradas para: :values.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00112}00112     \textcolor{stringliteral}{'required\_if'} => \textcolor{stringliteral}{'El campo :attribute es requerido cuando el campo :other es :value.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00113}00113     \textcolor{stringliteral}{'required\_unless'} => \textcolor{stringliteral}{'El campo :attribute es requerido a menos que :other esté presente en :values.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00114}00114     \textcolor{stringliteral}{'required\_with'} => \textcolor{stringliteral}{'El campo :attribute es requerido cuando :values está presente.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00115}00115     \textcolor{stringliteral}{'required\_with\_all'} => \textcolor{stringliteral}{'El campo :attribute es requerido cuando :values está presente.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00116}00116     \textcolor{stringliteral}{'required\_without'} => \textcolor{stringliteral}{'El campo :attribute es requerido cuando :values no está presente.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00117}00117     \textcolor{stringliteral}{'required\_without\_all'} => \textcolor{stringliteral}{'El campo :attribute es requerido cuando ningún :values está presente.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00118}00118     \textcolor{stringliteral}{'same'} => \textcolor{stringliteral}{'El campo :attribute y :other debe coincidir.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00119}00119     \textcolor{stringliteral}{'size'} => [}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00120}00120         \textcolor{stringliteral}{'numeric'} => \textcolor{stringliteral}{'El campo :attribute debe ser :size.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00121}00121         \textcolor{stringliteral}{'file'} => \textcolor{stringliteral}{'El campo :attribute debe tener :size kilobytes.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00122}00122         \textcolor{stringliteral}{'string'} => \textcolor{stringliteral}{'El campo :attribute debe tener :size caracteres.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00123}00123         \textcolor{stringliteral}{'array'} => \textcolor{stringliteral}{'El campo :attribute debe contener :size elementos.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00124}00124     ],}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00125}00125     \textcolor{stringliteral}{'starts\_with'} => \textcolor{stringliteral}{'El :attribute debe empezar con uno de los siguientes valores :values'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00126}00126     \textcolor{stringliteral}{'string'} => \textcolor{stringliteral}{'El campo :attribute debe ser una cadena.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00127}00127     \textcolor{stringliteral}{'timezone'} => \textcolor{stringliteral}{'El campo :attribute debe ser una zona válida.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00128}00128     \textcolor{stringliteral}{'unique'} => \textcolor{stringliteral}{'El campo :attribute ya ha sido tomado.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00129}00129     \textcolor{stringliteral}{'uploaded'} => \textcolor{stringliteral}{'El campo :attribute no ha podido ser cargado.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00130}00130     \textcolor{stringliteral}{'url'} => \textcolor{stringliteral}{'El formato de :attribute no es válido.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00131}00131     \textcolor{stringliteral}{'uuid'} => \textcolor{stringliteral}{'El :attribute debe ser un UUID válido.'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00133}00133     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00134}00134 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00135}00135 \textcolor{comment}{    | Validación del idioma personalizado}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00136}00136 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00137}00137 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00138}00138 \textcolor{comment}{    |   Aquí puede especificar mensajes de validación personalizados para atributos utilizando el}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00139}00139 \textcolor{comment}{    | convención "{}attribute.rule"{} para nombrar las líneas. Esto hace que sea rápido}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00140}00140 \textcolor{comment}{    | especifique una línea de idioma personalizada específica para una regla de atributo dada.}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00141}00141 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00142}00142 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00144}00144     \textcolor{stringliteral}{'custom'} => [}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00145}00145         \textcolor{stringliteral}{'attribute-\/name'} => [}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00146}00146             \textcolor{stringliteral}{'rule-\/name'} => \textcolor{stringliteral}{'custom-\/message'},}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00147}00147         ],}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00148}00148     ],}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00150}00150     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00151}00151 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00152}00152 \textcolor{comment}{    | Atributos de validación personalizados}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00153}00153 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00154}00154 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00155}00155 \textcolor{comment}{    | Las siguientes líneas de idioma se utilizan para intercambiar los marcadores de posición de atributo.}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00156}00156 \textcolor{comment}{    | con algo más fácil de leer, como la dirección de correo electrónico.}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00157}00157 \textcolor{comment}{    | de "{}email"{}. Esto simplemente nos ayuda a hacer los mensajes un poco más limpios.}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00158}00158 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00159}00159 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00161}00161     \textcolor{stringliteral}{'attributes'} => [],}
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{es_2validation_8php_source_l00163}00163 ];}
+
+\end{DoxyCode}

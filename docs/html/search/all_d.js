@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['kernel_0',['Kernel',['../d9/d47/classApp_1_1Console_1_1Kernel.html',1,'App\Console\Kernel'],['../d7/d20/classApp_1_1Http_1_1Kernel.html',1,'App\Http\Kernel']]],
-  ['kernel_2ephp_1',['Kernel.php',['../d6/d53/Console_2Kernel_8php.html',1,'(Global Namespace)'],['../d2/d08/Http_2Kernel_8php.html',1,'(Global Namespace)']]]
+  ['laravel_0',['Laravel',['../db/d99/namespaceLaravel.html',1,'']]],
+  ['loggedout_1',['loggedOut',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#a753621beb8b1f6dde02f9aa220eedb66',1,'Illuminate::Foundation::Auth']]],
+  ['logging_2ephp_2',['logging.php',['../dd/d45/logging_8php.html',1,'']]],
+  ['login_3',['login',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#ac93f5b7c4ea51eece6203533b4ecf17a',1,'Illuminate::Foundation::Auth']]],
+  ['logout_4',['logout',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#a44c4cf7e7c321b96b391dcb1db9adb72',1,'Illuminate::Foundation::Auth']]]
 ];

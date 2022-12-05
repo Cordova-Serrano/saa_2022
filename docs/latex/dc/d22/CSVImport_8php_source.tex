@@ -1,0 +1,124 @@
+\hypertarget{CSVImport_8php_source}{}\doxysection{CSVImport.\+php}
+\label{CSVImport_8php_source}\index{app/Imports/CSVImport.php@{app/Imports/CSVImport.php}}
+\mbox{\hyperlink{CSVImport_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00003}\mbox{\hyperlink{namespaceApp_1_1Imports}{00003}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Imports}{App\(\backslash\)Imports}};}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00005}00005 use \mbox{\hyperlink{classApp_1_1Models_1_1CSV}{App\(\backslash\)Models\(\backslash\)CSV}};}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00006}00006 use \mbox{\hyperlink{classApp_1_1Models_1_1Student}{App\(\backslash\)Models\(\backslash\)Student}};}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00007}00007 use \mbox{\hyperlink{classApp_1_1Models_1_1Data}{App\(\backslash\)Models\(\backslash\)Data}};}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00008}00008 use Maatwebsite\(\backslash\)Excel\(\backslash\)Concerns\(\backslash\)ToModel;}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00009}00009 use Maatwebsite\(\backslash\)Excel\(\backslash\)Concerns\(\backslash\)WithHeadingRow;}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00010}00010 use Maatwebsite\(\backslash\)Excel\(\backslash\)Concerns\(\backslash\)WithCalculatedFormulas;}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00011}00011 use Maatwebsite\(\backslash\)Excel\(\backslash\)Concerns\(\backslash\)Importable;}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00012}00012 use Maatwebsite\(\backslash\)Excel\(\backslash\)Concerns\(\backslash\)SkipsErrors;}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00013}00013 use Maatwebsite\(\backslash\)Excel\(\backslash\)Concerns\(\backslash\)SkipsFailures;}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00014}\mbox{\hyperlink{classApp_1_1Imports_1_1CSVImport}{00014}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Imports_1_1CSVImport}{CSVImport}} \textcolor{keyword}{implements}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00015}00015     ToModel,}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00016}00016     WithHeadingRow,}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00017}00017     WithCalculatedFormulas}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00018}00018 \{}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00019}00019     use Importable, SkipsErrors, SkipsFailures;}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00021}\mbox{\hyperlink{classApp_1_1Imports_1_1CSVImport_a4903c1070fdc14c95bcf9eeb1d7e70cc}{00021}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Imports_1_1CSVImport_a4903c1070fdc14c95bcf9eeb1d7e70cc}{model}}(array \$row)}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00023}00023         \textcolor{comment}{//dd(\$row);}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00024}00024         \textcolor{comment}{/*if (isset(Student::where('uaslp\_key', \$row['cve\_uaslp'])-\/>first()-\/>uaslp\_key)) \{}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00025}00025 \textcolor{comment}{            //Ya existe el alumno}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00026}00026 \textcolor{comment}{            //Actualizamos al alumno}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00027}00027 \textcolor{comment}{            Student::where('uaslp\_key', \$row['cve\_uaslp'])}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00028}00028 \textcolor{comment}{                -\/>update([}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00029}00029 \textcolor{comment}{                    "{}uaslp\_key"{} => \$row['cve\_uaslp'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00030}00030 \textcolor{comment}{                    "{}large\_key"{} => \$row['cve\_larga'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00031}00031 \textcolor{comment}{                    "{}generation"{} => \$row['generación'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00032}00032 \textcolor{comment}{                    "{}name"{} => \$row['nombre'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00033}00033 \textcolor{comment}{                    "{}career"{} => \$row['carrera'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00034}00034 \textcolor{comment}{                ]);}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00035}00035 \textcolor{comment}{            //Data alumno}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00036}00036 \textcolor{comment}{        \} else \{}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00037}00037 \textcolor{comment}{            //No existe el alumno en la Base de datos}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00038}00038 \textcolor{comment}{            //Creamos un nuevo alumno a la base de datos}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00039}00039 \textcolor{comment}{            return new Student([}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00040}00040 \textcolor{comment}{                "{}uaslp\_key"{} => \$row['cve\_uaslp'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00041}00041 \textcolor{comment}{                "{}large\_key"{} => \$row['cve\_larga'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00042}00042 \textcolor{comment}{                "{}generation"{} => \$row['generación'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00043}00043 \textcolor{comment}{                "{}name"{} => \$row['nombre'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00044}00044 \textcolor{comment}{                "{}career"{} => \$row['carrera'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00045}00045 \textcolor{comment}{            ]);}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00046}00046 \textcolor{comment}{        \}}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00047}00047 \textcolor{comment}{        //Continuamos con su informacion}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00048}00048 \textcolor{comment}{        new Data([}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00049}00049 \textcolor{comment}{            "{}status"{} => \$row['situación'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00050}00050 \textcolor{comment}{            "{}creds\_remaining"{} => \$row['cred\_por\_cursar'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00051}00051 \textcolor{comment}{            "{}creds\_per\_semester"{} => \$row['cred\_por\_semestre'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00052}00052 \textcolor{comment}{            "{}semesters\_completed"{} => \$row['semestres\_cursados'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00053}00053 \textcolor{comment}{            "{}percentage\_progress"{} => \$row['porcentaje\_avance'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00054}00054 \textcolor{comment}{            "{}general\_average"{} => \$row['promedio\_general'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00055}00055 \textcolor{comment}{            "{}general\_performance"{} => \$row['rendimiento\_general'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00056}00056 \textcolor{comment}{            "{}app\_average"{} => \$row['promedio\_aprobatorio'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00057}00057 \textcolor{comment}{            "{}subjects\_approved"{} => \$row['materias\_aprobadas'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00058}00058 \textcolor{comment}{            "{}subjects\_failed"{} => \$row['materias\_reprobadas'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00059}00059 \textcolor{comment}{        ]);*/}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00060}00060         \$csv = \textcolor{keyword}{new} \mbox{\hyperlink{classApp_1_1Models_1_1CSV}{CSV}}();}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00061}00061         \$csv-\/>uaslp\_key = \$row[\textcolor{stringliteral}{'cve\_uaslp'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00062}00062         \$csv-\/>large\_key = \$row[\textcolor{stringliteral}{'cve\_larga'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00063}00063         \$csv-\/>generation = \$row[\textcolor{stringliteral}{'generacion'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00064}00064         \$csv-\/>name = \$row[\textcolor{stringliteral}{'nombre'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00065}00065         \$csv-\/>career = \$row[\textcolor{stringliteral}{'carrera'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00066}00066         \$csv-\/>status = \$row[\textcolor{stringliteral}{'situacion'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00067}00067         \$csv-\/>creds\_remaining = \$row[\textcolor{stringliteral}{'cred\_por\_cursar'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00068}00068         \$csv-\/>creds\_per\_semester = \$row[\textcolor{stringliteral}{'cred\_por\_semestre'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00069}00069         \$csv-\/>semesters\_completed = \$row[\textcolor{stringliteral}{'semestres\_cursados'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00070}00070         \$csv-\/>percentage\_progress = \$row[\textcolor{stringliteral}{'porcentaje\_avance'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00071}00071         \$csv-\/>general\_average = \$row[\textcolor{stringliteral}{'rendimiento\_general'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00072}00072         \$csv-\/>general\_performance = \$row[\textcolor{stringliteral}{'rendimiento\_general'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00073}00073         \$csv-\/>app\_average = \$row[\textcolor{stringliteral}{'promedio\_aprobatorio'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00074}00074         \$csv-\/>subjects\_approved = \$row[\textcolor{stringliteral}{'materias\_aprobadas'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00075}00075         \$csv-\/>subjects\_failed = \$row[\textcolor{stringliteral}{'materias\_reprobadas'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00076}00076         \$csv-\/>large\_key = \$row[\textcolor{stringliteral}{'cve\_larga'}];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00077}00077         \textcolor{comment}{//dd(\$csv);}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00078}00078         \textcolor{keywordflow}{return} \$csv;}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00080}00080         \textcolor{comment}{/*return new CSV([}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00081}00081 \textcolor{comment}{            "{}uaslp\_key"{} => \$row['cve\_uaslp'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00082}00082 \textcolor{comment}{            "{}large\_key"{} => \$row['cve\_larga'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00083}00083 \textcolor{comment}{            "{}generation"{} => \$row['generacion'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00084}00084 \textcolor{comment}{            "{}name"{} => \$row['nombre'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00085}00085 \textcolor{comment}{            "{}career"{} => \$row['carrera'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00086}00086 \textcolor{comment}{            "{}status"{} => \$row['situacion'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00087}00087 \textcolor{comment}{            "{}creds\_remaining"{} => \$row['cred\_por\_cursar'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00088}00088 \textcolor{comment}{            "{}creds\_per\_semester"{} => \$row[''],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00089}00089 \textcolor{comment}{            "{}semesters\_completed"{} => \$row['semestres\_cursados'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00090}00090 \textcolor{comment}{            "{}percentage\_progress"{} => \$row['porcentaje\_avance'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00091}00091 \textcolor{comment}{            "{}general\_average"{} => \$row['promedio\_general'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00092}00092 \textcolor{comment}{            "{}general\_performance"{} => \$row['rendimiento\_general'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00093}00093 \textcolor{comment}{            "{}app\_average"{} => \$row['promedio\_aprobatorio'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00094}00094 \textcolor{comment}{            "{}subjects\_approved"{} => \$row['materias\_aprobadas'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00095}00095 \textcolor{comment}{            "{}subjects\_failed"{} => \$row['materias\_reprobadas'],}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00096}00096 \textcolor{comment}{        ]);*/}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00097}00097     \}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00099}\mbox{\hyperlink{classApp_1_1Imports_1_1CSVImport_aa8440defff7bfd889fb94d2d5c693d88}{00099}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Imports_1_1CSVImport_aa8440defff7bfd889fb94d2d5c693d88}{rules}}(): array}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00100}00100     \{}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00101}00101         \textcolor{keywordflow}{return} [}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00102}00102             \textcolor{stringliteral}{'*.codigo'}              => [\textcolor{stringliteral}{'bail'}, \textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'min:1'}, \textcolor{stringliteral}{'max:20'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00103}00103             \textcolor{stringliteral}{'*.nombre\_comercial'}    => [\textcolor{stringliteral}{'bail'}, \textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'max:255'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00104}00104             \textcolor{stringliteral}{'*.nombre\_generico'}     => [\textcolor{stringliteral}{'bail'}, \textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'max:255'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00105}00105             \textcolor{stringliteral}{'*.presentacion'}        => [\textcolor{stringliteral}{'bail'}, \textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'numeric'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00106}00106             \textcolor{stringliteral}{'*.unidades'}            => [\textcolor{stringliteral}{'bail'}, \textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'numeric'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00107}00107             \textcolor{stringliteral}{'*.precio\_de\_compra'}    => [\textcolor{stringliteral}{'bail'}, \textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'numeric'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00108}00108             \textcolor{stringliteral}{'*.precio\_de\_venta'}     => [\textcolor{stringliteral}{'bail'}, \textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'numeric'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00109}00109             \textcolor{stringliteral}{'*.descuento'}           => [\textcolor{stringliteral}{'bail'}, \textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'numeric'}, \textcolor{stringliteral}{'between:0,100'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00110}00110             \textcolor{stringliteral}{'*.minimo'}              => [\textcolor{stringliteral}{'bail'}, \textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'numeric'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00111}00111             \textcolor{stringliteral}{'*.maximo'}              => [\textcolor{stringliteral}{'bail'}, \textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'numeric'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00112}00112             \textcolor{stringliteral}{'*.punto\_de\_reorden'}    => [\textcolor{stringliteral}{'bail'}, \textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'numeric'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00113}00113             \textcolor{stringliteral}{'*.expira'}              => [\textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'numeric'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00114}00114             \textcolor{stringliteral}{'*.aplica\_iva'}          => [\textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'numeric'}],}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00115}00115             \textcolor{stringliteral}{'*.clasificacion'}       => [\textcolor{stringliteral}{'bail'}, \textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'exists:classifications,name'}]}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00116}00116         ];}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00117}00117     \}}
+\DoxyCodeLine{\Hypertarget{CSVImport_8php_source_l00118}00118 \}}
+
+\end{DoxyCode}

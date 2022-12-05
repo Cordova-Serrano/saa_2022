@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['model_0',['model',['../d5/d1b/classApp_1_1Imports_1_1CSVImport.html#a4903c1070fdc14c95bcf9eeb1d7e70cc',1,'App::Imports::CSVImport']]]
+  ['validatelogin_0',['validateLogin',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#a64afb1fb49e325a4928f0196d3455fa2',1,'Illuminate::Foundation::Auth']]]
 ];

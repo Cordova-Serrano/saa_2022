@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['user_2ephp_0',['User.php',['../db/da2/User_8php.html',1,'']]],
-  ['usercontroller_2ephp_1',['UserController.php',['../d9/d07/UserController_8php.html',1,'']]],
-  ['userfactory_2ephp_2',['UserFactory.php',['../d9/d9d/UserFactory_8php.html',1,'']]],
-  ['userseeder_2ephp_3',['UserSeeder.php',['../df/d58/UserSeeder_8php.html',1,'']]],
-  ['usersindexcopy_2eblade_2ephp_4',['usersIndexCopy.blade.php',['../d9/d4b/usersIndexCopy_8blade_8php.html',1,'']]]
+  ['validation_2ephp_0',['validation.php',['../d1/dfd/en_2validation_8php.html',1,'(Global Namespace)'],['../dc/d0f/es_2validation_8php.html',1,'(Global Namespace)']]],
+  ['verificationcontroller_2ephp_1',['VerificationController.php',['../d5/d81/VerificationController_8php.html',1,'']]],
+  ['verify_2eblade_2ephp_2',['verify.blade.php',['../de/d9e/verify_8blade_8php.html',1,'']]],
+  ['verifycsrftoken_2ephp_3',['VerifyCsrfToken.php',['../dc/d1d/VerifyCsrfToken_8php.html',1,'']]],
+  ['view_2ephp_4',['view.php',['../db/de1/view_8php.html',1,'']]]
 ];

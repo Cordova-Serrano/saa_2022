@@ -1,0 +1,217 @@
+\hypertarget{users_2index_8blade_8php_source}{}\doxysection{index.\+blade.\+php}
+\label{users_2index_8blade_8php_source}\index{resources/views/users/index.blade.php@{resources/views/users/index.blade.php}}
+\mbox{\hyperlink{users_2index_8blade_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00001}00001 @extends (\textcolor{stringliteral}{'layout'})}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00003}00003 @section (\textcolor{stringliteral}{'title'}, \textcolor{stringliteral}{'Seguimiento de Alumnos del Área | Usuarios'})}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00005}00005 @section (\textcolor{stringliteral}{'styles'})}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00006}00006 <link href=\textcolor{stringliteral}{"{}\{\{ asset('plugins/datatables-\/bs4/css/dataTables.bootstrap4.css') \}\}"{}} rel=\textcolor{stringliteral}{"{}stylesheet"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00007}00007 <link href=\textcolor{stringliteral}{"{}\{\{ asset('plugins/datatables-\/responsive/css/responsive.bootstrap4.css') \}\}"{}} rel=\textcolor{stringliteral}{"{}stylesheet"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00008}00008 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00010}00010 @section (\textcolor{stringliteral}{'content'})}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00011}00011 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}row"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00012}00012     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}col-\/12"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00013}00013         @\textcolor{keywordflow}{if} (\$message = session(\textcolor{stringliteral}{'success'}))}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00014}00014         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert alert-\/success alert-\/dismissible text-\/justify"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}success-\/alert"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00015}00015             <button aria-\/hidden=\textcolor{stringliteral}{"{}true"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}close"{}} data-\/dismiss=\textcolor{stringliteral}{"{}alert"{}} type=\textcolor{stringliteral}{"{}button"{}}>\&times;</button>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00016}00016             <h6><i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}icon fal fa-\/check-\/circle"{}}></i>¡Realizado!</h6>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00017}00017             \{\{ \$message \}\}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00018}00018         </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00019}00019         \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00020}00020         @\textcolor{keywordflow}{if} (\$message = session(\textcolor{stringliteral}{'warning'}))}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00021}00021         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert alert-\/warning alert-\/dismissible text-\/justify"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}warning-\/alert"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00022}00022             <button aria-\/hidden=\textcolor{stringliteral}{"{}true"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}close"{}} data-\/dismiss=\textcolor{stringliteral}{"{}alert"{}} type=\textcolor{stringliteral}{"{}button"{}}>\&times;</button>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00023}00023             <h6><i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}icon fal fa-\/check-\/circle"{}}></i>¡Advertencia!</h6>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00024}00024             \{\{ \$message \}\}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00025}00025         </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00026}00026         \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00027}00027         @\textcolor{keywordflow}{if} (\$errors-\/>any())}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00028}00028         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert alert-\/danger alert-\/dismissible text-\/justify"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}error-\/alert"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00029}00029             <button aria-\/hidden=\textcolor{stringliteral}{"{}true"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}close"{}} data-\/dismiss=\textcolor{stringliteral}{"{}alert"{}} type=\textcolor{stringliteral}{"{}button"{}}>\&times;</button>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00030}00030             <h6><i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}icon fal fa-\/times-\/circle"{}}></i>¡Error!</h6>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00031}00031             @\textcolor{keywordflow}{foreach} (\$errors-\/>all() as \$error)}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00032}00032             \{\{ \$error \}\}<br>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00033}00033             \textcolor{keyword}{@end}\textcolor{keywordflow}{foreach}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00034}00034         </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00035}00035         \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00036}00036         @\textcolor{keywordflow}{if} (\$message = Session::get(\textcolor{stringliteral}{'error'}))}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00037}00037                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert alert-\/danger alert-\/dismissible text-\/justify"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}successMessage"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00038}00038                     <button aria-\/hidden=\textcolor{stringliteral}{"{}true"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}close"{}} data-\/dismiss=\textcolor{stringliteral}{"{}alert"{}} type=\textcolor{stringliteral}{"{}button"{}}>\&times;</button>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00039}00039                     <h6><i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}icon fal fa-\/times-\/circle"{}}></i>¡Error!</h6>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00040}00040                     \{\{ \$message \}\}<br>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00041}00041                 </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00042}00042         \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00043}00043         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card card-\/outline card-\/reflex-\/blue"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00044}00044             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}overlay"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}overlay"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00045}00045                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/2x fa-\/sync fa-\/spin"{}}></i>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00046}00046             </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00047}00047             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/header"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00048}00048                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}d-\/flex flex-\/wrap justify-\/content-\/between"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00049}00049                     <h3 \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/title my-\/auto"{}}>Usuarios</h3>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00050}00050                     <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/sm btn-\/success"{}} href=\textcolor{stringliteral}{"{}\{\{ route('users.create') \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00051}00051                         <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/plus-\/circle mr-\/2"{}}></i>Nuevo}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00052}00052                     </a>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00053}00053                 </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00054}00054             </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00055}00055             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/body"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00056}00056                 <table \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}table table-\/valign-\/middle table-\/hover"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}data-\/table"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00057}00057                     <thead \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}saa-\/table-\/header"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00058}00058                         <tr>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00059}00059                             <th>\#</th>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00060}00060                             <th>Nombre</th>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00061}00061                             <th>Email</th>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00062}00062                             <th>Username</th>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00063}00063                             <th></th>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00064}00064                         </tr>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00065}00065                     </thead>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00066}00066                     <tbody>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00067}00067                     </tbody>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00068}00068                 </table>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00069}00069             </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00070}00070         </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00071}00071     </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00072}00072 </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00074}00074 <div aria-\/hidden=\textcolor{stringliteral}{"{}true"{}} aria-\/labelledby=\textcolor{stringliteral}{"{}delete-\/record"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal fade"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}delete-\/modal"{}} data-\/backdrop=\textcolor{stringliteral}{"{}static"{}} data-\/keyboard=\textcolor{stringliteral}{"{}false"{}} role=\textcolor{stringliteral}{"{}dialog"{}} tabindex=\textcolor{stringliteral}{"{}-\/1"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00075}00075     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/dialog modal-\/dialog-\/centered"{}} role=\textcolor{stringliteral}{"{}document"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00076}00076         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/content"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00077}00077             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/header bg-\/danger"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00078}00078                 <h4 \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/title"{}}>Eliminar Usuario</h4>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00079}00079                 <button aria-\/label=\textcolor{stringliteral}{"{}Close"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}close"{}} data-\/dismiss=\textcolor{stringliteral}{"{}modal"{}} title=\textcolor{stringliteral}{"{}Cerrar"{}} type=\textcolor{stringliteral}{"{}button"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00080}00080                     <span aria-\/hidden=\textcolor{stringliteral}{"{}true"{}}>\&times;</span>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00081}00081                 </button>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00082}00082             </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00083}00083             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/body"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00084}00084                 <p \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}text-\/justify"{}}>¿Está seguro que desea eliminar al usuario?</p>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00085}00085             </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00086}00086             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/footer justify-\/content-\/between"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00087}00087                 <button \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/sm btn-\/secondary"{}} data-\/dismiss=\textcolor{stringliteral}{"{}modal"{}} type=\textcolor{stringliteral}{"{}button"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00088}00088                     <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/times-\/circle mr-\/2"{}}></i>Cancelar}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00089}00089                 </button>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00090}00090                 <form autocomplete=\textcolor{stringliteral}{"{}off"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}delete-\/form"{}} method=\textcolor{stringliteral}{"{}post"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00091}00091                     @csrf}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00092}00092                     @method (\textcolor{stringliteral}{'DELETE'})}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00093}00093                     <button \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/sm btn-\/danger"{}} type=\textcolor{stringliteral}{"{}submit"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00094}00094                         <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/trash-\/alt mr-\/2"{}}></i>Eliminar}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00095}00095                     </button>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00096}00096                 </form>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00097}00097             </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00098}00098         </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00099}00099     </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00100}00100 </div>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00101}00101 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00103}00103 @section (\textcolor{stringliteral}{'plugins'})}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00104}00104 <!-\/-\/ Form Validations -\/-\/>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00105}00105 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/jquery-\/validation/jquery.validate.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00106}00106 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/jquery-\/validation/localization/messages\_es.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00107}00107 <!-\/-\/ Datatables -\/-\/>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00108}00108 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/datatables/jquery.dataTables.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00109}00109 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/datatables-\/bs4/js/dataTables.bootstrap4.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00110}00110 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/datatables-\/responsive/js/dataTables.responsive.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00111}00111 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/datatables-\/responsive/js/responsive.bootstrap4.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00112}00112 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00114}00114 @section (\textcolor{stringliteral}{'scripts'})}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00115}00115 <script type=\textcolor{stringliteral}{"{}text/javascript"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00116}00116     let dt = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00118}00118     \$(\textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00119}00119         dt = \$(\textcolor{stringliteral}{'\#data-\/table'}).DataTable(\{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00120}00120             pageLength: 10,}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00121}00121             autoWidth: \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00122}00122             processing: \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00123}00123             responsive: \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00124}00124             searching: \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00125}00125             lengthChange: \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00126}00126             language: \{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00127}00127                 url: \textcolor{stringliteral}{"{}\{\{ asset('plugins/datatables/jquery.dataTables.spanish.json') \}\}"{}}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00128}00128             \},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00129}00129             ajax: \textcolor{stringliteral}{"{}\{\{ route('users.index') \}\}"{}},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00130}00130             columnDefs: [\{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00131}00131                     className: \textcolor{stringliteral}{'text-\/center'},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00132}00132                     targets: [0, 1, 2, 3,4]}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00133}00133                 \},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00134}00134                 \{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00135}00135                     orderable: \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00136}00136                     searchable: \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00137}00137                     targets: 4}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00138}00138                 \}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00139}00139             ],}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00140}00140             columns: [\{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00141}00141                     data: \textcolor{stringliteral}{'id'}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00142}00142                 \},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00143}00143                 \{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00144}00144                     data: \textcolor{stringliteral}{'name'}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00145}00145                 \},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00146}00146                 \{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00147}00147                     data: \textcolor{stringliteral}{'email'}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00148}00148                 \},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00149}00149                 \{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00150}00150                     data: \textcolor{stringliteral}{'username'}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00151}00151                 \},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00152}00152                 \{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00153}00153                     className: \textcolor{stringliteral}{'text-\/center'},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00154}00154                     defaultContent: \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00155}00155                     createdCell: \textcolor{keyword}{function}(td, cellData, rowData, row, col, data, id, meta) \{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00156}00156                         \$(td).prepend(}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00157}00157                             `<div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn-\/group"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00158}00158                                 <button type=\textcolor{stringliteral}{"{}button"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}update btn btn-\/sm btn-\/warning edit-\/user mr-\/1 update"{}} title=\textcolor{stringliteral}{"{}Editar"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00159}00159                                     <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/pencil-\/alt"{}}></i>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00160}00160                                 </button>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00161}00161                                 <button type=\textcolor{stringliteral}{"{}button"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/sm btn-\/danger delete-\/user"{}} title=\textcolor{stringliteral}{"{}Eliminar"{}}>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00162}00162                                     <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/trash-\/alt"{}}></i>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00163}00163                                 </button>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00164}00164                             </div>`}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00165}00165                         );}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00166}00166                         \$(td).addClass(data);}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00167}00167                     \}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00168}00168                 \}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00169}00169             ],}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00170}00170             drawCallback: () => \{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00171}00171                 \$(\textcolor{stringliteral}{'.edit-\/user'}).on(\textcolor{stringliteral}{'click'}, (e) => \{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00172}00172                     let user = dt.row(\$(e.currentTarget).closest(\textcolor{stringliteral}{'tr'})).data();}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00173}00173                     console.log(user);}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00174}00174                     editRecord(user);}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00175}00175                 \});}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00178}00178                 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00179}00179                 \$(\textcolor{stringliteral}{'.delete-\/user'}).on(\textcolor{stringliteral}{'click'}, (e) => \{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00180}00180                     let user = dt.row(\$(e.currentTarget).closest(\textcolor{stringliteral}{'tr'})).data();}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00181}00181                     deleteRecord(user);}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00182}00182                 \});}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00183}00183             \}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00184}00184         \});}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00186}00186         \$(\textcolor{stringliteral}{'\#overlay'}).hide();}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00187}00187     \});}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00189}00189     \textcolor{keyword}{function} editRecord(user) \{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00190}00190         let route = \textcolor{stringliteral}{"{}\{\{ route('users.edit', ['user' => 'id']) \}\}"{}};}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00191}00191         route = route.replace(\textcolor{stringliteral}{'id'}, user.id);}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00193}00193         window.location.href = route;}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00194}00194     \}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00196}00196     \textcolor{keyword}{function} deleteRecord(user)\{}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00197}00197         let route = \textcolor{stringliteral}{"{}\{\{ route('users.destroy', ['user' => 'id']) \}\}"{}};}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00198}00198         route = route.replace(\textcolor{stringliteral}{'id'}, user.id);}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00199}00199 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00200}00200         let modal = \$(\textcolor{stringliteral}{'\#delete-\/modal'});}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00201}00201 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00202}00202         let form = modal.find(\textcolor{stringliteral}{'form:first'});}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00203}00203         form.attr(\textcolor{stringliteral}{'action'}, route);}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00204}00204 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00205}00205         modal.modal(\textcolor{stringliteral}{'show'});}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00206}00206     \}}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00207}00207 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00208}00208     setTimeout(\textcolor{keyword}{function}() \{\$(\textcolor{stringliteral}{'\#successMessage'}).fadeOut(\textcolor{stringliteral}{'fast'});\}, 3000);}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00209}00209 }
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00210}00210 </script>}
+\DoxyCodeLine{\Hypertarget{users_2index_8blade_8php_source_l00211}00211 \textcolor{keyword}{@end}section}
+
+\end{DoxyCode}

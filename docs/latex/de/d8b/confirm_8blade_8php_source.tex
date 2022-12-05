@@ -1,0 +1,55 @@
+\hypertarget{confirm_8blade_8php_source}{}\doxysection{confirm.\+blade.\+php}
+\label{confirm_8blade_8php_source}\index{resources/views/auth/passwords/confirm.blade.php@{resources/views/auth/passwords/confirm.blade.php}}
+\mbox{\hyperlink{confirm_8blade_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00001}00001 @extends(\textcolor{stringliteral}{'layouts.app'})}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00003}00003 @section(\textcolor{stringliteral}{'content'})}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00004}00004 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}container"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00005}00005     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}justify-\/content-\/center"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00006}00006         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}col-\/md-\/8"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00007}00007             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00008}00008                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/header"{}}>\{\{ \_\_(\textcolor{stringliteral}{'Confirma contraseña'}) \}\}</div>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00010}00010                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/body"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00011}00011                     \{\{ \_\_(\textcolor{stringliteral}{'Por favor confirma tu contraseña antes de continuar.'}) \}\}}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00013}00013                     <form method=\textcolor{stringliteral}{"{}POST"{}} action=\textcolor{stringliteral}{"{}\{\{ route('password.confirm') \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00014}00014                         @csrf}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00016}00016                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}row mb-\/3"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00017}00017                             <label \textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}password"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}col-\/md-\/4 col-\/form-\/label text-\/md-\/end"{}}>\{\{ \_\_(\textcolor{stringliteral}{'Password'}) \}\}</label>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00019}00019                             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}col-\/md-\/6"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00020}00020                                 <input \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}password"{}} type=\textcolor{stringliteral}{"{}password"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control @error('password') is-\/invalid @enderror"{}} name=\textcolor{stringliteral}{"{}password"{}} required autocomplete=\textcolor{stringliteral}{"{}current-\/password"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00022}00022                                 @error(\textcolor{stringliteral}{'password'})}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00023}00023                                 <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}invalid-\/feedback"{}} role=\textcolor{stringliteral}{"{}alert"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00024}00024                                     <strong>\{\{ \$message \}\}</strong>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00025}00025                                 </span>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00026}00026                                 \textcolor{keyword}{@end}error}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00027}00027                             </div>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00028}00028                         </div>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00030}00030                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}row mb-\/0"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00031}00031                             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}col-\/md-\/8 offset-\/md-\/4"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00032}00032                                 <button type=\textcolor{stringliteral}{"{}submit"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/primary"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00033}00033                                     \{\{ \_\_(\textcolor{stringliteral}{'Confirma tu contraseña'}) \}\}}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00034}00034                                 </button>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00036}00036                                 @\textcolor{keywordflow}{if} (Route::has(\textcolor{stringliteral}{'password.request'}))}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00037}00037                                 <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/link"{}} href=\textcolor{stringliteral}{"{}\{\{ route('password.request') \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00038}00038                                     \{\{ \_\_(\textcolor{stringliteral}{'¿Olvidaste tu contraseña?'}) \}\}}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00039}00039                                 </a>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00040}00040                                 \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00041}00041                             </div>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00042}00042                         </div>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00043}00043                     </form>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00044}00044                 </div>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00045}00045             </div>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00046}00046         </div>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00047}00047     </div>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00048}00048 </div>}
+\DoxyCodeLine{\Hypertarget{confirm_8blade_8php_source_l00049}00049 \textcolor{keyword}{@end}section}
+
+\end{DoxyCode}

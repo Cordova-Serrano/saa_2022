@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['broadcastserviceprovider_0',['BroadcastServiceProvider',['../d1/d05/classApp_1_1Providers_1_1BroadcastServiceProvider.html',1,'App::Providers']]]
+  ['databaseseeder_0',['DatabaseSeeder',['../d8/d63/classDatabase_1_1Seeders_1_1DatabaseSeeder.html',1,'Database::Seeders']]]
 ];

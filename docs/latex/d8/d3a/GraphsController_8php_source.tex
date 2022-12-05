@@ -1,0 +1,78 @@
+\hypertarget{GraphsController_8php_source}{}\doxysection{Graphs\+Controller.\+php}
+\label{GraphsController_8php_source}\index{app/Http/Controllers/GraphsController.php@{app/Http/Controllers/GraphsController.php}}
+\mbox{\hyperlink{GraphsController_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Http_1_1Controllers}{App\(\backslash\)Http\(\backslash\)Controllers}};}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00005}00005 use Illuminate\(\backslash\)Http\(\backslash\)Request;}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00006}00006 use \mbox{\hyperlink{classApp_1_1Models_1_1Student}{App\(\backslash\)Models\(\backslash\)Student}};}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00007}00007 use \mbox{\hyperlink{classApp_1_1Models_1_1Semester}{App\(\backslash\)Models\(\backslash\)Semester}};}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00008}00008 use \mbox{\hyperlink{classApp_1_1Models_1_1Career}{App\(\backslash\)Models\(\backslash\)Career}};}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00010}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController}{00010}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController}{GraphsController}} \textcolor{keyword}{extends} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Controller}{Controller}}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00017}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_ae86fce1a07046353add434bcf14e610f}{00017}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_ae86fce1a07046353add434bcf14e610f}{\_\_construct}}()}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00019}00019         \$this-\/>middleware(\textcolor{stringliteral}{'auth'});}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00021}00021     }
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00022}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_a5120a83163dfc1c70b8cd6c6e0ca8642}{00022}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_a5120a83163dfc1c70b8cd6c6e0ca8642}{index}}(Request \$request)}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00023}00023     \{}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00024}00024         \textcolor{keywordflow}{if} (\$request-\/>ajax()) \{}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00025}00025             \$model = Student::join(\textcolor{stringliteral}{'student\_data\_semester'}, \textcolor{stringliteral}{'student\_data\_semester.student\_id'}, \textcolor{charliteral}{'='}, \textcolor{stringliteral}{'students.id'})}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00026}00026                 -\/>join(\textcolor{stringliteral}{'data'}, \textcolor{stringliteral}{'data.id'}, \textcolor{charliteral}{'='}, \textcolor{stringliteral}{'student\_data\_semester.data\_id'})}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00027}00027                 -\/>get();}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00029}00029             \textcolor{keywordflow}{return} DataTables::of(\$model)-\/>toJson();}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00030}00030         \}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00031}00031         \textcolor{comment}{//Recuperamos los semestres y carreras}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00032}00032         \$semesters = Semester::get();}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00033}00033         \$careers = Career::get();}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00034}00034         \$gen = Student::orderBy(\textcolor{stringliteral}{'generation'}, \textcolor{stringliteral}{'asc'})-\/>select(\textcolor{stringliteral}{'generation'})-\/>distinct()-\/>get();}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00035}00035         \textcolor{comment}{//\$generation = DataTables::of(\$gen)-\/>toJson();}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00036}00036         \textcolor{keywordflow}{return} view(\textcolor{stringliteral}{'graphs.index'}, compact(\textcolor{stringliteral}{'semesters'}, \textcolor{stringliteral}{'careers'},\textcolor{stringliteral}{'gen'}));}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00039}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_a747d73c9c8d6bd5f090837c63c496eef}{00039}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_a747d73c9c8d6bd5f090837c63c496eef}{loadSemester}}(Request \$request)}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00040}00040     \{}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00041}00041         \textcolor{keywordflow}{if} (\$request-\/>ajax()) \{}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00042}00042             \$data\_semester = Student::join(\textcolor{stringliteral}{'student\_data\_semester'}, \textcolor{stringliteral}{'student\_data\_semester.student\_id'}, \textcolor{charliteral}{'='}, \textcolor{stringliteral}{'students.id'})}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00043}00043                 -\/>where(\textcolor{stringliteral}{'student\_data\_semester.semester\_id'}, \textcolor{charliteral}{'='}, \$request-\/>semester\_id)}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00044}00044                 -\/>join(\textcolor{stringliteral}{'data'}, \textcolor{stringliteral}{'data.id'}, \textcolor{charliteral}{'='}, \textcolor{stringliteral}{'student\_data\_semester.data\_id'})-\/>get();}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00045}00045             \textcolor{keywordflow}{return} \$data\_semester;}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00046}00046         \}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00053}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_a7b6d357965c5d9519833fa06e0f7c4f1}{00053}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_a7b6d357965c5d9519833fa06e0f7c4f1}{create}}()}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00054}00054     \{}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00055}00055         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00056}00056     \}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00064}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_af49600266fc6004b00246f6c698209ed}{00064}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_af49600266fc6004b00246f6c698209ed}{store}}(Request \$request)}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00065}00065     \{}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00066}00066         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00067}00067     \}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00075}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_a1ca5893db77e5128851a9ad64417b69e}{00075}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_a1ca5893db77e5128851a9ad64417b69e}{show}}(\$id)}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00076}00076     \{}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00077}00077         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00078}00078     \}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00086}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_a0df06bec45fdb4b54eb00b13192a8b21}{00086}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_a0df06bec45fdb4b54eb00b13192a8b21}{edit}}(\$id)}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00087}00087     \{}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00088}00088         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00089}00089     \}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00098}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_ae7d043071a050cb0df174017140637f9}{00098}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_ae7d043071a050cb0df174017140637f9}{update}}(Request \$request, \$id)}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00099}00099     \{}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00100}00100         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00101}00101     \}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00109}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_a43b415aa586c54a2429974c537957b44}{00109}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1GraphsController_a43b415aa586c54a2429974c537957b44}{destroy}}(\$id)}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00110}00110     \{}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00111}00111         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00112}00112     \}}
+\DoxyCodeLine{\Hypertarget{GraphsController_8php_source_l00113}00113 \}}
+
+\end{DoxyCode}

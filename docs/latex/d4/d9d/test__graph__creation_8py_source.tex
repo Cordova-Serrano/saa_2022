@@ -1,0 +1,84 @@
+\hypertarget{test__graph__creation_8py_source}{}\doxysection{test\+\_\+graph\+\_\+creation.\+py}
+\label{test__graph__creation_8py_source}\index{tests/Feature/test\_graph\_creation.py@{tests/Feature/test\_graph\_creation.py}}
+\mbox{\hyperlink{test__graph__creation_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00001}\mbox{\hyperlink{namespacetest__graph__creation}{00001}} \textcolor{comment}{\# pylint: disable=missing-\/docstring}}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00002}00002 \textcolor{keyword}{from} unittest \textcolor{keyword}{import} IsolatedAsyncioTestCase}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00003}00003 \textcolor{keyword}{from} unittest.mock \textcolor{keyword}{import} patch}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00005}00005 \textcolor{keyword}{import} pandas \textcolor{keyword}{as} pd}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00006}00006 \textcolor{keyword}{import} plotly}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00008}00008 \textcolor{keyword}{from} graph.graph\_api \textcolor{keyword}{import} Student, StudentList, bar\_plot, get\_dataframe, scatter\_plot}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00011}\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI}{00011}} \textcolor{keyword}{class }\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI}{GraphsAPI}}(IsolatedAsyncioTestCase):}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00012}\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_a60c9716a662c600bcb62adfd22640245}{00012}}     \textcolor{keyword}{def }\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_a60c9716a662c600bcb62adfd22640245}{setUp}}(self) -\/> None:}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00013}\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_a23992160c6508f6256edb41d4ac5e867}{00013}}         self.\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_a23992160c6508f6256edb41d4ac5e867}{student\_list}} = StudentList(}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00014}00014             records=[}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00015}00015                 Student(}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00016}00016                     name=\textcolor{stringliteral}{"{}Juan Perez"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00017}00017                     uaslp\_key=\textcolor{stringliteral}{"{}123456"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00018}00018                     large\_key=\textcolor{stringliteral}{"{}123456"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00019}00019                     status=\textcolor{stringliteral}{"{}Regular"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00020}00020                     generation=\textcolor{stringliteral}{"{}2018"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00021}00021                     semesters\_completed=8,}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00022}00022                     creds\_per\_semester=45,}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00023}00023                 ),}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00024}00024                 Student(}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00025}00025                     name=\textcolor{stringliteral}{"{}Maria Lopez"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00026}00026                     uaslp\_key=\textcolor{stringliteral}{"{}654321"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00027}00027                     large\_key=\textcolor{stringliteral}{"{}654321"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00028}00028                     status=\textcolor{stringliteral}{"{}Regular"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00029}00029                     generation=\textcolor{stringliteral}{"{}2018"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00030}00030                     semesters\_completed=8,}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00031}00031                     creds\_per\_semester=45,}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00032}00032                 ),}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00033}00033             ]}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00034}00034         )}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00035}00035         \textcolor{keywordflow}{return} super().\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_a60c9716a662c600bcb62adfd22640245}{setUp}}()}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00037}\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_ab7017dbc0d9189f7123628d5b4414385}{00037}}     \textcolor{keyword}{def }\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_ab7017dbc0d9189f7123628d5b4414385}{test\_get\_dataframe}}(self):}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00038}00038         data\_frame = get\_dataframe(self.\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_a23992160c6508f6256edb41d4ac5e867}{student\_list}})}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00040}00040         self.assertIsInstance(data\_frame, pd.DataFrame)}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00041}00041         self.assertEqual(data\_frame.shape, (2, 10))}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00042}00042         self.assertEqual(}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00043}00043             data\_frame.columns.tolist(),}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00044}00044             [}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00045}00045                 \textcolor{stringliteral}{"{}name"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00046}00046                 \textcolor{stringliteral}{"{}uaslp\_key"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00047}00047                 \textcolor{stringliteral}{"{}large\_key"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00048}00048                 \textcolor{stringliteral}{"{}status"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00049}00049                 \textcolor{stringliteral}{"{}generation"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00050}00050                 \textcolor{stringliteral}{"{}semesters\_completed"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00051}00051                 \textcolor{stringliteral}{"{}creds\_per\_semester"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00052}00052                 \textcolor{stringliteral}{"{}cred\_aprob\_acum"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00053}00053                 \textcolor{stringliteral}{"{}cred\_rezago"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00054}00054                 \textcolor{stringliteral}{"{}nivel\_rezago"{}},}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00055}00055             ],}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00056}00056         )}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00058}00058     \textcolor{preprocessor}{@patch("{}graph.graph\_api.get\_dataframe"{})}}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00059}00059     \textcolor{keyword}{def }\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_af1839758820856ef5a136eaa081637e3}{test\_lag\_graph}}(self, mock\_get\_dataframe):}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00060}\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_af1839758820856ef5a136eaa081637e3}{00060}}         \textcolor{stringliteral}{"{}"{}"{}Test the function that generates the lag graph."{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00061}00061         mock\_get\_dataframe.return\_value = get\_dataframe(self.\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_a23992160c6508f6256edb41d4ac5e867}{student\_list}})}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00063}00063         lag\_graph = bar\_plot(self.\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_a23992160c6508f6256edb41d4ac5e867}{student\_list}})}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00065}00065         figure = plotly.io.from\_json(lag\_graph)}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00067}00067         self.assertIsInstance(figure, plotly.graph\_objs.Figure)}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00069}00069     \textcolor{preprocessor}{@patch("{}graph.graph\_api.get\_dataframe"{})}}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00070}00070     \textcolor{keyword}{def }\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_a66abb9476faab1471c739f356c8bd573}{test\_process\_graph}}(self, mock\_get\_dataframe):}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00071}\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_a66abb9476faab1471c739f356c8bd573}{00071}}         \textcolor{stringliteral}{"{}"{}"{}Test the function that processes the graph."{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00072}00072         mock\_get\_dataframe.return\_value = get\_dataframe(self.\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_a23992160c6508f6256edb41d4ac5e867}{student\_list}})}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00074}00074         process\_graph = scatter\_plot(self.\mbox{\hyperlink{classtest__graph__creation_1_1GraphsAPI_a23992160c6508f6256edb41d4ac5e867}{student\_list}})}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00076}00076         figure = plotly.io.from\_json(process\_graph)}
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{test__graph__creation_8py_source_l00078}00078         self.assertIsInstance(figure, plotly.graph\_objs.Figure)}
+
+\end{DoxyCode}

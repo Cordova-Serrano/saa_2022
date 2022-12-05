@@ -1,0 +1,172 @@
+\hypertarget{import_8blade_8php_source}{}\doxysection{import.\+blade.\+php}
+\label{import_8blade_8php_source}\index{resources/views/csv/import.blade.php@{resources/views/csv/import.blade.php}}
+\mbox{\hyperlink{import_8blade_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00001}00001 @extends (\textcolor{stringliteral}{'layout'})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00003}00003 @section (\textcolor{stringliteral}{'title'}, \textcolor{stringliteral}{'Seguimiento de Alumnos del Área | Importación CSV'})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00005}00005 @section (\textcolor{stringliteral}{'styles'})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00006}00006 <!-\/-\/ Dropify -\/-\/>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00007}00007 <link href=\textcolor{stringliteral}{"{}\{\{ asset('plugins/dropify/core/dropify.min.css') \}\}"{}} rel=\textcolor{stringliteral}{"{}stylesheet"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00008}00008 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00010}00010 @section (\textcolor{stringliteral}{'content'})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00011}00011 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}row"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00012}00012     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}col-\/12"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00013}00013         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card card-\/outline card-\/reflex-\/blue"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00014}00014             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}overlay"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}overlay"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00015}00015                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/2x fa-\/sync fa-\/spin"{}}></i>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00016}00016             </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00017}00017             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/header"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00018}00018                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}d-\/flex flex-\/wrap justify-\/content-\/between"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00019}00019                     <h3 \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/title my-\/auto"{}}>Importación archivo csv</h3>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00020}00020                 </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00021}00021             </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00022}00022             <form action=\textcolor{stringliteral}{"{}\{\{ route('csv.store') \}\}"{}} autocomplete=\textcolor{stringliteral}{"{}off"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/horizontal"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}import-\/form"{}} method=\textcolor{stringliteral}{"{}post"{}} enctype=\textcolor{stringliteral}{"{}multipart/form-\/data"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00023}00023                 @csrf}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00024}00024                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/body"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00025}00025                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}row"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00026}00026                         <input \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}logo"{}} type=\textcolor{stringliteral}{"{}file"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}dropify"{}} name=\textcolor{stringliteral}{"{}file"{}} data-\/max-\/file-\/size=\textcolor{stringliteral}{"{}15M"{}} data-\/allowed-\/file-\/extensions=\textcolor{stringliteral}{"{}csv"{}} data-\/\textcolor{keywordflow}{default}-\/file=\textcolor{stringliteral}{"{}"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00027}00027                         <input type=\textcolor{stringliteral}{"{}text"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}is\_update"{}} name=\textcolor{stringliteral}{"{}is\_update"{}} hidden>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00028}00028                     </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00029}00029                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}row mt-\/4"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00030}00030                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert alert-\/info alert-\/dismissible w-\/100 saa-\/bg-\/color"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00031}00031                             <h5><i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}icon fas fa-\/info"{}}></i> Importante!</h5>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00032}00032                             -\/Formato por columna: cve\_uaslp,cve\_larga,generacion,nombre,carrera,situacion,cred\_por\_cursar,cred\_por\_semestre,semestres\_cursados,porcentaje\_avance,promedio\_general,rendimiento\_general,promedio\_aprobatorio,materias\_aprobadas,materias\_reprobadas}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00034}00034                             <br>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00035}00035                             -\/Subir archivo con encabezados}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00036}00036                         </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00037}00037                     </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00038}00038                 </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00039}00039                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/footer"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00040}00040                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}d-\/flex justify-\/content-\/between"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00041}00041                         <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/secondary btn-\/icon-\/text"{}} href=\textcolor{stringliteral}{"{}\{\{ route('csv.index') \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00042}00042                             <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fas fa-\/times-\/circle mr-\/2"{}}></i>Cancelar}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00043}00043                         </a>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00044}00044                         <button \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}import"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/sm btn-\/warning btn-\/icon-\/text ml-\/2"{}} type=\textcolor{stringliteral}{"{}submit"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00045}00045                             <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fas fa-\/upload mr-\/2"{}}></i>Importar}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00046}00046                         </button>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00047}00047                     </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00048}00048                 </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00049}00049             </form>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00050}00050         </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00051}00051     </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00052}00052 </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00054}00054 <!-\/-\/ Modal Sobreescribir-\/-\/>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00055}00055 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal fade"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}modal-\/csv-\/update"{}} data-\/bs-\/backdrop=\textcolor{stringliteral}{"{}static"{}} data-\/bs-\/keyboard=\textcolor{stringliteral}{"{}false"{}} tabindex=\textcolor{stringliteral}{"{}-\/1"{}} aria-\/labelledby=\textcolor{stringliteral}{"{}staticBackdropLabel"{}} aria-\/hidden=\textcolor{stringliteral}{"{}true"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00056}00056     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/dialog modal-\/dialog-\/centered"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00057}00057         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/content"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00058}00058             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/header bg-\/warning"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00059}00059                 <h5 \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/title-\/saa"{}}>Sobreescribir archivo</h5>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00060}00060                 <button type=\textcolor{stringliteral}{"{}button"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}close"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}close-\/modal"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00061}00061                     <span aria-\/hidden=\textcolor{stringliteral}{"{}true"{}}>\&times;</span>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00062}00062                 </button>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00063}00063             </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00064}00064             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/body"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00065}00065                 Archivo ya existente <br>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00066}00066                 ¿Está seguro de querer actualizarlo?}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00067}00067             </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00068}00068             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}modal-\/footer justify-\/content-\/between"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00069}00069                 <button type=\textcolor{stringliteral}{"{}button"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/secondary"{}} data-\/bs-\/dismiss=\textcolor{stringliteral}{"{}modal"{}}>Cancelar</button>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00070}00070                 <button type=\textcolor{stringliteral}{"{}button"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/success"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}accept-\/update"{}}>Aceptar</button>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00071}00071             </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00072}00072         </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00073}00073     </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00074}00074 </div>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00075}00075 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00077}00077 @section (\textcolor{stringliteral}{'plugins'})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00078}00078 <!-\/-\/ Jquery Validations -\/-\/>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00079}00079 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/jquery-\/validation/jquery.validate.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00080}00080 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/jquery-\/validation/localization/messages\_es.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00081}00081 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/moment/moment.min.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00082}00082 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/moment/locale/es-\/mx.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00083}00083 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/tempusdominus-\/bootstrap-\/4/js/tempusdominus-\/bootstrap-\/4.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00084}00084 <!-\/-\/ Dropify -\/-\/>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00085}00085 <script src=\textcolor{stringliteral}{"{}https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"{}} integrity=\textcolor{stringliteral}{"{}sha512-\/8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew=="{}} crossorigin=\textcolor{stringliteral}{"{}anonymous"{}}></script>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00086}00086 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/dropify/core/dropify.min.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00087}00087 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00089}00089 @section (\textcolor{stringliteral}{'scripts'})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00090}00090 <script type=\textcolor{stringliteral}{"{}text/javascript"{}}>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00091}00091     \$(document).ready(\textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00092}00092         \textcolor{comment}{//Validation forms}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00093}00093         \$(\textcolor{stringliteral}{'\#import-\/form'}).validate(\{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00094}00094             ignore: \textcolor{stringliteral}{''},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00095}00095             rules: \{\},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00096}00096             errorPlacement: \textcolor{keyword}{function}(error, element) \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00097}00097                 error.addClass(\textcolor{stringliteral}{'form-\/check-\/label invalid-\/feedback'})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00098}00098                 element.closest(\textcolor{stringliteral}{'div'}).append(error)}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00099}00099             \},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00100}00100             highlight: \textcolor{keyword}{function}(element, errorClass, validClass) \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00101}00101                 \$(element).addClass(\textcolor{stringliteral}{'is-\/invalid'})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00102}00102             \},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00103}00103             unhighlight: \textcolor{keyword}{function}(element, errorClass, validClass) \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00104}00104                 \$(element).removeClass(\textcolor{stringliteral}{'is-\/invalid'})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00105}00105                 \$(element).addClass(\textcolor{stringliteral}{'is-\/valid'})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00106}00106             \}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00107}00107         \})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00109}00109         \$(\textcolor{stringliteral}{'.dropify'}).dropify(\{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00110}00110             messages: \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00111}00111                 \textcolor{stringliteral}{'remove'}: \textcolor{stringliteral}{'Eliminar archivo'},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00112}00112                 \textcolor{stringliteral}{'error'}: \textcolor{stringliteral}{'Vaya, sucedió algo mal.'},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00113}00113                 \textcolor{stringliteral}{'default'}: \textcolor{stringliteral}{'Arrastre y suelte un archivo aquí o haga clic.'},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00114}00114                 \textcolor{stringliteral}{'replace'}: \textcolor{stringliteral}{'Arrastre y suelte un archivo aquí o haga clic para reemplazar.'}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00115}00115             \},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00116}00116             error: \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00117}00117                 \textcolor{stringliteral}{'fileSize'}: \textcolor{stringliteral}{'El tamaño máximo del archivo es de 15M.'},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00118}00118                 \textcolor{stringliteral}{'imageFormat'}: \textcolor{stringliteral}{'Sólo puede subir archivos en formato PNG o JPG.'}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00119}00119             \}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00120}00120         \});}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00121}00121         \$(\textcolor{stringliteral}{'\#overlay'}).hide();}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00122}00122     \});}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00124}00124     \$(\textcolor{stringliteral}{'\#logo'}).change(\textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00125}00125         var filename = \$(\textcolor{keyword}{this}).val().replace(/.*(\(\backslash\)/|\(\backslash\)\(\backslash\))/, \textcolor{stringliteral}{''})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00126}00126         \textcolor{comment}{//Ajax Patients}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00127}00127         \textcolor{comment}{/*\$.get('/update', function(data) \{}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00128}00128 \textcolor{comment}{            console.log(data)}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00129}00129 \textcolor{comment}{        \});*/}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00130}00130         \textcolor{comment}{//Ajax semester}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00131}00131         \$.ajax(\{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00132}00132             url: \textcolor{stringliteral}{"{}/update"{}},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00133}00133             type: \textcolor{stringliteral}{"{}get"{}},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00134}00134             data: \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00135}00135                 filename: filename,}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00136}00136             \},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00137}00137             success: \textcolor{keyword}{function}(response) \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00138}00138                 \textcolor{comment}{//Do Something}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00139}00139                 console.log(response)}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00140}00140                 \textcolor{keywordflow}{if} (response == 1) \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00141}00141                     \textcolor{comment}{//Ya existe, mostrar modal sobreescribir}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00142}00142                     \$modalUpdate = \$(\textcolor{stringliteral}{'\#modal-\/csv-\/update'})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00143}00143                     \$modalUpdate.modal('show')}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00145}00145                 \} else \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00146}00146                     \textcolor{comment}{//No existe subir a base de datos}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00147}00147                     \$(\textcolor{stringliteral}{'\#is\_update'}).val(0)}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00148}00148                 \}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00149}00149             \},}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00150}00150             error: \textcolor{keyword}{function}(xhr) \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00151}00151                 \textcolor{comment}{//Do Something to handle error}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00152}00152                 console.log(xhr)}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00153}00153             \}}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00154}00154         \});}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00155}00155     \})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00157}00157     \$(\textcolor{stringliteral}{'\#accept-\/update'}).click(\textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00158}00158         \$(\textcolor{stringliteral}{'\#is\_update'}).val(1)}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00159}00159         \$(\textcolor{stringliteral}{'\#import-\/form'}).submit();}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00160}00160     \})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00161}00161     }
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00162}00162     \$(\textcolor{stringliteral}{'\#close-\/modal'}).click(\textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00163}00163         \$(\textcolor{stringliteral}{'\#modal-\/csv-\/update'}).modal(\textcolor{stringliteral}{'hide'});}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00164}00164     \})}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00165}00165 </script>}
+\DoxyCodeLine{\Hypertarget{import_8blade_8php_source_l00166}00166 @endsection}
+
+\end{DoxyCode}

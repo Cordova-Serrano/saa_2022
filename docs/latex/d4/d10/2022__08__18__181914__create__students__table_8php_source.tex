@@ -1,0 +1,37 @@
+\hypertarget{2022__08__18__181914__create__students__table_8php_source}{}\doxysection{2022\+\_\+08\+\_\+18\+\_\+181914\+\_\+create\+\_\+students\+\_\+table.\+php}
+\label{2022__08__18__181914__create__students__table_8php_source}\index{database/migrations/2022\_08\_18\_181914\_create\_students\_table.php@{database/migrations/2022\_08\_18\_181914\_create\_students\_table.php}}
+\mbox{\hyperlink{2022__08__18__181914__create__students__table_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00003}00003 use Illuminate\(\backslash\)Database\(\backslash\)Migrations\(\backslash\)Migration;}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00004}00004 use Illuminate\(\backslash\)Database\(\backslash\)Schema\(\backslash\)Blueprint;}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00005}00005 use Illuminate\(\backslash\)Support\(\backslash\)Facades\(\backslash\)Schema;}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00007}\mbox{\hyperlink{classCreateStudentsTable}{00007}} \textcolor{keyword}{class }\mbox{\hyperlink{classCreateStudentsTable}{CreateStudentsTable}} \textcolor{keyword}{extends} Migration}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00009}\mbox{\hyperlink{classCreateStudentsTable_a50192d7b8cfb26c8d51402c1ab311836}{00009}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classCreateStudentsTable_a50192d7b8cfb26c8d51402c1ab311836}{up}}()}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00010}00010     \{}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00011}00011         Schema::create(\textcolor{stringliteral}{'students'}, \textcolor{keyword}{function} (Blueprint \$table) \{}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00012}00012             \$table-\/>id();}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00013}00013             \$table-\/>string(\textcolor{stringliteral}{'name'});}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00014}00014             }
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00015}00015             \$table-\/>unsignedBigInteger(\textcolor{stringliteral}{'career\_id'});}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00016}00016             \$table-\/>foreign(\textcolor{stringliteral}{'career\_id'})-\/>references(\textcolor{stringliteral}{'id'})-\/>on(\textcolor{stringliteral}{'careers'});}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00018}00018             \$table-\/>string(\textcolor{stringliteral}{'generation'});}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00019}00019             \$table-\/>integer(\textcolor{stringliteral}{'uaslp\_key'})-\/>unique(); \textcolor{comment}{//Clave única}}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00020}00020             \$table-\/>bigInteger(\textcolor{stringliteral}{'large\_key'})-\/>unique(); \textcolor{comment}{//Clave larga o de ingeniería}}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00021}00021             \$table-\/>integer(\textcolor{stringliteral}{'type'})-\/>nullable(); \textcolor{comment}{//Tipo: }}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00022}00022             \$table-\/>timestamps();}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00023}00023             \$table-\/>softDeletes();}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00024}00024         \});}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00027}\mbox{\hyperlink{classCreateStudentsTable_acbeb7f5f181975381f22731317025b35}{00027}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classCreateStudentsTable_acbeb7f5f181975381f22731317025b35}{down}}()}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00028}00028     \{}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00029}00029         Schema::dropIfExists(\textcolor{stringliteral}{'students'});}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00030}00030     \}}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181914__create__students__table_8php_source_l00031}00031 \}}
+
+\end{DoxyCode}

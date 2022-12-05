@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['pagination_2ephp_0',['pagination.php',['../d5/df4/en_2pagination_8php.html',1,'(Global Namespace)'],['../de/d80/es_2pagination_8php.html',1,'(Global Namespace)']]],
-  ['passwords_2ephp_1',['passwords.php',['../da/dfb/en_2passwords_8php.html',1,'(Global Namespace)'],['../dd/d18/es_2passwords_8php.html',1,'(Global Namespace)']]],
-  ['plotly_2ejs_2',['plotly.js',['../d3/ddb/plotly_8js.html',1,'']]],
-  ['preventrequestsduringmaintenance_2ephp_3',['PreventRequestsDuringMaintenance.php',['../d6/d20/PreventRequestsDuringMaintenance_8php.html',1,'']]]
+  ['sanctum_2ephp_0',['sanctum.php',['../dd/dcf/sanctum_8php.html',1,'']]],
+  ['server_2ephp_1',['server.php',['../df/dbd/server_8php.html',1,'']]],
+  ['services_2ephp_2',['services.php',['../de/d6d/services_8php.html',1,'']]],
+  ['session_2ephp_3',['session.php',['../de/d8b/session_8php.html',1,'']]]
 ];

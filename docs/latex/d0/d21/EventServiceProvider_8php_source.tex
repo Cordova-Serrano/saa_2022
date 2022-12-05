@@ -1,0 +1,28 @@
+\hypertarget{EventServiceProvider_8php_source}{}\doxysection{Event\+Service\+Provider.\+php}
+\label{EventServiceProvider_8php_source}\index{app/Providers/EventServiceProvider.php@{app/Providers/EventServiceProvider.php}}
+\mbox{\hyperlink{EventServiceProvider_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Providers}{App\(\backslash\)Providers}};}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00005}00005 use Illuminate\(\backslash\)Auth\(\backslash\)Events\(\backslash\)Registered;}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00006}00006 use Illuminate\(\backslash\)Auth\(\backslash\)Listeners\(\backslash\)SendEmailVerificationNotification;}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00007}00007 use Illuminate\(\backslash\)Foundation\(\backslash\)Support\(\backslash\)Providers\(\backslash\)EventServiceProvider as ServiceProvider;}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00008}00008 use Illuminate\(\backslash\)Support\(\backslash\)Facades\(\backslash\)Event;}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00010}\mbox{\hyperlink{classApp_1_1Providers_1_1EventServiceProvider}{00010}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Providers_1_1EventServiceProvider}{EventServiceProvider}} \textcolor{keyword}{extends} ServiceProvider}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00017}\mbox{\hyperlink{classApp_1_1Providers_1_1EventServiceProvider_a679fbd44d111ead2386bb00f9f5e2c39}{00017}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Providers_1_1EventServiceProvider_a679fbd44d111ead2386bb00f9f5e2c39}{\$listen}} = [}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00018}00018         Registered::class => [}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00019}00019             SendEmailVerificationNotification::class,}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00020}00020         ],}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00021}00021     ];}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00028}\mbox{\hyperlink{classApp_1_1Providers_1_1EventServiceProvider_a316894ee1e83b63096b91fabadd27476}{00028}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Providers_1_1EventServiceProvider_a316894ee1e83b63096b91fabadd27476}{boot}}()}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00029}00029     \{}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00030}00030         \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00031}00031     \}}
+\DoxyCodeLine{\Hypertarget{EventServiceProvider_8php_source_l00032}00032 \}}
+
+\end{DoxyCode}

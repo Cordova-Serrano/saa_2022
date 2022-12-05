@@ -1,0 +1,27 @@
+\hypertarget{Console_2Kernel_8php_source}{}\doxysection{Kernel.\+php}
+\label{Console_2Kernel_8php_source}\index{app/Console/Kernel.php@{app/Console/Kernel.php}}
+\mbox{\hyperlink{Console_2Kernel_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00003}\mbox{\hyperlink{namespaceApp_1_1Console}{00003}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Console}{App\(\backslash\)Console}};}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00005}00005 use Illuminate\(\backslash\)Console\(\backslash\)Scheduling\(\backslash\)Schedule;}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00006}00006 use Illuminate\(\backslash\)Foundation\(\backslash\)Console\(\backslash\)Kernel as ConsoleKernel;}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00008}\mbox{\hyperlink{classApp_1_1Console_1_1Kernel}{00008}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Console_1_1Kernel}{Kernel}} \textcolor{keyword}{extends} ConsoleKernel}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00016}\mbox{\hyperlink{classApp_1_1Console_1_1Kernel_a99912aa32dab8508ff247aef40ba7bcb}{00016}}     \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Console_1_1Kernel_a99912aa32dab8508ff247aef40ba7bcb}{schedule}}(Schedule \$schedule)}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00017}00017     \{}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00018}00018         \textcolor{comment}{// \$schedule-\/>command('inspire')-\/>hourly();}}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00026}\mbox{\hyperlink{classApp_1_1Console_1_1Kernel_a4d7114cccb6b563bd33c5ed2ab22028a}{00026}}     \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Console_1_1Kernel_a4d7114cccb6b563bd33c5ed2ab22028a}{commands}}()}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00027}00027     \{}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00028}00028         \$this-\/>load(\_\_DIR\_\_.\textcolor{stringliteral}{'/Commands'});}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00030}00030         \mbox{\hyperlink{app_8js_ac7f6b26a53465b420f480d9a3b4673ce}{require}} base\_path(\textcolor{stringliteral}{'routes/console.php'});}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00031}00031     \}}
+\DoxyCodeLine{\Hypertarget{Console_2Kernel_8php_source_l00032}00032 \}}
+
+\end{DoxyCode}

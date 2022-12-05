@@ -1,0 +1,65 @@
+\hypertarget{email_8blade_8php_source}{}\doxysection{email.\+blade.\+php}
+\label{email_8blade_8php_source}\index{resources/views/auth/passwords/email.blade.php@{resources/views/auth/passwords/email.blade.php}}
+\mbox{\hyperlink{email_8blade_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00001}00001 @extends(\textcolor{stringliteral}{'layouts.app'})}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00003}00003 @section(\textcolor{stringliteral}{'content'})}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00004}00004 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}container"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00005}00005     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}justify-\/content-\/center"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00006}00006         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00007}00007             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}overlay"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}overlay"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00008}00008                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/2x fa-\/sync fa-\/spin"{}}></i>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00009}00009             </div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00010}00010             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/body login-\/card-\/body"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00011}00011                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}login-\/box-\/msg"{}}>\{\{ \_\_(\textcolor{stringliteral}{'Reestablecer contraseña'}) \}\}</div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00012}00012                 @\textcolor{keywordflow}{if} (\$errors-\/>any())}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00013}00013                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert alert-\/danger alert-\/dismissible text-\/justify"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}error-\/alert"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00014}00014                     <button aria-\/hidden=\textcolor{stringliteral}{"{}true"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}close"{}} data-\/dismiss=\textcolor{stringliteral}{"{}alert"{}} type=\textcolor{stringliteral}{"{}button"{}}>\&times;</button>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00015}00015                     <h6><i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}icon fal fa-\/times-\/circle"{}}></i>¡Error!</h6>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00016}00016                     @\textcolor{keywordflow}{foreach} (\$errors-\/>all() as \$error)}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00017}00017                     \{\{ \$error \}\}<br>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00018}00018                     \textcolor{keyword}{@end}\textcolor{keywordflow}{foreach}}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00019}00019                 </div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00020}00020                 \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00022}00022                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/body"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00023}00023                     @\textcolor{keywordflow}{if} (session(\textcolor{stringliteral}{'status'}))}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00024}00024                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert alert-\/success"{}} role=\textcolor{stringliteral}{"{}alert"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00025}00025                         \{\{ session(\textcolor{stringliteral}{'status'}) \}\}}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00026}00026                     </div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00027}00027                     \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00029}00029                     <form method=\textcolor{stringliteral}{"{}POST"{}} action=\textcolor{stringliteral}{"{}\{\{ route('password.email') \}\}"{}} autocomplete=\textcolor{stringliteral}{"{}off"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00030}00030                         @csrf}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00032}00032                         <!-\/-\/ EMAIL -\/-\/>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00033}00033                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group mb-\/3"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00034}00034                             <input \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}email"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control @error('email') is-\/invalid @enderror"{}} name=\textcolor{stringliteral}{"{}email"{}} placeholder=\textcolor{stringliteral}{"{}Correo electrónico"{}} required autofocus type=\textcolor{stringliteral}{"{}email"{}} value=\textcolor{stringliteral}{"{}\{\{ old('email') \}\}"{}} autocomplete=\textcolor{stringliteral}{"{}email"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00035}00035                             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/append"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00036}00036                                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/text"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00037}00037                                     <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/user"{}}></span>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00038}00038                                 </div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00039}00039                             </div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00040}00040                             @error(\textcolor{stringliteral}{'email'})}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00041}00041                             <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}invalid-\/feedback"{}} role=\textcolor{stringliteral}{"{}alert"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00042}00042                                 <strong>\{\{ \$message \}\}</strong>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00043}00043                             </span>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00044}00044                             \textcolor{keyword}{@end}error}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00045}00045                         </div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00046}00046                         <!-\/-\/ /EMAIL -\/-\/>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00047}00047                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}row "{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00048}00048                             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00049}00049                                 <button type=\textcolor{stringliteral}{"{}submit"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/primary"{}}>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00050}00050                                     \{\{ \_\_(\textcolor{stringliteral}{'Enviar enlace de restablecimiento de contraseña'}) \}\}}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00051}00051                                 </button>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00052}00052                             </div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00053}00053                         </div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00054}00054                     </form>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00055}00055                 </div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00056}00056             </div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00057}00057         </div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00058}00058     </div>}
+\DoxyCodeLine{\Hypertarget{email_8blade_8php_source_l00059}00059     \textcolor{keyword}{@end}section}
+
+\end{DoxyCode}

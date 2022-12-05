@@ -1,0 +1,19 @@
+\hypertarget{server_8php_source}{}\doxysection{server.\+php}
+\mbox{\hyperlink{server_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00010}\mbox{\hyperlink{server_8php_a653b5458163d338546c47271b4fb81b7}{00010}} \mbox{\hyperlink{server_8php_a653b5458163d338546c47271b4fb81b7}{\$uri}} = urldecode(}
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00011}00011     parse\_url(\$\_SERVER[\textcolor{stringliteral}{'REQUEST\_URI'}], PHP\_URL\_PATH) ?? \textcolor{stringliteral}{''}}
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00012}00012 );}
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00014}00014 \textcolor{comment}{// This file allows us to emulate Apache's "{}mod\_rewrite"{} functionality from the}}
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00015}00015 \textcolor{comment}{// built-\/in PHP web server. This provides a convenient way to test a Laravel}}
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00016}00016 \textcolor{comment}{// application without having installed a "{}real"{} web server software here.}}
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00017}\mbox{\hyperlink{server_8php_afc8b25b448fd1a3d79f6171af75f39ff}{00017}} \textcolor{keywordflow}{if} (\mbox{\hyperlink{server_8php_a653b5458163d338546c47271b4fb81b7}{\$uri}} !== \textcolor{charliteral}{'/'} \&\& file\_exists(\_\_DIR\_\_.\textcolor{stringliteral}{'/public'}.\mbox{\hyperlink{server_8php_a653b5458163d338546c47271b4fb81b7}{\$uri}})) \{}
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00018}00018     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00019}00019 \}}
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{server_8php_source_l00021}00021 require\_once \_\_DIR\_\_.\textcolor{stringliteral}{'/public/index.php'};}
+
+\end{DoxyCode}

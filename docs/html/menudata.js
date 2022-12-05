@@ -24,7 +24,6 @@
 */
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
-{text:"Related Pages",url:"pages.html"},
 {text:"Namespaces",url:"namespaces.html",children:[
 {text:"Namespace List",url:"namespaces.html"},
 {text:"Namespace Members",url:"namespacemembers.html",children:[
@@ -34,67 +33,9 @@ var menudata={children:[
 {text:"Classes",url:"annotated.html",children:[
 {text:"Class List",url:"annotated.html"},
 {text:"Class Index",url:"classes.html"},
-{text:"Class Hierarchy",url:"hierarchy.html"},
-{text:"Class Members",url:"functions.html",children:[
-{text:"All",url:"functions.html",children:[
-{text:"$",url:"functions.html#index__24"},
-{text:"_",url:"functions.html#index__5F"},
-{text:"a",url:"functions.html#index_a"},
-{text:"b",url:"functions.html#index_b"},
-{text:"c",url:"functions.html#index_c"},
-{text:"d",url:"functions.html#index_d"},
-{text:"e",url:"functions.html#index_e"},
-{text:"h",url:"functions.html#index_h"},
-{text:"i",url:"functions.html#index_i"},
-{text:"l",url:"functions.html#index_l"},
-{text:"m",url:"functions.html#index_m"},
-{text:"r",url:"functions.html#index_r"},
-{text:"s",url:"functions.html#index_s"},
-{text:"t",url:"functions.html#index_t"},
-{text:"u",url:"functions.html#index_u"},
-{text:"v",url:"functions.html#index_v"}]},
-{text:"Functions",url:"functions_func.html",children:[
-{text:"_",url:"functions_func.html#index__5F"},
-{text:"a",url:"functions_func.html#index_a"},
-{text:"b",url:"functions_func.html#index_b"},
-{text:"c",url:"functions_func.html#index_c"},
-{text:"d",url:"functions_func.html#index_d"},
-{text:"e",url:"functions_func.html#index_e"},
-{text:"h",url:"functions_func.html#index_h"},
-{text:"i",url:"functions_func.html#index_i"},
-{text:"l",url:"functions_func.html#index_l"},
-{text:"m",url:"functions_func.html#index_m"},
-{text:"r",url:"functions_func.html#index_r"},
-{text:"s",url:"functions_func.html#index_s"},
-{text:"t",url:"functions_func.html#index_t"},
-{text:"u",url:"functions_func.html#index_u"},
-{text:"v",url:"functions_func.html#index_v"}]},
-{text:"Variables",url:"functions_vars.html",children:[
-{text:"$",url:"functions_vars.html#index__24"},
-{text:"h",url:"functions_vars.html#index_h"}]}]}]},
+{text:"Class Hierarchy",url:"hierarchy.html"}]},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"},
 {text:"File Members",url:"globals.html",children:[
-{text:"All",url:"globals.html",children:[
-{text:"$",url:"globals.html#index__24"},
-{text:"_",url:"globals.html#index__5F"},
-{text:"a",url:"globals.html#index_a"},
-{text:"c",url:"globals.html#index_c"},
-{text:"i",url:"globals.html#index_i"},
-{text:"j",url:"globals.html#index_j"},
-{text:"m",url:"globals.html#index_m"},
-{text:"p",url:"globals.html#index_p"},
-{text:"r",url:"globals.html#index_r"},
-{text:"s",url:"globals.html#index_s"},
-{text:"t",url:"globals.html#index_t"}]},
-{text:"Functions",url:"globals_func.html"},
-{text:"Variables",url:"globals_vars.html",children:[
-{text:"$",url:"globals_vars.html#index__24"},
-{text:"_",url:"globals_vars.html#index__5F"},
-{text:"a",url:"globals_vars.html#index_a"},
-{text:"c",url:"globals_vars.html#index_c"},
-{text:"i",url:"globals_vars.html#index_i"},
-{text:"m",url:"globals_vars.html#index_m"},
-{text:"p",url:"globals_vars.html#index_p"},
-{text:"r",url:"globals_vars.html#index_r"},
-{text:"t",url:"globals_vars.html#index_t"}]}]}]}]}
+{text:"All",url:"globals.html"},
+{text:"Functions",url:"globals_func.html"}]}]}]}

@@ -1,5 +1,4 @@
 var namespaces_dup =
 [
-    [ "Laravel", "db/d99/namespaceLaravel.html", null ],
-    [ "Tests", "df/da7/namespaceTests.html", "df/da7/namespaceTests" ]
+    [ "graph_api", "d6/d95/namespacegraph__api.html", "d6/d95/namespacegraph__api" ]
 ];

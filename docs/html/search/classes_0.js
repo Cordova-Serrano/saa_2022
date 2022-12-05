@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['appserviceprovider_0',['AppServiceProvider',['../da/d86/classApp_1_1Providers_1_1AppServiceProvider.html',1,'App::Providers']]],
-  ['authenticate_1',['Authenticate',['../dd/dee/classApp_1_1Http_1_1Middleware_1_1Authenticate.html',1,'App::Http::Middleware']]],
-  ['authserviceprovider_2',['AuthServiceProvider',['../d1/d0a/classApp_1_1Providers_1_1AuthServiceProvider.html',1,'App::Providers']]]
+  ['student_0',['Student',['../db/d03/classgraph__api_1_1Student.html',1,'graph_api']]],
+  ['studentlist_1',['StudentList',['../d0/d51/classgraph__api_1_1StudentList.html',1,'graph_api']]]
 ];

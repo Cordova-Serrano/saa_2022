@@ -1,0 +1,21 @@
+\hypertarget{Authenticate_8php_source}{}\doxysection{Authenticate.\+php}
+\label{Authenticate_8php_source}\index{app/Http/Middleware/Authenticate.php@{app/Http/Middleware/Authenticate.php}}
+\mbox{\hyperlink{Authenticate_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00003}\mbox{\hyperlink{namespaceApp_1_1Http_1_1Middleware}{00003}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Http_1_1Middleware}{App\(\backslash\)Http\(\backslash\)Middleware}};}
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00005}00005 use Illuminate\(\backslash\)Auth\(\backslash\)Middleware\(\backslash\)Authenticate as Middleware;}
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00007}\mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1Authenticate}{00007}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1Authenticate}{Authenticate}} \textcolor{keyword}{extends} Middleware}
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00015}\mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1Authenticate_a7c1fa7220415fea90a67d6f9c755fa1f}{00015}}     \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1Authenticate_a7c1fa7220415fea90a67d6f9c755fa1f}{redirectTo}}(\$request)}
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00017}00017         \textcolor{keywordflow}{if} (! \$request-\/>expectsJson()) \{}
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00018}00018             \textcolor{keywordflow}{return} route(\textcolor{stringliteral}{'login'});}
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00019}00019         \}}
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{Authenticate_8php_source_l00021}00021 \}}
+
+\end{DoxyCode}

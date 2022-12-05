@@ -1,0 +1,29 @@
+\hypertarget{2022__08__18__181913__create__careers__table_8php_source}{}\doxysection{2022\+\_\+08\+\_\+18\+\_\+181913\+\_\+create\+\_\+careers\+\_\+table.\+php}
+\label{2022__08__18__181913__create__careers__table_8php_source}\index{database/migrations/2022\_08\_18\_181913\_create\_careers\_table.php@{database/migrations/2022\_08\_18\_181913\_create\_careers\_table.php}}
+\mbox{\hyperlink{2022__08__18__181913__create__careers__table_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00003}00003 use Illuminate\(\backslash\)Database\(\backslash\)Migrations\(\backslash\)Migration;}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00004}00004 use Illuminate\(\backslash\)Database\(\backslash\)Schema\(\backslash\)Blueprint;}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00005}00005 use Illuminate\(\backslash\)Support\(\backslash\)Facades\(\backslash\)Schema;}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00007}\mbox{\hyperlink{classCreateCareersTable}{00007}} \textcolor{keyword}{class }\mbox{\hyperlink{classCreateCareersTable}{CreateCareersTable}} \textcolor{keyword}{extends} Migration}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00014}\mbox{\hyperlink{classCreateCareersTable_a9567fa2e16ca12ecf85fb415486bb565}{00014}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classCreateCareersTable_a9567fa2e16ca12ecf85fb415486bb565}{up}}()}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00016}00016         Schema::create(\textcolor{stringliteral}{'careers'}, \textcolor{keyword}{function} (Blueprint \$table) \{}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00017}00017             \$table-\/>id();}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00018}00018             \$table-\/>string(\textcolor{stringliteral}{'name'});}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00019}00019             \$table-\/>timestamps();}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00020}00020             \$table-\/>softDeletes();}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00021}00021         \});}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00029}\mbox{\hyperlink{classCreateCareersTable_ad6350c32a61876eede3c371ae07cfa6d}{00029}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classCreateCareersTable_ad6350c32a61876eede3c371ae07cfa6d}{down}}()}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00030}00030     \{}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00031}00031         Schema::dropIfExists(\textcolor{stringliteral}{'careers'});}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{2022__08__18__181913__create__careers__table_8php_source_l00033}00033 \}}
+
+\end{DoxyCode}

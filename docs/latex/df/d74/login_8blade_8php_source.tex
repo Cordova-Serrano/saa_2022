@@ -1,0 +1,152 @@
+\hypertarget{login_8blade_8php_source}{}\doxysection{login.\+blade.\+php}
+\label{login_8blade_8php_source}\index{resources/views/auth/login.blade.php@{resources/views/auth/login.blade.php}}
+\mbox{\hyperlink{login_8blade_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00001}00001 @extends(\textcolor{stringliteral}{'layouts.app'})}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00003}00003 @section(\textcolor{stringliteral}{'content'})}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00004}00004 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}container"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00005}00005     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}justify-\/content-\/center"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00006}00006         <!-\/-\/ Card con el fomrulario de \mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_ac93f5b7c4ea51eece6203533b4ecf17a}{login}} -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00007}00007         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00008}00008             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}overlay"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}overlay"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00009}00009                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/2x fa-\/sync fa-\/spin"{}}></i>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00010}00010             </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00011}00011             <!-\/-\/ Contenido del card -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00012}00012             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/body login-\/card-\/body"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00013}00013                 <p \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}login-\/box-\/msg"{}}>Ingresa para continuar</p>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00014}00014                 <!-\/-\/ Verifica si existe algun error y muestra una alerta en caso de error -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00015}00015                 @\textcolor{keywordflow}{if} (\$errors-\/>any())}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00016}00016                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert alert-\/danger alert-\/dismissible text-\/justify"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}error-\/alert"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00017}00017                     <button aria-\/hidden=\textcolor{stringliteral}{"{}true"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}close"{}} data-\/dismiss=\textcolor{stringliteral}{"{}alert"{}} type=\textcolor{stringliteral}{"{}button"{}}>\&times;</button>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00018}00018                     <h6><i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}icon fal fa-\/times-\/circle"{}}></i>¡Error!</h6>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00019}00019                     <!-\/-\/ Muestra el mensaje de error correspondiente -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00020}00020                     @\textcolor{keywordflow}{foreach} (\$errors-\/>all() as \$error)}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00021}00021                     \{\{ \$error \}\}<br>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00022}00022                     \textcolor{keyword}{@end}\textcolor{keywordflow}{foreach}}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00023}00023                 </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00024}00024                 \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00026}00026                 <!-\/-\/ FORMULARIO DE LOGIN -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00027}00027                 <form method=\textcolor{stringliteral}{"{}POST"{}} action=\textcolor{stringliteral}{"{}\{\{ route('login') \}\}"{}} autocomplete=\textcolor{stringliteral}{"{}off"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}login-\/form"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00028}00028                     @csrf}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00029}00029                     <!-\/-\/ USERNAME -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00030}00030                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group mb-\/3"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00031}00031                         <!-\/-\/ input con \textcolor{keywordtype}{id} necesario para identificar el nombre de usuario ingresado-\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00032}00032                         <input \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}username"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control @error('username') is-\/invalid @enderror"{}} name=\textcolor{stringliteral}{"{}username"{}} placeholder=\textcolor{stringliteral}{"{}Nombre de usuario"{}} required autofocus type=\textcolor{stringliteral}{"{}username"{}} value=\textcolor{stringliteral}{"{}\{\{ old('username') \}\}"{}} autocomplete=\textcolor{stringliteral}{"{}off"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00033}00033                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/append"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00034}00034                             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/text"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00035}00035                                 <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/user"{}}></span>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00036}00036                             </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00037}00037                         </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00038}00038                         <!-\/-\/ Si sale error de \mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_ad64bd657a8f23578398fc0bb2d620f5b}{username}} va a mostrar una alerta -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00039}00039                         @error(\textcolor{stringliteral}{'username'})}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00040}00040                         <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}invalid-\/feedback"{}} role=\textcolor{stringliteral}{"{}alert"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00041}00041                             <strong>\{\{ \$message \}\}</strong>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00042}00042                         </span>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00043}00043                         \textcolor{keyword}{@end}error}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00044}00044                     </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00045}00045                     <!-\/-\/ /USERNAME -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00046}00046                     <!-\/-\/ PASSWORD -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00047}00047                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group mb-\/3"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00048}00048                         <!-\/-\/ input con \textcolor{keywordtype}{id} necesario para identificar la contraseña ingresada -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00049}00049                         <input \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}password"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}form-\/control @error('password') is-\/invalid @enderror"{}} name=\textcolor{stringliteral}{"{}password"{}} placeholder=\textcolor{stringliteral}{"{}Contraseña"{}} required type=\textcolor{stringliteral}{"{}password"{}} autocomplete=\textcolor{stringliteral}{"{}current-\/password"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00050}00050                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/append"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00051}00051                             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}input-\/group-\/text"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00052}00052                                 <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/lock-\/alt"{}}></span>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00053}00053                             </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00054}00054                         </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00055}00055                         <!-\/-\/ Si sale error de password va a mostrar una alerta -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00056}00056                         @error(\textcolor{stringliteral}{'password'})}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00057}00057                         <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}invalid-\/feedback"{}} role=\textcolor{stringliteral}{"{}alert"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00058}00058                             <strong>\{\{ \$message \}\}</strong>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00059}00059                         </span>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00060}00060                         \textcolor{keyword}{@end}error}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00061}00061                     </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00062}00062                     <!-\/-\/ /PASSWORD -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00063}00063                     <!-\/-\/ BUTTON -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00064}00064                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}row"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00065}00065                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}col-\/12 text-\/center text-\/sm-\/right"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00066}00066                             <!-\/-\/ BOTON QUE ENVIA LA INFORMACION INGRESADA AL SISTEMA -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00067}00067                             <button type=\textcolor{stringliteral}{"{}submit"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/sm btn-\/primary"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00068}00068                                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/sign-\/in mr-\/2"{}}></i>\{\{ \_\_(\textcolor{stringliteral}{'Iniciar sesión'}) \}\}}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00069}00069                             </button>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00070}00070                             <!-\/-\/ Si quiere activar la funcion de olvido contraseña descomentar esta sección -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00071}00071                             <!-\/-\/ FORGOT YOUR PASSWORD? -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00072}00072                             <!-\/-\/ @\textcolor{keywordflow}{if} (Route::has(\textcolor{stringliteral}{'password.request'}))}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00073}00073                             <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn btn-\/link"{}} href=\textcolor{stringliteral}{"{}\{\{ route('password.request') \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00074}00074                                 \{\{ \_\_(\textcolor{stringliteral}{'¿Olvidaste tu contraseña?'}) \}\}}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00075}00075                             </a>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00076}00076                             \textcolor{keyword}{@end}\textcolor{keywordflow}{if} -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00077}00077                             <!-\/-\/ /FORGOT YOUR PASSWORD? -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00078}00078                             @guest}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00079}00079                             <!-\/-\/ Si quiere activar la funcion de registro descomentar esta sección -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00080}00080                             <!-\/-\/ @\textcolor{keywordflow}{if} (Route::has(\textcolor{stringliteral}{'register'}))}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00081}00081                             <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/link"{}} href=\textcolor{stringliteral}{"{}\{\{ route('register') \}\}"{}}>\{\{ \_\_(\textcolor{stringliteral}{'Regístrate'}) \}\}</a>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00082}00082                             \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00083}00083                             @\textcolor{keywordflow}{else} -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00084}00084                             <!-\/-\/ MANDA UN ITEM DE NAVBAR DONDE MOSTRARA UN DROPDOWN -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00085}00085                             <li \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/item dropdown"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00086}00086                                 <a \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}navbarDropdown"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/link dropdown-\/toggle"{}} href=\textcolor{stringliteral}{"{}\#"{}} role=\textcolor{stringliteral}{"{}button"{}} data-\/bs-\/toggle=\textcolor{stringliteral}{"{}dropdown"{}} aria-\/haspopup=\textcolor{stringliteral}{"{}true"{}} aria-\/expanded=\textcolor{stringliteral}{"{}false"{}} v-\/pre>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00087}00087                                     \{\{ Auth::user()-\/>name \}\} <!-\/-\/ Obtiene el nombre del usuario que ingreso al sistema -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00088}00088                                 </a>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00090}00090                                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}dropdown-\/menu dropdown-\/menu-\/end"{}} aria-\/labelledby=\textcolor{stringliteral}{"{}navbarDropdown"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00091}00091                                     <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}dropdown-\/item"{}} href=\textcolor{stringliteral}{"{}\{\{ route('logout') \}\}"{}} onclick=\textcolor{stringliteral}{"{}event.preventDefault(); }}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00092}00092 \textcolor{stringliteral}{                                                     document.getElementById('logout-\/form').submit();"{}}> <!-\/-\/ Boton manda a ruta de cerrar sesion -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00093}00093                                         \{\{ \_\_(\textcolor{stringliteral}{'Cerrar sesión'}) \}\}}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00094}00094                                     </a>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00095}00095                                     <!-\/-\/ Sale del sistema, mandando a la ruta de logouts -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00096}00096                                     <form \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}logout-\/form"{}} action=\textcolor{stringliteral}{"{}\{\{ route('logout') \}\}"{}} method=\textcolor{stringliteral}{"{}POST"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}d-\/none"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00097}00097                                         @csrf}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00098}00098                                     </form>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00099}00099                                 </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00100}00100                             </li>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00101}00101                             \textcolor{keyword}{@end}guest}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00102}00102                         </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00103}00103                     </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00104}00104                     <!-\/-\/ /BUTTON -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00105}00105                 </form>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00106}00106                 <!-\/-\/ /FORMULARIO DE LOGIN -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00107}00107             </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00108}00108         </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00109}00109     </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00110}00110 </div>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00111}00111 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00113}00113 @section (\textcolor{stringliteral}{'plugins'})}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00114}00114 <!-\/-\/ Form Validations -\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00115}00115 <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/jquery-\/validation/jquery.validate.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00116}00116 <!-\/-\/<script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/jquery-\/validation/localization/messages\_es.js') \}\}"{}}></script>-\/-\/>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00117}00117 <script type=\textcolor{stringliteral}{"{}text/javascript"{}} src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/jquery-\/validation/localization/messages\_es.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00118}00118 \textcolor{keyword}{@end}section}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00120}00120 @section (\textcolor{stringliteral}{'scripts'})}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00121}00121 <script type=\textcolor{stringliteral}{"{}text/javascript"{}}>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00122}00122     \textcolor{comment}{// Valida las credenciales ingresadas en el formulario}}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00123}00123     \$(\textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00124}00124         \$(\textcolor{stringliteral}{'\#login-\/form'}).validate(\{}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00125}00125             lang: \textcolor{stringliteral}{'es'},}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00126}00126             errorPlacement: \textcolor{keyword}{function}(error, element) \{ \textcolor{comment}{//define una clase para el elemento de error}}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00127}00127                 error.addClass(\textcolor{stringliteral}{'form-\/check-\/label invalid-\/feedback'});}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00128}00128                 element.closest(\textcolor{stringliteral}{'.input-\/group'}).append(error);}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00129}00129             \},}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00130}00130             highlight: \textcolor{keyword}{function}(element, errorClass, validClass) \{ \textcolor{comment}{//se invoca el metodo highlight sobre el elemento que se quiere destacar}}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00131}00131                 \$(element).addClass(\textcolor{stringliteral}{'is-\/invalid'});}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00132}00132             \},}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00133}00133             unhighlight: \textcolor{keyword}{function}(element, errorClass, validClass) \{ \textcolor{comment}{//se invoca el metodo unhighlight sobre el elemento que no se va a resaltar}}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00134}00134                 \$(element).removeClass(\textcolor{stringliteral}{'is-\/invalid'});}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00135}00135             \},}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00136}00136             submitHandler: \textcolor{keyword}{function}(form) \{ \textcolor{comment}{//se invoca el metodo submitHandler para el envio de datos}}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00137}00137                 \$(\textcolor{stringliteral}{'\#overlay'}).show();}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00139}00139                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00140}00140             \}}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00141}00141         \});}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00143}00143         \$(\textcolor{stringliteral}{'\#overlay'}).hide();}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00144}00144     \})}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00145}00145 </script>}
+\DoxyCodeLine{\Hypertarget{login_8blade_8php_source_l00146}00146 @endsection}
+
+\end{DoxyCode}

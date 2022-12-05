@@ -1,0 +1,41 @@
+\hypertarget{dash__api_8py_source}{}\doxysection{dash\+\_\+api.\+py}
+\label{dash__api_8py_source}\index{graph/dash\_api.py@{graph/dash\_api.py}}
+\mbox{\hyperlink{dash__api_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00001}\mbox{\hyperlink{namespacegraph_1_1dash__api}{00001}} \textcolor{comment}{\# Run this app with `python app.py` and}}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00002}00002 \textcolor{comment}{\# visit http://127.0.0.1:8050/ in your web browser.}}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00004}00004 \textcolor{keyword}{from} dash \textcolor{keyword}{import} Dash, html, dcc}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00005}00005 \textcolor{keyword}{import} plotly.express \textcolor{keyword}{as} px}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00006}00006 \textcolor{keyword}{import} pandas \textcolor{keyword}{as} pd}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00008}\mbox{\hyperlink{namespacegraph_1_1dash__api_afb6545dbcb2a61a9a0a957dc21a8ea3c}{00008}} app = Dash(\_\_name\_\_)}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00010}00010 \textcolor{comment}{\# assume you have a "{}long-\/form"{} data frame}}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00011}00011 \textcolor{comment}{\# see https://plotly.com/python/px-\/arguments/ for more options}}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00012}\mbox{\hyperlink{namespacegraph_1_1dash__api_aaa4580c9673d458b824a1c1f52ac448d}{00012}} df = pd.DataFrame(}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00014}00014         \textcolor{stringliteral}{"{}Fruit"{}}: [\textcolor{stringliteral}{"{}Apples"{}}, \textcolor{stringliteral}{"{}Oranges"{}}, \textcolor{stringliteral}{"{}Bananas"{}}, \textcolor{stringliteral}{"{}Apples"{}}, \textcolor{stringliteral}{"{}Oranges"{}}, \textcolor{stringliteral}{"{}Bananas"{}}],}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00015}00015         \textcolor{stringliteral}{"{}Amount"{}}: [4, 1, 2, 2, 4, 5],}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00016}00016         \textcolor{stringliteral}{"{}City"{}}: [\textcolor{stringliteral}{"{}SF"{}}, \textcolor{stringliteral}{"{}SF"{}}, \textcolor{stringliteral}{"{}SF"{}}, \textcolor{stringliteral}{"{}Montreal"{}}, \textcolor{stringliteral}{"{}Montreal"{}}, \textcolor{stringliteral}{"{}Montreal"{}}],}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00017}00017     \}}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00018}00018 )}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00020}\mbox{\hyperlink{namespacegraph_1_1dash__api_a08de837887cc926a74b2ac44809d51eb}{00020}} fig = px.bar(df, x=\textcolor{stringliteral}{"{}Fruit"{}}, y=\textcolor{stringliteral}{"{}Amount"{}}, color=\textcolor{stringliteral}{"{}City"{}}, barmode=\textcolor{stringliteral}{"{}group"{}})}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00022}\mbox{\hyperlink{namespacegraph_1_1dash__api_af25dfb0a2b66964c7828f23cc470477b}{00022}} app.layout = html.Div(}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00023}\mbox{\hyperlink{namespacegraph_1_1dash__api_a2cf27ea72e03e4b700dd137a6017f0b8}{00023}}     children=[}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00024}00024         html.H1(children=\textcolor{stringliteral}{"{}Hello Dash"{}}),}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00025}00025         html.Div(}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00026}00026             children=\textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00027}00027 \textcolor{stringliteral}{        Dash: A web application framework }\textcolor{keywordflow}{for} your data.}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00028}00028     \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00029}00029 \textcolor{stringliteral}{        ),}}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00030}00030 \textcolor{stringliteral}{        dcc.Graph(id="{}example-\/graph"{}}, figure=fig),}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00031}00031     ]}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00032}00032 )}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00034}00034 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{dash__api_8py_source_l00035}\mbox{\hyperlink{namespacegraph_1_1dash__api_a60c4e1ef630143f104f515355d328ff0}{00035}}     app.run\_server(debug=\textcolor{keyword}{True})}
+
+\end{DoxyCode}

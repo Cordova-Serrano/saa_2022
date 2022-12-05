@@ -1,0 +1,28 @@
+\hypertarget{plotly_8js_source}{}\doxysection{plotly.\+js}
+\label{plotly_8js_source}\index{resources/js/plotly.js@{resources/js/plotly.js}}
+\mbox{\hyperlink{plotly_8js}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00010}\mbox{\hyperlink{plotly_8js_ac4b47bc0c430737097b2d183857ec816}{00010}}  \textcolor{keyword}{function} \mbox{\hyperlink{plotly_8js_ac4b47bc0c430737097b2d183857ec816}{RenderGraphs}}(records) \{}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00011}00011     \textcolor{keyword}{const} graphType = document.getElementById(\textcolor{stringliteral}{'select-\/graph'}).value;}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00012}00012     \textcolor{keyword}{const} varValue = document.getElementById(\textcolor{stringliteral}{'modal-\/var'}).getAttribute(\textcolor{stringliteral}{'data-\/var'});}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00013}00013     \textcolor{keyword}{const} URL = \textcolor{stringliteral}{"{}http://127.0.0.1:8000/graph/"{}} + graphType + \textcolor{stringliteral}{"{}?var="{}} + varValue;}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00014}00014     \textcolor{keyword}{const} request = \{}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00015}00015         method: \textcolor{stringliteral}{"{}POST"{}},}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00016}00016         headers: \{\textcolor{stringliteral}{"{}content-\/type"{}}: \textcolor{stringliteral}{"{}application/json"{}}, \textcolor{stringliteral}{"{}accept"{}}: \textcolor{stringliteral}{"{}application/json"{}}\},}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00017}00017         body: JSON.stringify(\{}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00018}00018             records: records}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00019}00019         \}),}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00021}00021     console.log(request);}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00022}00022     fetch(URL, request)}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00023}00023         .then(response => response.json())}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00024}00024         .then(data => \{}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00025}00025             json\_graph = JSON.parse(data);}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00027}00027             Plotly.newPlot(\textcolor{stringliteral}{'graph'}, json\_graph);}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00028}00028         \}}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00029}00029     );}
+\DoxyCodeLine{\Hypertarget{plotly_8js_source_l00030}00030 \}}
+
+\end{DoxyCode}

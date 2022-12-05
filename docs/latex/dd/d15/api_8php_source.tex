@@ -1,0 +1,25 @@
+\hypertarget{api_8php_source}{}\doxysection{api.\+php}
+\label{api_8php_source}\index{routes/api.php@{routes/api.php}}
+\mbox{\hyperlink{api_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00003}00003 use Illuminate\(\backslash\)Http\(\backslash\)Request;}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00004}00004 use Illuminate\(\backslash\)Support\(\backslash\)Facades\(\backslash\)Route;}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00006}00006 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00007}00007 \textcolor{comment}{|-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00008}00008 \textcolor{comment}{| API Routes}}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00009}00009 \textcolor{comment}{|-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00010}00010 \textcolor{comment}{|}}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00011}00011 \textcolor{comment}{| Here is where you can register API routes for your application. These}}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00012}00012 \textcolor{comment}{| routes are loaded by the RouteServiceProvider within a group which}}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00013}00013 \textcolor{comment}{| is assigned the "{}api"{} middleware group. Enjoy building your API!}}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00014}00014 \textcolor{comment}{|}}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00015}00015 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00017}00017 Route::middleware(\textcolor{stringliteral}{'auth:sanctum'})-\/>get(\textcolor{stringliteral}{'/user'}, \textcolor{keyword}{function} (Request \$request) \{}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00018}00018     \textcolor{keywordflow}{return} \$request-\/>user();}
+\DoxyCodeLine{\Hypertarget{api_8php_source_l00019}00019 \});}
+
+\end{DoxyCode}

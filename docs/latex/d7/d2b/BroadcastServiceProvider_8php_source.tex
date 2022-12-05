@@ -1,0 +1,22 @@
+\hypertarget{BroadcastServiceProvider_8php_source}{}\doxysection{Broadcast\+Service\+Provider.\+php}
+\label{BroadcastServiceProvider_8php_source}\index{app/Providers/BroadcastServiceProvider.php@{app/Providers/BroadcastServiceProvider.php}}
+\mbox{\hyperlink{BroadcastServiceProvider_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Providers}{App\(\backslash\)Providers}};}
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00005}00005 use Illuminate\(\backslash\)Support\(\backslash\)Facades\(\backslash\)Broadcast;}
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00006}00006 use Illuminate\(\backslash\)Support\(\backslash\)ServiceProvider;}
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00008}\mbox{\hyperlink{classApp_1_1Providers_1_1BroadcastServiceProvider}{00008}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Providers_1_1BroadcastServiceProvider}{BroadcastServiceProvider}} \textcolor{keyword}{extends} ServiceProvider}
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00015}\mbox{\hyperlink{classApp_1_1Providers_1_1BroadcastServiceProvider_a00e0773db96bb9be027c3e8fe2346032}{00015}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Providers_1_1BroadcastServiceProvider_a00e0773db96bb9be027c3e8fe2346032}{boot}}()}
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00017}00017         Broadcast::routes();}
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00019}00019         \mbox{\hyperlink{app_8js_ac7f6b26a53465b420f480d9a3b4673ce}{require}} base\_path(\textcolor{stringliteral}{'routes/channels.php'});}
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{BroadcastServiceProvider_8php_source_l00021}00021 \}}
+
+\end{DoxyCode}

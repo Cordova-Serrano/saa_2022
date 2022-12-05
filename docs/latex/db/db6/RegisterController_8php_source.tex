@@ -1,0 +1,57 @@
+\hypertarget{RegisterController_8php_source}{}\doxysection{Register\+Controller.\+php}
+\label{RegisterController_8php_source}\index{app/Http/Controllers/Auth/RegisterController.php@{app/Http/Controllers/Auth/RegisterController.php}}
+\mbox{\hyperlink{RegisterController_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Http_1_1Controllers_1_1Auth}{App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)Auth}};}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00005}00005 use \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Controller}{App\(\backslash\)Http\(\backslash\)Controllers\(\backslash\)Controller}};}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00006}00006 use \mbox{\hyperlink{classApp_1_1Providers_1_1RouteServiceProvider}{App\(\backslash\)Providers\(\backslash\)RouteServiceProvider}};}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00007}00007 use \mbox{\hyperlink{classApp_1_1Models_1_1User}{App\(\backslash\)Models\(\backslash\)User}};}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00008}00008 use Illuminate\(\backslash\)Foundation\(\backslash\)Auth\(\backslash\)RegistersUsers;}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00009}00009 use Illuminate\(\backslash\)Support\(\backslash\)Facades\(\backslash\)Hash;}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00010}00010 use Illuminate\(\backslash\)Support\(\backslash\)Facades\(\backslash\)Validator;}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00012}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController}{00012}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController}{RegisterController}} \textcolor{keyword}{extends} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Controller}{Controller}}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00014}00014     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00015}00015 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00016}00016 \textcolor{comment}{    | Register Controller}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00017}00017 \textcolor{comment}{    |-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00018}00018 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00019}00019 \textcolor{comment}{    | This controller handles the registration of new users as well as their}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00020}00020 \textcolor{comment}{    | validation and creation. By default this controller uses a trait to}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00021}00021 \textcolor{comment}{    | provide this functionality without requiring any additional code.}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00022}00022 \textcolor{comment}{    |}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00023}00023 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00025}00025     use RegistersUsers;}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00032}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_aa6b41bd2d6cdbaacf9b41805588073a2}{00032}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_aa6b41bd2d6cdbaacf9b41805588073a2}{\$redirectTo}} = RouteServiceProvider::HOME;}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00039}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_a782a0072be2b44f06f2b67daa2d1876c}{00039}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_a782a0072be2b44f06f2b67daa2d1876c}{\_\_construct}}()}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00040}00040     \{}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00041}00041         \$this-\/>middleware(\textcolor{stringliteral}{'guest'});}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00050}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_a8c0f4d4f7b751490d25d183ec086bc21}{00050}}     \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_a8c0f4d4f7b751490d25d183ec086bc21}{validator}}(array \$data)}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00051}00051     \{}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00052}00052         \textcolor{keywordflow}{return} Validator::make(\$data, [}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00053}00053             \textcolor{stringliteral}{'name'} => [\textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'string'}, \textcolor{stringliteral}{'max:255'}],}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00054}00054             \textcolor{stringliteral}{'email'} => [\textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'string'}, \textcolor{stringliteral}{'email'}, \textcolor{stringliteral}{'max:255'}, \textcolor{stringliteral}{'unique:users'}],}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00055}00055             \textcolor{stringliteral}{'password'} => [\textcolor{stringliteral}{'required'}, \textcolor{stringliteral}{'string'}, \textcolor{stringliteral}{'min:8'}, \textcolor{stringliteral}{'confirmed'}],}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00056}00056         ]);}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00057}00057     \}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00065}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_af969cbad0c184d760c5e7ba80099abda}{00065}}     \textcolor{keyword}{protected} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController_af969cbad0c184d760c5e7ba80099abda}{create}}(array \$data)}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00066}00066     \{}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00067}00067         \textcolor{keywordflow}{return} User::create([}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00068}00068             \textcolor{stringliteral}{'name'} => \$data[\textcolor{stringliteral}{'name'}],}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00069}00069             \textcolor{stringliteral}{'email'} => \$data[\textcolor{stringliteral}{'email'}],}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00070}00070             \textcolor{stringliteral}{'password'} => Hash::make(\$data[\textcolor{stringliteral}{'password'}]),}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00071}00071         ]);}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00072}00072     \}}
+\DoxyCodeLine{\Hypertarget{RegisterController_8php_source_l00073}00073 \}}
+
+\end{DoxyCode}

@@ -1,29 +1,4 @@
 var searchData=
 [
-  ['api_2ephp_0',['api.php',['../dd/d15/api_8php.html',1,'']]],
-  ['app_2eblade_2ephp_1',['app.blade.php',['../d9/d7d/app_8blade_8php.html',1,'']]],
-  ['app_2ejs_2',['app.js',['../d7/d45/app_8js.html',1,'']]],
-  ['app_2ephp_3',['app.php',['../dd/d85/config_2app_8php.html',1,'(Global Namespace)'],['../d7/dfb/bootstrap_2app_8php.html',1,'(Global Namespace)']]],
-  ['appserviceprovider_4',['AppServiceProvider',['../da/d86/classApp_1_1Providers_1_1AppServiceProvider.html',1,'App::Providers']]],
-  ['appserviceprovider_2ephp_5',['AppServiceProvider.php',['../d1/d1e/AppServiceProvider_8php.html',1,'']]],
-  ['attemptlogin_6',['attemptLogin',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#a689357bbcf3d23d296718a0bd7c0ac88',1,'Illuminate::Foundation::Auth']]],
-  ['auth_7',['Auth',['../de/d21/namespaceApp_1_1Http_1_1Controllers_1_1Auth.html',1,'App::Http::Controllers']]],
-  ['auth_2ephp_8',['auth.php',['../dc/d9c/resources_2lang_2es_2auth_8php.html',1,'(Global Namespace)'],['../d1/d4f/resources_2lang_2en_2auth_8php.html',1,'(Global Namespace)'],['../d9/dd0/config_2auth_8php.html',1,'(Global Namespace)']]],
-  ['authenticate_9',['Authenticate',['../dd/dee/classApp_1_1Http_1_1Middleware_1_1Authenticate.html',1,'App::Http::Middleware']]],
-  ['authenticate_2ephp_10',['Authenticate.php',['../db/d18/Authenticate_8php.html',1,'']]],
-  ['authenticated_11',['authenticated',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#a0e9b05e1f8f07cb7a0d2f9933d401f04',1,'Illuminate::Foundation::Auth']]],
-  ['authenticatesusers_12',['AuthenticatesUsers',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#ae4f3c3791a133ad66712fed89abb72ff',1,'Illuminate::Foundation::Auth']]],
-  ['authenticatesusers_2ephp_13',['AuthenticatesUsers.php',['../d0/da6/AuthenticatesUsers_8php.html',1,'']]],
-  ['authorizeroles_14',['authorizeRoles',['../dc/d3b/classApp_1_1Models_1_1User.html#aedfc2e1b46d7635ba965b37678a034e3',1,'App::Models::User']]],
-  ['authserviceprovider_15',['AuthServiceProvider',['../d1/d0a/classApp_1_1Providers_1_1AuthServiceProvider.html',1,'App::Providers']]],
-  ['authserviceprovider_2ephp_16',['AuthServiceProvider.php',['../d2/da8/AuthServiceProvider_8php.html',1,'']]],
-  ['axios_17',['axios',['../d0/d1f/bootstrap_8js.html#a9fdcfebe26e40321cda1c1abee43b0ec',1,'bootstrap.js']]],
-  ['console_18',['Console',['../d9/dfe/namespaceApp_1_1Console.html',1,'App']]],
-  ['controllers_19',['Controllers',['../d1/d2d/namespaceApp_1_1Http_1_1Controllers.html',1,'App::Http']]],
-  ['exceptions_20',['Exceptions',['../df/d90/namespaceApp_1_1Exceptions.html',1,'App']]],
-  ['http_21',['Http',['../dc/de8/namespaceApp_1_1Http.html',1,'App']]],
-  ['imports_22',['Imports',['../da/d1e/namespaceApp_1_1Imports.html',1,'App']]],
-  ['middleware_23',['Middleware',['../d8/d29/namespaceApp_1_1Http_1_1Middleware.html',1,'App::Http']]],
-  ['models_24',['Models',['../d4/de2/namespaceApp_1_1Models.html',1,'App']]],
-  ['providers_25',['Providers',['../d2/dd0/namespaceApp_1_1Providers.html',1,'App']]]
+  ['plotly_2ejs_0',['plotly.js',['../d3/ddb/plotly_8js.html',1,'']]]
 ];

@@ -6,6 +6,7 @@ var searchData=
   ['require_3',['require',['../d7/d45/app_8js.html#ac7f6b26a53465b420f480d9a3b4673ce',1,'app.js']]],
   ['roles_4',['roles',['../dc/d3b/classApp_1_1Models_1_1User.html#a89d7ac6d2f257050a4cdb944b65c1052',1,'App::Models::User']]],
   ['roleusers_5',['roleUsers',['../d3/d06/classApp_1_1Models_1_1RoleUser.html#afa113b0ca45aecadf94794cfd78f70d1',1,'App::Models::RoleUser']]],
-  ['rules_6',['rules',['../d5/d1b/classApp_1_1Imports_1_1CSVImport.html#aa8440defff7bfd889fb94d2d5c693d88',1,'App::Imports::CSVImport']]],
-  ['run_7',['run',['../d8/d63/classDatabase_1_1Seeders_1_1DatabaseSeeder.html#a912019806f53d69ab59a1c2ba79e2f02',1,'Database\Seeders\DatabaseSeeder\run()'],['../dd/da8/classDatabase_1_1Seeders_1_1RoleSeeder.html#a24250696996cfca113750757e7b0390b',1,'Database\Seeders\RoleSeeder\run()'],['../d5/dd6/classDatabase_1_1Seeders_1_1UserSeeder.html#a7ebb2e185ccb32fb0743e12cfcaa6476',1,'Database\Seeders\UserSeeder\run()']]]
+  ['root_6',['root',['../d6/d95/namespacegraph__api.html#a818636356dc2c78613b59afcf44008b5',1,'graph_api']]],
+  ['rules_7',['rules',['../d5/d1b/classApp_1_1Imports_1_1CSVImport.html#aa8440defff7bfd889fb94d2d5c693d88',1,'App::Imports::CSVImport']]],
+  ['run_8',['run',['../d8/d63/classDatabase_1_1Seeders_1_1DatabaseSeeder.html#a912019806f53d69ab59a1c2ba79e2f02',1,'Database\Seeders\DatabaseSeeder\run()'],['../dd/da8/classDatabase_1_1Seeders_1_1RoleSeeder.html#a24250696996cfca113750757e7b0390b',1,'Database\Seeders\RoleSeeder\run()'],['../d5/dd6/classDatabase_1_1Seeders_1_1UserSeeder.html#a7ebb2e185ccb32fb0743e12cfcaa6476',1,'Database\Seeders\UserSeeder\run()']]]
 ];

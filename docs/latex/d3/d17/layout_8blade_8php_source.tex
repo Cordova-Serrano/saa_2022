@@ -1,0 +1,238 @@
+\hypertarget{layout_8blade_8php_source}{}\doxysection{layout.\+blade.\+php}
+\label{layout_8blade_8php_source}\index{resources/views/layout.blade.php@{resources/views/layout.blade.php}}
+\mbox{\hyperlink{layout_8blade_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00001}00001 @php}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00002}00002 \$route = Route::currentRouteName();}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00003}00003 \textcolor{keyword}{@end}php}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00004}00004 <!DOCTYPE html>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00005}00005 <html lang=\textcolor{stringliteral}{"{}es"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00007}00007 <head>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00008}00008     <meta name=\textcolor{stringliteral}{"{}csrf-\/token"{}} content=\textcolor{stringliteral}{"{}\{\{ csrf\_token() \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00009}00009     <meta charset=\textcolor{stringliteral}{"{}utf-\/8"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00010}00010     <meta content=\textcolor{stringliteral}{"{}width=device-\/width, initial-\/scale=1"{}} name=\textcolor{stringliteral}{"{}viewport"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00011}00011     <title>@yield (\textcolor{stringliteral}{'title'})</title>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00012}00012     <link href=\textcolor{stringliteral}{"{}https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700\&display=fallback"{}} rel=\textcolor{stringliteral}{"{}stylesheet"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00013}00013     <link href=\textcolor{stringliteral}{"{}\{\{ asset('plugins/font-\/awesome-\/pro/css/all.css') \}\}"{}} rel=\textcolor{stringliteral}{"{}stylesheet"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00014}00014     <script src=\textcolor{stringliteral}{"{}https://cdn.plot.ly/plotly-\/latest.min.js"{}}></script>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00015}00015     <!-\/-\/ etc. -\/-\/>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00016}00016     @yield (\textcolor{stringliteral}{'styles'})}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00017}00017     <link href=\textcolor{stringliteral}{"{}\{\{ asset('core/css/adminlte.css') \}\}"{}} rel=\textcolor{stringliteral}{"{}stylesheet"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00018}00018     <link href=\textcolor{stringliteral}{"{}\{\{ asset('css/custom.css') \}\}"{}} rel=\textcolor{stringliteral}{"{}stylesheet"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00019}00019     <link href=\textcolor{stringliteral}{"{}\{\{ asset('favicon.ico') \}\}"{}} rel=\textcolor{stringliteral}{"{}icon"{}} type=\textcolor{stringliteral}{"{}image/x-\/icon"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00020}00020     <link href=\textcolor{stringliteral}{"{}\{\{ asset('favicon.ico') \}\}"{}} rel=\textcolor{stringliteral}{"{}shortcut icon"{}} type=\textcolor{stringliteral}{"{}image/x-\/icon"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00021}00021 </head>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00023}00023 <body \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}hold-\/transition sidebar-\/mini"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00024}00024     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}wrapper"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00025}00025         <nav \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}main-\/header navbar navbar-\/expand navbar-\/light navbar-\/1235c"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00026}00026             <ul \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}navbar-\/nav"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00027}00027                 <li \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/item"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00028}00028                     <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/link"{}} data-\/widget=\textcolor{stringliteral}{"{}pushmenu"{}} href=\textcolor{stringliteral}{"{}javascript:void(0)"{}} role=\textcolor{stringliteral}{"{}button"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00029}00029                         <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/bars"{}}></i>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00030}00030                     </a>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00031}00031                 </li>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00032}00032             </ul>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00033}00033             <ul \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}navbar-\/nav ml-\/auto"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00034}00034                 <li \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/item dropdown"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00035}00035                     <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/link mr-\/1 p-\/0"{}} data-\/toggle=\textcolor{stringliteral}{"{}dropdown"{}} href=\textcolor{stringliteral}{"{}javascript:void(0)"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00036}00036                         <img \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}h-\/100 img-\/circle elevation-\/1"{}} src=\textcolor{stringliteral}{"{}\{\{ asset('core/img/logo\_minimal\_test.jpg') \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00037}00037                     </a>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00038}00038                     <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}dropdown-\/menu dropdown-\/menu-\/lg dropdown-\/menu-\/right"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00040}00040                         <!-\/-\/ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00041}00041                         <a \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}navbarDropdown"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}dropdown-\/item dropdown-\/header"{}} href=\textcolor{stringliteral}{"{}\#"{}} role=\textcolor{stringliteral}{"{}button"{}} data-\/bs-\/toggle=\textcolor{stringliteral}{"{}dropdown"{}} aria-\/haspopup=\textcolor{stringliteral}{"{}true"{}} aria-\/expanded=\textcolor{stringliteral}{"{}false"{}} v-\/pre>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00042}00042                             \{\{ Auth::user()-\/>name \}\}}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00043}00043                         </a>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00044}00044                         <!-\/-\/ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00045}00045                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}dropdown-\/divider"{}}></div>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00046}00046                         <form action=\textcolor{stringliteral}{"{}\{\{ route('logout') \}\}"{}} autocomplete=\textcolor{stringliteral}{"{}off"{}} method=\textcolor{stringliteral}{"{}post"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00047}00047                             @csrf}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00048}00048                             <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}dropdown-\/item"{}} href=\textcolor{stringliteral}{"{}javascript:void(0)"{}} onclick=\textcolor{stringliteral}{"{}event.preventDefault(); this.closest('form').submit();"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00049}00049                                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}fal fa-\/sign-\/out mr-\/2"{}}></i>Cerrar Sesión}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00050}00050                             </a>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00051}00051                         </form>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00052}00052                         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}dropdown-\/divider"{}}></div>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00053}00053                         <!-\/-\/ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ -\/-\/>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00054}00054                         </form>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00055}00055                     </div>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00056}00056                 </li>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00057}00057             </ul>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00058}00058         </nav>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00059}00059         <aside \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}main-\/sidebar sidebar-\/light-\/reflex-\/blue elevation-\/4"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00060}00060             <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}brand-\/link"{}} href=\textcolor{stringliteral}{"{}"{}} style=\textcolor{stringliteral}{"{}background-\/color: \#004A98 !important;"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00061}00061                 <img alt=\textcolor{stringliteral}{"{}Isotipo"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}brand-\/image"{}} src=\textcolor{stringliteral}{"{}\{\{ asset('core/img/logo\_uaslp.png') \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00062}00062                 <span \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}brand-\/text"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00063}00063                     <img alt=\textcolor{stringliteral}{"{}Logotipo"{}} height=\textcolor{stringliteral}{"{}30"{}} src=\textcolor{stringliteral}{"{}\{\{ asset('core/img/logo\_ing\_uaslp.png') \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00064}00064                 </span>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00065}00065             </a>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00066}00066             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}sidebar"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00067}00067                 <nav \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}mt-\/2"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00068}00068                     <ul \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav nav-\/pills nav-\/sidebar flex-\/column"{}} data-\/accordion=\textcolor{stringliteral}{"{}false"{}} data-\/widget=\textcolor{stringliteral}{"{}treeview"{}} role=\textcolor{stringliteral}{"{}menu"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00069}00069                         <li \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/item"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00070}00070                             <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/link \{\{ str\_starts\_with(\$route, 'home') ? 'active' : '' \}\}"{}} href=\textcolor{stringliteral}{"{}/home"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00071}00071                                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/icon fas fa-\/clinic-\/medical"{}}></i>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00072}00072                                 <p>Inicio</p>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00073}00073                             </a>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00074}00074                         </li>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00075}00075                         <li \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/item"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00076}00076                             <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/link \{\{ str\_starts\_with(\$route, 'csv') ? 'active' : '' \}\}"{}} href=\textcolor{stringliteral}{"{}\{\{ route('csv.index') \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00077}00077                                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/icon fas fa-\/file-\/csv"{}}></i>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00078}00078                                 <p>Archivo CSV</p>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00079}00079                             </a>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00080}00080                         </li>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00081}00081                         <li \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/item"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00082}00082                             <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/link \{\{ str\_starts\_with(\$route, 'graphs') ? 'active' : '' \}\}"{}} href=\textcolor{stringliteral}{"{}\{\{ route('graphs.index') \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00083}00083                                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/icon fas fa-\/chart-\/bar"{}}></i>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00084}00084                                 <p>Ver gráficas</p>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00085}00085                             </a>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00086}00086                         </li>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00087}00087                         <li \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/item"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00088}00088                             <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/link \{\{ str\_starts\_with(\$route, 'consult') ? 'active' : '' \}\}"{}} href=\textcolor{stringliteral}{"{}\{\{ route('consult.index') \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00089}00089                                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/icon fas fa-\/users"{}}></i>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00090}00090                                 <p>Consulta de alumnos</p>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00091}00091                             </a>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00092}00092                         </li>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00093}00093                         @\textcolor{keywordflow}{if} (Auth::user()-\/>hasRole(\textcolor{stringliteral}{'super'}))}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00094}00094                         <li \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/item \{\{ (str\_starts\_with(\$route, 'classifications') || str\_starts\_with(\$route, 'settings') || str\_starts\_with(\$route, 'suppliers') || str\_starts\_with(\$route, 'users'))||  str\_starts\_with(\$route, 'fees') ||str\_starts\_with(\$route, 'charge-\/vouchers') ||  str\_starts\_with(\$route, 'type') ? 'menu-\/open' : '' \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00095}00095                             <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/link \{\{ (str\_starts\_with(\$route, 'classifications') || str\_starts\_with(\$route, 'settings') || str\_starts\_with(\$route, 'suppliers') || str\_starts\_with(\$route, 'users')) || str\_starts\_with(\$route, 'charge-\/vouchers') ||  str\_starts\_with(\$route, 'fees') ? 'active' : '' \}\}"{}} href=\textcolor{stringliteral}{"{}javascript:void(0)"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00096}00096                                 <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/icon fas fa-\/tools"{}}></i>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00097}00097                                 <p>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00098}00098                                     Configuración}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00099}00099                                     <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}right fal fa-\/angle-\/left"{}}></i>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00100}00100                                 </p>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00101}00101                             </a>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00102}00102                             <ul \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav nav-\/treeview"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00103}00103                                 <li \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/item"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00104}00104                                     <a \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/link \{\{ str\_starts\_with(\$route, 'users') ? 'active' : '' \}\}"{}} href=\textcolor{stringliteral}{"{}\{\{ route('users.index') \}\}"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00105}00105                                         <i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}nav-\/icon fal fa-\/users"{}}></i>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00106}00106                                         <p>Usuarios</p>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00107}00107                                     </a>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00108}00108                                 </li>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00109}00109                             </ul>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00110}00110                         </li>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00111}00111                         \textcolor{keyword}{@end}\textcolor{keywordflow}{if}}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00112}00112                     </ul>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00113}00113                 </nav>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00114}00114             </div>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00115}00115         </aside>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00116}00116         <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}content-\/wrapper"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00117}00117             <section \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}content-\/header"{}}></section>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00118}00118             <section \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}content"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00119}00119                 <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}container-\/fluid"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00120}00120                     @yield (\textcolor{stringliteral}{'content'})}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00121}00121                 </div>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00122}00122             </section>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00123}00123         </div>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00124}00124         <footer \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}main-\/footer text-\/center text-\/sm-\/left"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00125}00125             <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}float-\/right d-\/none d-\/sm-\/block"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00126}00126                 v1.0}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00127}00127             </div>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00128}00128             \&copy; \{\{ date(\textcolor{charliteral}{'Y'}) \}\} <a href=\textcolor{stringliteral}{"{}javascript:void(0)"{}}>Facultad de Ingeniería, Área de Ciencias de la Computación</a>.}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00129}00129             Todos los derechos reservados.}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00130}00130         </footer>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00131}00131     </div>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00132}00132     <script src=\textcolor{stringliteral}{"{}\{!! mix('js/app.js') !!\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00133}00133     <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/jquery/jquery.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00134}00134     <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/bootstrap/js/bootstrap.bundle.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00135}00135     <script src=\textcolor{stringliteral}{"{}\{\{ asset('plugins/inputmask/jquery.inputmask.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00136}00136     @yield (\textcolor{stringliteral}{'plugins'})}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00137}00137     <script src=\textcolor{stringliteral}{"{}\{\{ asset('core/js/adminlte.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00138}00138     <script src=\textcolor{stringliteral}{"{}\{\{ asset('core/js/demo.js') \}\}"{}}></script>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00139}00139     <script type=\textcolor{stringliteral}{"{}text/javascript"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00140}00140         String.prototype.capitalize = \textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00141}00141             \textcolor{keywordflow}{return} this.toLowerCase().split(\textcolor{charliteral}{' '}).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(\textcolor{charliteral}{' '});}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00142}00142         \}}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00144}00144         Inputmask.extendAliases(\{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00145}00145             currency: \{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00146}00146                 digits: 2,}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00147}00147                 prefix: \textcolor{charliteral}{'\$'},}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00148}00148                 allowMinus: !1,}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00149}00149                 alias: \textcolor{stringliteral}{'numeric'},}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00150}00150                 digitsOptional: !1,}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00151}00151             \},}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00152}00152             integer: \{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00153}00153                 digits: 0,}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00154}00154                 allowMinus: !1,}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00155}00155                 alias: \textcolor{stringliteral}{'numeric'}}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00156}00156             \},}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00157}00157             percentage: \{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00158}00158                 max: 100,}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00159}00159                 digits: 2,}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00160}00160                 suffix: \textcolor{charliteral}{'\%'},}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00161}00161                 allowMinus: !1,}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00162}00162                 alias: \textcolor{stringliteral}{'numeric'},}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00163}00163                 digitsOptional: !1}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00164}00164             \},}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00165}00165             decimal: \{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00166}00166                 max: 100,}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00167}00167                 digits: 2,}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00168}00168                 allowMinus: !1,}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00169}00169                 alias: \textcolor{stringliteral}{'numeric'},}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00170}00170                 digitsOptional: !1}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00171}00171             \},}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00172}00172 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00174}00174         \});}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00176}00176         \$(\textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00177}00177             \$(\textcolor{stringliteral}{'.inputmask'}).inputmask(\{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00178}00178                 rightAlign: \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00179}00179                 showMaskOnFocus: \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00180}00180                 showMaskOnHover: \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00181}00181                 removeMaskOnSubmit: \textcolor{keyword}{true}}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00182}00182             \});}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00184}00184             \$(\textcolor{stringliteral}{'\#error-\/alert, \#success-\/alert, \#warning-\/alert'}).fadeTo(5000, 1, \textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00185}00185                 \$(\textcolor{keyword}{this}).slideUp(1000);}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00186}00186             \});}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00187}00187         \});}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00189}00189         \textcolor{keyword}{function} drawAlert(parent, type, message) \{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00190}00190             let icon = \textcolor{stringliteral}{''};}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00191}00191             let title = \textcolor{stringliteral}{''};}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00192}00192             let element = \textcolor{keyword}{new} Date().toLocaleTimeString().replaceAll(\textcolor{charliteral}{':'}, \textcolor{stringliteral}{''});}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00193}00193 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00194}00194             \textcolor{keywordflow}{switch} (type) \{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00195}00195                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{'danger'}:}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00196}00196                     title = \textcolor{stringliteral}{'Error'};}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00197}00197                     icon = \textcolor{stringliteral}{'times-\/circle'};}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00198}00198                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00199}00199                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{'success'}:}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00200}00200                     title = \textcolor{stringliteral}{'Realizado'};}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00201}00201                     icon = \textcolor{stringliteral}{'check-\/circle'};}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00202}00202                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00203}00203                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{'warning'}:}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00204}00204                     title = \textcolor{stringliteral}{'Advertencia'};}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00205}00205                     icon = \textcolor{stringliteral}{'exclamation-\/triangle'};}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00206}00206                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00207}00207             \}}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00208}00208 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00209}00209             \$(`\#\$\{ parent \}`).prepend(}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00210}00210                 `<div \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert alert-\/\$\{ type \} alert-\/dismissible text-\/justify"{}} \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}\$\{ element \}"{}}>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00211}00211                     <button aria-\/hidden=\textcolor{stringliteral}{"{}true"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}close"{}} data-\/dismiss=\textcolor{stringliteral}{"{}alert"{}} type=\textcolor{stringliteral}{"{}button"{}}>\&times;</button>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00212}00212                     <h6><i \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}icon fal fa-\/\$\{ icon \}"{}}></i>¡\$\{ title \}!</h6>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00213}00213                     \$\{ message \}}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00214}00214                 </div>`}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00215}00215             );}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00217}00217             \$(`\#\$\{ element \}`).fadeTo(5000, 1, \textcolor{keyword}{function}() \{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00218}00218                 \$(\textcolor{keyword}{this}).slideUp(1000);}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00219}00219             \});}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00220}00220 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00221}00221             window.scrollTo(0, 0);}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00222}00222         \}}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00223}00223         \$.ajaxSetup(\{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00224}00224             headers: \{}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00225}00225                 \textcolor{stringliteral}{'X-\/CSRF-\/TOKEN'}: \$(\textcolor{stringliteral}{'meta[name="{}csrf-\/token"{}]'}).attr(\textcolor{stringliteral}{'content'})}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00226}00226             \}}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00227}00227         \})}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00228}00228     </script>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00229}00229     @yield (\textcolor{stringliteral}{'scripts'})}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00230}00230 </body>}
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00231}00231 }
+\DoxyCodeLine{\Hypertarget{layout_8blade_8php_source_l00232}00232 </html>}
+
+\end{DoxyCode}

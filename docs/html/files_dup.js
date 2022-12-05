@@ -1,14 +1,5 @@
 var files_dup =
 [
-    [ "app", "dir_d422163b96683743ed3963d4aac17747.html", "dir_d422163b96683743ed3963d4aac17747" ],
-    [ "bootstrap", "dir_484e16b7f23165de9367bba0deb2c68e.html", "dir_484e16b7f23165de9367bba0deb2c68e" ],
-    [ "config", "dir_9f351d46ce3cc29445a41dc3a31e6919.html", "dir_9f351d46ce3cc29445a41dc3a31e6919" ],
-    [ "database", "dir_f32c53f2c0f0ccaeb11076e30674d5f4.html", "dir_f32c53f2c0f0ccaeb11076e30674d5f4" ],
     [ "graph", "dir_12552d7fa429bf94a2e32e5cf39f7e69.html", "dir_12552d7fa429bf94a2e32e5cf39f7e69" ],
-    [ "resources", "dir_0fc3f8f3ef96ce2d45d66d6e29832317.html", "dir_0fc3f8f3ef96ce2d45d66d6e29832317" ],
-    [ "routes", "dir_533417642d4c22e94ed6b0528ca3d24e.html", "dir_533417642d4c22e94ed6b0528ca3d24e" ],
-    [ "tests", "dir_59425e443f801f1f2fd8bbe4959a3ccf.html", "dir_59425e443f801f1f2fd8bbe4959a3ccf" ],
-    [ "vendor", "dir_c5da75fdc1d6c57999112ed830c87a3c.html", "dir_c5da75fdc1d6c57999112ed830c87a3c" ],
-    [ "server.php", "df/dbd/server_8php.html", "df/dbd/server_8php" ],
-    [ "webpack.mix.js", "dc/dfc/webpack_8mix_8js.html", "dc/dfc/webpack_8mix_8js" ]
+    [ "resources", "dir_0fc3f8f3ef96ce2d45d66d6e29832317.html", "dir_0fc3f8f3ef96ce2d45d66d6e29832317" ]
 ];

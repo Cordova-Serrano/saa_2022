@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['handle_0',['handle',['../d6/d26/classApp_1_1Http_1_1Middleware_1_1CheckRole.html#aeb8f2e275946f0cb3f9f550c7b293540',1,'App\Http\Middleware\CheckRole\handle()'],['../d8/d89/classApp_1_1Http_1_1Middleware_1_1RedirectIfAuthenticated.html#ab47f045fb777f7f5149a68885e198e62',1,'App\Http\Middleware\RedirectIfAuthenticated\handle()']]],
-  ['hasanyrole_1',['hasAnyRole',['../dc/d3b/classApp_1_1Models_1_1User.html#a5ec46f64967c26ea745d3887948f953b',1,'App::Models::User']]],
-  ['hasrole_2',['hasRole',['../dc/d3b/classApp_1_1Models_1_1User.html#a0895d8827a2eeafd0b87b4d799316251',1,'App::Models::User']]],
-  ['hosts_3',['hosts',['../d0/dbd/classApp_1_1Http_1_1Middleware_1_1TrustHosts.html#a57465bf083dec211e877366c64681bfa',1,'App::Http::Middleware::TrustHosts']]]
+  ['rendergraphs_0',['RenderGraphs',['../d3/ddb/plotly_8js.html#ac4b47bc0c430737097b2d183857ec816',1,'plotly.js']]],
+  ['root_1',['root',['../d6/d95/namespacegraph__api.html#a818636356dc2c78613b59afcf44008b5',1,'graph_api']]],
+  ['run_2',['run',['../d8/d63/classDatabase_1_1Seeders_1_1DatabaseSeeder.html#a912019806f53d69ab59a1c2ba79e2f02',1,'Database\Seeders\DatabaseSeeder\run()'],['../dd/da8/classDatabase_1_1Seeders_1_1RoleSeeder.html#a24250696996cfca113750757e7b0390b',1,'Database\Seeders\RoleSeeder\run()'],['../d5/dd6/classDatabase_1_1Seeders_1_1UserSeeder.html#a7ebb2e185ccb32fb0743e12cfcaa6476',1,'Database\Seeders\UserSeeder\run()']]]
 ];

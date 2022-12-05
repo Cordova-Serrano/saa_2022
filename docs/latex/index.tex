@@ -1,0 +1,123 @@
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ !\mbox{[}\mbox{]}\mbox{[}1\mbox{]}
+
++-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Integrantes\+:}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ -\/ Córdova Serrano Eduardo Javier    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Integrantes\+:}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ -\/ Córdova Serrano Eduardo Javier    }\\\cline{1-2}
+\endhead
+&-\/ Gómez Arreguín Sonni Augusto    \\\cline{1-2}
+&\\\cline{1-2}
+&-\/ Hernandéz Hernandéz Bernardo    \\\cline{1-2}
+&\\\cline{1-2}
+&-\/ Llamas de la Torre María Jocelyn    \\\cline{1-2}
+&\\\cline{1-2}
+&-\/ Martínez Astello Aldair Marcelo   \\\cline{1-2}
+\end{longtabu}
++==========================+===========================================+ $\vert$ {\bfseries{Profesor\+:}} $\vert$ Francisco Eduardo Martínez Pérez $\vert$ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ $\vert$ {\bfseries{Semestre\+:}} $\vert$ 2022-\/2023 l $\vert$ +-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+
+
+{\bfseries{Control de versiones}}
+
+\DoxyHorRuler{0}
+ {\bfseries{Versión}} {\bfseries{Fecha}} {\bfseries{Descripción del cambio}} {\bfseries{Elaboró}} {\bfseries{Autorizó}} \DoxyHorRuler{0}
+ 1.\+0 01/12/2022 Creación del documento de manual de desarrollador Equipo de desarrollo SAA ~\newline
+
+
+\DoxyHorRuler{0}
+ \hypertarget{index_autotoc_md16}{}\doxysection{Instalación para desarrollo}\label{index_autotoc_md16}
+Instala \href{https://laragon.org/}{\texttt{ Laragon}}.
+
+Suponiendo que se utilizó el directorio por defecto durante la instalación, crear un archivo llamado {\ttfamily sistema-\/seguimiento-\/alumnos.\+conf} en el directorio {\ttfamily C\+:\textbackslash{}laragon\textbackslash{}etc\textbackslash{}apache2\textbackslash{}sites-\/enabled\textbackslash{}} con el siguiente contenido\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<\textcolor{keywordtype}{VirtualHost} *:80> }
+\DoxyCodeLine{    \textcolor{keyword}{DocumentRoot} \textcolor{stringliteral}{"{}C:\(\backslash\)PATH\(\backslash\)TO\(\backslash\)PROJECT\(\backslash\)public"{}}}
+\DoxyCodeLine{    \textcolor{keyword}{ServerName} \textcolor{keyword}{sistema-\/seguimiento.test}}
+\DoxyCodeLine{    \textcolor{keyword}{ServerAlias} *.\textcolor{keyword}{sistema-\/seguimiento.test}}
+\DoxyCodeLine{    <\textcolor{keywordtype}{Directory} \textcolor{stringliteral}{"{}C:\(\backslash\)PATH\(\backslash\)TO\(\backslash\)PROJECT\(\backslash\)public"{}}>}
+\DoxyCodeLine{        \textcolor{keyword}{AllowOverride} \textcolor{keyword}{All}}
+\DoxyCodeLine{        \textcolor{keyword}{Require} \textcolor{keyword}{all} \textcolor{keyword}{granted}}
+\DoxyCodeLine{    </\textcolor{keywordtype}{Directory}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{VirtualHost}>}
+
+\end{DoxyCode}
+
+
+{\ttfamily C\+:\textbackslash{}PATH\textbackslash{}TO\textbackslash{}PROJECT} debe sustituirse por el directorio del proyecto.
+
+Después de reiniciar Laragon, se deben ejecutar los siguientes comandos\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer install}
+\DoxyCodeLine{copy .env.example .env }
+\DoxyCodeLine{php artisan key:generate}
+
+\end{DoxyCode}
+ En la base de datos de laragon (Heidi\+SQL), crear una base de datos llamada \textquotesingle{}saa\textquotesingle{}, correr migraciones y servidor.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{php artisan migrate:fresh}
+\DoxyCodeLine{php artisan serve}
+
+\end{DoxyCode}
+ En la terminal de laragon ingresar el comando\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require laravel/ui}
+
+\end{DoxyCode}
+ En el archivo vendor/laravel/ui/auth-\/backend/\+Authenticates\+Users.\+php linea 157 modificar \textquotesingle{}email\textquotesingle{} por \textquotesingle{}username\textquotesingle{}\hypertarget{index_autotoc_md17}{}\doxysection{Iniciar Servidor Python}\label{index_autotoc_md17}
+Si es la primera vez que se ejecuta el servidor, se debe crear un entorno virtual de python y activarlo. Para esto, se debe ejecutar el siguiente comando en la carpeta del proyecto\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python -\/m venv .venv}
+
+\end{DoxyCode}
+ \hypertarget{index_autotoc_md18}{}\doxysubsection{Activar entorno virtual}\label{index_autotoc_md18}
+{\bfseries{Windows Powershell\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\& .venv\(\backslash\)Scripts\(\backslash\)Activate.ps1}
+
+\end{DoxyCode}
+
+
+{\bfseries{Windows CMD\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.venv\(\backslash\)Scripts\(\backslash\)activate.bat}
+
+\end{DoxyCode}
+
+
+{\bfseries{Bash/\+Zsh (Unix-\/like)\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source .venv/bin/activate}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md19}{}\doxysubsection{Instalar dependencias}\label{index_autotoc_md19}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip install -\/r graph/requirements.txt}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md20}{}\doxysubsection{Ejecutar servidor}\label{index_autotoc_md20}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uvicorn graph.graph\_api:graphAPI}
+
+\end{DoxyCode}
+ 

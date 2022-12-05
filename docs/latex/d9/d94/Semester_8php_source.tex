@@ -1,0 +1,31 @@
+\hypertarget{Semester_8php_source}{}\doxysection{Semester.\+php}
+\label{Semester_8php_source}\index{app/Models/Semester.php@{app/Models/Semester.php}}
+\mbox{\hyperlink{Semester_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Models}{App\(\backslash\)Models}};}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00005}00005 use Illuminate\(\backslash\)Database\(\backslash\)Eloquent\(\backslash\)Factories\(\backslash\)HasFactory;}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00006}00006 use Illuminate\(\backslash\)Database\(\backslash\)Eloquent\(\backslash\)Model;}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00007}00007 use Illuminate\(\backslash\)Database\(\backslash\)Eloquent\(\backslash\)SoftDeletes;}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00009}\mbox{\hyperlink{classApp_1_1Models_1_1Semester}{00009}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Models_1_1Semester}{Semester}} \textcolor{keyword}{extends} Model}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00011}00011     use HasFactory, SoftDeletes;}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00013}\mbox{\hyperlink{classApp_1_1Models_1_1Semester_adf263ee54725d14689fc05e38e7154f7}{00013}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Models_1_1Semester_adf263ee54725d14689fc05e38e7154f7}{\$fillable}} = [}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00014}00014         \textcolor{stringliteral}{'semester'}}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00015}00015     ];}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00017}\mbox{\hyperlink{classApp_1_1Models_1_1Semester_a15965dafd9174d390403ac44e39e51d9}{00017}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classApp_1_1Models_1_1Semester_a15965dafd9174d390403ac44e39e51d9}{\$hidden}} = [}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00018}00018         \textcolor{stringliteral}{'created\_at'}, \textcolor{stringliteral}{'updated\_at'}, \textcolor{stringliteral}{'deleted\_at'}}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00019}00019     ];}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00021}\mbox{\hyperlink{classApp_1_1Models_1_1Semester_a08a772cb620a4d974a20cc57ecb3281b}{00021}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Models_1_1Semester_a08a772cb620a4d974a20cc57ecb3281b}{data}}()}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00023}00023         \textcolor{keywordflow}{return} \$this-\/>belongsToMany(Student::class, \textcolor{stringliteral}{'student\_data\_semester'}, \textcolor{stringliteral}{'semester\_id'}, \textcolor{stringliteral}{'data\_id'});}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00024}00024     \}}
+\DoxyCodeLine{\Hypertarget{Semester_8php_source_l00025}00025 \}}
+
+\end{DoxyCode}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['plotly_0',['Plotly',['../d7/d45/app_8js.html#a187773a8b4af7d9076cf2de9cbc6fe06',1,'app.js']]]
+  ['try_0',['try',['../d7/d45/app_8js.html#abe4cc9788f52e49485473dc699537388',1,'try():&#160;app.js'],['../d0/d1f/bootstrap_8js.html#abe4cc9788f52e49485473dc699537388',1,'try():&#160;bootstrap.js']]]
 ];

@@ -1,0 +1,26 @@
+\hypertarget{CareerController_8php_source}{}\doxysection{Career\+Controller.\+php}
+\label{CareerController_8php_source}\index{app/Http/Controllers/CareerController.php@{app/Http/Controllers/CareerController.php}}
+\mbox{\hyperlink{CareerController_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Http_1_1Controllers}{App\(\backslash\)Http\(\backslash\)Controllers}};}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00004}00004 use \mbox{\hyperlink{classApp_1_1Models_1_1Student}{App\(\backslash\)Models\(\backslash\)Student}};}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00005}00005 use Illuminate\(\backslash\)Http\(\backslash\)Request;}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00007}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1CareerController}{00007}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1CareerController}{CareerController}} \textcolor{keyword}{extends} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1Controller}{Controller}}}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00009}\mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1CareerController_a7b984e826fef95d8532d2deedce7b589}{00009}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Controllers_1_1CareerController_a7b984e826fef95d8532d2deedce7b589}{loadCareer}}(Request \$request)}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00010}00010     \{}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00011}00011         \textcolor{keywordflow}{if} (\$request-\/>ajax()) \{}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00012}00012             \$data\_career = Student::join(\textcolor{stringliteral}{'student\_data\_semester'}, \textcolor{stringliteral}{'student\_data\_semester.student\_id'}, \textcolor{charliteral}{'='}, \textcolor{stringliteral}{'students.id'})}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00013}00013                 -\/>where(\textcolor{stringliteral}{'student\_data\_semester.semester\_id'}, \textcolor{charliteral}{'='}, \$request-\/>semester\_id)}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00014}00014                 -\/>where(\textcolor{stringliteral}{'students.career'}, \textcolor{charliteral}{'='},\$request-\/>career)}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00015}00015                 -\/>join(\textcolor{stringliteral}{'data'}, \textcolor{stringliteral}{'data.id'}, \textcolor{charliteral}{'='}, \textcolor{stringliteral}{'student\_data\_semester.data\_id'})-\/>get();}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00016}00016                 }
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00017}00017             \textcolor{keywordflow}{return} \$data\_career;}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00018}00018         \}}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{CareerController_8php_source_l00020}00020 \}}
+
+\end{DoxyCode}

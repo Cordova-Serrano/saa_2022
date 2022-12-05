@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['kernel_0',['Kernel',['../d9/d47/classApp_1_1Console_1_1Kernel.html',1,'App\Console\Kernel'],['../d7/d20/classApp_1_1Http_1_1Kernel.html',1,'App\Http\Kernel']]]
+  ['userfactory_0',['UserFactory',['../d5/d9e/classDatabase_1_1Factories_1_1UserFactory.html',1,'Database::Factories']]],
+  ['userseeder_1',['UserSeeder',['../d5/dd6/classDatabase_1_1Seeders_1_1UserSeeder.html',1,'Database::Seeders']]]
 ];

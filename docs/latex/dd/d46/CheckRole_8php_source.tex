@@ -1,0 +1,27 @@
+\hypertarget{CheckRole_8php_source}{}\doxysection{Check\+Role.\+php}
+\label{CheckRole_8php_source}\index{app/Http/Middleware/CheckRole.php@{app/Http/Middleware/CheckRole.php}}
+\mbox{\hyperlink{CheckRole_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00001}00001 <?php}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceApp_1_1Http_1_1Middleware}{App\(\backslash\)Http\(\backslash\)Middleware}};}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00005}00005 use Auth;}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00006}00006 use Closure;}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00007}00007 use Illuminate\(\backslash\)Http\(\backslash\)Request;}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00009}\mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1CheckRole}{00009}} \textcolor{keyword}{class }\mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1CheckRole}{CheckRole}} }
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00011}\mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1CheckRole_aeb8f2e275946f0cb3f9f550c7b293540}{00011}}     \textcolor{keyword}{public} \textcolor{keyword}{function} \mbox{\hyperlink{classApp_1_1Http_1_1Middleware_1_1CheckRole_aeb8f2e275946f0cb3f9f550c7b293540}{handle}}(Request \$request, Closure \$next,  ...\$roles) }
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00012}00012     \{}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00013}00013         \$userRoles = Auth::user()-\/>roles-\/>pluck(\textcolor{stringliteral}{'name'});}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00014}00014         \textcolor{comment}{// dd(\$userRoles);}}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00015}00015         \textcolor{keywordflow}{if}(!\$userRoles-\/>contains(\textcolor{stringliteral}{'super'}))\{}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00016}00016             \textcolor{keywordflow}{return} redirect(\textcolor{stringliteral}{'/home'});}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00017}00017         \}}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00019}00019         \textcolor{keywordflow}{return} \$next(\$request);}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{CheckRole_8php_source_l00021}00021 \}}
+
+\end{DoxyCode}
