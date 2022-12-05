@@ -1,28 +1,6 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../da/ddd/README_8md.html',1,'(Global Namespace)'],['../d3/d23/graph_2README_8md.html',1,'(Global Namespace)']]],
-  ['redirectifauthenticated_1',['RedirectIfAuthenticated',['../d8/d89/classApp_1_1Http_1_1Middleware_1_1RedirectIfAuthenticated.html',1,'App::Http::Middleware']]],
-  ['redirectifauthenticated_2ephp_2',['RedirectIfAuthenticated.php',['../db/d64/RedirectIfAuthenticated_8php.html',1,'']]],
-  ['redirectto_3',['redirectTo',['../dd/dee/classApp_1_1Http_1_1Middleware_1_1Authenticate.html#a7c1fa7220415fea90a67d6f9c755fa1f',1,'App::Http::Middleware::Authenticate']]],
-  ['register_4',['register',['../da/d86/classApp_1_1Providers_1_1AppServiceProvider.html#a2853e71d5b5c0d013d755b0265da3a9f',1,'App\Providers\AppServiceProvider\register()'],['../d4/d9d/classApp_1_1Exceptions_1_1Handler.html#a462e0f3975bc726befcfd1d724131d5b',1,'App\Exceptions\Handler\register()']]],
-  ['register_2eblade_2ephp_5',['register.blade.php',['../da/d36/register_8blade_8php.html',1,'']]],
-  ['registercontroller_6',['RegisterController',['../d5/d17/classApp_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController.html',1,'App::Http::Controllers::Auth']]],
-  ['registercontroller_2ephp_7',['RegisterController.php',['../db/db6/RegisterController_8php.html',1,'']]],
-  ['reset_2eblade_2ephp_8',['reset.blade.php',['../dc/dc7/reset_8blade_8php.html',1,'']]],
-  ['resetpasswordcontroller_9',['ResetPasswordController',['../d9/d21/classApp_1_1Http_1_1Controllers_1_1Auth_1_1ResetPasswordController.html',1,'App::Http::Controllers::Auth']]],
-  ['resetpasswordcontroller_2ephp_10',['ResetPasswordController.php',['../da/d62/ResetPasswordController_8php.html',1,'']]],
-  ['return_11',['return',['../da/dde/broadcasting_8php.html#a99746c61184f2d0411932506d34c2fec',1,'return():&#160;broadcasting.php'],['../dc/dba/cache_8php.html#a6d4f94e4789b307a6f38ffd148e26fe0',1,'return():&#160;cache.php'],['../d8/de4/database_8php.html#a237064f73cbc70bc12a565093bf6d44e',1,'return():&#160;database.php'],['../d0/dd2/excel_8php.html#a1132390402a68b3b7f66d05c6a54f2f9',1,'return():&#160;excel.php'],['../dc/de1/filesystems_8php.html#aa913fd3ccb72335fbae691d8fb9b182b',1,'return():&#160;filesystems.php'],['../d0/df2/hashing_8php.html#acfeb710b89c68b6eb2bd490cce873ab0',1,'return():&#160;hashing.php'],['../dd/d45/logging_8php.html#ae3a302318c9a0406d2f9201bed5dcc31',1,'return():&#160;logging.php'],['../d4/d5c/mail_8php.html#a45a8977cc7b66816c7428a3b1579145b',1,'return():&#160;mail.php'],['../da/dfb/en_2passwords_8php.html#a1040d325a37192bab0de2548cb6e733a',1,'return():&#160;passwords.php'],['../d5/df4/en_2pagination_8php.html#a50e0b2b6f61b30a5560e15034e254f92',1,'return():&#160;pagination.php'],['../d1/d4f/resources_2lang_2en_2auth_8php.html#a94a5e44df7928bb10560ccb9eb748b8d',1,'return():&#160;auth.php'],['../db/de1/view_8php.html#a8f2b01da8f9a138218541e9ce1530eeb',1,'return():&#160;view.php'],['../d5/d4e/queue_8php.html#a70b9fd4d8e4ea76010514e492023c832',1,'return():&#160;queue.php'],['../dd/dcf/sanctum_8php.html#a1fce65bc28427581f0493d67bdf44b9e',1,'return():&#160;sanctum.php'],['../de/d6d/services_8php.html#a7b2d3a3196ec7a07395f08a2ff4a5571',1,'return():&#160;services.php'],['../de/d8b/session_8php.html#aabb10af32954f8924f449108fb3d5cff',1,'return():&#160;session.php'],['../d9/dd0/config_2auth_8php.html#a75d05175ca276df077947d99fd8c47e9',1,'return():&#160;auth.php'],['../dd/d85/config_2app_8php.html#ac1d4a22dd5dd475ac523455bb7a93abd',1,'return():&#160;app.php'],['../d1/dfd/en_2validation_8php.html#ad2c8189da09141614fa97851d8a21142',1,'return():&#160;validation.php'],['../dc/d9c/resources_2lang_2es_2auth_8php.html#abd3e0cba85156d039b5a3649056c775d',1,'return():&#160;auth.php'],['../de/d80/es_2pagination_8php.html#a49b24e0a45c67cb18aa6e20e0a50614c',1,'return():&#160;pagination.php'],['../dd/d18/es_2passwords_8php.html#acf6295e35814b8737271ac76ceb55e8f',1,'return():&#160;passwords.php'],['../dc/d0f/es_2validation_8php.html#ae52dd2a4e79626b35aeeac3d135511c2',1,'return():&#160;validation.php']]],
-  ['role_12',['Role',['../d9/d04/classApp_1_1Models_1_1Role.html',1,'App::Models']]],
-  ['role_2ephp_13',['Role.php',['../da/d3e/Role_8php.html',1,'']]],
-  ['roles_14',['roles',['../dc/d3b/classApp_1_1Models_1_1User.html#a89d7ac6d2f257050a4cdb944b65c1052',1,'App::Models::User']]],
-  ['roleseeder_15',['RoleSeeder',['../dd/da8/classDatabase_1_1Seeders_1_1RoleSeeder.html',1,'Database::Seeders']]],
-  ['roleseeder_2ephp_16',['RoleSeeder.php',['../d8/d36/RoleSeeder_8php.html',1,'']]],
-  ['roleuser_17',['RoleUser',['../d3/d06/classApp_1_1Models_1_1RoleUser.html',1,'App::Models']]],
-  ['roleuser_2ephp_18',['RoleUser.php',['../d7/df8/RoleUser_8php.html',1,'']]],
-  ['roleusers_19',['roleUsers',['../d3/d06/classApp_1_1Models_1_1RoleUser.html#afa113b0ca45aecadf94794cfd78f70d1',1,'App::Models::RoleUser']]],
-  ['root_20',['root',['../db/de0/namespacegraph_1_1graph__api.html#abcafbbeb818016e468a4ad7d4fe4773d',1,'graph::graph_api']]],
-  ['routeserviceprovider_21',['RouteServiceProvider',['../da/d61/classApp_1_1Providers_1_1RouteServiceProvider.html',1,'App::Providers']]],
-  ['routeserviceprovider_2ephp_22',['RouteServiceProvider.php',['../d7/d7e/RouteServiceProvider_8php.html',1,'']]],
-  ['rules_23',['rules',['../d5/d1b/classApp_1_1Imports_1_1CSVImport.html#aa8440defff7bfd889fb94d2d5c693d88',1,'App::Imports::CSVImport']]],
-  ['run_24',['run',['../d5/dd6/classDatabase_1_1Seeders_1_1UserSeeder.html#a7ebb2e185ccb32fb0743e12cfcaa6476',1,'Database\Seeders\UserSeeder\run()'],['../dd/da8/classDatabase_1_1Seeders_1_1RoleSeeder.html#a24250696996cfca113750757e7b0390b',1,'Database\Seeders\RoleSeeder\run()'],['../d8/d63/classDatabase_1_1Seeders_1_1DatabaseSeeder.html#a912019806f53d69ab59a1c2ba79e2f02',1,'Database\Seeders\DatabaseSeeder\run()']]]
+  ['querycontroller_0',['QueryController',['../da/d16/classApp_1_1Http_1_1Controllers_1_1QueryController.html',1,'App::Http::Controllers']]],
+  ['querycontroller_2ephp_1',['QueryController.php',['../d2/dae/QueryController_8php.html',1,'']]],
+  ['queue_2ephp_2',['queue.php',['../d5/d4e/queue_8php.html',1,'']]]
 ];

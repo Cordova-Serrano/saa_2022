@@ -59,6 +59,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ]
       ] ]
     ] ]
@@ -68,7 +69,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d9/dd0/config_2auth_8php.html"
+"da/d82/Controller_8php.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

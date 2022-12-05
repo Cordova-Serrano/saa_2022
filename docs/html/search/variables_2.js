@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['children_0',['children',['../d4/d53/namespacegraph_1_1dash__api.html#a2cf27ea72e03e4b700dd137a6017f0b8',1,'graph::dash_api']]],
-  ['client_1',['client',['../d8/d0d/classtest__graph__api_1_1GraphsAPI.html#a259e82a003dd9f85baa7e39b6b4c8fb4',1,'test_graph_api::GraphsAPI']]]
+  ['authenticatesusers_0',['AuthenticatesUsers',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#ae4f3c3791a133ad66712fed89abb72ff',1,'Illuminate::Foundation::Auth']]],
+  ['axios_1',['axios',['../d0/d1f/bootstrap_8js.html#a9fdcfebe26e40321cda1c1abee43b0ec',1,'bootstrap.js']]]
 ];

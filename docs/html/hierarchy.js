@@ -51,16 +51,8 @@ var hierarchy =
     ] ],
     [ "Migration", "d9/d51/classMigration.html", null ],
     [ "App\\Http\\Middleware\\RedirectIfAuthenticated", "d8/d89/classApp_1_1Http_1_1Middleware_1_1RedirectIfAuthenticated.html", null ],
-    [ "BaseModel", null, [
-      [ "graph.graph_api.Student", "d5/dbd/classgraph_1_1graph__api_1_1Student.html", null ],
-      [ "graph.graph_api.StudentList", "d6/d37/classgraph_1_1graph__api_1_1StudentList.html", null ]
-    ] ],
     [ "Factory", null, [
       [ "Database\\Factories\\UserFactory", "d5/d9e/classDatabase_1_1Factories_1_1UserFactory.html", null ]
-    ] ],
-    [ "IsolatedAsyncioTestCase", null, [
-      [ "test_graph_api.GraphsAPI", "d8/d0d/classtest__graph__api_1_1GraphsAPI.html", null ],
-      [ "test_graph_creation.GraphsAPI", "d9/d7f/classtest__graph__creation_1_1GraphsAPI.html", null ]
     ] ],
     [ "Migration", null, [
       [ "CreateCareersTable", "d2/dd5/classCreateCareersTable.html", null ],

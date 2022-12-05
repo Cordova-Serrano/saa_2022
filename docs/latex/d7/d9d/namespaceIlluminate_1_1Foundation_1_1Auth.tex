@@ -41,7 +41,7 @@ trait \mbox{\hyperlink{namespaceIlluminate_1_1Foundation_1_1Auth_ae4f3c3791a133a
 \doxysubsubsection{\texorpdfstring{attemptLogin()}{attemptLogin()}}
 {\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}attempt\+Login (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-Attempt to log the user into the application.
+Intente iniciar la sesión del usuario en la aplicación.
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -57,7 +57,7 @@ bool
 \doxysubsubsection{\texorpdfstring{authenticated()}{authenticated()}}
 {\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}authenticated (\begin{DoxyParamCaption}\item[{Request}]{\$request,  }\item[{}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-The user has been authenticated.
+El usuario ha sido autenticado.
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -75,7 +75,7 @@ mixed
 \doxysubsubsection{\texorpdfstring{credentials()}{credentials()}}
 {\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}credentials (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-Get the needed authorization credentials from the request.
+Obtiene las credenciales de autorización necesarias de la solicitud.
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -91,7 +91,7 @@ array
 \doxysubsubsection{\texorpdfstring{guard()}{guard()}}
 {\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}guard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-Get the guard to be used during authentication.
+Obtiene el protector que se usará durante la autenticación.
 
 \begin{DoxyReturn}{Returns}
 \textbackslash{}\+Illuminate\textbackslash{}\+Contracts\textbackslash{}\+Auth\textbackslash{}\+Stateful\+Guard 
@@ -102,7 +102,7 @@ Get the guard to be used during authentication.
 \doxysubsubsection{\texorpdfstring{loggedOut()}{loggedOut()}}
 {\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}logged\+Out (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-The user has logged out of the application.
+El usuario ha cerrado sesión en la aplicación.
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -118,7 +118,7 @@ mixed
 \doxysubsubsection{\texorpdfstring{login()}{login()}}
 {\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}login (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})}
 
-Handle a login request to the application.
+Manejar una solicitud de inicio de sesión al sistema
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -139,7 +139,7 @@ Illuminate\textbackslash{}\+Validation\textbackslash{}\+Validation\+Exception \m
 \doxysubsubsection{\texorpdfstring{logout()}{logout()}}
 {\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}logout (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})}
 
-Log the user out of the application.
+Cerrar la sesión del usuario de la aplicación.
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -155,7 +155,7 @@ Log the user out of the application.
 \doxysubsubsection{\texorpdfstring{sendFailedLoginResponse()}{sendFailedLoginResponse()}}
 {\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}send\+Failed\+Login\+Response (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-Get the failed login response instance.
+Obtiene la instancia de respuesta de inicio de sesión fallida.
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -176,7 +176,7 @@ Illuminate\textbackslash{}\+Validation\textbackslash{}\+Validation\+Exception \m
 \doxysubsubsection{\texorpdfstring{sendLoginResponse()}{sendLoginResponse()}}
 {\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}send\+Login\+Response (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-Send the response after the user was authenticated.
+Envía la respuesta después de que el usuario se haya autenticado.
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -192,7 +192,7 @@ Send the response after the user was authenticated.
 \doxysubsubsection{\texorpdfstring{showLoginForm()}{showLoginForm()}}
 {\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}show\+Login\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Show the application\textquotesingle{}s login form.
+Muestra el formulario de inicio de sesión del sistema
 
 \begin{DoxyReturn}{Returns}
 \textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View 
@@ -203,7 +203,7 @@ Show the application\textquotesingle{}s login form.
 \doxysubsubsection{\texorpdfstring{username()}{username()}}
 {\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Get the login username to be used by the controller.
+Obtiene el nombre de usuario de inicio de sesión que utilizará el controlador.
 
 \begin{DoxyReturn}{Returns}
 string 
@@ -214,7 +214,7 @@ string
 \doxysubsubsection{\texorpdfstring{validateLogin()}{validateLogin()}}
 {\footnotesize\ttfamily Illuminate\textbackslash{}\+Foundation\textbackslash{}\+Auth\textbackslash{}validate\+Login (\begin{DoxyParamCaption}\item[{Request}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-Validate the user login request.
+Validar la solicitud de inicio de sesión del usuario.
 
 
 \begin{DoxyParams}[1]{Parameters}

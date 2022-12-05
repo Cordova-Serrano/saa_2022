@@ -1,13 +1,11 @@
 /**
- * @fn RenderGraphs
  * 
  * Sends a POST request to the server to get a json with necessary data to render the graphs,
  * uses the value of component select-graph to determine which graph to render. It also sends
  * the value of the modal-var input if the graph type is "Rezago Academico".
  * 
- * @param {array} records
- * 
- * @return {void}
+ * @param {array} records - The alumn records to be used to render the graphs, as defined in the
+ *                         controller and in the @ref graph.graph_api.Student model.
  */
  function RenderGraphs(records) {
     const graphType = document.getElementById('select-graph').value;

@@ -1,18 +1,5 @@
 var searchData=
 [
-  ['laravel_0',['Laravel',['../db/d99/namespaceLaravel.html',1,'']]],
-  ['laravel_5fstart_1',['LARAVEL_START',['../de/d20/index_8php.html#a3904d6331aed7d48e576702946b2f47c',1,'index.php']]],
-  ['layout_2',['layout',['../d4/d53/namespacegraph_1_1dash__api.html#af25dfb0a2b66964c7828f23cc470477b',1,'graph::dash_api']]],
-  ['layout_2eblade_2ephp_3',['layout.blade.php',['../d3/d17/layout_8blade_8php.html',1,'']]],
-  ['loadcareer_4',['loadCareer',['../de/dde/classApp_1_1Http_1_1Controllers_1_1CareerController.html#a7b984e826fef95d8532d2deedce7b589',1,'App::Http::Controllers::CareerController']]],
-  ['loadgeneration_5',['loadGeneration',['../d5/dce/classApp_1_1Http_1_1Controllers_1_1GenerationController.html#af7c71fced713fc9071cc32855a9566c4',1,'App::Http::Controllers::GenerationController']]],
-  ['loadquery_6',['loadQuery',['../da/d16/classApp_1_1Http_1_1Controllers_1_1QueryController.html#a2d3e9e467afc43f041afba3d8b1273f5',1,'App::Http::Controllers::QueryController']]],
-  ['loadsemester_7',['loadSemester',['../d2/d6c/classApp_1_1Http_1_1Controllers_1_1ConsultController.html#ab68b1480ca904e4522c427ac80e7ce82',1,'App\Http\Controllers\ConsultController\loadSemester()'],['../dd/dec/classApp_1_1Http_1_1Controllers_1_1GraphsController.html#a747d73c9c8d6bd5f090837c63c496eef',1,'App\Http\Controllers\GraphsController\loadSemester()']]],
-  ['loggedout_8',['loggedOut',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#a753621beb8b1f6dde02f9aa220eedb66',1,'Illuminate::Foundation::Auth']]],
-  ['logging_2ephp_9',['logging.php',['../dd/d45/logging_8php.html',1,'']]],
-  ['login_10',['login',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#ac93f5b7c4ea51eece6203533b4ecf17a',1,'Illuminate::Foundation::Auth']]],
-  ['login_2eblade_2ephp_11',['login.blade.php',['../df/d74/login_8blade_8php.html',1,'']]],
-  ['logincontroller_12',['LoginController',['../de/d5f/classApp_1_1Http_1_1Controllers_1_1Auth_1_1LoginController.html',1,'App::Http::Controllers::Auth']]],
-  ['logincontroller_2ephp_13',['LoginController.php',['../da/d9c/LoginController_8php.html',1,'']]],
-  ['logout_14',['logout',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html#a44c4cf7e7c321b96b391dcb1db9adb72',1,'Illuminate::Foundation::Auth']]]
+  ['kernel_0',['Kernel',['../d9/d47/classApp_1_1Console_1_1Kernel.html',1,'App\Console\Kernel'],['../d7/d20/classApp_1_1Http_1_1Kernel.html',1,'App\Http\Kernel']]],
+  ['kernel_2ephp_1',['Kernel.php',['../d6/d53/Console_2Kernel_8php.html',1,'(Global Namespace)'],['../d2/d08/Http_2Kernel_8php.html',1,'(Global Namespace)']]]
 ];

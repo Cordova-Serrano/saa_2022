@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['dash_5fapi_0',['dash_api',['../d4/d53/namespacegraph_1_1dash__api.html',1,'graph']]],
-  ['graph_1',['graph',['../df/dce/namespacegraph.html',1,'']]],
-  ['graph_5fapi_2',['graph_api',['../db/de0/namespacegraph_1_1graph__api.html',1,'graph']]]
+  ['auth_0',['Auth',['../d7/d9d/namespaceIlluminate_1_1Foundation_1_1Auth.html',1,'Illuminate::Foundation']]]
 ];

@@ -342,7 +342,7 @@ OPTIMIZE_OUTPUT_SLICE  = NO
 #
 # Note see also the list of default file extension mappings.
 
-EXTENSION_MAPPING      = .js=JavaScript
+EXTENSION_MAPPING      = js=JavaScript
 
 # If the MARKDOWN_SUPPORT tag is enabled then doxygen pre-processes all comments
 # according to the Markdown format, which allows for more readable
@@ -993,7 +993,8 @@ FILE_PATTERNS          = *.c \
                          *.vhdl \
                          *.ucf \
                          *.qsf \
-                         *.ice
+                         *.ice \
+                         *.js
 
 # The RECURSIVE tag can be used to specify whether or not subdirectories should
 # be searched for input files as well.
@@ -1015,7 +1016,8 @@ EXCLUDE                = ./docs \
                          ./cmake-build-release \
                          ./cmake-build-relwithdebinfo \
                          ./cmake-build-minsize \
-                         ./doxygen-awesome-css
+                         ./doxygen-awesome-css \
+                         ./public \
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded
@@ -1107,7 +1109,7 @@ INPUT_FILTER           =
 # need to set EXTENSION_MAPPING for the extension otherwise the files are not
 # properly processed by doxygen.
 
-FILTER_PATTERNS        =
+FILTER_PATTERNS        = *.py=py_filter
 
 # If the FILTER_SOURCE_FILES tag is set to YES, the input filter (if set using
 # INPUT_FILTER) will also be used to filter the input files that are used for

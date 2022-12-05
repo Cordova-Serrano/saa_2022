@@ -76,18 +76,6 @@ var annotated_dup =
         [ "UserSeeder", "d5/dd6/classDatabase_1_1Seeders_1_1UserSeeder.html", "d5/dd6/classDatabase_1_1Seeders_1_1UserSeeder" ]
       ] ]
     ] ],
-    [ "graph", "df/dce/namespacegraph.html", [
-      [ "graph_api", "db/de0/namespacegraph_1_1graph__api.html", [
-        [ "Student", "d5/dbd/classgraph_1_1graph__api_1_1Student.html", null ],
-        [ "StudentList", "d6/d37/classgraph_1_1graph__api_1_1StudentList.html", null ]
-      ] ]
-    ] ],
-    [ "test_graph_api", "d0/d1d/namespacetest__graph__api.html", [
-      [ "GraphsAPI", "d8/d0d/classtest__graph__api_1_1GraphsAPI.html", "d8/d0d/classtest__graph__api_1_1GraphsAPI" ]
-    ] ],
-    [ "test_graph_creation", "d3/d97/namespacetest__graph__creation.html", [
-      [ "GraphsAPI", "d9/d7f/classtest__graph__creation_1_1GraphsAPI.html", "d9/d7f/classtest__graph__creation_1_1GraphsAPI" ]
-    ] ],
     [ "Tests", "df/da7/namespaceTests.html", [
       [ "Feature", "d5/df8/namespaceTests_1_1Feature.html", [
         [ "ExampleTest", "db/d27/classTests_1_1Feature_1_1ExampleTest.html", "db/d27/classTests_1_1Feature_1_1ExampleTest" ]

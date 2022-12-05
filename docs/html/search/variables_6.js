@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['home_0',['HOME',['../da/d61/classApp_1_1Providers_1_1RouteServiceProvider.html#ab3578e1d8c69b5c43a6656958a68573d',1,'App::Providers::RouteServiceProvider']]]
+  ['mix_0',['mix',['../dc/dfc/webpack_8mix_8js.html#a0e22be2dc547142b279a695c87536ae6',1,'webpack.mix.js']]]
 ];

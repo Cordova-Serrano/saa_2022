@@ -103,18 +103,16 @@
 <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
 
 
-<!-- /**
-* RenderGraphs
-* 
-* Sends a POST request to the server to get a json with necessary data to render the graphs,
-* uses the value of component select-graph to determine which graph to render. It also sends
-* the value of the modal-var input if the graph type is "Rezago Academico".
-* 
-* @param {array} records
-* 
-* @return {void}
-*/ -->
 <script type="text/javascript">
+    /**
+    * @brief Sends a POST request to the server to get a json with necessary data to render the graphs,
+    * uses the value of component select-graph to determine which graph to render. It also sends
+    * the value of the modal-var input if the graph type is "Rezago Academico".
+    * 
+    * @param {array} records
+    * 
+    * @return {void}
+    */
     function RenderGraphs(records) {
         const graphType = document.getElementById('select-graph').value;
         const URL = "http://127.0.0.1:8000/graph/" + graphType;

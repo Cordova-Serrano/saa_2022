@@ -1,0 +1,23 @@
+\hypertarget{plotly_8js}{}\doxysection{resources/js/plotly.js File Reference}
+\label{plotly_8js}\index{resources/js/plotly.js@{resources/js/plotly.js}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+function \mbox{\hyperlink{plotly_8js_ac4b47bc0c430737097b2d183857ec816}{Render\+Graphs}} (records)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{plotly_8js_ac4b47bc0c430737097b2d183857ec816}\label{plotly_8js_ac4b47bc0c430737097b2d183857ec816}} 
+\index{plotly.js@{plotly.js}!RenderGraphs@{RenderGraphs}}
+\index{RenderGraphs@{RenderGraphs}!plotly.js@{plotly.js}}
+\doxysubsubsection{\texorpdfstring{RenderGraphs()}{RenderGraphs()}}
+{\footnotesize\ttfamily function Render\+Graphs (\begin{DoxyParamCaption}\item[{}]{records }\end{DoxyParamCaption})}
+
+Sends a POST request to the server to get a json with necessary data to render the graphs, uses the value of component select-\/graph to determine which graph to render. It also sends the value of the modal-\/var input if the graph type is \char`\"{}\+Rezago Academico\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \{array\}} & records -\/ The alumn records to be used to render the graphs, as defined in the controller and in the graph.\+graph\+\_\+api.\+Student model. \\
+\hline
+\end{DoxyParams}
