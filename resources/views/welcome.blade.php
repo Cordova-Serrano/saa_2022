@@ -14,7 +14,7 @@
         @endif
         <div class="card card-outline card-reflex-blue">
             <div class="card-header">
-                <h3 class="card-title">Bienvenido</h3>
+                <h3 class="card-title">Sistema de Seguimiento de Alumnos del Área</h3>
                 <div class="card-tools">
                     <button class="btn btn-tool" data-card-widget="collapse" title="Minimizar" type="button">
                         <i class="fal fa-minus"></i>

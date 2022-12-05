@@ -35,6 +35,7 @@ class Student(BaseModel):
     generation: str
     semesters_completed: int
     creds_per_semester: float
+    app_average: float
 
 
 class StudentList(BaseModel):
@@ -76,10 +77,10 @@ async def scatter_plot(data: StudentList):
     fig = px.scatter(
         data_frame,
         x="cred_aprob_acum",
-        y="creds_per_semester",
+        y="app_average",
         labels={
             "cred_aprob_acum": "Créditos aprobados acumulados",
-            "creds_per_semester": "Créditos aprobados por semestre",
+            "app_average": "Promedio aprobatorio",
             "generation": "Generación",
             "status": "Estatus",
             "name": "Nombre",
