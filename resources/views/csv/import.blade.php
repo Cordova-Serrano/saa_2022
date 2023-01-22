@@ -29,7 +29,8 @@
                     <div class="row mt-4">
                         <div class="alert alert-info alert-dismissible w-100 saa-bg-color">
                             <h5><i class="icon fas fa-info"></i> Importante!</h5>
-                            -Formato por columna: cve_uaslp,cve_larga,generacion,nombre,carrera,situacion,cred_por_cursar,cred_por_semestre,semestres_cursados,porcentaje_avance,promedio_general,rendimiento_general,promedio_aprobatorio,materias_aprobadas,materias_reprobadas
+                            -Formato por columna: cve_uaslp,cve_larga,generacion,nombre,carrera,situacion,cred_por_cursar,cred_por_semestre,semestres_cursados,
+                            porcentaje_avance,promedio_general,rendimiento_general,promedio_aprobatorio,materias_aprobadas,materias_reprobadas
 
                             <br>
                             -Subir archivo con encabezados
@@ -121,18 +122,13 @@
         $('#overlay').hide();
     });
 
-    $('#logo').change(function() {
-        var filename = $(this).val().replace(/.*(\/|\\)/, '')
-        //Ajax Patients
-        /*$.get('/update', function(data) {
-            console.log(data)
-        });*/
-        //Ajax semester
-        $.ajax({
-            url: "/update",
-            type: "get",
+    $('#logo').change(function() {//funcion para
+        var filename = $(this).val().replace(/.*(\/|\\)/, '')//obtiene el nombre del archivo
+        $.ajax({//peticion ajax
+            url: "/update",//ruta /update
+            type: "get",//de tipo get
             data: {
-                filename: filename,
+                filename: filename, //manda como parametro el nombre del archivo
             },
             success: function(response) {
                 //Do Something

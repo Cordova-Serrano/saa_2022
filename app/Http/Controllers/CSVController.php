@@ -17,35 +17,36 @@ use Illuminate\Support\Facades\DB;
 
 class CSVController extends Controller
 {
-    public function __construct()
+    public function __construct()//constructor de instancia
     {
-        $this->middleware('auth');
+        $this->middleware('auth');//para acceder a la vista, el usuario deberá contar con autenticacion
     }
     
-    public function index(Request $request)
+    public function index(Request $request)//funcion index para modulo Archivo CSV
     {
-        if ($request->ajax()) {
+        if ($request->ajax()) {//en caso de que sea una request de ajax, retorna los registros de File
             $model = File::all();
 
             return DataTables::of($model)->toJson();
         }
 
-        return view('csv.index');
+        return view('csv.index');//en caso de no tener solicitud request, retorna la vista principal
     }
 
     /** 
      * @desc Regresa la vista de importar archivo
     
     */
-    public function import()
+    public function import()//funcion que importa la vista csv.import
     {
         return view('csv.import');
     }
-    public function store(Request $request)
+    public function store(Request $request)//funcion que realiza el procesamiento del archivo csv y lo vacia en la base de
     {
-        $doc_info = pathinfo(request()->file('file')->getClientOriginalName());
-        $extension = $doc_info['extension'];
-        $file_name_uns = $doc_info['filename']; 
+	set_time_limit(0);
+        $doc_info = pathinfo(request()->file('file')->getClientOriginalName());//obtiene informacion del documento proveniente en request
+        $extension = $doc_info['extension'];//obtiene la extension del docuento
+        $file_name_uns = $doc_info['filename']; //obtiene el nombre del documento sin extension
         $file_name = explode(" ", $file_name_uns); //separa la cadena en arreglo
         $excel_array = Excel::toArray([], request()->file('file')); //convierte el archivo subido en arreglo
         //Si el nombre de archivo ya existe, se hace un update
@@ -53,17 +54,17 @@ class CSVController extends Controller
         $no_process = 0;//variable para verificar que el excel contiene el numero completo de columnas deacuerdo al formato
         if(count($data_excel[0]) != 15) $no_process = 1;//si no tiene las columnas suficientes
         else{
-            $lenght = count($data_excel);
+            $lenght = count($data_excel);//numero de registros
             //Semester
-            $semester_str = $file_name[1];
+            $semester_str = $file_name[1];//nombre del semestre
             //Semestre
-            if (isset(Semester::where('semester', $semester_str)->first()->semester)) {
-                $semester = Semester::where('semester', $semester_str)->first();
-                $dss = DB::table('student_data_semester')->where('semester_id', $semester->id);
-                $dss->delete();     
+            if (isset(Semester::where('semester', $semester_str)->first()->semester)) {//comprueba si existe el semestre
+                $semester = Semester::where('semester', $semester_str)->first();//obtiene el semestre
+                $dss = DB::table('student_data_semester')->where('semester_id', $semester->id);//obtiene todos los registros de ese semestre
+                $dss->delete();     //elimina los registros relacionales de el semestre
             } 
 
-            else {
+            else {//en caso que no exista semestre, lo crea
                 $semester = new Semester([
                     "semester" => $semester_str,
                 ]);
@@ -75,7 +76,7 @@ class CSVController extends Controller
         if ($no_process == 0) 
         {//si se sube un nuevo semestre
             if($request->is_update == 0){
-                $file = new File([//se crea registro de FIle
+                $file = new File([//se crea registro de File
                     "name" => $file_name_uns,
                 ]);
                 $file->save(); //se guarda registro
@@ -205,8 +206,8 @@ class CSVController extends Controller
                     }
 
                 }
-                unset($student);
-                unset($data);
+                unset($student);//elimina el valor almacenado en $student
+                unset($data);//elimina el valor almacenado en $data
             }
                 
             }
@@ -217,6 +218,7 @@ class CSVController extends Controller
 
     public function updateDoc(Request $request)
     {
+	set_time_limit(0);
         if ($request->ajax()) {
             $file_name_uns = pathinfo($request->filename, PATHINFO_FILENAME); //obtiene el nombre del archivo sin extencion
             $file_name = explode(" ", $file_name_uns); //separa la cadena en arreglo
